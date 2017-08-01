@@ -17,6 +17,8 @@ def creartxt():
 
 creartxt()
 
+iteracion = 1
+
 while True:
     # Obtener frame
     (grabbed, frame) = camara.read()
@@ -68,17 +70,25 @@ while True:
         archi.write('\n')
         archi.close()
 
-    grabartxt()  
+    grabartxt()
+
 
     
-
-    # Pausar el video cuando hayan problemas con el area. Pulsar Enter para reanudar.
+    # Pausar el video cuando hayan problemas con el area del contorno. Pulsar Enter para reanudar.
     if(area<=100):
-        print("Esta imagen tiene de area 0.")
+        # Guardar imagen en disco con area menor o igual que 100.
+        cv2.imwrite("Imagenes/ImagenNormal"+str(iteracion)+".png", gris)
+        cv2.imwrite("Imagenes/ImagenUmbral"+str(iteracion)+".png", im2)
+        iteracion += 1
+
+        
+        print("ATENCION: esta imagen tiene de area 100 o menos.")
         print("Pulse una tecla para continuar... ")
-        nombre = input()
+        #nombre = input()
+        
         
     # Dividir en parrafos la salida por consola.
     print("")
+
     
 print("Programa terminado")
