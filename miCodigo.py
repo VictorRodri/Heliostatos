@@ -69,6 +69,8 @@ while True:
     # print ("Area =", area) # Mostrar por consola el area del contorno.
 
     # Area de varios contornos en un fotograma del video
+    # Cada vez que se empiece a ejecutar el siguiente bucle 'for', se reestablece 'mayor' a cero para evitar tomar accidentalmente el valor mayor de iteraciones anteriores a la actual.
+    mayor = 0
     for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
               22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]:
         area = cv2.contourArea(contours[i])
@@ -100,7 +102,7 @@ while True:
 
     
     # Pausar el video cuando hayan problemas con el area del contorno. Pulsar Enter para reanudar.
-    if(area<=100):
+    if(mayor<=100):
         # Guardar imagen en disco con area menor o igual que 100.
         #cv2.imwrite("Imagenes/ImagenNormal"+str(iteracion)+".png", gris)
         #cv2.imwrite("Imagenes/ImagenUmbral"+str(iteracion)+".png", im2)
@@ -109,7 +111,7 @@ while True:
         
         print("ATENCION: esta imagen tiene de area 100 o menos.")
         print("Pulse una tecla para continuar... ")
-        nombre = input()
+        #nombre = input()
 
     '''
     if area > 1000 and area < 10000:
