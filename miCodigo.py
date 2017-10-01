@@ -71,8 +71,9 @@ while True:
     # Area de varios contornos en un fotograma del video
     # Cada vez que se empiece a ejecutar el siguiente bucle 'for', se reestablece 'mayor' a cero para evitar tomar accidentalmente el valor mayor de iteraciones anteriores a la actual.
     mayor = 0
-    for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-              22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33]:
+    # Recorrer todos los contornos de cada fotograma del video, el numero maximo de contornos en cada fotograma del video es variable,
+    # y por eso se pone 'len(contours)', para recorrer desde el contorno 0 hasta el numero maximo de contornos del fotograma del video en cuestion.
+    for i in range(0,len(contours)):
         area = cv2.contourArea(contours[i])
         print("Calcular area", i, ". Resultado:", area)
 
