@@ -18,7 +18,10 @@ def creartxt():
 creartxt()
 
 mayor = 0
+contornoPrimero = False
+areaContornoPrimero = 0
 
+# Iteracion 'while True' para cada fotograma del video, hasta completar todos los fotogramas y llegar al final del video (cambiaria automaticamente de True a False y el bucle 'while' finaliza).
 while True:
     # Obtener frame
     (grabbed, frame) = camara.read()
@@ -44,11 +47,11 @@ while True:
     #plt.imshow(thresh, cmap="gray")
 
     now = time.time() # Tomar el tiempo actual.
-    im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE) # Parametros: Imagen umbralizada, devolver todos los contornos y crear una lista completa de jerarquia de familia, marcar la mínima cantidad de puntos (no todos) que forman (delimitan) la figura (heliostato).
+    # Parametros del siguiente metodo: Imagen umbralizada, devolver todos los contornos y crear una lista completa de jerarquia de familia, marcar la mínima cantidad de puntos (no todos)
+    # que forman (delimitan) la figura (heliostato).
+    im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     M = cv2.moments(contours[0])
     print ("Time =", time.time() - now) # Restar el tiempo actual de esta linea menos el tomado 3 lineas antes en este codigo para calcular el tiempo de 'im2' y de los momentos.
-
-    #M = cv2.moments(contours[0])
     print('Momentos: ', M)
     
     
@@ -63,33 +66,37 @@ while True:
 
 
     # print("Contornos: ", contours);
-
-    # Area del contorno
-    # area = cv2.contourArea(contours[0]) # Maximo hasta 'contours[33]'.
-    # print ("Area =", area) # Mostrar por consola el area del contorno.
+    
 
     # Area de varios contornos en un fotograma del video
     # Cada vez que se empiece a ejecutar el siguiente bucle 'for', se reestablece 'mayor' a cero para evitar tomar accidentalmente el valor mayor de iteraciones anteriores a la actual.
     mayor = 0
-    # Recorrer todos los contornos de cada fotograma del video, el numero maximo de contornos en cada fotograma del video es variable,
-    # y por eso se pone 'len(contours)', para recorrer desde el contorno 0 hasta el numero maximo de contornos del fotograma del video en cuestion.
+    # Recorrer todos los contornos (siguiente bucle 'for') de cada fotograma del video (bucle 'while' ejecutandose actualmente).
+    # El numero maximo de contornos en cada fotograma del video es variable, y por eso se pone 'len(contours)',
+    # para recorrer desde el contorno 0 hasta el numero maximo de contornos del fotograma del video en cuestion.
     for i in range(0,len(contours)):
+        # Calcular el area del contorno numero 'i', en el fotograma actual del video. 'i' es el iterador del bucle 'for' actual.
         area = cv2.contourArea(contours[i])
-        print("Calcular area", i, ". Resultado:", area)
+        # Almacenar, para cada fotograma del video, y para el primer contorno de todos, su area.
+        # Esta variable se actualizara cuando se quiera leer otro primer area de contorno de un fotograma distinto del video.
+        if i==0:
+            areaContornoPrimero = area
+            print("Area del primer contorno:", areaContornoPrimero)
+        # Mostrar por consola el numero de area que se esta calculando actualmente, y su area, para cada fotograma del video.
+        print("Calcular area", i+1, ". Resultado:", area)
 
         # Quedarse con el area mas grande de todas las areas localizadas en el fotograma actual del video.
         if area > mayor:
             mayor = area
+
+        # Si el primer contorno detectado en el fotograma actual es 1000 o mas (muy grande), significa que se esta detectando correctamente el contorno principal y deseado, el grande, y no otros.
+        if areaContornoPrimero>=1000:
+            contornoPrimero=True
+        else:
+            contornoPrimero=False
         
     print("Final del bucle 'for'. Area mayor encontrada:", mayor)
-    
-    
-    '''
-    for c in contours:
-        area = cv2.contourArea(c)
-        if area > 1000 and area < 10000:
-            cv2.drawContours(img, contours, 0, (0, 255, 0), 2, cv2.LINE_AA)
-            '''
+
 
     # Grabar TXT
     def grabartxt():
@@ -101,25 +108,13 @@ while True:
     grabartxt()
 
 
+    # Si tras analizar todos los contornos del fotograma actual, se detecto o no el contorno principal, se mostrara por consola si se detecto o no correctamente el contorno principal.
+    if(contornoPrimero==True):     
+        print("Se esta detectando correctamente el contorno principal.")
+    else:
+        print("No se esta detectando correctamente el contorno principal.")
+
     
-    # Pausar el video cuando hayan problemas con el area del contorno. Pulsar Enter para reanudar.
-    if(mayor<=100):
-        # Guardar imagen en disco con area menor o igual que 100.
-        #cv2.imwrite("Imagenes/ImagenNormal"+str(iteracion)+".png", gris)
-        #cv2.imwrite("Imagenes/ImagenUmbral"+str(iteracion)+".png", im2)
-        #iteracion += 1
-
-        
-        print("ATENCION: esta imagen tiene de area 100 o menos.")
-        print("Pulse una tecla para continuar... ")
-        #nombre = input()
-
-    '''
-    if area > 1000 and area < 10000:
-        cv2.drawContours(img, contours, 0, (0, 255, 0), 2, cv2.LINE_AA)
-        print("Dibujar contorno mayor que 1000 y menor que 10000")
-        '''
-        
     # Dividir en parrafos la salida por consola.
     print("")
 
