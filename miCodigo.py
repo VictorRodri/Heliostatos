@@ -70,14 +70,14 @@ while True:
     r = frame.item(y, x, 2)
 
     print('pixel:', b, g, r)
-    '''
+    
     b, g, r = frame[100, 100]
     print('pixel:', b, g, r)
     
     sumaRGB = b + g + r
     print('sumaRGB:', sumaRGB)
+    '''
     
-
     # Area de varios contornos en un fotograma del video
     # Cada vez que se empiece a ejecutar el siguiente bucle 'for', se reestablece 'areaMayorDeTodas' a cero para evitar tomar accidentalmente el valor mayor de iteraciones anteriores a la actual.
     areaMayorDeTodas = 0
@@ -88,11 +88,24 @@ while True:
         
         # Recuadros verdes en el contorno mas grande (o en plural), para cada fotograma del video.
         # 1: get the bounding rect (obtener el contorno)
-        (x, y, w, h) = cv2.boundingRect(contours[i]) # x: esquina superior izquierda, y: esquina inferior derecha, w: ancho, h: altura.
+        (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
         # 2: si el ancho de un contorno cualquiera es mayor que 70, reencuadrar ese contorno con un rectangulo verde, con la siguiente linea de codigo. Asi se descartaran falsos contornos.
         if (w>70):
             # draw a green rectangle to visualize the bounding rect
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2) # Parametros: fotograma actual video, esq sup izda, esq inf dcha (width: ancho, height: altura), rectang color verde, grosor 2 px.
+
+            # Ademas, mientras que w>70, analizar todos los pixeles del contorno principal, para obtener las componentes RGB de cada uno de ellos.
+            for xAux in range(x, w+1):
+                for yAux in range(y, h+1):
+                    # Obtener las componentes RGB de las coordenadas (pixel) XY
+                    b, g, r = frame[xAux, yAux]
+                    print('pixel:', b, g, r)
+
+                    # Sumar las componentes RGB
+                    #sumaRGB = b + g + r
+                    #print('sumaRGB:', sumaRGB)
+
+                    print("Coordenadas contorno:", xAux, yAux)
 
         # print("Coordenadas rectangulos verdes:", x, y, w, h)
                 
