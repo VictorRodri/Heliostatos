@@ -11,16 +11,21 @@ print("Iniciando programa...")
 camara = cv2.VideoCapture("Videos/varios_heliostatos.mp4") # Leer secuencia de imagenes
 
 # Crear TXT
-def creartxt():
+'''def creartxt():
     archi=open('datos.txt','w')
     archi.close()
 
-creartxt()
+creartxt()'''
 
 areaMayorDeTodas = 0
 contornoPrimero = False
 areaContornoPrimero = 0
 sumaRGB = 0
+
+# Declarar estas variables sumatorias de rojo, verde y azul, e inicializarlas a cero. Explicado posteriormente en detalle.
+rTot = 0
+gTot = 0
+bTot = 0
 
 # Iteracion 'while True' para cada fotograma del video, hasta completar todos los fotogramas y llegar al final del video (cambiaria automaticamente de True a False y el bucle 'while' finaliza).
 while True:
@@ -79,19 +84,19 @@ while True:
     print('sumaRGB:', sumaRGB)
     '''
     
-    # Area de varios contornos en un fotograma del video
     # Cada vez que se empiece a ejecutar el siguiente bucle 'for', se reestablece 'areaMayorDeTodas' a cero para evitar tomar accidentalmente el valor mayor de iteraciones anteriores a la actual.
     areaMayorDeTodas = 0
-
-    rTot = 0
-    gTot = 0
-    bTot = 0
     
     # Recorrer todos los contornos (siguiente bucle 'for') de cada fotograma del video (bucle 'while' ejecutandose actualmente).
     # El numero maximo de contornos en cada fotograma del video es variable, y por eso se pone 'len(contours)',
     # para recorrer desde el contorno 0 hasta el numero maximo de contornos del fotograma del video en cuestion.
     for i in range(0,len(contours)):
         
+        # Cada vez que se empiece a analizar un contorno diferente, se reestablece 'sumaRGB' a cero para evitar tomar accidentalmente la suma de RGB de los siguientes contornos en vez del actual.
+        sumaRGB = 0
+        rTot = 0
+        gTot = 0
+        bTot = 0
         # Recuadros verdes en el contorno mas grande (o en plural), para cada fotograma del video.
         # 1: get the bounding rect (obtener el contorno)
         (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
@@ -109,9 +114,9 @@ while True:
 
                     print("RGB", r, g, b)
                     # Cada componente RGB se eleva al cuadrado.
-                    r2 = pow(r, r) # Tambien vale r**r en lugar de pow(r, r)
-                    g2 = pow(g, g)
-                    b2 = pow(b, b)
+                    r2 = r*r # Tambien vale r**r en lugar de pow(r, r)
+                    g2 = g*g
+                    b2 = b*b
                     print("RGB2", r2, g2, b2)
 
                     # Realizar la sumatoria RGB (cada componente por separado) de todos los pixeles del contorno principal.
@@ -120,9 +125,15 @@ while True:
                     bTot += b2
                     print("SumaRGBsepar", rTot, gTot, bTot)
 
-                    # Realizar la sumatoria RGB (esta vez las tres componentes al mismo tiempo) de todos los pixeles del contorno principal.
-                    sumaRGB = rTot+gTot+bTot
-                    print("SumaRGBtotal", sumaRGB)
+                    # Dividir en parrafos la salida por consola.
+                    print("")
+                    
+            # Realizar la sumatoria RGB (esta vez las tres componentes al mismo tiempo) de todos los pixeles del contorno principal.
+            sumaRGB = rTot+gTot+bTot
+
+            # Si la variable 'sumaRGB' es mayor que cero, se mostrara por consola su valor.
+            if (sumaRGB > 0):
+                print("SumaRGBtotal", sumaRGB)
 
         # print("Coordenadas rectangulos verdes:", x, y, w, h)
                 
@@ -149,7 +160,7 @@ while True:
     print("Final del bucle 'for'. Area mayor encontrada:", areaMayorDeTodas)
 
     # Mostrar video original en una ventana. Al colocar esta linea de codigo aqui, y no al principio del todo, permitira mostrar ademas los recuadros verdes en los heliostatos
-    # (esto ya se programo lineas antes).
+    # (esto ultimo se programo lineas antes).
     cv2.imshow("Camara", frame)
 
 
