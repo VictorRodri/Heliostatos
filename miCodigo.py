@@ -10,6 +10,12 @@ print("Iniciando programa...")
 
 camara = cv2.VideoCapture("Videos/varios_heliostatos.mp4") # Leer secuencia de imagenes
 
+# Argumentos necesarios para ejecutar este programa a traves de la consola de Windows.
+sys.argv[0] # Nombre del archivo.
+sys.argv[1] # Ruta o directorio del video de heliostatos.
+sys.argv[2] # Ancho minimo de cualquier contorno o heliostato para ser detectado.
+sys.argv[3] # Area minima del primer contorno o heliostato para ser detectado.
+
 # Crear TXT
 '''def creartxt():
     archi=open('datos.txt','w')
@@ -101,7 +107,7 @@ while True:
         # 1: get the bounding rect (obtener el contorno)
         (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
         # 2: si el ancho de un contorno cualquiera es mayor que 70, reencuadrar ese contorno con un rectangulo verde, con la siguiente linea de codigo. Asi se descartaran falsos contornos.
-        if (w>70):
+        if (w>int(sys.argv[2])):
             # draw a green rectangle to visualize the bounding rect
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2) # Parametros: fotograma actual video, esq sup izda, esq inf dcha (width: ancho, height: altura), rectang color verde, grosor 2 px.
 
@@ -152,7 +158,7 @@ while True:
             areaMayorDeTodas = area
 
         # Si el primer contorno detectado en el fotograma actual es 1000 o mas (muy grande), significa que se esta detectando correctamente el contorno principal y deseado, el grande, y no otros.
-        if areaContornoPrimero>=1000:
+        if areaContornoPrimero>=int(sys.argv[3]):
             contornoPrimero=True
         else:
             contornoPrimero=False
