@@ -5,16 +5,23 @@ import time
 import metodos as met
 from matplotlib import pyplot as plt
 import sys # Permitir ejecutar este programa con argumentos
+import argparse
+
+# Argumentos necesarios para ejecutar este programa a traves de la consola de Windows.
+parser = argparse.ArgumentParser(description='Pruebas parametros.')
+parser.add_argument('directorioVideoHeliostatosCargar', type=str)
+parser.add_argument('anchoMinimoCualquierHeliostato', type=int)
+parser.add_argument('areaMinimaPrimerHeliostato', type=int)
+args = parser.parse_args()
+'''sys.argv[0] # Nombre del archivo.
+sys.argv[1] # Ruta o directorio del video de heliostatos.
+sys.argv[2] # Ancho minimo de cualquier contorno o heliostato para ser detectado.
+sys.argv[3] # Area minima del primer contorno o heliostato para ser detectado.'''
 
 print("Iniciando programa...")
 
-camara = cv2.VideoCapture("Videos/varios_heliostatos.mp4") # Leer secuencia de imagenes
-
-# Argumentos necesarios para ejecutar este programa a traves de la consola de Windows.
-sys.argv[0] # Nombre del archivo.
-sys.argv[1] # Ruta o directorio del video de heliostatos.
-sys.argv[2] # Ancho minimo de cualquier contorno o heliostato para ser detectado.
-sys.argv[3] # Area minima del primer contorno o heliostato para ser detectado.
+# camara = cv2.VideoCapture("Videos/varios_heliostatos.mp4") # Leer secuencia de imagenes
+camara = cv2.VideoCapture(args.directorioVideoHeliostatosCargar) # Leer secuencia de imagenes
 
 # Crear TXT
 '''def creartxt():
@@ -107,7 +114,7 @@ while True:
         # 1: get the bounding rect (obtener el contorno)
         (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
         # 2: si el ancho de un contorno cualquiera es mayor que 70, reencuadrar ese contorno con un rectangulo verde, con la siguiente linea de codigo. Asi se descartaran falsos contornos.
-        if (w>int(sys.argv[2])):
+        if (w>args.anchoMinimoCualquierHeliostato):
             # draw a green rectangle to visualize the bounding rect
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2) # Parametros: fotograma actual video, esq sup izda, esq inf dcha (width: ancho, height: altura), rectang color verde, grosor 2 px.
 
@@ -158,7 +165,7 @@ while True:
             areaMayorDeTodas = area
 
         # Si el primer contorno detectado en el fotograma actual es 1000 o mas (muy grande), significa que se esta detectando correctamente el contorno principal y deseado, el grande, y no otros.
-        if areaContornoPrimero>=int(sys.argv[3]):
+        if areaContornoPrimero>=args.areaMinimaPrimerHeliostato:
             contornoPrimero=True
         else:
             contornoPrimero=False
