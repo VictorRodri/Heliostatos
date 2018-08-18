@@ -103,7 +103,7 @@ while True:
     # Recorrer todos los contornos (siguiente bucle 'for') de cada fotograma del video (bucle 'while' ejecutandose actualmente).
     # El numero maximo de contornos en cada fotograma del video es variable, y por eso se pone 'len(contours)',
     # para recorrer desde el contorno 0 hasta el numero maximo de contornos del fotograma del video en cuestion.
-    for i in range(0,len(contours)):
+    for i in range(0,2):
         
         # Cada vez que se empiece a analizar un contorno diferente, se reestablece 'sumaRGB' a cero para evitar tomar accidentalmente la suma de RGB de los siguientes contornos en vez del actual.
         sumaRGB = 0
@@ -113,17 +113,21 @@ while True:
         # Recuadros verdes en el contorno mas grande (o en plural), para cada fotograma del video.
         # 1: get the bounding rect (obtener el contorno)
         (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
+        
         # 2: si el ancho de un contorno cualquiera es mayor que 70, reencuadrar ese contorno con un rectangulo verde, con la siguiente linea de codigo. Asi se descartaran falsos contornos.
         if (w>args.anchoMinimoCualquierHeliostato):
             # draw a green rectangle to visualize the bounding rect
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2) # Parametros: fotograma actual video, esq sup izda, esq inf dcha (width: ancho, height: altura), rectang color verde, grosor 2 px.
 
             # Ademas, mientras que w>70, analizar todos los pixeles del contorno principal, para obtener las componentes RGB de cada uno de ellos.
-            for xAux in range(x, w+1):
-                for yAux in range(y, h+1):
+            for xAux in range(x, x+w+1):
+                for yAux in range(y, y+h+1):
+                    print("X", x, "Y", y)
+                    print("X+W", x+w, "Y+H", y+h)
                     # Obtener las componentes RGB de las coordenadas (pixel) XY
-                    b, g, r = frame[xAux, yAux]
+                    b, g, r = frame[yAux, xAux]
                     print("xAux, yAux", xAux, yAux)
+                    print("W", w, "H", h)
 
                     print("RGB", r, g, b)
                     # Cada componente RGB se eleva al cuadrado.
@@ -147,6 +151,8 @@ while True:
             # Si la variable 'sumaRGB' es mayor que cero, se mostrara por consola su valor.
             if (sumaRGB > 0):
                 print("SumaRGBtotal", sumaRGB)
+                # Dividir en parrafos la salida por consola.
+                print("")
 
         # print("Coordenadas rectangulos verdes:", x, y, w, h)
                 
