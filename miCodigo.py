@@ -10,29 +10,18 @@ import argparse
 # Argumentos necesarios para ejecutar este programa a traves de la consola de Windows.
 parser = argparse.ArgumentParser(description='Pruebas parametros.')
 parser.add_argument('directorioVideoHeliostatosCargar', type=str)
-parser.add_argument('anchoMinimoCualquierHeliostato', type=int)
-parser.add_argument('areaMinimaPrimerHeliostato', type=int)
+parser.add_argument('areaMinimaHeliostato', type=int)
+parser.add_argument('anchoMinimoHeliostato', type=int)
+parser.add_argument('altoMinimoHeliostato', type=int)
 args = parser.parse_args()
-'''sys.argv[0] # Nombre del archivo.
-sys.argv[1] # Ruta o directorio del video de heliostatos.
-sys.argv[2] # Ancho minimo de cualquier contorno o heliostato para ser detectado.
-sys.argv[3] # Area minima del primer contorno o heliostato para ser detectado.'''
 
+print("")
 print("Iniciando programa...")
+print("")
 
-# camara = cv2.VideoCapture("Videos/varios_heliostatos.mp4") # Leer secuencia de imagenes
 camara = cv2.VideoCapture(args.directorioVideoHeliostatosCargar) # Leer secuencia de imagenes
 
-# Crear TXT
-'''def creartxt():
-    archi=open('datos.txt','w')
-    archi.close()
-
-creartxt()'''
-
-areaMayorDeTodas = 0
-contornoPrimero = False
-areaContornoPrimero = 0
+area = 0
 sumaRGB = 0
 
 # Declarar estas variables sumatorias de rojo, verde y azul, e inicializarlas a cero. Explicado posteriormente en detalle.
@@ -64,8 +53,7 @@ while True:
     im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     M = cv2.moments(contours[0]) # Calcular los momentos del primer contorno, para cada fotograma del video. Los momentos permiten calcular el centro de masa del objeto, su area, etcetera.
     #print ("Time =", time.time() - now) # Restar el tiempo actual de esta linea menos el tomado 3 lineas antes en este codigo para calcular el tiempo de 'im2' y de los momentos.
-    #print('Momentos: ', M)
-    
+    #print('Momentos: ', M)    
     
     if M['m00'] != 0: # Si el divisor es distinto de 0, hacer.
         #print("m00 es distinto de cero, cx y cy valen: ");
@@ -77,25 +65,6 @@ while True:
         plt.scatter([cx],[cy]) # Dispersar los centroides 'cx' y 'cy'.
         #plt.imshow(img, cmap="gray") # ?Mostrar imagen a escala de grises?
 
-
-    # print("Contornos: ", contours);
-
-    '''
-    x = 240
-    y = 178
-
-    b = frame.item(y, x, 0)
-    g = frame.item(y, x, 1)
-    r = frame.item(y, x, 2)
-
-    print('pixel:', b, g, r)
-    
-    b, g, r = frame[100, 100]
-    print('pixel:', b, g, r)
-    
-    sumaRGB = b + g + r
-    print('sumaRGB:', sumaRGB)
-    '''
     
     # Cada vez que se empiece a ejecutar el siguiente bucle 'for', se reestablece 'areaMayorDeTodas' a cero para evitar tomar accidentalmente el valor mayor de iteraciones anteriores a la actual.
     areaMayorDeTodas = 0
@@ -110,97 +79,66 @@ while True:
         rTot = 0
         gTot = 0
         bTot = 0
+        area = 0
         # Recuadros verdes en el contorno mas grande (o en plural), para cada fotograma del video.
         # 1: get the bounding rect (obtener el contorno)
         (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
+
+        # Calcular el area del contorno numero 'i', en el fotograma actual del video. 'i' es el iterador del bucle 'for' actual.
+        area = cv2.contourArea(contours[i])
         
         # 2: si el ancho de un contorno cualquiera es mayor que 70, reencuadrar ese contorno con un rectangulo verde, con la siguiente linea de codigo. Asi se descartaran falsos contornos.
-        if (w>args.anchoMinimoCualquierHeliostato):
+        if (area > args.areaMinimaHeliostato and w > args.anchoMinimoHeliostato and h > args.altoMinimoHeliostato):
+            print("Area heliostato", i+1, ":", area)
             # draw a green rectangle to visualize the bounding rect
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2) # Parametros: fotograma actual video, esq sup izda, esq inf dcha (width: ancho, height: altura), rectang color verde, grosor 2 px.
-
+            
             # Ademas, mientras que w>70, analizar todos los pixeles del contorno principal, para obtener las componentes RGB de cada uno de ellos.
             for xAux in range(x, x+w+1):
                 for yAux in range(y, y+h+1):
-                    print("X", x, "Y", y)
-                    print("X+W", x+w, "Y+H", y+h)
+                    # Dividir en parrafos la salida por consola.
+                    print("")
+                    
+                    print("- Heliostato", i+1, "en analisis. -")
+                    print("")
+                    print("Pixel XY en analisis del heliostato:           %4i %4i" %(xAux, yAux))
+                    print("Ancho y alto WH del heliostato:                %4i %4i" %(w, h))
+                    print("Esquina superior izquierda heliostato XY:      %4i %4i" %(x, y))
+                    print("Esquinas superior e inferior derechas X+W Y+H: %4i %4i" %(x+w, y+h))
+                    
                     # Obtener las componentes RGB de las coordenadas (pixel) XY
                     b, g, r = frame[yAux, xAux]
-                    print("xAux, yAux", xAux, yAux)
-                    print("W", w, "H", h)
-
-                    print("RGB", r, g, b)
+                    
+                    print("Valores componentes RGB del pixel en analisis: %4i %4i %4i" %(r, g, b))
                     # Cada componente RGB se eleva al cuadrado.
                     r2 = r*r # Tambien vale r**r en lugar de pow(r, r)
                     g2 = g*g
                     b2 = b*b
-                    print("RGB2", r2, g2, b2)
-
+                    print("Elevar cada componente RGB al cuadrado:        %4i %4i %4i" %(r2, g2, b2))
+                    
                     # Realizar la sumatoria RGB (cada componente por separado) de todos los pixeles del contorno principal.
                     rTot += r2
                     gTot += g2
                     bTot += b2
-                    print("SumaRGBsepar", rTot, gTot, bTot)
-
-                    # Dividir en parrafos la salida por consola.
-                    print("")
+                    print("Sumatoria componentes RGB al cuadrado:         %8i %8i %8i" %(rTot, gTot, bTot))
                     
             # Realizar la sumatoria RGB (esta vez las tres componentes al mismo tiempo) de todos los pixeles del contorno principal.
             sumaRGB = rTot+gTot+bTot
-
-            # Si la variable 'sumaRGB' es mayor que cero, se mostrara por consola su valor.
-            if (sumaRGB > 0):
-                print("SumaRGBtotal", sumaRGB)
-                # Dividir en parrafos la salida por consola.
-                print("")
-
-        # print("Coordenadas rectangulos verdes:", x, y, w, h)
-                
-        # Calcular el area del contorno numero 'i', en el fotograma actual del video. 'i' es el iterador del bucle 'for' actual.
-        area = cv2.contourArea(contours[i])
-        # Almacenar, para cada fotograma del video, y para el primer contorno de todos, su area.
-        # Esta variable se actualizara cuando se quiera leer otro primer area de contorno de un fotograma distinto del video.
-        if i==0:
-            areaContornoPrimero = area
-            #print("Area del primer contorno:", areaContornoPrimero) # Esta salida por consola tambien se muestra al final de este codigo, por eso es mejor dejar esta deshabilitada (comentada).
-        # Mostrar por consola el numero de area que se esta calculando actualmente, y su area, para cada fotograma del video.
-        # print("Calcular area", i+1, ". Resultado:", area)
-
-        # Quedarse con el area mas grande de todas las areas localizadas en el fotograma actual del video.
-        if area > areaMayorDeTodas:
-            areaMayorDeTodas = area
-
-        # Si el primer contorno detectado en el fotograma actual es 1000 o mas (muy grande), significa que se esta detectando correctamente el contorno principal y deseado, el grande, y no otros.
-        if areaContornoPrimero>=args.areaMinimaPrimerHeliostato:
-            contornoPrimero=True
+            print("")
+            print("Suma de las tres componentes RGB al cuadrado:  ", sumaRGB)
+            print("")
         else:
-            contornoPrimero=False
-        
-    print("Final del bucle 'for'. Area mayor encontrada:", areaMayorDeTodas)
+            print("No se detecta ningun heliostato", i+1)
 
     # Mostrar video original en una ventana. Al colocar esta linea de codigo aqui, y no al principio del todo, permitira mostrar ademas los recuadros verdes en los heliostatos
     # (esto ultimo se programo lineas antes).
     cv2.imshow("Camara", frame)
-
-
-    # Grabar TXT
-    # def grabartxt():
-        # archi=open('datos.txt','a') # abrir y crear el archivo de texto 'datos.txt' en el mismo directorio donde se esta ejecutando este programa
-        # archi.write(repr(areaMayorDeTodas)) # repr convierte de float a string. Escribir en el TXT el area mas grande de todas las areas (contornos) detectadas en cada fotograma actual del video
-        # archi.write('\n') # retorno de carro, para que cada valor escrito en el archivo de texto este en una unica linea
-        # archi.close() # tras realizar todas las operaciones anteriores, cerrar el archivo de texto
-    # grabartxt()
-    
-
-    # Si tras analizar todos los contornos del fotograma actual, se detecto o no el contorno principal (el primer contorno de todos), se mostrara por consola si lo detecto o no correctamente.
-    if(contornoPrimero==True):     
-        print("Se esta detectando correctamente el contorno principal (primero). Su area:", areaContornoPrimero)
-    else:
-        print("No se esta detectando correctamente el contorno principal (primero). Su area:", areaContornoPrimero)
-
     
     # Dividir en parrafos la salida por consola.
     print("")
-
+    print("")
+    print("   --- Siguiente fotograma video. ---")
+    print("")
+    print("")
     
-print("Programa terminado")
+print("Programa terminado.")
