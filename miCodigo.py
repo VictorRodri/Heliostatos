@@ -1,144 +1,130 @@
-import urllib.request
+# Bibliotecas requeridas para este software.
 import cv2
-import numpy as np
-import time
-import metodos as met
-from matplotlib import pyplot as plt
-import sys # Permitir ejecutar este programa con argumentos
 import argparse
+import time
 
-# Argumentos necesarios para ejecutar este programa a traves de la consola de Windows.
-parser = argparse.ArgumentParser(description='Pruebas parametros.')
-parser.add_argument('directorioVideoHeliostatosCargar', type=str)
-parser.add_argument('areaMinimaHeliostato', type=int)
-parser.add_argument('anchoMinimoHeliostato', type=int)
-parser.add_argument('altoMinimoHeliostato', type=int)
-args = parser.parse_args()
+# Declarar e inicializar estas variables a cero.
+rTot = 0
+gTot = 0
+bTot = 0
+area = 0
+sumaRGB = 0
 
+# Argumentos o parametros necesarios para ejecutar este programa a traves de la consola de Windows.
+parser = argparse.ArgumentParser(description='Parametros del programa.') # Dar un nombre al conjunto de parametros y asignarlo a la variable 'parser'.
+parser.add_argument('directorioVideoHeliostatosCargar', type=str) # Crear el argumento 1: ruta o directorio del video a cargar en el PC.
+parser.add_argument('anchoMinimoHeliostato', type=int) # Crear el argumento 3: ancho minimo del heliostato para su analisis.
+parser.add_argument('altoMinimoHeliostato', type=int) # Crear el argumento 4: alto minimo del heliostato para su analisis.
+args = parser.parse_args() # Devuelve informacion de los parametros definidos previamente.
+
+# Mostrar en la consola este aviso de cuando se va a ejecutar el programa.
 print("")
 print("Iniciando programa...")
 print("")
 
-camara = cv2.VideoCapture(args.directorioVideoHeliostatosCargar) # Leer secuencia de imagenes
-
-area = 0
-sumaRGB = 0
-
-# Declarar estas variables sumatorias de rojo, verde y azul, e inicializarlas a cero. Explicado posteriormente en detalle.
-rTot = 0
-gTot = 0
-bTot = 0
+# Leer secuencia de imagenes del video a partir del directorio especificado por parametro.
+camara = cv2.VideoCapture(args.directorioVideoHeliostatosCargar)
 
 # Iteracion 'while True' para cada fotograma del video, hasta completar todos los fotogramas y llegar al final del video (cambiaria automaticamente de True a False y el bucle 'while' finaliza).
 while True:
+    now = time.time()
+    
     # Obtener frame. Para ello, se toma un fotograma del video, se guarda en 'frame', y si se ha hecho esta accion correctamente, 'grabbed' valdra true (verdadero), y viceversa.
     (grabbed, frame) = camara.read()
 
-    # Si hemos llegado al final del vídeo salimos
+    # Si se ha llegado al final del video, romper la ejecucion de este bucle 'while' y finalizar el programa.
     if not grabbed:
         break
 
-    # Convertir a escala de grises el video normal. Para ello, con la variable 'frame' (fotograma del video) capturada anteriormente, se llama a la funcion 'cv2.COLOR_BGR2GRAY'.
+    # Convertir a escala de grises el fotograma actual del video. Para ello, con la variable 'frame' (fotograma del video) capturada anteriormente, se llama a la funcion 'cv2.COLOR_BGR2GRAY'.
     img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     
-    # Aplicamos un umbral
-    ret,thresh = cv2.threshold(img,127,255,0) # Parametros de este metodo: fuente, umbral, valor maximo, aplicar un tipo concreto de umbralizacion (0 porque no se desea hacer esto).
-    # La variable ‘ret’ de la linea de codigo anterior no es usada en este programa así que se puede ignorar, esto es debido a que no se está aplicando umbralización de Otsu.
+    # Aplicar un umbral a ese fotograma del video. Parametros de este metodo: imagen fuente en escala de grises, valor de umbral para clasificar los valores de pixeles de esa imagen,
+    # valor maximo a ser representado si el valor del pixel supera al valor del umbral, aplicar un tipo concreto de umbralizacion (0 porque no se desea hacer esto).
+    # NOTA: la variable ‘ret’ que recibe como resultado en este metodo no es usada en este programa así que se puede ignorar, esto es debido a que no se está aplicando umbralización de Otsu.
+    ret, thresh = cv2.threshold(img, 127, 255, 0)
+    
     cv2.imshow("Camara2", thresh) # Mostrar video umbralizado en una ventana.
     cv2.waitKey(1) # El programa hara una pequena pausa (1 milisegundo) para que de tiempo a que se muestren los videos y fotogramas en las dos ventanas que se han creado en este codigo para tal fin.
 
-    # now = time.time() # Tomar el tiempo actual.
-    # Parametros del siguiente metodo: Imagen umbralizada, devolver todos los contornos y crear una lista completa de jerarquia de familia, marcar la mínima cantidad de puntos (no todos)
+    # Buscar y detectar todos los contornos o heliostatos del fotograma actual del video.
+    # Parametros del siguiente metodo: imagen umbralizada, devolver todos los contornos y crear una lista completa de jerarquia de familia, marcar la mínima cantidad de puntos (no todos)
     # que forman (delimitan) la figura (heliostato). Argumentos que devolvera dicho metodo: imagen fuente (sobra), modo de devolucion del contorno, metodo de aproximacion del contorno (sobra).
-    im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-    M = cv2.moments(contours[0]) # Calcular los momentos del primer contorno, para cada fotograma del video. Los momentos permiten calcular el centro de masa del objeto, su area, etcetera.
-    #print ("Time =", time.time() - now) # Restar el tiempo actual de esta linea menos el tomado 3 lineas antes en este codigo para calcular el tiempo de 'im2' y de los momentos.
-    #print('Momentos: ', M)    
-    
-    if M['m00'] != 0: # Si el divisor es distinto de 0, hacer.
-        #print("m00 es distinto de cero, cx y cy valen: ");
-        # Centroides 'cx' y 'cy', y su forma de calcularlos.
-        cx = int(M['m10']/M['m00'])
-        cy = int(M['m01']/M['m00'])
-        #print(cx, cy)
-        cv2.drawContours(img, contours, -1, (0,255,0), 3) # Dibujar contornos. Parametros: donde dibujar, contornos a dibujar, dibujar en todos los contornos con el '-1', color verde, grosor 3 px.
-        plt.scatter([cx],[cy]) # Dispersar los centroides 'cx' y 'cy'.
-        #plt.imshow(img, cmap="gray") # ?Mostrar imagen a escala de grises?
-
-    
-    # Cada vez que se empiece a ejecutar el siguiente bucle 'for', se reestablece 'areaMayorDeTodas' a cero para evitar tomar accidentalmente el valor mayor de iteraciones anteriores a la actual.
-    areaMayorDeTodas = 0
-    
-    # Recorrer todos los contornos (siguiente bucle 'for') de cada fotograma del video (bucle 'while' ejecutandose actualmente).
-    # El numero maximo de contornos en cada fotograma del video es variable, y por eso se pone 'len(contours)',
-    # para recorrer desde el contorno 0 hasta el numero maximo de contornos del fotograma del video en cuestion.
+    im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+        
+    # Recorrer solo los dos primeros contornos, los mas grandes (siguiente bucle 'for'), para cada fotograma del video (bucle 'while' ejecutandose actualmente).
+    # Al no recorrer los demas contornos, estos seran descartados porque no son muy grandes ni importantes o son falsos.
     for i in range(0,2):
         
-        # Cada vez que se empiece a analizar un contorno diferente, se reestablece 'sumaRGB' a cero para evitar tomar accidentalmente la suma de RGB de los siguientes contornos en vez del actual.
-        sumaRGB = 0
+        # Cada vez que se empiece a analizar un contorno diferente, se reestablecen estas variables a cero porque cada contorno comienza con todos estos valores a cero.
+        # Ademas, se realiza para evitar que un contorno del siguiente fotograma del video tome los mismos valores o superiores del contorno del anterior fotograma del video ya analizado.
         rTot = 0
         gTot = 0
         bTot = 0
         area = 0
-        # Recuadros verdes en el contorno mas grande (o en plural), para cada fotograma del video.
-        # 1: get the bounding rect (obtener el contorno)
+        sumaRGB = 0
+        
+        # Obtener las coordenadas del contorno.
         (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
 
         # Calcular el area del contorno numero 'i', en el fotograma actual del video. 'i' es el iterador del bucle 'for' actual.
         area = cv2.contourArea(contours[i])
         
-        # 2: si el ancho de un contorno cualquiera es mayor que 70, reencuadrar ese contorno con un rectangulo verde, con la siguiente linea de codigo. Asi se descartaran falsos contornos.
-        if (area > args.areaMinimaHeliostato and w > args.anchoMinimoHeliostato and h > args.altoMinimoHeliostato):
-            print("Area heliostato", i+1, ":", area)
-            # draw a green rectangle to visualize the bounding rect
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2) # Parametros: fotograma actual video, esq sup izda, esq inf dcha (width: ancho, height: altura), rectang color verde, grosor 2 px.
+        # Si el contorno tiene un area, ancho y alto mayores a los especificados por parametros, este sera analizado y reencuadrado en un rectangulo verde en el video.
+        if (w > args.anchoMinimoHeliostato and h > args.altoMinimoHeliostato):
+
+            if (i == 0):
+                # Dibujar un rectangulo verde alrededor del contorno, en el video.
+                # Parametros: fotograma actual video, esquina superior izquierda, esquina inferior derecha (width: ancho, height: altura), rectangulo color verde, grosor del rectangulo 2 pixeles.
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+                # Mostrar video original en una ventana.
+                cv2.imshow("Camara", frame)
+                print("Analizando el helióstato verde.")
+            else:
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
+                # Mostrar video original en una ventana.
+                cv2.imshow("Camara", frame)
+                print("Analizando el helióstato rojo.")
             
-            # Ademas, mientras que w>70, analizar todos los pixeles del contorno principal, para obtener las componentes RGB de cada uno de ellos.
+            # Para cada pixel del contorno, hacer.
             for xAux in range(x, x+w+1):
-                for yAux in range(y, y+h+1):
-                    # Dividir en parrafos la salida por consola.
-                    print("")
+                for yAux in range(y, y+h+1):                  
                     
-                    print("- Heliostato", i+1, "en analisis. -")
-                    print("")
-                    print("Pixel XY en analisis del heliostato:           %4i %4i" %(xAux, yAux))
-                    print("Ancho y alto WH del heliostato:                %4i %4i" %(w, h))
-                    print("Esquina superior izquierda heliostato XY:      %4i %4i" %(x, y))
-                    print("Esquinas superior e inferior derechas X+W Y+H: %4i %4i" %(x+w, y+h))
-                    
-                    # Obtener las componentes RGB de las coordenadas (pixel) XY
+                    # Obtener las componentes RGB de las coordenadas XY del pixel en analisis.
                     b, g, r = frame[yAux, xAux]
                     
-                    print("Valores componentes RGB del pixel en analisis: %4i %4i %4i" %(r, g, b))
-                    # Cada componente RGB se eleva al cuadrado.
+                    # Cada componente RGB de aquel pixel leido se eleva al cuadrado.
                     r2 = r*r # Tambien vale r**r en lugar de pow(r, r)
                     g2 = g*g
                     b2 = b*b
-                    print("Elevar cada componente RGB al cuadrado:        %4i %4i %4i" %(r2, g2, b2))
                     
-                    # Realizar la sumatoria RGB (cada componente por separado) de todos los pixeles del contorno principal.
+                    # Realizar la sumatoria acumulativa de cada componente RGB de todos los pixeles al cuadrado del contorno entero.
                     rTot += r2
                     gTot += g2
                     bTot += b2
-                    print("Sumatoria componentes RGB al cuadrado:         %8i %8i %8i" %(rTot, gTot, bTot))
                     
-            # Realizar la sumatoria RGB (esta vez las tres componentes al mismo tiempo) de todos los pixeles del contorno principal.
+            # Sumar las anteriores tres componentes entre si, para obtener la sumatoria total de los valores de las tres componentes RGB entre si de todos los pixeles al cuadrado del contorno entero.
             sumaRGB = rTot+gTot+bTot
+
+            print("Área helióstato:", area) # Mostrar en consola el area del heliostato.
+            print("Ancho y alto WH del helióstato:                %4i %4i" %(w, h)) # Mostrar en consola el ancho y el alto WH del heliostato.
+            print("Esquina superior izquierda helióstato XY:      %4i %4i" %(x, y)) # Mostrar en consola la esquina superior izquierda del heliostato.
+            print("Esquinas superior e inferior derechas X+W Y+H: %4i %4i" %(x+w, y+h)) # Mostrar en consola las esquinas superior e inferior derechas del helistato.
+	    # Mostrar en consola el valor de la sumatoria acumulativa de cada componente RGB de todos los pixeles al cuadrado del contorno entero.
+            print("Sumatoria componentes RGB al cuadrado:         %8i %8i %8i" %(rTot, gTot, bTot))
+			
+            # Mostrar en consola la sumatoria total de los valores de las tres componentes RGB entre si de todos los pixeles al cuadrado del contorno entero.
             print("")
             print("Suma de las tres componentes RGB al cuadrado:  ", sumaRGB)
             print("")
-        else:
-            print("No se detecta ningun heliostato", i+1)
+    
+    # Al finalizar el bucle 'for' que analizaba dos contornos por fotograma del video, mostrar en consola el aviso de que se cambiara y analizara el siguiente fotograma de dicho video.
+    print("")
+    print("")
+    print("   --- Siguiente fotograma vídeo. ---")
+    print("")
+    print("")
 
-    # Mostrar video original en una ventana. Al colocar esta linea de codigo aqui, y no al principio del todo, permitira mostrar ademas los recuadros verdes en los heliostatos
-    # (esto ultimo se programo lineas antes).
-    cv2.imshow("Camara", frame)
-    
-    # Dividir en parrafos la salida por consola.
-    print("")
-    print("")
-    print("   --- Siguiente fotograma video. ---")
-    print("")
-    print("")
-    
+    print ("Time =", time.time() - now)
+# Cuando el bucle 'while' inicial finalice, mostrar en consola que el programa finalizo su ejecucion (el video fue leido y analizado completamente).
 print("Programa terminado.")
