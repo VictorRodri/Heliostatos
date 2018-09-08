@@ -86,6 +86,8 @@ while True:
                 print("")
                 print("- Analizando el helióstato rojo...")
                 print("")
+
+            # CODIGO NUEVO:
             
             # Para cada píxel del contorno, hacer.
             def vectorial(frame, x, y):
@@ -121,7 +123,34 @@ while True:
                 bTot += b2'''
 
             vectorial(frame, x, y)
-               
+
+            # CODIGO ANTIGUO:
+
+            for xAux in range(x, x+w+1):
+                for yAux in range(y, y+h+1):
+                    # Dividir en parrafos la salida por consola.
+                    print("")
+                                 
+                    
+                    
+                    # Obtener las componentes RGB de las coordenadas (pixel) XY
+                    # Obtener las componentes RGB de las coordenadas XY del pixel en analisis.
+                    b, g, r = frame[yAux, xAux]
+                    
+        
+                    # Cada componente RGB se eleva al cuadrado.
+                    # Cada componente RGB de aquel pixel leido se eleva al cuadrado.
+                    r2 = r*r # Tambien vale r**r en lugar de pow(r, r)
+                    g2 = g*g
+                    b2 = b*b
+                    
+                    
+                    # Realizar la sumatoria RGB (cada componente por separado) de todos los pixeles del contorno principal.
+                    # Realizar la sumatoria acumulativa de cada componente RGB de todos los pixeles al cuadrado del contorno entero.
+                    rTot += r2
+                    gTot += g2
+                    bTot += b2
+                                   
             # Sumar las anteriores tres componentes entre sí, para obtener la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
             sumaRGB = rTot+gTot+bTot
             
