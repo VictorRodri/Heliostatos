@@ -21,8 +21,15 @@ camara = cv2.VideoCapture(args.directorioVideoHeliostatosCargar)
 
 # Iteración 'while True' para cada fotograma del vídeo, hasta completar todos los fotogramas y llegar al final del vídeo (cambiaría automáticamente de True a False y el bucle 'while' finaliza).
 while True:
-    # Medir el tiempo de ejecución del código desde esta línea de código hasta alcanzar la línea de código 'time.time() - now'.
-    now = time.time()
+    # Find OpenCV version
+    (major_ver, minor_ver, subminor_ver) = (cv2.__version__).split('.')
+     
+    if int(major_ver)  < 3 :
+        fps = camara.get(cv2.cv.CV_CAP_PROP_FPS)
+        print ("Frames per second using video.get(cv2.cv.CV_CAP_PROP_FPS): {0}".format(fps))
+    else :
+        fps = camara.get(cv2.CAP_PROP_FPS)
+        print ("Frames per second using video.get(cv2.CAP_PROP_FPS) : {0}".format(fps))
     
     # Obtener frame. Para ello, se toma un fotograma del vídeo, se guarda en 'frame', y si se ha hecho esta acción correctamente, 'grabbed' valdrá true (verdadero), y viceversa.
     (grabbed, frame) = camara.read()
@@ -53,9 +60,6 @@ while True:
         
         # Cada vez que se empiece a analizar un contorno diferente, se reestablecen estas variables a cero porque cada contorno comienza con todos estos valores a cero.
         # Además, se realiza para evitar que un contorno del siguiente fotograma del vídeo tome los mismos valores o superiores del contorno del anterior fotograma del vídeo ya analizado.
-        rTot = 0
-        gTot = 0
-        bTot = 0
         area = 0
         sumaRGB = 0
         
@@ -86,93 +90,62 @@ while True:
                 print("")
                 print("- Analizando el helióstato rojo...")
                 print("")
-
-            # CODIGO NUEVO:
             
-            # Para cada píxel del contorno, hacer.
             def vectorial(frame, x, y):
+                # Del fotograma actual del vídeo, se leerá únicamente donde haya un contorno (su ancho y alto), y así con todos los contornos de cada fotograma del vídeo.
                 i = frame[y+2:y+h-1, x+2:x+w-1]
-                mB = frame[:, 0: :3]
-                mG = frame[:, 1: :3]
-                mR = frame[:, 2: :3]
-                
-                sumB = 0
-                sumG = 0
-                sumR = 0
-                sumB = np.sum(mB)
-                sumG = np.sum(mG)
-                sumR = np.sum(mR)
-                print("Energía: ", sumB, sumG, sumR)
-                '''
-                # Obtener las componentes RGB de las coordenadas XY del píxel en análisis.
-                b, g, r = num
-                
-                # Cada componente RGB de aquel píxel leído se eleva al cuadrado.
-                r2temp = np.square(r)
-                g2temp = np.square(g)
-                b2temp = np.square(b)
-                
-                # Representar los anteriores valores entre un número de 0 a 255 porque los valores RGB se representan así.
-                r2 = r2temp % 256
-                g2 = g2temp % 256
-                b2 = b2temp % 256
-                
-                # Realizar la sumatoria acumulativa de cada componente RGB de todos los píxeles al cuadrado del contorno entero.
-                rTot += r2
-                gTot += g2
-                bTot += b2'''
 
+                # Matrices BGR resultado de la lectura de ese contorno.
+                mB = i[:, 0: :3]
+                mG = i[:, 1: :3]
+                mR = i[:, 2: :3]
+
+                # Elevar al cuadrado cada dato BGR del contorno.
+                mB2 = np.power(mB, 2)
+                mG2 = np.power(mG, 2)
+                mR2 = np.power(mR, 2)
+
+                # Realizar la sumatoria acumulativa de cada BGR al cuadrado de ese contorno.
+                sumB = np.sum(mB2)
+                sumG = np.sum(mG2)
+                sumR = np.sum(mR2)
+
+                # Obtener la suma total RGB del contorno sumando las anteriores sumatorias entre sí.
+                sumaRGB = sumR+sumG+sumB
+
+                # Mostrar en consola los resultados del helióstato o helióstatos localizados y analizados, para cada fotograma del vídeo.
+                print("Ancho y alto WH del helióstato en píxeles:       %4i %4i" %(w, h)) # Mostrar en consola el ancho y el alto WH del helióstato en píxeles.
+                print("Área del helióstato en píxeles:                  ", area) # Mostrar en consola el área del helióstato en píxeles.
+                print("Sumatorias RGB al cuadrado de todos sus píxeles: %8i %8i %8i" %(sumB, sumG, sumR))
+                print("Suma total RGB al cuadrado helióstato completo:  ", sumaRGB)
+
+            # Llamar a la función definida 'vectorial(frame, x, y)', siendo 'frame' el fotograma actual del vídeo a tratar, y XY las coordenadas de la esquina superior izquierda del contorno.
             vectorial(frame, x, y)
 
-            # CODIGO ANTIGUO:
-
+            # cod antig
+            '''
             for xAux in range(x, x+w+1):
                 for yAux in range(y, y+h+1):
                     # Dividir en parrafos la salida por consola.
                     print("")
-                                 
-                    
-                    
+
                     # Obtener las componentes RGB de las coordenadas (pixel) XY
                     # Obtener las componentes RGB de las coordenadas XY del pixel en analisis.
                     b, g, r = frame[yAux, xAux]
                     
-        
                     # Cada componente RGB se eleva al cuadrado.
                     # Cada componente RGB de aquel pixel leido se eleva al cuadrado.
-                    r2 = r*r # Tambien vale r**r en lugar de pow(r, r)
-                    g2 = g*g
-                    b2 = b*b
-                    
+                    #r2 = r*r # Tambien vale r**r en lugar de pow(r, r)
+                    #g2 = g*g
+                    #b2 = b*b
+                    #print("Elevar cada componente RGB al cuadrado:        %4i %4i %4i" %(r2, g2, b2))
                     
                     # Realizar la sumatoria RGB (cada componente por separado) de todos los pixeles del contorno principal.
                     # Realizar la sumatoria acumulativa de cada componente RGB de todos los pixeles al cuadrado del contorno entero.
-                    rTot += r2
-                    gTot += g2
-                    bTot += b2
-                                   
-            # Sumar las anteriores tres componentes entre sí, para obtener la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
-            sumaRGB = rTot+gTot+bTot
-            
-            print("Área del helióstato en píxeles:                  ", area) # Mostrar en consola el área del helióstato en píxeles.
-            print("Ancho y alto WH del helióstato en píxeles:       %4i %4i" %(w, h)) # Mostrar en consola el ancho y el alto WH del helióstato en píxeles.
-            print("Esquina superior izquierda XY del helióstato:    %4i %4i" %(x, y)) # Mostrar en consola la esquina superior izquierda del helióstato.
-            print("Esquinas superior e inferior derechas X+W Y+H:   %4i %4i" %(x+w, y+h)) # Mostrar en consola las esquinas superior e inferior derechas del helióstato.
-	    # Mostrar en consola el valor de la sumatoria acumulativa de cada componente RGB de todos los píxeles al cuadrado del contorno entero.
-            print("Sumatorias RGB al cuadrado de todos sus píxeles: %8i %8i %8i" %(rTot, gTot, bTot))
-            # Mostrar en consola la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
-            print("Suma total RGB al cuadrado helióstato completo:  ", sumaRGB)
-            
-    # Mostrar en consola cuánto tiempo (en segundos) ha tardado la ejecución de este presente bucle 'while', equivalente a la lectura del fotograma actual del vídeo.
-    print("")
-    print("Tiempo procesamiento fotograma vídeo actual (s): ", time.time() - now)
-
-    # Al finalizar el bucle 'for' que analizaba hasta dos contornos por fotograma del vídeo, mostrar en consola el aviso de que se cambiará y analizará el siguiente fotograma de dicho vídeo.
-    print("")
-    print("")
-    print("   --- Siguiente fotograma vídeo. ---")
-    print("")
-    print("")
+                    rTot += r
+                    gTot += g
+                    bTot += b
+            print("Sumatoria componentes RGB sin cuadrado:         %8i %8i %8i" %(rTot, gTot, bTot))'''
     
 # Cuando el bucle 'while' inicial finalice, mostrar en consola que el programa finalizó su ejecución (el vídeo fue leído y analizado completamente).
 print("Programa terminado.")
