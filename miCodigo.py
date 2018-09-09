@@ -60,8 +60,8 @@ while True:
         
         # Cada vez que se empiece a analizar un contorno diferente, se reestablecen estas variables a cero porque cada contorno comienza con todos estos valores a cero.
         # Además, se realiza para evitar que un contorno del siguiente fotograma del vídeo tome los mismos valores o superiores del contorno del anterior fotograma del vídeo ya analizado.
-        area = 0
-        sumaRGB = 0
+        #area = 0
+        #sumaRGB = 0
         
         # Obtener las coordenadas del contorno.
         (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
@@ -90,37 +90,44 @@ while True:
                 print("")
                 print("- Analizando el helióstato rojo...")
                 print("")
-            
+
+            # Leer y analizar todos los píxeles del helióstato.
             def vectorial(frame, x, y):
-                # Del fotograma actual del vídeo, se leerá únicamente donde haya un contorno (su ancho y alto), y así con todos los contornos de cada fotograma del vídeo.
-                i = frame[y+2:y+h-1, x+2:x+w-1]
-
-                # Matrices BGR resultado de la lectura de ese contorno.
-                mB = i[:, 0: :3]
-                mG = i[:, 1: :3]
-                mR = i[:, 2: :3]
-
-                # Elevar al cuadrado cada dato BGR del contorno.
+                # Del fotograma actual del vídeo, se leerá únicamente donde haya un helióstato (su ancho y alto), y así con todos los helióstatos de cada fotograma del vídeo.
+                i = frame[y+2:y+h-1, x+2:x+w-1] # ANTES: i = frame[y+2:y+h-1, x+2:x+w]
+                print("contorno", i.shape)
+                # Matrices BGR resultado de la lectura de ese helióstato.
+                mB = i[:, :, 2]
+                mG = i[:, :, 1]
+                mR = i[:, :, 0]
+                print("dimensiones", mG.shape)
+                print("pri col", mG[:, 0])
+                print("pri fil", mG[0, :])
+                print("ult col", mG[:, -1])
+                print("pri col", mG[-1, :])
+                # Elevar al cuadrado cada dato BGR del helióstato.
                 mB2 = np.power(mB, 2)
                 mG2 = np.power(mG, 2)
                 mR2 = np.power(mR, 2)
 
-                # Realizar la sumatoria acumulativa de cada BGR al cuadrado de ese contorno.
+                # Realizar la sumatoria acumulativa de cada BGR al cuadrado de ese helióstato.
                 sumB = np.sum(mB2)
                 sumG = np.sum(mG2)
                 sumR = np.sum(mR2)
 
-                # Obtener la suma total RGB del contorno sumando las anteriores sumatorias entre sí.
+                # Obtener la suma total RGB del helióstato sumando las anteriores sumatorias entre sí.
                 sumaRGB = sumR+sumG+sumB
-
+                
                 # Mostrar en consola los resultados del helióstato o helióstatos localizados y analizados, para cada fotograma del vídeo.
                 print("Ancho y alto WH del helióstato en píxeles:       %4i %4i" %(w, h)) # Mostrar en consola el ancho y el alto WH del helióstato en píxeles.
                 print("Área del helióstato en píxeles:                  ", area) # Mostrar en consola el área del helióstato en píxeles.
                 print("Sumatorias RGB al cuadrado de todos sus píxeles: %8i %8i %8i" %(sumB, sumG, sumR))
                 print("Suma total RGB al cuadrado helióstato completo:  ", sumaRGB)
 
-            # Llamar a la función definida 'vectorial(frame, x, y)', siendo 'frame' el fotograma actual del vídeo a tratar, y XY las coordenadas de la esquina superior izquierda del contorno.
+            # Llamar a la función definida 'vectorial(frame, x, y)', siendo 'frame' el fotograma actual del vídeo a tratar, y XY las coordenadas de la esquina superior izquierda del helióstato.
             vectorial(frame, x, y)
+
+            
 
             # cod antig
             '''
