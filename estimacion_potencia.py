@@ -22,6 +22,12 @@ print("")
 # Leer secuencia de imágenes del vídeo a partir del directorio especificado por parámetro.
 camara = cv2.VideoCapture(args.directorioVideoHeliostatosCargar)
 
+heliostato = []
+anchoAlto = []
+areaTotal = []
+sumaBGRparcial = []
+sumaBGRtotal = []
+
 # Iteración 'while True' para cada fotograma del vídeo, hasta completar todos los fotogramas y llegar al final del vídeo (cambiaría automáticamente de True a False y el bucle 'while' finaliza).
 while True:
     
@@ -47,6 +53,11 @@ while True:
     # Parámetros del siguiente método: imagen umbralizada, devolver todos los contornos y crear una lista completa de jerarquía de familia, marcar la mínima cantidad de puntos (no todos)
     # que forman (delimitan) la figura (helióstato). Argumentos que devolverá dicho método: imagen fuente (sobra), modo de devolución del contorno, método de aproximación del contorno (sobra).
     im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    anchoAlto.append("Ancho y alto WH del helióstato en píxeles:      ")
+    areaTotal.append("Área del helióstato en píxeles:                 ")
+    sumaBGRparcial.append("Sumatorias BGR al cuadrado de todos sus píxeles:")
+    sumaBGRtotal.append("Suma total BGR al cuadrado helióstato completo: ")
         
     # Recorrer solo los dos primeros contornos, los más grandes (siguiente bucle 'for'), para cada fotograma del vídeo (bucle 'while' ejecutándose actualmente).
     # Al no recorrer los demás contornos, éstos serán descartados porque no son muy grandes ni importantes o son falsos.
@@ -67,38 +78,38 @@ while True:
                 # Dibujar un rectángulo verde alrededor del contorno, en el vídeo.
                 # Parámetros: fotograma actual vídeo, esquina superior izquierda, esquina inferior derecha (width: ancho, height: altura), rectángulo color verde, grosor del rectángulo 2 píxeles.
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-                
+                '''
                 # Mostrar en consola que se está analizando el helióstato reencuadrado en un rectángulo verde en el vídeo.
                 print("")
                 print("- Analizando el helióstato verde...")
-                print("")
+                print("")'''
                 
             # Si se está analizando el helióstato número dos en el fotograma actual del vídeo (en caso de que ya exista el otro helióstato en ese mismo fotograma del vídeo), hacer.
             else:
                 
                 # En este caso, ahora se reencuadra el contorno en un rectángulo rojo, en vez de verde. Así, ambos contornos podrán ser diferenciados si se muestran en el mismo fotograma del vídeo.
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-
+                '''
                 # Mostrar en consola que se está analizando el helióstato reencuadrado en un rectángulo rojo en el vídeo.
                 print("")
                 print("- Analizando el helióstato rojo...")
-                print("")
+                print("")'''
 
             # Leer y analizar todos los píxeles del helióstato.
             def vectorial(frame, x, y):
                 
                 # Del fotograma actual del vídeo, se leerá únicamente donde haya un helióstato (su ancho y alto), y así con todos los helióstatos de cada fotograma del vídeo.
-                m = frame[y+2:y+h-1, x+2:x+w-1] # ANTES: i = frame[y+2:y+h-1, x+2:x+w]
-                
+                m = frame[y+2:y+h-1, x+2:x+w-1]
+                             
                 # Matrices BGR resultado de la lectura de ese helióstato.
                 mB = m[:, :, 2]
                 mG = m[:, :, 1]
                 mR = m[:, :, 0]
                 
                 # Elevar al cuadrado cada dato BGR del helióstato.
-                mB2 = np.power(mB, 2)
-                mG2 = np.power(mG, 2)
-                mR2 = np.power(mR, 2)
+                mB2 = mB*mB
+                mG2 = mG*mG
+                mR2 = mR*mR
 
                 # Realizar la sumatoria acumulativa de cada BGR al cuadrado de ese helióstato.
                 sumB = np.sum(mB2)
@@ -107,18 +118,51 @@ while True:
 
                 # Sumar las anteriores tres componentes entre sí, para obtener la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
                 sumaBGR = sumR+sumG+sumB
-                
+                '''
                 # Mostrar en consola los resultados del helióstato o helióstatos localizados y analizados, para cada fotograma del vídeo.
                 print("Ancho y alto WH del helióstato en píxeles:       %4i %4i" %(w, h)) # Mostrar en consola el ancho y el alto WH del helióstato en píxeles.
                 print("Área del helióstato en píxeles:                  ", area) # Mostrar en consola el área del helióstato en píxeles.
                 print("Sumatorias BGR al cuadrado de todos sus píxeles: %8i %8i %8i" %(sumB, sumG, sumR)) # Mostrar en consola el valor de la sumatoria acumulativa de cada componente RGB de todos los pixeles al cuadrado del helióstato entero.
                 print("Suma total BGR al cuadrado helióstato completo:  ", sumaBGR) # Mostrar en consola la sumatoria total de los valores de las tres componentes RGB entre si de todos los pixeles al cuadrado del helióstato entero.
+                '''
 
+                if (i == 0):
+                    heliostato.append("                                                   Verde")
+                else:
+                    heliostato.append("                                                   Rojo")
+                
+                anchoAlto.append(w)
+                anchoAlto.append(h)
+                anchoAlto.append("                      ")
+                
+                areaTotal.append(area)
+                areaTotal.append("                       ")
+                
+                sumaBGRparcial.append(sumB)
+                sumaBGRparcial.append(sumG)
+                sumaBGRparcial.append(sumR)
+                sumaBGRparcial.append("     ")
+                
+                sumaBGRtotal.append(sumaBGR)
+                sumaBGRtotal.append("                       ")
+                
             # Llamar a la función definida 'vectorial(frame, x, y)', siendo 'frame' el fotograma actual del vídeo a tratar, y XY las coordenadas de la esquina superior izquierda del helióstato.
             vectorial(frame, x, y)
 
     # Mostrar vídeo original en una ventana/actualizar fotograma.
     cv2.imshow("Camara", frame)
+    
+    print(heliostato)
+    print(anchoAlto)
+    print(areaTotal)
+    print(sumaBGRparcial)
+    print(sumaBGRtotal)
+
+    del heliostato[:]
+    del anchoAlto[:]
+    del areaTotal[:]
+    del sumaBGRparcial[:]
+    del sumaBGRtotal[:]
 
     # Al alcanzar esta línea de código, ya se habrá leído y analizado el fotograma actual del vídeo. Antes de pasar al siguiente fotograma, hacer:
     frame_counter += 1 # Incrementar el contador de fotogramas leídos del vídeo a uno.
