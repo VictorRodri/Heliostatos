@@ -44,7 +44,7 @@ while True:
     # Aplicar un umbral a ese fotograma del vídeo. Parámetros de este método: imagen fuente en escala de grises, valor de umbral para clasificar los valores de píxeles de esa imagen,
     # valor máximo a ser representado si el valor del píxel supera al valor del umbral, aplicar un tipo concreto de umbralización (0 porque no se desea hacer esto).
     # NOTA: la variable ‘ret’ que recibe como resultado en este método no es usada en este programa así que se puede ignorar, esto es debido a que no se está aplicando umbralización de Otsu.
-    ret, thresh = cv2.threshold(img, 127, 255, 0)
+    ret, thresh = cv2.threshold(img, 200, 255, 0)
     
     cv2.imshow("Camara2", thresh) # Mostrar vídeo umbralizado en una ventana.
     cv2.waitKey(1) # El programa hará una pequeña pausa (1 milisegundo) para que de tiempo a que se muestren los vídeos y fotogramas en las dos ventanas que se han creado en este código para tal fin.
@@ -61,11 +61,11 @@ while True:
         
     # Recorrer solo los dos primeros contornos, los más grandes (siguiente bucle 'for'), para cada fotograma del vídeo (bucle 'while' ejecutándose actualmente).
     # Al no recorrer los demás contornos, éstos serán descartados porque no son muy grandes ni importantes o son falsos.
-    for i in range(0,2):
+    for i in range(0,1):
         
         # Obtener las coordenadas del contorno.
         (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
-
+        
         # Calcular el área del contorno número 'i', en el fotograma actual del vídeo. 'i' es el iterador del bucle 'for' actual.
         area = cv2.contourArea(contours[i])
         
