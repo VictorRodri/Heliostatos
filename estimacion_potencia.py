@@ -12,6 +12,8 @@ parser = argparse.ArgumentParser(description='Parametros del programa.') # Dar u
 parser.add_argument('directorioVideoHeliostatosCargar', type=str) # Crear el argumento 1: ruta o directorio del vídeo a cargar en el PC.
 parser.add_argument('anchoMinimoHeliostato', type=int) # Crear el argumento 3: ancho mínimo del helióstato para su análisis.
 parser.add_argument('altoMinimoHeliostato', type=int) # Crear el argumento 4: alto mínimo del helióstato para su análisis.
+parser.add_argument('umbralVideoHeliostatos', type=int) # Crear el argumento 5: umbral o nivel de color mínimo del vídeo de helióstatos a partir del cual podría estar detectándose un helióstato.
+parser.add_argument('numeroHeliostatosAnalizar', type=int) # Crear el argumento 6: número máximo de helióstatos a detectar y analizar en cada fotograma del vídeo de helióstatos.
 args = parser.parse_args() # Devuelve información de los parámetros definidos previamente.
 
 # Mostrar en la consola este aviso de cuando se va a ejecutar el programa.
@@ -44,7 +46,7 @@ while True:
     # Aplicar un umbral a ese fotograma del vídeo. Parámetros de este método: imagen fuente en escala de grises, valor de umbral para clasificar los valores de píxeles de esa imagen,
     # valor máximo a ser representado si el valor del píxel supera al valor del umbral, aplicar un tipo concreto de umbralización (0 porque no se desea hacer esto).
     # NOTA: la variable ‘ret’ que recibe como resultado en este método no es usada en este programa así que se puede ignorar, esto es debido a que no se está aplicando umbralización de Otsu.
-    ret, thresh = cv2.threshold(img, 200, 255, 0)
+    ret, thresh = cv2.threshold(img, args.umbralVideoHeliostatos, 255, 0)
     
     cv2.imshow("Camara2", thresh) # Mostrar vídeo umbralizado en una ventana.
     cv2.waitKey(1) # El programa hará una pequeña pausa (1 milisegundo) para que de tiempo a que se muestren los vídeos y fotogramas en las dos ventanas que se han creado en este código para tal fin.
@@ -61,7 +63,7 @@ while True:
         
     # Recorrer solo los dos primeros contornos, los más grandes (siguiente bucle 'for'), para cada fotograma del vídeo (bucle 'while' ejecutándose actualmente).
     # Al no recorrer los demás contornos, éstos serán descartados porque no son muy grandes ni importantes o son falsos.
-    for i in range(0,1):
+    for i in range(0, args.numeroHeliostatosAnalizar):
         
         # Obtener las coordenadas del contorno.
         (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
