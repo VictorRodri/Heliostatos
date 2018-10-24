@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  20 OCT 2018 11:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  24 OCT 2018 19:06
 entering extended mode
 **./main.tex
 (main.tex
@@ -390,35 +390,28 @@ LaTeX Info: Redefining \% on input line 1.
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-[2] [3] [4]
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
+[2] [3] ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-32.de
+f"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)
-[5] [6] [7] [8] [9]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 312.
+) [4] [5] [6] [7] [8]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 278.
 
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 312.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 278.
 
-[10] [11] [12] [13] [14]
-Overfull \hbox (0.55023pt too wide) in paragraph at lines 397--398
-[]\OT1/cmr/m/n/12 Nos en-fo-ca-mos en el di-se~no y desa-rro-llo de una CSP mo-
-du-lar de "to-rre de energa"que
- []
-
-[15] [16] [17] (main.aux
+[9] [10] [11] [12] [13] (main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5581 strings out of 492970
- 74368 string characters out of 3127925
+ 5573 strings out of 492970
+ 74262 string characters out of 3127925
  160888 words of memory out of 3000000
- 9339 multiletter control sequences out of 15000+200000
+ 9331 multiletter control sequences out of 15000+200000
  11653 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,11n,43p,814b,535s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -430,9 +423,9 @@ pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Pc/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Pc/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (18 pages, 172329 bytes).
+Output written on main.pdf (14 pages, 158818 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
