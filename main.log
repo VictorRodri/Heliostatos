@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  24 OCT 2018 19:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  25 OCT 2018 18:44
 entering extended mode
 **./main.tex
 (main.tex
@@ -280,30 +280,35 @@ Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen119
 \PaperHeight=\dimen120
+) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks33
+\verbatim@line=\toks34
+\verbatim@in@stream=\read1
 ) (main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -312,12 +317,12 @@ LaTeX Info: Redefining \% on input line 39.
 \scratchbox=\box28
 \nofMPsegments=\count114
 \nofMParguments=\count115
-\everyMPshowfont=\toks33
+\everyMPshowfont=\toks35
 \MPscratchCnt=\count116
 \MPscratchDim=\dimen122
 \MPnumerator=\count117
 \makeMPintoPDFobject=\count118
-\everyMPtoPDFconversion=\toks34
+\everyMPtoPDFconversion=\toks36
 )
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-bas
 e.sty"
@@ -350,28 +355,28 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \celsius on input line 39.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 39.
+LaTeX Info: Redefining \celsius on input line 40.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 40.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 39.
-Package gensymb Info: Using \Omega for \ohm on input line 39.
+LaTeX Info: Redefining \ohm on input line 40.
+Package gensymb Info: Using \Omega for \ohm on input line 40.
 
 Package gensymb Warning: Not defining \micro.
 
 <Logo_Uchile_modern.png, id=1, 1308.89pt x 1081.03876pt>
 File: Logo_Uchile_modern.png Graphic file (type png)
 <use Logo_Uchile_modern.png>
-Package pdftex.def Info: Logo_Uchile_modern.png  used on input line 46.
+Package pdftex.def Info: Logo_Uchile_modern.png  used on input line 47.
 (pdftex.def)             Requested size: 170.16167pt x 140.53996pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 59.
+LaTeX Font Info:    Try loading font information for U+msa on input line 60.
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 59.
+LaTeX Font Info:    Try loading font information for U+msb on input line 60.
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -390,42 +395,282 @@ LaTeX Info: Redefining \% on input line 1.
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-[2] [3] ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-32.de
-f"
+[2] [3] [4]
+("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-) [4] [5] [6] [7] [8]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 278.
+)
+[5] [6] [7] [8] [9]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 289.
 
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 278.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 289.
 
-[9] [10] [11] [12] [13] (main.aux
+[10] [11] [12]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 387.
+
+
+("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 387.
+
+[13] [14] [15] [16] [17] [18] [19]
+Overfull \hbox (6.6226pt too wide) in paragraph at lines 520--522
+\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Python35-32. Va-ria-ble: Pyt-hon36. Va-lor: C
+: \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Users \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Pc 
+\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 AppData \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Loc
+al \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Programs
+ []
+
+[20] [21]
+Overfull \hbox (74.64024pt too wide) in paragraph at lines 593--603
+[]\OT1/cmr/m/n/12 1. Ac-ce-der a la pagi-na Web don-de se ubi-ca el pro-yec-to
+: https://github.com/VictorRodri/Heliostatos
+ []
+
+[22] [23]
+Overfull \hbox (148.26028pt too wide) in paragraph at lines 641--647
+\OT1/cmr/m/n/12 Crear el ar-gu-men-to 1: ru-ta o di-rec-to-rio del vdeo a car
+-gar en el PC. par-ser.add[]argument('anchoMinimoHeliostato',
+ []
+
+[24] [25] [26]
+Overfull \hbox (1.8077pt too wide) in paragraph at lines 716--718
+[]\OT1/cmr/m/n/12 # Ob-te-ner las coor-de-na-das del con-torno. (x, y, w, h) = 
+cv2.boundingRect(contours[i])
+ []
+
+[27] [28] [29] [30]
+Overfull \hbox (4.83705pt too wide) in paragraph at lines 828--830
+[]\OT1/cmr/m/n/12 # Mos-trar vdeo ori-gi-nal en una ven-ta-na/actualizar fo-t
+o-gra-ma. cv2.imshow([]amara",
+ []
+
+[31] [32] [33] [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45]
+[46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57]
+Overfull \hbox (15.08276pt too wide) in paragraph at lines 1453--1454
+\OT1/cmr/m/n/12 ro de 2.018 de: https://www.ecured.cu/Biblioteca[]P$ $%C3$ $%BA
+blica[]Municipal[]Sandino 
+ []
+
+
+Overfull \hbox (23.9985pt too wide) in paragraph at lines 1455--1456
+\OT1/cmr/m/n/12 2.018 de: https://www.eldiario.es/sociedad/Heliostatos-luz-sola
+r-carta[]0[]423107817.html 
+ []
+
+
+Overfull \hbox (114.4251pt too wide) in paragraph at lines 1457--1458
+\OT1/cmr/m/n/12 pe-ra-do el 2 de abril de 2.018 de: http://webs.ucm.es/info/Ast
+rof/users/jaz/CELOSTATO/descripcion.html 
+ []
+
+[58]
+Overfull \hbox (1.22017pt too wide) in paragraph at lines 1467--1468
+\OT1/cmr/m/n/12 som-bra. Re-cu-pe-ra-do el 15 de ju-nio de 2.018 de: https://bl
+ogingenieria.com/empresas-
+ []
+
+
+Overfull \hbox (32.05397pt too wide) in paragraph at lines 1475--1476
+\OT1/cmr/m/n/12 desarrolla-un-mecanismo-de-seguimiento-solar-unico-en-el-mercad
+o-a-partir-de-tecnologia-
+ []
+
+
+Overfull \hbox (148.94225pt too wide) in paragraph at lines 1477--1478
+\OT1/cmr/m/n/12 energa so-lar (y como fun-cio-na). Re-cu-pe-ra-do el 16 de j
+u-nio de 2.018 de: http://www.teknoplof.com/tag/heliostato/ 
+ []
+
+
+Overfull \hbox (5.30098pt too wide) in paragraph at lines 1481--1482
+[]\OT1/cmr/m/n/12 [16] Fran-cis-co Ja-vier Sanchez-Salcedo y Al-fre-do J. San-
+tillan Gonzalez (2.009). Desafos
+ []
+
+
+Overfull \hbox (262.9119pt too wide) in paragraph at lines 1481--1482
+\OT1/cmr/m/n/12 de la As-trofsi-ca con-tem-poranea. Re-cu-pe-ra-do el 17 de 
+ju-nio de 2.018 de: http://www.revista.unam.mx/vol.10/num10/art61/int61.htm#a 
+ []
+
+[59]
+Overfull \hbox (29.76012pt too wide) in paragraph at lines 1487--1488
+\OT1/cmr/m/n/12 el 17 de ju-nio de 2.018 de: http://www.parquesfotovoltaicos.co
+m/paneles[]fotovoltaicos.php 
+ []
+
+
+Overfull \hbox (149.24535pt too wide) in paragraph at lines 1489--1490
+[]\OT1/cmr/m/n/12 [20] Psa.es (n. d). N. d. Re-cu-pe-ra-do el 17 de ju-nio de 2
+.018 de: http://www.psa.es/webesp/instalaciones/discos.php 
+ []
+
+
+Overfull \hbox (24.90923pt too wide) in paragraph at lines 1493--1494
+[]\OT1/cmr/m/n/12 [22] UNIA (n. d). N. d. Re-cu-pe-ra-do el 17 de ju-nio de 2.0
+18 de: http://ocw.unia.es/ciencias-
+ []
+
+
+Overfull \hbox (103.71664pt too wide) in paragraph at lines 1497--1498
+[]\OT1/cmr/m/n/12 [24] Conv-docs.org (n. d.). N. d. Re-cu-pe-ra-do el 17 de ju-
+nio de 2.018 de: http://es.convdocs.org/docs/index-
+ []
+
+
+Overfull \hbox (116.26521pt too wide) in paragraph at lines 1501--1502
+[]\OT1/cmr/m/n/12 [26] GMM (n. d.). PSA. Re-cu-pe-ra-do el 18 de ju-nio de 2.01
+8 de: http://materiales.etsii.uclm.es/?page[]id=725 
+ []
+
+
+Overfull \hbox (4.30205pt too wide) in paragraph at lines 1503--1504
+\OT1/cmr/m/n/12 de ju-nio de 2.018 de: http://www.parquesfotovoltaicos.com/pane
+les[]fotovoltaicos.php 
+ []
+
+
+Overfull \hbox (79.74852pt too wide) in paragraph at lines 1505--1506
+\OT1/cmr/m/n/12 ter-mo-so-lar. Re-cu-pe-ra-do el 18 de ju-nio de 2.018 de: http
+://www.es.lowtechmagazine.com/2012/03/el-
+ []
+
+
+Overfull \hbox (195.91399pt too wide) in paragraph at lines 1507--1523
+\OT1/cmr/m/n/12 Pho-toe-nergy Sys-tems'. Re-cu-pe-ra-do el 18 de ju-nio de 2.01
+8 de: http://www.eolss.net/ebooks/Sample$ $%20Chapters/C08/E6-
+ []
+
+
+Overfull \hbox (247.56395pt too wide) in paragraph at lines 1507--1523
+\OT1/cmr/m/n/12 do el 18 de ju-nio de 2.018 de: https://www.amazon.com/gp/produ
+ct/4871877124/ref=as[]li[]qf[]sp[]asin[]tl?ie=UTF8&tag=lowtemagaz-
+ []
+
+
+Overfull \hbox (1.48763pt too wide) in paragraph at lines 1507--1523
+\OT1/cmr/m/n/12 20&linkCode=as2&camp=217145&creative=399373&creativeASIN=487187
+7124 In-
+ []
+
+
+Overfull \hbox (29.4468pt too wide) in paragraph at lines 1507--1523
+\OT1/cmr/m/n/12 pe-ra-do el 18 de ju-nio de 2.018 de: http://www.iea-shc.org/pu
+blications/downloads/task33-
+ []
+
+
+Overfull \hbox (430.33014pt too wide) in paragraph at lines 1507--1523
+\OT1/cmr/m/n/12 mo-che-mi-cal pro-cess tech-no-logy. Re-cu-pe-ra-do el 18 de ju
+-nio de 2.018 de: http://www.pre.ethz.ch/publications/0[]pdf/books/Solar[]Therm
+ochemical[]Process[]Technology.pdf
+ []
+
+
+Overfull \hbox (98.2144pt too wide) in paragraph at lines 1507--1523
+\OT1/cmr/m/n/12 ra-do el 18 de ju-nio de 2.018 de: http://www.iea-shc.org/publi
+cations/downloads/Solar[]Heat[]Worldwide-
+ []
+
+
+Overfull \hbox (208.78828pt too wide) in paragraph at lines 1507--1523
+\OT1/cmr/m/n/12 ding so-lar co-llec-tors. Re-cu-pe-ra-do el 18 de ju-nio de 2.0
+18 de: http://www.cd3wd.com/cd3wd[]40/vita/solrconc/en/solrconc.htm
+ []
+
+
+Overfull \hbox (17.65088pt too wide) in paragraph at lines 1507--1523
+\OT1/cmr/m/n/12 process-heat.eu (n. d.). So-Pro. Re-cu-pe-ra-do el 18 de ju-nio
+ de 2.018 de: http://www.solar-
+ []
+
+
+Overfull \hbox (12.8395pt too wide) in paragraph at lines 1507--1523
+\OT1/cmr/m/n/12 tion. Re-cu-pe-ra-do el 18 de ju-nio de 2.018 de: http://www.es
+tif.org/home/ www.sollab.eu
+ []
+
+
+Overfull \hbox (236.52034pt too wide) in paragraph at lines 1507--1523
+\OT1/cmr/m/n/12 (2.017). CSP - hot it works. Re-cu-pe-ra-do el 18 de ju-nio de 
+2.018 de: http://www.solarpaces.org/CSP[]Technology/csp[]technology.htm 
+ []
+
+[60]
+Overfull \hbox (49.48686pt too wide) in paragraph at lines 1525--1526
+\OT1/cmr/m/n/12 cu-pe-ra-do el 18 de ju-nio de 2.018 de: https://themorningstar
+g2.wordpress.com/tag/heliostatos/ 
+ []
+
+
+Overfull \hbox (94.0442pt too wide) in paragraph at lines 1529--1530
+\OT1/cmr/m/n/12 blog]. Re-cu-pe-ra-do el 18 de ju-nio de 2.018 de: https://them
+orningstarg2.wordpress.com/tag/heliostatos/ 
+ []
+
+
+Overfull \hbox (256.49449pt too wide) in paragraph at lines 1531--1532
+\OT1/cmr/m/n/12 Re-cu-pe-ra-do el 19 de ju-nio de 2.018 de: http://www.mariolou
+reiro.net/ciencia/EnerSolarTermica/SolarPROCESOSTERMO/Solar7.pdf 
+ []
+
+
+Overfull \hbox (24.77557pt too wide) in paragraph at lines 1533--1534
+[]\OT1/cmr/m/n/12 [33] OpenCV (2.018). OpenCV. Re-cu-pe-ra-do el 20 de ju-nio d
+e 2.018 de: http://opencv.org/ 
+ []
+
+
+Overfull \hbox (159.35004pt too wide) in paragraph at lines 1535--1536
+[]\OT1/cmr/m/n/12 [34] SAL (2.015). In-fra-es-truc-tu-ra. Re-cu-pe-ra-do el 20 
+de ju-nio de 2.018 de: http://www.hpca.ual.es/es/infraestructura. 
+ []
+
+
+Overfull \hbox (148.84589pt too wide) in paragraph at lines 1539--1540
+[]\OT1/cmr/m/n/12 [36] Sour-ge-For-ce.net (2.018). N. d. Re-cu-pe-ra-do el 17 d
+e ju-lio de 2.018 de: https://sourceforge.net/projects/opencv/ 
+ []
+
+[61]
+Overfull \hbox (3.17068pt too wide) in paragraph at lines 1547--1548
+\OT1/cmr/m/n/12 Re-cu-pe-ra-do el 1 de agos-to de 2.018 de: https://desarrollow
+eb.com/articulos/1325.php 
+ []
+
+[62] (main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5573 strings out of 492970
- 74262 string characters out of 3127925
- 160888 words of memory out of 3000000
- 9331 multiletter control sequences out of 15000+200000
+ 5637 strings out of 492970
+ 75379 string characters out of 3127925
+ 171520 words of memory out of 3000000
+ 9390 multiletter control sequences out of 15000+200000
  11653 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,43p,814b,535s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,11n,43p,2499b,535s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmbx12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmcsc10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Pc/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Pc/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Pc/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (14 pages, 158818 bytes).
+pe1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Pc/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Pc/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Pc/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
+Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ti12.pfb>
+Output written on main.pdf (63 pages, 316105 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
+ 242 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
