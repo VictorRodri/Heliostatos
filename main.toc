@@ -1,13 +1,30 @@
 \babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}
-\contentsline {section}{\numberline {2}Nudo}{2}
-\contentsline {section}{\numberline {3}blabla}{2}
-\contentsline {section}{\numberline {4}m\IeC {\'a}s apartados}{2}
-\contentsline {section}{\numberline {5}Introduction}{2}
-\contentsline {section}{\numberline {6}m\IeC {\'a}s apartados}{2}
-\contentsline {section}{\numberline {7}Lo que sea}{2}
-\contentsline {section}{\numberline {8}m\IeC {\'a}s apartados}{2}
-\contentsline {section}{\numberline {9}m\IeC {\'a}s apartados}{3}
-\contentsline {section}{\numberline {10}explicacion}{3}
-\contentsline {section}{\numberline {11}m\IeC {\'a}s apartados}{3}
-\contentsline {section}{\numberline {12}otro apartado}{3}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n.}{3}
+\contentsline {section}{\numberline {2}Objetivos y justificaci\IeC {\'o}n.}{3}
+\contentsline {section}{\numberline {3}Heli\IeC {\'o}statos.}{3}
+\contentsline {section}{\numberline {4}Heli\IeC {\'o}stato con sensor de reflexi\IeC {\'o}n.}{4}
+\contentsline {section}{\numberline {5}Funcionamiento de la central solar de receptor central o de tipo torre.}{4}
+\contentsline {section}{\numberline {6}Ejemplos de centrales de receptor central.}{5}
+\contentsline {subsection}{\numberline {6.1}Plantas PS10 y PS20.}{5}
+\contentsline {subsection}{\numberline {6.2}Planta termosolar Gemasolar.}{7}
+\contentsline {subsection}{\numberline {6.3}Planta termosolar de receptor central de Ivanpah.}{7}
+\contentsline {subsection}{\numberline {6.4}Proyecto de Google RE\textless C.}{8}
+\contentsline {subsection}{\numberline {6.5}Torres CESA y CRS de la Plataforma Solar de Almer\IeC {\'\i }a.}{10}
+\contentsline {section}{\numberline {7}El lenguaje de programaci\IeC {\'o}n Python.}{11}
+\contentsline {section}{\numberline {8}Usos de Python.}{13}
+\contentsline {section}{\numberline {9}Versiones de Python.}{14}
+\contentsline {section}{\numberline {10}La biblioteca OpenCV.}{16}
+\contentsline {section}{\numberline {11}Trabajo realizado en el proyecto.}{18}
+\contentsline {section}{\numberline {12}Variables de entorno.}{18}
+\contentsline {section}{\numberline {13}Instalaci\IeC {\'o}n del software Python.}{18}
+\contentsline {section}{\numberline {14}C\IeC {\'o}mo usar el software.}{20}
+\contentsline {section}{\numberline {15}Diagrama de flujo.}{21}
+\contentsline {section}{\numberline {16}Funcionamiento del software y c\IeC {\'o}digo.}{21}
+\contentsline {section}{\numberline {17}Cronograma de tareas.}{30}
+\contentsline {section}{\numberline {18}Descripci\IeC {\'o}n de los requerimientos/requisitos.}{45}
+\contentsline {section}{\numberline {19}Entradas y salidas.}{45}
+\contentsline {section}{\numberline {20}An\IeC {\'a}lisis de los recursos consumidos.}{47}
+\contentsline {section}{\numberline {21}Plataformas que son capaces de ejecutar el software.}{50}
+\contentsline {section}{\numberline {22}Ejemplos de ejecuciones y comentarios sobre sus resultados.}{50}
+\contentsline {section}{\numberline {23}Conclusiones y posibles l\IeC {\'\i }neas de trabajo futuro.}{57}
+\contentsline {section}{\numberline {24}Referencias bibliogr\IeC {\'a}ficas.}{58}
