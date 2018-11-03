@@ -80,7 +80,7 @@ La obtención en tiempo real de parámetros matemáticos obtenidos del análisis
 \section{Objetivos y justificación.}
 
 Este proyecto tiene como objetivo fundamental obtener los parámetros matemáticos de una imagen de ejemplo de la proyección de la radiación solar reflejada por un helióstato de la Plataforma Solar de Almería (CIEMAT) sobre una diana. Con dichos parámetros se construirá un estimador de la cantidad de radiación solar concentrada.
-Para ello se utilizarán como herramientas la librería de código abierto OpenCV a través de su interfase en lenguaje Python/C/C++ y sobre el sistema operativo UNIX/Linux. Se utilizarán las primitivas que dicho sistema ofrece para obtener la medida del tiempo de cómputo de cada parámetro ante diferentes configuraciones de computador (concurrencia, paralelismo, ...). [33] [34] [35]
+Para ello se utilizarán como herramientas la librería de código abierto OpenCV a través de su interfase en lenguaje Python/C/C++ y sobre el sistema operativo UNIX/Linux. Se utilizarán las primitivas que dicho sistema ofrece para obtener la medida del tiempo de cómputo de cada parámetro ante diferentes configuraciones de computador (concurrencia, paralelismo, ...). \cite{OpenCVWebPage} \cite{SALWebPage} \cite{IEEEXploreWebPage}
 
 \section{Helióstatos.}
 
@@ -95,20 +95,20 @@ Los primeros helióstatos considerados como elementos industriales se desarrolla
 \section{Helióstato con sensor de reflexión.}
 
 \includegraphics[width=\textwidth]{unnamed (1).jpg}
-[5]
+\cite{OepmWebSite}
 
 Figura 1.
 
 El helióstato con sensor de reflexión es un helióstato perteneciente a un campo solar que refleja los haces de luz que llegan a él dotado de un mecanismo de seguimiento solar. Se trata de una invención que pertenece dentro del área de la termotecnia, al campo de la producción de energía a partir de la radiación solar.
 
 \includegraphics[width=\textwidth]{unnamed.jpg}
-[5]
+\cite{OepmWebSite}
 
 Figura 2.
 
 Desde mediados del siglo XX se vienen realizando investigaciones para intentar transformar esa energía en electricidad. Es por esto que se han desarrollado helióstatos que concentran haces de luz sobre un receptor central que contiene un fluido logran alcanzar temperaturas suficientes como para producir grandes cantidades de vapor de agua que genera electricidad a través de una turbina, normalmente en un ciclo de Rankine.
 
-[1] [2]
+\cite{GstriatumWebSite} \cite{EcuRedWebSite}
 
 \section{Funcionamiento de la central solar de receptor central o de tipo torre.}
 
@@ -124,7 +124,7 @@ La cantidad de horas que este fluido esté expuesto al sol.
 El lugar donde la fábrica esté situada.
 La calidad de los depósitos de almacenamiento del fluido.
 
-La energía producida, después de ser transformada, es transportada mediante líneas a la red general. [8]
+La energía producida, después de ser transformada, es transportada mediante líneas a la red general. \cite{LuciaRinconWebSite}
 
 La potencia de la torre central va de los 10 a los 200 MW, habiéndose instalado ya diferentes plantas comerciales.
 
@@ -142,7 +142,7 @@ Se debe de instalar en lugares en donde la radiación del sol sea durante el may
 Todo su sistema mecánico es más complejo que otros sistemas.
 Se necesitan acumuladores de calor para poder usar este dispositivo para cuando no haya radiación.
 
-En la turbina se genera la energía eléctrica, y de ahí pasa a un generador y un transformador y finalmente a una subestación; mientras que el vapor de agua pasa a un condensador y a un sistema de enfriamiento para posteriormente pasar por una bomba a la caldera donde el ciclo se repite. [10] [11] [12]
+En la turbina se genera la energía eléctrica, y de ahí pasa a un generador y un transformador y finalmente a una subestación; mientras que el vapor de agua pasa a un condensador y a un sistema de enfriamiento para posteriormente pasar por una bomba a la caldera donde el ciclo se repite. \cite{IgualadaWebSite} \cite{SoliclimaWebSite} \cite{ClaudioWebSite}
 
 \includegraphics[width=\textwidth]{unnamed.png}
 \includegraphics[width=\textwidth]{unnamed (1).png}
@@ -174,7 +174,7 @@ Por lo tanto, esta planta funciona calentando agua con luz solar y, con el vapor
 \includegraphics[width=\textwidth]{unnamed (6).jpg}
 
 Campo y torre PS10
-[14]
+\cite{JonathanWebSite}
 
 
 
@@ -188,7 +188,7 @@ La PS20 dispone con un sistema de almacenamiento de 1 hora, con un receptor más
 Helióstato PS10
 
 \includegraphics[width=\textwidth]{unnamed (3).png}
-[29]
+\cite{ValenticampderrosWebSite}
 
 \subsection{Planta termosolar Gemasolar.}
 
@@ -214,7 +214,7 @@ Las sales al perder calor generan vapor de agua.
 El vapor de agua hace que se mueva la turbina y el generador que produce la energía.
 Transformador. La energía pasa al tendido eléctrico.
 La planta no solo funciona como una central solar sino también como una central térmica (cuando no hay luz solar) gracias a su sistema de concentración de sales y a partir de ahí también generar electricidad. También podemos decir que gracias a esto la planta asegura obtención de energía las 24 horas del días en situaciones de baja insolación, en las madrugadas y varios meses al año.
-Es tal el éxito de la planta sevillana que muchos profesionales del sector buscan aplicar las energías limpias a las pequeñas urbanizaciones y así hacer posible su aplicación a la vida cotidiana. [30]
+Es tal el éxito de la planta sevillana que muchos profesionales del sector buscan aplicar las energías limpias a las pequeñas urbanizaciones y así hacer posible su aplicación a la vida cotidiana. \cite{PonsWebSite}
 
 
 
@@ -226,7 +226,7 @@ Los campos de espejos de helióstatos enfocan la luz solar en los receptores ubi
  
 Para la primera planta, se ordenó el mayor grupo generador de turbina de vapor con energía solar, con una turbina de recalentamiento de caja única Siemens SST-900 de 123 MW. Las plantas no tienen almacenaje, y calientan el vapor a 550 °C directamente en los receptores. La potencia total instalada de la planta de Ivanpah es de 377 MW eléctricos.
  
-La instalación, con un costo de \$ 2.2 mil millones, fue desarrollada por BrightSource Energy y Bechtel. [45]
+La instalación, con un costo de \$ 2.2 mil millones, fue desarrollada por BrightSource Energy y Bechtel. \cite{Wikipedia2WebSite}
 
 
 
@@ -234,7 +234,7 @@ La instalación, con un costo de \$ 2.2 mil millones, fue desarrollada por Brigh
 
 \includegraphics[width=\textwidth]{HeliostatoGoogle.png}
 
-Un helióstato prototipo manteniendo la luz en el objetivo. [46]
+Un helióstato prototipo manteniendo la luz en el objetivo. \cite{Wikipedia3WebSite}
 
 Introducción.
 
@@ -278,7 +278,7 @@ Mitigación del viento.
 
 Las áreas de tierra grandes y planas donde es más probable que se construyan los helióstatos son también las áreas más propensas al viento.
 
-Los helióstatos a lo largo del borde exterior de un campo protegen a los helióstatos en el medio de gran parte del impacto del viento. Las cercas de viento simples también reducen el impacto del viento en los helióstatos. [43]
+Los helióstatos a lo largo del borde exterior de un campo protegen a los helióstatos en el medio de gran parte del impacto del viento. Las cercas de viento simples también reducen el impacto del viento en los helióstatos. \cite{GoogleWebSite}
 
 
 
@@ -287,7 +287,7 @@ Los helióstatos a lo largo del borde exterior de un campo protegen a los helió
 La instalación CESA-1 de 7MWt
 
 \includegraphics[width=\textwidth]{unnamed (4).png}
-Instalación CESA. [47]
+Instalación CESA. \cite{PSA1WebSite}
 
 El proyecto CESA-I fue promovido por el Ministerio de Industria y Energía de España e inaugurado en mayo de 1983 para demostrar la viabilidad de las plantas solares de receptor central y para permitir el desarrollo de la tecnología necesaria. En la actualidad CESA-I ya no produce electricidad, sino que se opera, con un alto grado de flexibilidad, como una instalación de ensayo de componentes y subsistemas como helióstatos y receptores solares.
 La instalación capta la radiación solar directa por medio de un campo de 300 helióstatos.
@@ -295,21 +295,21 @@ La torre es de hormigón y tiene una altura de 80 m, siendo capaz de soportar un
 Una cavidad adaptada para su uso como horno solar y ensayo de materiales.
 Una cavidad con un banco calorimétrico de ensayo de receptores volumétricos presurizados.
 Una instalación de ensayo de receptores volumétricos atmosféricos.
-La torre se completa con una grúa en la parte superior con 5 toneladas de capacidad y un elevador montacargas con capacidad para 1.000 kg. [49]
+La torre se completa con una grúa en la parte superior con 5 toneladas de capacidad y un elevador montacargas con capacidad para 1.000 kg. \cite{PSA3WebSite}
 
 
 
 La instalación SSPS-CRS de 2,5 MWt
 
 \includegraphics[width=\textwidth]{unnamed (6).png}
-Instalación CRS. [48]
+Instalación CRS. \cite{PSA2WebSite}
 
 La planta SSPS-CRS fue inaugurada como parte del proyecto SSPS (Small Solar Power Systems) de la Agencia Internacional de la Energía en Septiembre de 1981.
 Es una instalación de ensayos dedicada al ensayo de pequeños receptores solares. El campo de helióstatos está formado por 91 unidades, aunque también existe un segundo campo con 20 helióstatos.
 El campo de helióstatos CRS ha sido recientemente mejorado con la conversión de todos sus helióstatos en unidades autónomas. En la actualidad, la instalación CRS dispone del primer campo de helióstatos autónomos, que no precisa del uso de zanjas ni cableados.
 La torre, de 43 m de altura, es metálica y dispone de tres plataformas de ensayo.
 La infraestructura de la torre se completa con una grúa con capacidad para 4.000 kg y un elevador de cremallera con capacidad para 1.000 kg.
-Para la caracterización del mapa de flujo de la radiación solar concentrada en ambas torres, se utilizan dos sistemas de medida de flujo: directo e indirecto. El sistema de medida directo consiste en una serie de calorímetros con tiempos de respuesta de microsegundos; están dispuestos en una barra móvil y montada frente a la apertura del receptor. El sistema de medida indirecto consta de una cámara CCD que utiliza un sensor de flujo para la calibración convirtiendo la escala de gris de las imágenes tomadas por la cámara en valores de flujo. [50]
+Para la caracterización del mapa de flujo de la radiación solar concentrada en ambas torres, se utilizan dos sistemas de medida de flujo: directo e indirecto. El sistema de medida directo consiste en una serie de calorímetros con tiempos de respuesta de microsegundos; están dispuestos en una barra móvil y montada frente a la apertura del receptor. El sistema de medida indirecto consta de una cámara CCD que utiliza un sensor de flujo para la calibración convirtiendo la escala de gris de las imágenes tomadas por la cámara en valores de flujo. \cite{PSA4WebSite}
 
 
 
@@ -339,7 +339,7 @@ Ejemplo del modo interactivo:
 \textgreater\textgreater\textgreater a = range(10)
 \textgreater\textgreater\textgreater print(list(a))
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-[41]
+\cite{Wikipedia1WebSite}
 
 
 
@@ -366,7 +366,7 @@ Este paradigma de programación se utiliza para tratar el rápido aumento en el 
  
 Nos ofrece un tipado dinámico fuerte
 Por último, cabe destacar la fácil atribución de una variable que nos ofrece a cualquier tipo de valor, y lo mejor de todo, en cualquier lugar de su código fuente.
-[42]
+\cite{BeJobWebSite}
 
 
 \section{Versiones de Python.}
@@ -418,14 +418,14 @@ En marzo de 2016, un estudio de empleados de Microsoft señalaba que por aquel e
 Varias páginas web hacen un seguimiento de la compatibilidad con Python 3 de las bibliotecas más populares
 Python 3 Wall of Superpowers (parece que desde abril de 2018 esta web ya no actualiza los datos) y Python 3 Readiness muestran cómo la inmensa mayoría de las bibliotecas más populares ya están disponibles en Python 3
 la distribución GNU/Linux Fedora lleva el seguimiento de los paquetes de Python que forman parte de la distribución: paquetes y evolución.
-Drop Python muestra las bibliotecas más populares han dejado de dar soporte a las versiones obsoletas de Python (Python 2.6, Python 3.2 y Python 3.3). [39]
+Drop Python muestra las bibliotecas más populares han dejado de dar soporte a las versiones obsoletas de Python (Python 2.6, Python 3.2 y Python 3.3). \cite{BartolomeWebSite}
 
 
 \section{La biblioteca OpenCV.}
 
 OpenCV (Open Source Computer Vision Library) se lanza bajo licencia BSD y, por lo tanto, es gratuito tanto para uso académico como comercial. Tiene interfaces C ++, Python y Java y es compatible con Windows, Linux, Mac OS, iOS y Android. OpenCV fue diseñado para la eficiencia computacional y con un fuerte enfoque en aplicaciones en tiempo real. Escrito en C / C ++ optimizado, la biblioteca puede aprovechar el procesamiento de múltiples núcleos. Habilitado con OpenCL, puede aprovechar la aceleración de hardware de la plataforma informática heterogénea subyacente.
 
-Adoptado en todo el mundo, OpenCV tiene más de 47 mil personas de usuarios y una cantidad estimada de descargas que supera los 14 millones. El uso va desde el arte interactivo hasta la inspección de minas, la costura de mapas en la web o la robótica avanzada. [33]
+Adoptado en todo el mundo, OpenCV tiene más de 47 mil personas de usuarios y una cantidad estimada de descargas que supera los 14 millones. El uso va desde el arte interactivo hasta la inspección de minas, la costura de mapas en la web o la robótica avanzada. \cite{OpenCVWebSite}
 
 
 OpenCV, es una biblioteca informática de código abierto desarrollado originalmente por la visión de Intel . Es gratuito para uso comercial y la investigación bajo un licencia BSD. La biblioteca es multiplataforma y funciona en Mac OSX, Windows y Linux. Se centra principalmente hacia procesamiento imagen tiempo real como tal si encuentra Intel Integrated Performance Primitives sobre el sistema, utilizará estas rutinas optimizado comerciales a acelerarse.
@@ -433,33 +433,38 @@ Diseño del proyecto
 
 \includegraphics[width=\textwidth]{unnamed (9).jpg}
 
-OpenCV
+OpenCV.
+
 Lanzado oficialmente en 1999, el proyecto fue inicialmente OpenCV iniciativa de investigación del Intel para avanzar en la CPU aplicaciones de uso intensivo, que forma parte de una serie de proyectos, entre ellos en tiempo real el trazado de rayos y las paredes de visualización 3D. Los principales contribuyentes al proyecto incluye equipo de Intel la biblioteca de rendimiento. En los primeros días de OpenCV, los objetivos del proyecto se describe como:
 Avanzar en la investigación, proporcionando la visión no sólo libre, sino también el código optimizado para las infraestructuras básicas de la visión.
 Difundir el conocimiento de la visión de aportar una infraestructura común que los desarrolladores pueden construir, para que el código sería más fácil lectura e intransferible.
 Promover la visión basada en aplicaciones comerciales, haciendo portátiles, rendimiento optimizado de código disponible de forma gratuita con una licencia que no requiere ser abierto o gratuitas.
-Historia
-Desde que apareció su primera versión alfa en
 
+Historia.
 
-Proyecto
-el mes de enero de 1999, se ha utilizado en infinidad de aplicaciones. Desde sistemas de seguridad con detección de movimiento, hasta aplicativos de control de procesos donde se requiere reconocimiento de objetos. Esto se debe a que su publicación se da bajo licencia BSD, que permite que sea usada libremente para propósitos comerciales y de investigación con las condiciones en ella expresadas.
+Desde que apareció su primera versión alfa en el mes de enero de 1999, se ha utilizado en infinidad de aplicaciones. Desde sistemas de seguridad con detección de movimiento, hasta aplicativos de control de procesos donde se requiere reconocimiento de objetos. Esto se debe a que su publicación se da bajo licencia BSD, que permite que sea usada libremente para propósitos comerciales y de investigación con las condiciones en ella expresadas.
 OpenCV es multiplataforma, existiendo versiones para GNU/Linux, Mac OSX y Windows. Contiene más de 500 funciones que abarcan una gran gama de áreas en el proceso de visión, como reconocimiento de objetos (reconocimientos facial), calibración de cámaras, visión estéreo y visión robótica.
 El proyecto pretende proporcionar un entorno de desarrollo fácil de utilizar y altamente eficiente. Esto se ha logrado, realizando su programación en código C y C++ optimizados, aprovechando además las capacidades que proveen los procesadores multi núcleo. OpenCV puede además utilizar el sistema de primitivas de rendimiento integradas de Intel, un conjunto de rutinas de bajo nivel específicas para procesadores Intel (IPP).
-Funciones
+
+Funciones.
+
 Captura en tiempo real.
 Importación de archivos de vídeo.
 El tratamiento básico de imágenes (brillo, contraste, umbral).
 Detección de objetos (cara, cuerpo).
 Blob detección.
-Aplicaciones
+
+Aplicaciones.
+
 OpenCV ha sido usado en el sistema de visión del vehículo no tripulado Stanley de la Universidad de Stanford, el ganador en el año 2005 del Gran desafío DARPA
 OpenCV se usa en sistemas de vigilancia de vídeo
 OpenCV es la clave en el programa Swistrack, una herramienta de seguimiento distribuida
-Lenguaje de programación
+
+Lenguaje de programación.
+
 La biblioteca fue originalmente escrita en C y esta interfaz C hace OpenCV portátil para algunas plataformas específicas,tales como procesadores de señal digital.
 OpenCV incluye tanto la interfaz de C tradicionales, así como una nueva interfaz C++, que busca reducir el número de líneas de código necesarias al código de la funcionalidad de la visión, así como reducir los errores comunes de programación, tales como la memoria fugas que pueden surgir al utilizar OpenCV en la mayoría de los nuevos desarrollos y algoritmos OpenCV C.
-Se desarrollan en el interfaz C++, es mucho más difícil para las envolturas en otras lenguas de código C++ en lugar de código en C. [36] [37] [38]
+Se desarrollan en el interfaz C++, es mucho más difícil para las envolturas en otras lenguas de código C++ en lugar de código en C. \cite{SourgeForgeWebSite} \cite{UbaaWebSite} \cite{YahooWebSite}
 
 
 \section{Trabajo realizado en el proyecto.}
