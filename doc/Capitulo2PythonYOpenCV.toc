@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}El lenguaje de programaci\IeC {\'o}n Python.}{2}
+\contentsline {section}{\numberline {2}Usos de Python.}{3}
+\contentsline {section}{\numberline {3}Versiones de Python.}{4}
+\contentsline {section}{\numberline {4}La biblioteca OpenCV.}{7}

@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{gensymb}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{verbatim}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{Tu titulo}					% Titulo
+\author{Tu nombre}					% Autor
+\date{\today}						% Fecha
+
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Entradas y salidas.}
+
+El software requiere de un vídeo cualquiera en formato MP4, de cualquier resolución, y guardado en una ubicación o ruta cualquiera en el disco duro del PC. El vídeo preferentemente será de helióstatos, con el fin de sacar el máximo partido al código ya que este está adaptado para procesar helióstatos.
+
+En el código de ese software, se han utilizado las siguientes variables de entrada:
+
+‘start\_time’. Indica el tiempo de ejecución nada más iniciar la ejecución del programa.
+‘frame\_counter’. Cuenta los fotogramas analizados del vídeo.
+‘end\_time’. Indica el tiempo de ejecución tras haber procesado un fotograma del vídeo (o tiempo final), y lo mismo para los siguientes, en cuyo caso el tiempo final nunca se reinicia a cero, sino que es acumulado.
+‘fps’. Con la fórmula ‘frame\_counter / float(end\_time - start\_time)’, es decir, usando las variables anteriores, se calcula, para cada fotograma analizado del vídeo, sus fotogramas por segundo.
+‘parser’. Permite definir unos parámetros para que cuando se ejecute el programa por consola, se proporcione como parámetros o entradas (y en el siguiente orden) la ruta o directorio del vídeo a leer en el PC, el ancho y el alto mínimos del helióstato para su detección y análisis.
+‘args’. Devuelve o carga el parámetro deseado y que fueron especificados por el usuario (explicado previamente): directorio, ancho o alto.
+‘camara = cv2.VideoCapture(“Videos/varios\_heliostatos.mp4”)’. Ruta o directorio del PC que el programa usará para leer el vídeo. La ruta especificada deberá existir, así como el vídeo en esa ruta.
+‘grabbed’. Indica si se ha logrado cargar el siguiente fotograma del vídeo de helióstatos, queriendo además decir que dicho vídeo aún no se han analizado todos sus fotogramas y que debe proseguir la ejecución del programa.
+‘frame’. Es el contenido del fotograma concreto del vídeo de helióstatos.
+‘img’. Es el vídeo de helióstatos convertido a escala de grises.
+‘thresh’. Aplicar un umbral para cada fotograma del vídeo de helióstatos, con el fin de determinar en cada píxel, si este es relativamente brillante o no lo es.
+‘i’. Para el fotograma del vídeo actual, indica el número de helióstato en análisis: 0 (helióstato 1) ó 1 (helióstato 2).
+‘contours’. Todos los contornos o helióstatos detectados, para cada fotograma del vídeo de helióstatos.
+‘x, y, w, h’. Referido al contorno en análisis: ‘xy’ son las coordenadas de un punto, ‘w’ es el ancho, y ‘h’ es la altura.
+‘area’. Valor del área del contorno o helióstato en análisis.
+‘m’. Vector BGR en tres dimensiones que representa dicha información del helióstato en análisis.
+‘mB’, ‘mG’, ‘mR’. Lo mismo que la variable anterior ‘m’, pero esta vez separadas en sus distintas componentes BGR.
+‘mB2’, ‘mG2’, ‘mR2’. Resultados de elevar al cuadrado los valores de las componentes BGR del helióstato.
+‘sumB’, ‘sumG’ y ‘sumR’. Indica la sumatoria acumulativa de todos los píxeles de valor R al cuadrado del helióstato en análisis, y respectivamente para G y B.
+‘sumaBGR’. Indica la sumatoria de todos los píxeles de valores R al cuadrado más G al cuadrado más B al cuadrado del helióstato en análisis.
+
+Las siguientes variables no son usadas para este proyecto y se explicarán muy brevemente. No obstante, era necesario declararlas para evitar errores de compilación en el software.
+
+‘ret’. Umbralización de Otsu en el vídeo de helióstatos.
+‘im2’. Imagen fuente, procedente del fotograma actual del vídeo de helióstatos.
+‘hierarchy’. Método de aproximación del contorno.
+
+Tras el uso de las variables de entrada anteriores, el software mostrará por pantalla una consola de información y resultados y dos ventanas del vídeo de helióstatos. Ambos elementos se van actualizando en tiempo de ejecución. Los resultados mostrados en consola de los helióstatos son finales, no parciales. En la consola aparece la siguiente información, para cada fotograma del vídeo de helióstatos:
+
+Analizando el helióstato verde/rojo…
+Ancho y alto del helióstato en píxeles.
+Área del helióstato en píxeles.
+Sumatorias acumulativas de los valores BGR al cuadrado (cada componente por separado) de todos los píxeles del helióstato en análisis.
+Suma total (o unificación) de esas tres componentes BGR entre sí.
+Fotogramas por segundo del vídeo.
+
+Ejemplo gráfico:
+
+
+
+En las ventanas del vídeo de helióstatos, en una de ellas aparece el vídeo umbralizado, con el fin de detectar lo que son contornos (helióstatos) e ignorar los que no lo sean, así como los falsos contornos. Y en la otra ventana, aparece el vídeo original. En esta última, cuando se detecten helióstatos de un tamaño (ancho y alto) determinados (deseados por el usuario en los parámetros que él mismo proporcionó al ejecutar el programa), se reencuadrará con un cuadrado o rectángulo verde o rojo y se analizará por el software. El rectángulo en general será de color verde si solo se muestra un helióstato en el fotograma actual del vídeo, pero si en dicho fotograma se muestran dos (y separados entre sí), el rectángulo para el helióstato secundario será rojo. Esto permitirá diferenciar bien los helióstatos, y saber qué información mostrada en consola le corresponde a cada helióstato.
+
+Ejemplo gráfico:
+
+\end{document}

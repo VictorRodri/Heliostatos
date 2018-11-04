@@ -39,34 +39,6 @@
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{titlepage}
-	\centering
-    \vspace*{0.0 cm}
-    \includegraphics[scale = 0.13]{Logo_Uchile_modern.png}\\[1.0 cm]	% Logo Universidad
-    \textsc{\LARGE Universidad de Chile}\\[2.0 cm]	% Nombre Universidad
-	\textsc{\Large CC3001-02}\\[0.5 cm]				% Codigo Curso
-	\textsc{\large Algoritmos y Estructuras de Datos}\\[0.5 cm]		% Nombre Curso
-	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
-	{ \huge \bfseries \thetitle}\\
-	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
-	
-	\begin{minipage}{0.4\textwidth}
-		\begin{center} \large
-			\emph{Autor:}\\
-			\theauthor\linebreak
-			\end{center}
-	\end{minipage}\\[2 cm]
-	
-	{\large \thedate}\\[2 cm]
- 
-	\vfill
-	
-\end{titlepage}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \tableofcontents
 \pagebreak
 
@@ -751,7 +723,7 @@ Respecto a los parámetros introducidos en el método ‘rectangle’, aclarar q
                 \# Mostrar en consola los resultados del helióstato o helióstatos localizados y analizados, para cada fotograma del vídeo.
                 print("Ancho y alto WH del helióstato en píxeles:       \%4i \%4i" \%(w, h)) \# Mostrar en consola el ancho y el alto WH del helióstato en píxeles.
                 print("Área del helióstato en píxeles:                  ", area) \# Mostrar en consola el área del helióstato en píxeles.
-                print("Sumatorias RGB al cuadrado de todos sus píxeles: %8i %8i %8i" %(sumB, sumG, sumR))
+                print("Sumatorias RGB al cuadrado de todos sus píxeles: \%8i \%8i \%8i" \%(sumB, sumG, sumR))
                 print("Suma total RGB al cuadrado helióstato completo:  ", sumaRGB)
 
             \# Llamar a la función definida 'vectorial(frame, x, y)', siendo 'frame' el fotograma actual del vídeo a tratar, y XY las coordenadas de la esquina superior izquierda del helióstato.
@@ -955,7 +927,7 @@ Cuando se hayan terminado de leer todos los fotogramas del vídeo, es decir, se 
 6. Bibliografía.
 Yo continuaré revisando lo que sería el punto 4 de dicho índice.’. Le pregunté, en base a eso, que aparte de lo de Python, si lo de las plataformas solares y demás capítulos los debía resumir más, quitando mucho texto innecesario que puse, o no hacía falta.
 
-16 de julio de 2.018: Vicente me respondió que era correcto, que el 90% de mi memoria actual sería el punto 1 del índice que él me dijo anteayer día 14 de julio.
+16 de julio de 2.018: Vicente me respondió que era correcto, que el 90\% de mi memoria actual sería el punto 1 del índice que él me dijo anteayer día 14 de julio.
 
 17 de julio de 2.018: le pregunté a Vicente lo siguiente: ‘De acuerdo. No obstante, al igual que en el TFG ejemplo que tú me pasaste (y como me dijiste), debo hacer que la descripción del problema a resolver (punto 1) y la propuesta desarrollada (descripción del trabajo, punto 4) sean prácticamente del mismo número de hojas, tengo entendido. ¿Es así? Más cosas: en el caso de la descripción del trabajo (punto 4), yo no pensaba agregar más cosas. No se me ocurrían más cosas que poner, excepto si trato de hacerlo para que tenga el mismo número de páginas que en el apartado de 'descripción del problema a resolver' (punto 1) que ahí puse muchas cosas. Y además, encontré una página de wikipedia sobre la historia de python pero por ser de wikipedia (ahí las fuentes no son siempre fiables), pues no sé si incorporarlo al tfg o no.’. Vicente me respondió lo siguiente: ‘Generalmente los 4 primeros capítulos del índice que te he propuesto tienen aproximadamente la misma extensión, cada uno. Lo que no puede ser es que uno ocupe 90 página y otro 2, siendo este último el que describe tu trabajo. A ver, cosas que debes de poner en el capítulo 4: (1) un cronograma de tareas (tuyas, no del software, desde el comienzo del proyecto), (2) descripción de los requerimientos/requisitos, (3) descripción (texto) del funcionamiento del software, (4) entradas y salidas, (5) análisis de los recursos (principalmente memoria y CPU) consumidos, (6) plataformas (más bien, sistemas operativos) que serían capaces de ejecutarlo, (7) el código en sí, COMPLETAMENTE COMENTADO, (9) ejemplos de ejecuciones y comentarios sobre los resultados de las mismas.’. Además, en el informe he explicado cosas sobre OpenCV y Python.
 
@@ -1193,7 +1165,7 @@ Además, la ejecución del programa se realiza rápida, en apenas 1 minuto (lo m
 
 \section{Plataformas que son capaces de ejecutar el software.}
 
-El software está escrito en lenguaje de programación Python, y una de las características de Python es que es un lenguaje multiplataforma. Esto significa que, aunque originalmente Python se diseñó para Unix, cualquier sistema es compatible con el lenguaje siempre y cuando exista un intérprete programado para él. Además, hay diversas versiones de Python en muchos sistemas informáticos distintos. [40]
+El software está escrito en lenguaje de programación Python, y una de las características de Python es que es un lenguaje multiplataforma. Esto significa que, aunque originalmente Python se diseñó para Unix, cualquier sistema es compatible con el lenguaje siempre y cuando exista un intérprete programado para él. Además, hay diversas versiones de Python en muchos sistemas informáticos distintos.
 
 
 \section{Ejemplos de ejecuciones y comentarios sobre sus resultados.}
