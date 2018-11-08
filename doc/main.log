@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  4 NOV 2018 18:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  7 NOV 2018 23:32
 entering extended mode
 **./main.tex
 (main.tex
@@ -282,29 +282,29 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks34
 \verbatim@in@stream=\read1
 ) (main.aux
-LaTeX Info: Redefining \. on input line 2.
-LaTeX Info: Redefining \% on input line 2.
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \. on input line 40.
-LaTeX Info: Redefining \% on input line 40.
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -351,15 +351,15 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \celsius on input line 40.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 40.
+LaTeX Info: Redefining \celsius on input line 42.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 42.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 40.
-Package gensymb Info: Using \Omega for \ohm on input line 40.
+LaTeX Info: Redefining \ohm on input line 42.
+Package gensymb Info: Using \Omega for \ohm on input line 42.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -396,381 +396,281 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 
 Package natbib Warning: Citation `OpenCVWebPage' on page 3 undefined on input l
-ine 55.
+ine 57.
 
 
 Package natbib Warning: Citation `SALWebPage' on page 3 undefined on input line
- 55.
+ 57.
 
 
 Package natbib Warning: Citation `IEEEXploreWebPage' on page 3 undefined on inp
-ut line 55.
+ut line 57.
 
 [3]
 
-LaTeX Warning: File `unnamed (1).jpg' not found on input line 69.
+LaTeX Warning: File `unnamed (1).jpg' not found on input line 71.
 
 <unnamed (1).jpg, id=14, 595.22375pt x 288.07625pt>
 File: unnamed (1).jpg Graphic file (type jpg)
 <use unnamed (1).jpg>
-Package pdftex.def Info: unnamed (1).jpg  used on input line 69.
+Package pdftex.def Info: unnamed (1).jpg  used on input line 71.
 (pdftex.def)             Requested size: 427.43153pt x 206.86526pt.
 
-Package natbib Warning: Citation `OepmWebSite' on page 4 undefined on input lin
-e 70.
-
-
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 69--71
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 71--73
 []\OT1/cmr/m/n/12 (1).jpg (1).jpg []
  []
 
 <unnamed.jpg, id=15, 455.7025pt x 464.73625pt>
 File: unnamed.jpg Graphic file (type jpg)
 <use unnamed.jpg>
-Package pdftex.def Info: unnamed.jpg  used on input line 76.
+Package pdftex.def Info: unnamed.jpg  used on input line 78.
 (pdftex.def)             Requested size: 427.43153pt x 435.91608pt.
+[4 <./unnamed (1).jpg>] [5 <./unnamed.jpg>]
 
-Package natbib Warning: Citation `OepmWebSite' on page 4 undefined on input lin
-e 77.
-
-[4 <./unnamed (1).jpg>]
-
-Package natbib Warning: Citation `GstriatumWebSite' on page 5 undefined on inpu
-t line 83.
-
-
-Package natbib Warning: Citation `EcuRedWebSite' on page 5 undefined on input l
-ine 83.
-
-[5 <./unnamed.jpg>]
-
-LaTeX Warning: File `unnamed (2).jpg' not found on input line 89.
+LaTeX Warning: File `unnamed (2).jpg' not found on input line 91.
 
 <unnamed (2).jpg, id=23, 400.49625pt x 277.035pt>
 File: unnamed (2).jpg Graphic file (type jpg)
 <use unnamed (2).jpg>
-Package pdftex.def Info: unnamed (2).jpg  used on input line 89.
+Package pdftex.def Info: unnamed (2).jpg  used on input line 91.
 (pdftex.def)             Requested size: 427.43153pt x 295.68475pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 89--90
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 91--92
 []\OT1/cmr/m/n/12 (2).jpg (2).jpg [] 
  []
 
-
-Package natbib Warning: Citation `LuciaRinconWebSite' on page 6 undefined on in
-put line 99.
-
 [6 <./unnamed (2).jpg>]
-
-Package natbib Warning: Citation `IgualadaWebSite' on page 7 undefined on input
- line 117.
-
-
-Package natbib Warning: Citation `SoliclimaWebSite' on page 7 undefined on inpu
-t line 117.
-
-
-Package natbib Warning: Citation `ClaudioWebSite' on page 7 undefined on input 
-line 117.
-
 <unnamed.png, id=27, 150.5625pt x 111.41624pt>
 File: unnamed.png Graphic file (type png)
 <use unnamed.png>
-Package pdftex.def Info: unnamed.png  used on input line 119.
+Package pdftex.def Info: unnamed.png  used on input line 121.
 (pdftex.def)             Requested size: 427.43153pt x 316.36313pt.
 
-LaTeX Warning: File `unnamed (1).png' not found on input line 120.
+
+LaTeX Warning: File `unnamed (1).png' not found on input line 122.
 
 <unnamed (1).png, id=28, 150.5625pt x 63.23625pt>
 File: unnamed (1).png Graphic file (type png)
 <use unnamed (1).png>
-Package pdftex.def Info: unnamed (1).png  used on input line 120.
+Package pdftex.def Info: unnamed (1).png  used on input line 122.
 (pdftex.def)             Requested size: 427.43153pt x 179.55743pt.
 
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 119--121
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 121--123
 \OT1/cmr/m/n/12 (1).png (1).png [] 
  []
 
 [7]
 
-LaTeX Warning: File `unnamed (4).jpg' not found on input line 127.
+LaTeX Warning: File `unnamed (4).jpg' not found on input line 129.
 
 <unnamed (4).jpg, id=33, 180.675pt x 170.6375pt>
 File: unnamed (4).jpg Graphic file (type jpg)
 <use unnamed (4).jpg>
-Package pdftex.def Info: unnamed (4).jpg  used on input line 127.
+Package pdftex.def Info: unnamed (4).jpg  used on input line 129.
 (pdftex.def)             Requested size: 427.43153pt x 403.72424pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 127--130
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 129--132
 []\OT1/cmr/m/n/12 (4).jpg (4).jpg []
  []
 
 [8 <./unnamed.png> <./unnamed (1).png>]
 
-LaTeX Warning: File `unnamed (3).jpg' not found on input line 131.
+LaTeX Warning: File `unnamed (3).jpg' not found on input line 133.
 
 <unnamed (3).jpg, id=37, 501.875pt x 298.11375pt>
 File: unnamed (3).jpg Graphic file (type jpg)
 <use unnamed (3).jpg>
-Package pdftex.def Info: unnamed (3).jpg  used on input line 131.
+Package pdftex.def Info: unnamed (3).jpg  used on input line 133.
 (pdftex.def)             Requested size: 427.43153pt x 253.90735pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 131--136
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 133--138
 []\OT1/cmr/m/n/12 (3).jpg (3).jpg []
  []
 
 [9 <./unnamed (4).jpg>]
 
-LaTeX Warning: File `unnamed (5).jpg' not found on input line 137.
+LaTeX Warning: File `unnamed (5).jpg' not found on input line 139.
 
 <unnamed (5).jpg, id=41, 501.875pt x 294.09875pt>
 File: unnamed (5).jpg Graphic file (type jpg)
 <use unnamed (5).jpg>
-Package pdftex.def Info: unnamed (5).jpg  used on input line 137.
+Package pdftex.def Info: unnamed (5).jpg  used on input line 139.
 (pdftex.def)             Requested size: 427.43153pt x 250.48772pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 137--139
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 139--141
 []\OT1/cmr/m/n/12 (5).jpg (5).jpg []
  []
 
 [10 <./unnamed (3).jpg>]
 
-LaTeX Warning: File `unnamed (7).jpg' not found on input line 140.
+LaTeX Warning: File `unnamed (7).jpg' not found on input line 142.
 
 <unnamed (7).jpg, id=45, 501.875pt x 217.81375pt>
 File: unnamed (7).jpg Graphic file (type jpg)
 <use unnamed (7).jpg>
-Package pdftex.def Info: unnamed (7).jpg  used on input line 140.
+Package pdftex.def Info: unnamed (7).jpg  used on input line 142.
 (pdftex.def)             Requested size: 427.43153pt x 185.51479pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 140--141
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 142--143
 []\OT1/cmr/m/n/12 (7).jpg (7).jpg [] 
  []
 
 [11 <./unnamed (5).jpg> <./unnamed (7).jpg>]
 
-LaTeX Warning: File `unnamed (6).jpg' not found on input line 146.
+LaTeX Warning: File `unnamed (6).jpg' not found on input line 148.
 
 <unnamed (6).jpg, id=49, 501.875pt x 225.84375pt>
 File: unnamed (6).jpg Graphic file (type jpg)
 <use unnamed (6).jpg>
-Package pdftex.def Info: unnamed (6).jpg  used on input line 146.
+Package pdftex.def Info: unnamed (6).jpg  used on input line 148.
 (pdftex.def)             Requested size: 427.43153pt x 192.35403pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 146--147
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 148--149
 []\OT1/cmr/m/n/12 (6).jpg (6).jpg [] 
  []
 
 
-Package natbib Warning: Citation `JonathanWebSite' on page 12 undefined on inpu
-t line 149.
-
-
-LaTeX Warning: File `unnamed (2).png' not found on input line 159.
+LaTeX Warning: File `unnamed (2).png' not found on input line 161.
 
 <unnamed (2).png, id=50, 301.125pt x 177.66376pt>
 File: unnamed (2).png Graphic file (type png)
 <use unnamed (2).png>
-Package pdftex.def Info: unnamed (2).png  used on input line 159.
+Package pdftex.def Info: unnamed (2).png  used on input line 161.
 (pdftex.def)             Requested size: 427.43153pt x 252.20837pt.
 
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 159--161
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 161--163
 []\OT1/cmr/m/n/12 (2).png (2).png []
  []
 
 [12 <./unnamed (6).jpg>]
 
-LaTeX Warning: File `unnamed (3).png' not found on input line 162.
+LaTeX Warning: File `unnamed (3).png' not found on input line 164.
 
 <unnamed (3).png, id=55, 301.125pt x 226.8475pt>
 File: unnamed (3).png Graphic file (type png)
 <use unnamed (3).png>
-Package pdftex.def Info: unnamed (3).png  used on input line 162.
+Package pdftex.def Info: unnamed (3).png  used on input line 164.
 (pdftex.def)             Requested size: 427.43153pt x 322.02878pt.
 
-Package natbib Warning: Citation `ValenticampderrosWebSite' on page 13 undefine
-d on input line 163.
-
-
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 162--164
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 164--166
 []\OT1/cmr/m/n/12 (3).png (3).png []
  []
 
 [13 <./unnamed (2).png>]
 
-LaTeX Warning: File `unnamed (8).jpg' not found on input line 178.
+LaTeX Warning: File `unnamed (8).jpg' not found on input line 180.
 
 <unnamed (8).jpg, id=61, 491.8375pt x 306.14375pt>
 File: unnamed (8).jpg Graphic file (type jpg)
 <use unnamed (8).jpg>
-Package pdftex.def Info: unnamed (8).jpg  used on input line 178.
+Package pdftex.def Info: unnamed (8).jpg  used on input line 180.
 (pdftex.def)             Requested size: 427.43153pt x 266.06262pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 178--179
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 180--181
 []\OT1/cmr/m/n/12 (8).jpg (8).jpg [] 
  []
 
-[14 <./unnamed (3).png>]
-
-Package natbib Warning: Citation `PonsWebSite' on page 15 undefined on input li
-ne 189.
-
-[15 <./unnamed (8).jpg>]
-
-Package natbib Warning: Citation `Wikipedia2WebSite' on page 16 undefined on in
-put line 201.
-
+[14 <./unnamed (3).png>] [15 <./unnamed (8).jpg>]
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <14.4> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 205.
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 207.
 <HeliostatoGoogle.png, id=69, 357.58594pt x 283.81032pt>
 File: HeliostatoGoogle.png Graphic file (type png)
 <use HeliostatoGoogle.png>
-Package pdftex.def Info: HeliostatoGoogle.png  used on input line 207.
+Package pdftex.def Info: HeliostatoGoogle.png  used on input line 209.
 (pdftex.def)             Requested size: 427.43153pt x 339.26283pt.
-[16]
+ [16] [17 <./HeliostatoGoogle.png>] [18]
 
-Package natbib Warning: Citation `Wikipedia3WebSite' on page 17 undefined on in
-put line 209.
-
-[17 <./HeliostatoGoogle.png>] [18]
-
-Package natbib Warning: Citation `GoogleWebSite' on page 19 undefined on input 
-line 253.
-
-
-LaTeX Warning: File `unnamed (4).png' not found on input line 261.
+LaTeX Warning: File `unnamed (4).png' not found on input line 263.
 
 <unnamed (4).png, id=82, 521.95pt x 349.305pt>
 File: unnamed (4).png Graphic file (type png)
 <use unnamed (4).png>
-Package pdftex.def Info: unnamed (4).png  used on input line 261.
+Package pdftex.def Info: unnamed (4).png  used on input line 263.
 (pdftex.def)             Requested size: 427.43153pt x 286.05351pt.
 
-Package natbib Warning: Citation `PSA1WebSite' on page 19 undefined on input li
-ne 262.
-
-
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 261--263
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 263--265
 []\OT1/cmr/m/n/12 (4).png (4).png []
  []
 
-
-Package natbib Warning: Citation `PSA3WebSite' on page 19 undefined on input li
-ne 270.
-
 [19 <./unnamed (4).png>]
 
-LaTeX Warning: File `unnamed (6).png' not found on input line 276.
+LaTeX Warning: File `unnamed (6).png' not found on input line 278.
 
 <unnamed (6).png, id=87, 521.95pt x 210.7875pt>
 File: unnamed (6).png Graphic file (type png)
 <use unnamed (6).png>
-Package pdftex.def Info: unnamed (6).png  used on input line 276.
+Package pdftex.def Info: unnamed (6).png  used on input line 278.
 (pdftex.def)             Requested size: 427.43153pt x 172.6185pt.
 
-Package natbib Warning: Citation `PSA2WebSite' on page 20 undefined on input li
-ne 277.
-
-
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 276--278
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 278--280
 []\OT1/cmr/m/n/12 (6).png (6).png []
  []
-
-
-Package natbib Warning: Citation `PSA4WebSite' on page 20 undefined on input li
-ne 284.
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
+[20 <./unnamed (6).png>] [21] [22] [23]
 
-Package natbib Warning: Citation `Wikipedia1WebSite' on page 20 undefined on in
-put line 314.
-
-[20 <./unnamed (6).png>] [21] [22]
-
-Package natbib Warning: Citation `BeJobWebSite' on page 23 undefined on input l
-ine 341.
-
-[23]
-
-LaTeX Warning: File `unnamed (7).png' not found on input line 358.
+LaTeX Warning: File `unnamed (7).png' not found on input line 360.
 
 <unnamed (7).png, id=100, 1015.795pt x 283.0575pt>
 File: unnamed (7).png Graphic file (type png)
 <use unnamed (7).png>
-Package pdftex.def Info: unnamed (7).png  used on input line 358.
+Package pdftex.def Info: unnamed (7).png  used on input line 360.
 (pdftex.def)             Requested size: 427.43153pt x 119.1036pt.
 
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 358--359
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 360--361
 []\OT1/cmr/m/n/12 (7).png (7).png [] 
  []
 
 
-LaTeX Warning: File `unnamed (8).png' not found on input line 362.
+LaTeX Warning: File `unnamed (8).png' not found on input line 364.
 
 <unnamed (8).png, id=101, 1054.94125pt x 413.545pt>
 File: unnamed (8).png Graphic file (type png)
 <use unnamed (8).png>
-Package pdftex.def Info: unnamed (8).png  used on input line 362.
+Package pdftex.def Info: unnamed (8).png  used on input line 364.
 (pdftex.def)             Requested size: 427.43153pt x 167.55421pt.
 
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 362--363
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 364--365
 []\OT1/cmr/m/n/12 (8).png (8).png [] 
  []
 
-[24 <./unnamed (7).png>] [25 <./unnamed (8).png>]
+[24 <./unnamed (7).png>] [25 <./unnamed (8).png>] [26]
 
-Package natbib Warning: Citation `BartolomeWebSite' on page 26 undefined on inp
-ut line 393.
-
-[26]
-
-Package natbib Warning: Citation `OpenCVWebSite' on page 27 undefined on input 
-line 400.
-
-
-LaTeX Warning: File `unnamed (9).jpg' not found on input line 406.
+LaTeX Warning: File `unnamed (9).jpg' not found on input line 408.
 
 <unnamed (9).jpg, id=112, 180.675pt x 179.67125pt>
 File: unnamed (9).jpg Graphic file (type jpg)
 <use unnamed (9).jpg>
-Package pdftex.def Info: unnamed (9).jpg  used on input line 406.
+Package pdftex.def Info: unnamed (9).jpg  used on input line 408.
 (pdftex.def)             Requested size: 427.43153pt x 425.09785pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 406--407
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 408--409
 []\OT1/cmr/m/n/12 (9).jpg (9).jpg [] 
  []
 
 [27] [28 <./unnamed (9).jpg>]
 
 Package natbib Warning: Citation `SourgeForgeWebSite' on page 29 undefined on i
-nput line 439.
+nput line 441.
 
 
-Package natbib Warning: Citation `UbaaWebSite' on page 29 undefined on input li
-ne 439.
-
-
-Package natbib Warning: Citation `YahooWebSite' on page 29 undefined on input l
-ine 439.
-
-
-Overfull \hbox (7.51341pt too wide) in paragraph at lines 437--440
+Overfull \hbox (7.51341pt too wide) in paragraph at lines 439--442
 \OT1/cmr/m/n/12 pa-ra al-gu-nas pla-ta-for-mas es-pecfi-cas,tales co-mo pro-c
 e-sa-do-res de se~nal di-gi-tal. OpenCV
  []
 
 [29]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 452.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 454.
 
  ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 452.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 454.
 
-Overfull \hbox (6.6226pt too wide) in paragraph at lines 452--454
+Overfull \hbox (6.6226pt too wide) in paragraph at lines 454--456
 \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Python35-32. Va-ria-ble: Pyt-hon36. Va-lor: C
 : \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Users \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Pc 
 \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 AppData \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Loc
@@ -778,79 +678,79 @@ al \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Programs
  []
 
 [30] [31]
-Overfull \hbox (74.64024pt too wide) in paragraph at lines 525--535
+Overfull \hbox (74.64024pt too wide) in paragraph at lines 527--537
 []\OT1/cmr/m/n/12 1. Ac-ce-der a la pagi-na Web don-de se ubi-ca el pro-yec-to
 : https://github.com/VictorRodri/Heliostatos
  []
 
 [32] [33]
-Overfull \hbox (148.26028pt too wide) in paragraph at lines 573--579
+Overfull \hbox (148.26028pt too wide) in paragraph at lines 575--581
 \OT1/cmr/m/n/12 Crear el ar-gu-men-to 1: ru-ta o di-rec-to-rio del vdeo a car
 -gar en el PC. par-ser.add[]argument('anchoMinimoHeliostato',
  []
 
 [34] [35] [36]
-Overfull \hbox (1.8077pt too wide) in paragraph at lines 648--650
+Overfull \hbox (1.8077pt too wide) in paragraph at lines 650--652
 []\OT1/cmr/m/n/12 # Ob-te-ner las coor-de-na-das del con-torno. (x, y, w, h) = 
 cv2.boundingRect(contours[i])
  []
 
 [37] [38] [39] [40]
-Overfull \hbox (10.71199pt too wide) in paragraph at lines 760--762
+Overfull \hbox (10.71199pt too wide) in paragraph at lines 762--764
 []\OT1/cmr/m/n/12 # Mos-trar vdeo ori-gi-nal en una ven-ta-na/actualizar fo-t
 o-gra-ma. cv2.imshow("Camara",
  []
 
 [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55]
 [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69]
-Overfull \hbox (15.08276pt too wide) in paragraph at lines 1385--1386
+Overfull \hbox (15.08276pt too wide) in paragraph at lines 1387--1388
 \OT1/cmr/m/n/12 ro de 2.018 de: https://www.ecured.cu/Biblioteca[]P$ $%C3$ $%BA
 blica[]Municipal[]Sandino 
  []
 
 
-Overfull \hbox (148.94225pt too wide) in paragraph at lines 1397--1398
+Overfull \hbox (148.94225pt too wide) in paragraph at lines 1399--1400
 \OT1/cmr/m/n/12 energa so-lar (y como fun-cio-na). Re-cu-pe-ra-do el 16 de j
 u-nio de 2.018 de: http://www.teknoplof.com/tag/heliostato/ 
  []
 
 
-Overfull \hbox (49.48686pt too wide) in paragraph at lines 1399--1400
+Overfull \hbox (49.48686pt too wide) in paragraph at lines 1401--1402
 \OT1/cmr/m/n/12 cu-pe-ra-do el 18 de ju-nio de 2.018 de: https://themorningstar
 g2.wordpress.com/tag/heliostatos/ 
  []
 
 
-Overfull \hbox (24.77557pt too wide) in paragraph at lines 1403--1404
+Overfull \hbox (24.77557pt too wide) in paragraph at lines 1405--1406
 []\OT1/cmr/m/n/12 [33] OpenCV (2.018). OpenCV. Re-cu-pe-ra-do el 20 de ju-nio d
 e 2.018 de: http://opencv.org/ 
  []
 
 
-Overfull \hbox (159.35004pt too wide) in paragraph at lines 1405--1406
+Overfull \hbox (159.35004pt too wide) in paragraph at lines 1407--1408
 []\OT1/cmr/m/n/12 [34] SAL (2.015). In-fra-es-truc-tu-ra. Re-cu-pe-ra-do el 20 
 de ju-nio de 2.018 de: http://www.hpca.ual.es/es/infraestructura. 
  []
 
-
-Overfull \hbox (148.84589pt too wide) in paragraph at lines 1409--1410
+[70]
+Overfull \hbox (148.84589pt too wide) in paragraph at lines 1411--1412
 []\OT1/cmr/m/n/12 [36] Sour-ge-For-ce.net (2.018). N. d. Re-cu-pe-ra-do el 17 d
 e ju-lio de 2.018 de: https://sourceforge.net/projects/opencv/ 
  []
 
-[70]
+(main.bbl [71])
 
 Package natbib Warning: There were undefined citations.
 
-[71] (main.aux
-LaTeX Info: Redefining \. on input line 2.
-LaTeX Info: Redefining \% on input line 2.
+[72] (main.aux
+LaTeX Info: Redefining \. on input line 3.
+LaTeX Info: Redefining \% on input line 3.
 ) ) 
 Here is how much of TeX's memory you used:
- 5555 strings out of 492970
- 74618 string characters out of 3127925
- 168225 words of memory out of 3000000
- 9306 multiletter control sequences out of 15000+200000
+ 5631 strings out of 492970
+ 76247 string characters out of 3127925
+ 168599 words of memory out of 3000000
+ 9379 multiletter control sequences out of 15000+200000
  10161 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,11n,43p,2499b,529s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -862,9 +762,9 @@ e1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Pc/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Pc/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (71 pages, 2121567 bytes).
+Output written on main.pdf (72 pages, 2123081 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
+ 284 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
