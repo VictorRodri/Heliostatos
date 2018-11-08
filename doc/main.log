@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  7 NOV 2018 23:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  8 NOV 2018 22:44
 entering extended mode
 **./main.tex
 (main.tex
@@ -702,47 +702,12 @@ o-gra-ma. cv2.imshow("Camara",
  []
 
 [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55]
-[56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69]
-Overfull \hbox (15.08276pt too wide) in paragraph at lines 1387--1388
-\OT1/cmr/m/n/12 ro de 2.018 de: https://www.ecured.cu/Biblioteca[]P$ $%C3$ $%BA
-blica[]Municipal[]Sandino 
- []
-
-
-Overfull \hbox (148.94225pt too wide) in paragraph at lines 1399--1400
-\OT1/cmr/m/n/12 energa so-lar (y como fun-cio-na). Re-cu-pe-ra-do el 16 de j
-u-nio de 2.018 de: http://www.teknoplof.com/tag/heliostato/ 
- []
-
-
-Overfull \hbox (49.48686pt too wide) in paragraph at lines 1401--1402
-\OT1/cmr/m/n/12 cu-pe-ra-do el 18 de ju-nio de 2.018 de: https://themorningstar
-g2.wordpress.com/tag/heliostatos/ 
- []
-
-
-Overfull \hbox (24.77557pt too wide) in paragraph at lines 1405--1406
-[]\OT1/cmr/m/n/12 [33] OpenCV (2.018). OpenCV. Re-cu-pe-ra-do el 20 de ju-nio d
-e 2.018 de: http://opencv.org/ 
- []
-
-
-Overfull \hbox (159.35004pt too wide) in paragraph at lines 1407--1408
-[]\OT1/cmr/m/n/12 [34] SAL (2.015). In-fra-es-truc-tu-ra. Re-cu-pe-ra-do el 20 
-de ju-nio de 2.018 de: http://www.hpca.ual.es/es/infraestructura. 
- []
-
-[70]
-Overfull \hbox (148.84589pt too wide) in paragraph at lines 1411--1412
-[]\OT1/cmr/m/n/12 [36] Sour-ge-For-ce.net (2.018). N. d. Re-cu-pe-ra-do el 17 d
-e ju-lio de 2.018 de: https://sourceforge.net/projects/opencv/ 
- []
-
-(main.bbl [71])
+[56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] (main.bbl
+[70])
 
 Package natbib Warning: There were undefined citations.
 
-[72] (main.aux
+[71] (main.aux
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
 ) ) 
@@ -762,9 +727,9 @@ e1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Pc/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Pc/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (72 pages, 2123081 bytes).
+Output written on main.pdf (71 pages, 2119540 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
+ 281 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
