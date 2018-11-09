@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  8 NOV 2018 22:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  9 NOV 2018 11:31
 entering extended mode
 **./main.tex
 (main.tex
@@ -394,18 +394,6 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-
-Package natbib Warning: Citation `OpenCVWebPage' on page 3 undefined on input l
-ine 57.
-
-
-Package natbib Warning: Citation `SALWebPage' on page 3 undefined on input line
- 57.
-
-
-Package natbib Warning: Citation `IEEEXploreWebPage' on page 3 undefined on inp
-ut line 57.
-
 [3]
 
 LaTeX Warning: File `unnamed (1).jpg' not found on input line 71.
@@ -651,11 +639,6 @@ Overfull \hbox (73.76312pt too wide) in paragraph at lines 408--409
  []
 
 [27] [28 <./unnamed (9).jpg>]
-
-Package natbib Warning: Citation `SourgeForgeWebSite' on page 29 undefined on i
-nput line 441.
-
-
 Overfull \hbox (7.51341pt too wide) in paragraph at lines 439--442
 \OT1/cmr/m/n/12 pa-ra al-gu-nas pla-ta-for-mas es-pecfi-cas,tales co-mo pro-c
 e-sa-do-res de se~nal di-gi-tal. OpenCV
@@ -703,19 +686,15 @@ o-gra-ma. cv2.imshow("Camara",
 
 [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55]
 [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] (main.bbl
-[70])
-
-Package natbib Warning: There were undefined citations.
-
-[71] (main.aux
+[70]) [71] (main.aux
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
 ) ) 
 Here is how much of TeX's memory you used:
- 5631 strings out of 492970
- 76247 string characters out of 3127925
- 168599 words of memory out of 3000000
- 9379 multiletter control sequences out of 15000+200000
+ 5640 strings out of 492970
+ 76454 string characters out of 3127925
+ 167647 words of memory out of 3000000
+ 9388 multiletter control sequences out of 15000+200000
  10161 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,11n,43p,2499b,529s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -727,7 +706,7 @@ e1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Pc/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Pc/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (71 pages, 2119540 bytes).
+Output written on main.pdf (71 pages, 2119365 bytes).
 PDF statistics:
  281 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
