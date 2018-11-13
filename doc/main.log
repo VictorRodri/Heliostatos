@@ -1,11 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  11 NOV 2018 22:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.9.10)  13 NOV 2018 22:39
 entering extended mode
-**./main.tex
-(main.tex
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main
+(./main.tex
 LaTeX2e <2018-04-01> patch level 5
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
+(/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo"
+(/usr/share/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -20,57 +22,49 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\utf8x.def"
+(/usr/share/texmf-dist/tex/latex/ucs/utf8x.def
 File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 ))
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucs.sty"
+(/usr/share/texmf-dist/tex/latex/ucs/ucs.sty
 Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-global.def"
+(/usr/share/texmf-dist/tex/latex/ucs/data/uni-global.def
 File: uni-global.def 2013/05/13 UCS: Unicode global data
 )
 \uc@secondtry=\count88
 \uc@combtoks=\toks16
 \uc@combtoksb=\toks17
 \uc@temptokena=\toks18
-) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2018/10/03 3.25 The Babel package
+)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/09/02 3.23 The Babel package
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def"
-File: switch.def 2018/10/03 3.25 Babel switching mechanism
+(/usr/share/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/09/02 3.23 Babel switching mechanism
 )
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-spanish\spanish
-.ldf"
+(/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2018/10/03 3.25 Babel common definitions
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/09/02 3.23 Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.def"
-)
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count90
 )
 \es@quottoks=\toks19
 \es@quotdepth=\count91
 ))
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty
-"
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks20
 \symAMSa=\mathgroup4
@@ -78,23 +72,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks21
 \ex@=\dimen104
-)) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
-"
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen105
-) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count92
@@ -134,7 +129,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+)
+(/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks26
 \thm@bodyfont=\toks27
@@ -145,7 +141,8 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@postskip=\skip47
 \thm@headsep=\skip48
 \dth@everypar=\toks31
-) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+)
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count104
 \calc@Bcount=\count105
@@ -158,35 +155,32 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count106
 \calc@Cskip=\skip51
 )
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
-"
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks32
 )
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
-"
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics
-.cfg"
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.d
-ef"
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen115
 \Gin@req@width=\dimen116
 )
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfigure\subfigure.s
-ty"
-Package: subfigure 2002/07/30 v2.1.4 subfigure package
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip52
 \subfigcapskip=\skip53
 \subfigcaptopadj=\dimen117
@@ -201,63 +195,28 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\subfigure\subfigure.c
-fg")
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip56
 \subfig@bottom=\skip57
-) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\was\gensymb.sty"
+)
+(/usr/share/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+)
+(/usr/share/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip58
 \bibsep=\skip59
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count111
-) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+)
+(/usr/share/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\parskip\parskip.sty"
-Package: parskip 2018-08-24 v2.0a non-zero parskip adjustments
-
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.st
-y"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.st
-y"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+(/usr/share/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
 )
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.
-sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.
-sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.s
-ty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.s
-ty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
-"
-Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count112
-))
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
-"
+(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip60
@@ -269,19 +228,19 @@ s
 \f@nch@O@erf=\skip66
 \f@nch@O@olf=\skip67
 \f@nch@O@orf=\skip68
-) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\vmargin\vmargin.sty
-"
+)
+(/usr/share/texmf-dist/tex/latex/vmargin/vmargin.sty
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen119
 \PaperHeight=\dimen120
-) ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+) (/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks33
 \verbatim@line=\toks34
 \verbatim@in@stream=\read1
-) (main.aux
+) (./main.aux
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
 )
@@ -300,44 +259,64 @@ LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
+(/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 LaTeX Info: Redefining \. on input line 42.
 LaTeX Info: Redefining \% on input line 42.
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
+\scratchcounter=\count112
 \scratchdimen=\dimen121
 \scratchbox=\box28
-\nofMPsegments=\count114
-\nofMParguments=\count115
+\nofMPsegments=\count113
+\nofMParguments=\count114
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count116
+\MPscratchCnt=\count115
 \MPscratchDim=\dimen122
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks36
-)
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-bas
-e.sty"
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefineke
-ys.sty"
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds
-.sty"
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -350,7 +329,11 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-)
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Info: Redefining \celsius on input line 42.
 Package gensymb Info: Faking symbols for \degree and \celsius on input line 42.
 
@@ -363,22 +346,21 @@ Package gensymb Info: Using \Omega for \ohm on input line 42.
 
 Package gensymb Warning: Not defining \micro.
 
-(main.toc
+(./main.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    Try loading font information for U+msa on input line 8.
-
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 8.
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 11.
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+(/usr/share/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
@@ -387,11 +369,9 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-[1{C:/Users/Pc/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-]
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
+] (/usr/share/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 
@@ -410,7 +390,7 @@ ut line 57.
 
 LaTeX Warning: File `unnamed (1).jpg' not found on input line 71.
 
-<unnamed (1).jpg, id=11, 595.22375pt x 288.07625pt>
+<unnamed (1).jpg, id=12, 595.22375pt x 288.07625pt>
 File: unnamed (1).jpg Graphic file (type jpg)
 <use unnamed (1).jpg>
 Package pdftex.def Info: unnamed (1).jpg  used on input line 71.
@@ -424,7 +404,7 @@ Overfull \hbox (73.76312pt too wide) in paragraph at lines 71--73
 []\OT1/cmr/m/n/12 (1).jpg (1).jpg []
  []
 
-<unnamed.jpg, id=12, 455.7025pt x 464.73625pt>
+<unnamed.jpg, id=13, 455.7025pt x 464.73625pt>
 File: unnamed.jpg Graphic file (type jpg)
 <use unnamed.jpg>
 Package pdftex.def Info: unnamed.jpg  used on input line 78.
@@ -446,7 +426,7 @@ ine 85.
 
 LaTeX Warning: File `unnamed (2).jpg' not found on input line 91.
 
-<unnamed (2).jpg, id=20, 400.49625pt x 277.035pt>
+<unnamed (2).jpg, id=21, 400.49625pt x 277.035pt>
 File: unnamed (2).jpg Graphic file (type jpg)
 <use unnamed (2).jpg>
 Package pdftex.def Info: unnamed (2).jpg  used on input line 91.
@@ -473,7 +453,7 @@ t line 119.
 Package natbib Warning: Citation `ClaudioWebSite' on page 6 undefined on input 
 line 119.
 
-<unnamed.png, id=24, 150.5625pt x 111.41624pt>
+<unnamed.png, id=25, 150.5625pt x 111.41624pt>
 File: unnamed.png Graphic file (type png)
 <use unnamed.png>
 Package pdftex.def Info: unnamed.png  used on input line 121.
@@ -481,7 +461,7 @@ Package pdftex.def Info: unnamed.png  used on input line 121.
 
 LaTeX Warning: File `unnamed (1).png' not found on input line 122.
 
-<unnamed (1).png, id=25, 150.5625pt x 63.23625pt>
+<unnamed (1).png, id=26, 150.5625pt x 63.23625pt>
 File: unnamed (1).png Graphic file (type png)
 <use unnamed (1).png>
 Package pdftex.def Info: unnamed (1).png  used on input line 122.
@@ -491,11 +471,11 @@ Overfull \hbox (79.63806pt too wide) in paragraph at lines 121--123
 \OT1/cmr/m/n/12 (1).png (1).png [] 
  []
 
-[6]
+[6] [7 <./unnamed.png> <./unnamed (1).png>]
 
 LaTeX Warning: File `unnamed (4).jpg' not found on input line 129.
 
-<unnamed (4).jpg, id=29, 180.675pt x 170.6375pt>
+<unnamed (4).jpg, id=34, 180.675pt x 170.6375pt>
 File: unnamed (4).jpg Graphic file (type jpg)
 <use unnamed (4).jpg>
 Package pdftex.def Info: unnamed (4).jpg  used on input line 129.
@@ -505,11 +485,10 @@ Overfull \hbox (73.76312pt too wide) in paragraph at lines 129--132
 []\OT1/cmr/m/n/12 (4).jpg (4).jpg []
  []
 
-[7 <./unnamed.png> <./unnamed (1).png>]
 
 LaTeX Warning: File `unnamed (3).jpg' not found on input line 133.
 
-<unnamed (3).jpg, id=34, 501.875pt x 298.11375pt>
+<unnamed (3).jpg, id=35, 501.875pt x 298.11375pt>
 File: unnamed (3).jpg Graphic file (type jpg)
 <use unnamed (3).jpg>
 Package pdftex.def Info: unnamed (3).jpg  used on input line 133.
@@ -523,7 +502,7 @@ Overfull \hbox (73.76312pt too wide) in paragraph at lines 133--138
 
 LaTeX Warning: File `unnamed (5).jpg' not found on input line 139.
 
-<unnamed (5).jpg, id=38, 501.875pt x 294.09875pt>
+<unnamed (5).jpg, id=39, 501.875pt x 294.09875pt>
 File: unnamed (5).jpg Graphic file (type jpg)
 <use unnamed (5).jpg>
 Package pdftex.def Info: unnamed (5).jpg  used on input line 139.
@@ -537,7 +516,7 @@ Overfull \hbox (73.76312pt too wide) in paragraph at lines 139--141
 
 LaTeX Warning: File `unnamed (7).jpg' not found on input line 142.
 
-<unnamed (7).jpg, id=42, 501.875pt x 217.81375pt>
+<unnamed (7).jpg, id=43, 501.875pt x 217.81375pt>
 File: unnamed (7).jpg Graphic file (type jpg)
 <use unnamed (7).jpg>
 Package pdftex.def Info: unnamed (7).jpg  used on input line 142.
@@ -551,7 +530,7 @@ Overfull \hbox (73.76312pt too wide) in paragraph at lines 142--143
 
 LaTeX Warning: File `unnamed (6).jpg' not found on input line 148.
 
-<unnamed (6).jpg, id=46, 501.875pt x 225.84375pt>
+<unnamed (6).jpg, id=47, 501.875pt x 225.84375pt>
 File: unnamed (6).jpg Graphic file (type jpg)
 <use unnamed (6).jpg>
 Package pdftex.def Info: unnamed (6).jpg  used on input line 148.
@@ -568,7 +547,7 @@ t line 151.
 
 LaTeX Warning: File `unnamed (2).png' not found on input line 161.
 
-<unnamed (2).png, id=47, 301.125pt x 177.66376pt>
+<unnamed (2).png, id=48, 301.125pt x 177.66376pt>
 File: unnamed (2).png Graphic file (type png)
 <use unnamed (2).png>
 Package pdftex.def Info: unnamed (2).png  used on input line 161.
@@ -582,7 +561,7 @@ Overfull \hbox (79.63806pt too wide) in paragraph at lines 161--163
 
 LaTeX Warning: File `unnamed (3).png' not found on input line 164.
 
-<unnamed (3).png, id=52, 301.125pt x 226.8475pt>
+<unnamed (3).png, id=53, 301.125pt x 226.8475pt>
 File: unnamed (3).png Graphic file (type png)
 <use unnamed (3).png>
 Package pdftex.def Info: unnamed (3).png  used on input line 164.
@@ -600,7 +579,7 @@ Overfull \hbox (79.63806pt too wide) in paragraph at lines 164--166
 
 LaTeX Warning: File `unnamed (8).jpg' not found on input line 180.
 
-<unnamed (8).jpg, id=57, 491.8375pt x 306.14375pt>
+<unnamed (8).jpg, id=58, 491.8375pt x 306.14375pt>
 File: unnamed (8).jpg Graphic file (type jpg)
 <use unnamed (8).jpg>
 Package pdftex.def Info: unnamed (8).jpg  used on input line 180.
@@ -622,7 +601,7 @@ put line 203.
 
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <14.4> not available
 (Font)              Font shape `OML/cmm/b/it' tried instead on input line 207.
-<HeliostatoGoogle.png, id=66, 357.58594pt x 283.81032pt>
+<HeliostatoGoogle.png, id=67, 357.58594pt x 283.81032pt>
 File: HeliostatoGoogle.png Graphic file (type png)
 <use HeliostatoGoogle.png>
 Package pdftex.def Info: HeliostatoGoogle.png  used on input line 209.
@@ -640,7 +619,7 @@ line 255.
 
 LaTeX Warning: File `unnamed (4).png' not found on input line 263.
 
-<unnamed (4).png, id=79, 521.95pt x 349.305pt>
+<unnamed (4).png, id=80, 521.95pt x 349.305pt>
 File: unnamed (4).png Graphic file (type png)
 <use unnamed (4).png>
 Package pdftex.def Info: unnamed (4).png  used on input line 263.
@@ -662,7 +641,7 @@ ne 272.
 
 LaTeX Warning: File `unnamed (6).png' not found on input line 278.
 
-<unnamed (6).png, id=83, 521.95pt x 210.7875pt>
+<unnamed (6).png, id=84, 521.95pt x 210.7875pt>
 File: unnamed (6).png Graphic file (type png)
 <use unnamed (6).png>
 Package pdftex.def Info: unnamed (6).png  used on input line 278.
@@ -680,7 +659,7 @@ Overfull \hbox (79.63806pt too wide) in paragraph at lines 278--280
 Package natbib Warning: Citation `PSA4WebSite' on page 19 undefined on input li
 ne 286.
 
-("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-32.def"
+(/usr/share/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
 
@@ -696,7 +675,7 @@ ine 343.
 
 LaTeX Warning: File `unnamed (7).png' not found on input line 360.
 
-<unnamed (7).png, id=97, 1015.795pt x 283.0575pt>
+<unnamed (7).png, id=98, 1015.795pt x 283.0575pt>
 File: unnamed (7).png Graphic file (type png)
 <use unnamed (7).png>
 Package pdftex.def Info: unnamed (7).png  used on input line 360.
@@ -709,7 +688,7 @@ Overfull \hbox (79.63806pt too wide) in paragraph at lines 360--361
 
 LaTeX Warning: File `unnamed (8).png' not found on input line 364.
 
-<unnamed (8).png, id=98, 1054.94125pt x 413.545pt>
+<unnamed (8).png, id=99, 1054.94125pt x 413.545pt>
 File: unnamed (8).png Graphic file (type png)
 <use unnamed (8).png>
 Package pdftex.def Info: unnamed (8).png  used on input line 364.
@@ -732,7 +711,7 @@ line 402.
 
 LaTeX Warning: File `unnamed (9).jpg' not found on input line 408.
 
-<unnamed (9).jpg, id=109, 180.675pt x 179.67125pt>
+<unnamed (9).jpg, id=110, 180.675pt x 179.67125pt>
 File: unnamed (9).jpg Graphic file (type jpg)
 <use unnamed (9).jpg>
 Package pdftex.def Info: unnamed (9).jpg  used on input line 408.
@@ -757,14 +736,14 @@ ine 441.
 
 
 Overfull \hbox (7.51341pt too wide) in paragraph at lines 439--442
-\OT1/cmr/m/n/12 pa-ra al-gu-nas pla-ta-for-mas es-pecfi-cas,tales co-mo pro-c
-e-sa-do-res de se~nal di-gi-tal. OpenCV
+\OT1/cmr/m/n/12 pa-ra al-gu-nas pla-ta-for-mas es-pec^^S^^Pfi-cas,tales co-mo p
+ro-ce-sa-do-res de se~nal di-gi-tal. OpenCV
  []
 
 [28]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 454.
 
- ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
@@ -779,41 +758,41 @@ al \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Programs
 
 [29] [30]
 Overfull \hbox (74.64024pt too wide) in paragraph at lines 527--537
-[]\OT1/cmr/m/n/12 1. Ac-ce-der a la pagi-na Web don-de se ubi-ca el pro-yec-to
-: https://github.com/VictorRodri/Heliostatos
+[]\OT1/cmr/m/n/12 1. Ac-ce-der a la p^^Sagi-na Web don-de se ubi-ca el pro-yec-
+to: https://github.com/VictorRodri/Heliostatos
  []
 
 [31] [32]
 Overfull \hbox (148.26028pt too wide) in paragraph at lines 572--580
-\OT1/cmr/m/n/12 Crear el ar-gu-men-to 1: ru-ta o di-rec-to-rio del vdeo a car
--gar en el PC. par-ser.add[]argument('anchoMinimoHeliostato',
+\OT1/cmr/m/n/12 Crear el ar-gu-men-to 1: ru-ta o di-rec-to-rio del v^^S^^Pdeo a
+ car-gar en el PC. par-ser.add[]argument('anchoMinimoHeliostato',
  []
 
 
 Overfull \hbox (9.38922pt too wide) in paragraph at lines 572--580
-\OT1/cmr/m/n/12 mni-mo del he-liosta-to pa-ra su anali-sis. par-ser.add[]ar
-gument('umbralVideoHeliostatos',
+\OT1/cmr/m/n/12 m^^S^^Pni-mo del he-li^^Sosta-to pa-ra su an^^Sali-sis. par-ser
+.add[]argument('umbralVideoHeliostatos',
  []
 
 
 Overfull \hbox (161.55014pt too wide) in paragraph at lines 572--580
-\OT1/cmr/m/n/12 liosta-tos a par-tir del cual podra es-tar de-tectando-se u
-n he-liosta-to. par-ser.add[]argument('numeroHeliostatosAnalizar',
+\OT1/cmr/m/n/12 li^^Sosta-tos a par-tir del cual podr^^S^^Pa es-tar de-tect^^Sa
+ndo-se un he-li^^Sosta-to. par-ser.add[]argument('numeroHeliostatosAnalizar',
  []
 
 [33] [34] [35]
 Overfull \hbox (33.43567pt too wide) in paragraph at lines 653--659
-\OT1/cmr/m/n/12 area-To-tal.append("[]Area del he-liosta-to en pxe-les: ") s
-u-maBGRpar-cial.append("Sumatorias
+\OT1/cmr/m/n/12 area-To-tal.append("[]Area del he-li^^Sosta-to en p^^S^^Pxe-les
+: ") su-maBGRpar-cial.append("Sumatorias
  []
 
-
+[36]
 Overfull \hbox (6.55682pt too wide) in paragraph at lines 660--661
 []\OT1/cmr/m/n/12 Guardar en los res-pec-ti-vos arrays 'he-lios-ta-to', 'an-cho
 Al-to', 'area-To-tal', 'su-maBGRpar-
  []
 
-[36]
+
 Overfull \hbox (1.8077pt too wide) in paragraph at lines 671--673
 []\OT1/cmr/m/n/12 # Ob-te-ner las coor-de-na-das del con-torno. (x, y, w, h) = 
 cv2.boundingRect(contours[i])
@@ -827,37 +806,36 @@ maBGRpar-cial.append(sumR)
 
 [39] [40]
 Overfull \hbox (10.71199pt too wide) in paragraph at lines 785--787
-[]\OT1/cmr/m/n/12 # Mos-trar vdeo ori-gi-nal en una ven-ta-na/actualizar fo-t
-o-gra-ma. cv2.imshow("Camara",
+[]\OT1/cmr/m/n/12 # Mos-trar v^^S^^Pdeo ori-gi-nal en una ven-ta-na/actualizar 
+fo-to-gra-ma. cv2.imshow("Camara",
  []
 
 [41]
 
 Package natbib Warning: There were undefined citations.
 
-[42] (main.aux
+[42] (./main.aux
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
 ) ) 
 Here is how much of TeX's memory you used:
- 5555 strings out of 492970
- 74618 string characters out of 3127925
- 167240 words of memory out of 3000000
- 9306 multiletter control sequences out of 15000+200000
- 10161 words of font info for 38 fonts, out of 3000000 for 9000
+ 5225 strings out of 492642
+ 67473 string characters out of 6135566
+ 160909 words of memory out of 5000000
+ 8994 multiletter control sequences out of 15000+600000
+ 10161 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,43p,1435b,529s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Pc/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Pc/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Pc/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (42 pages, 2043540 bytes).
+ 41i,11n,43p,1429b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (42 pages, 2028968 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
