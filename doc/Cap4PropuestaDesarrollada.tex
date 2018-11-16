@@ -1,0 +1,894 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{gensymb}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{verbatim}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{Tu titulo}					% Titulo
+\author{Tu nombre}					% Autor
+\date{\today}						% Fecha
+
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Trabajo realizado en el proyecto.}
+
+\section{Variables de entorno.}
+
+Antes de trabajar el código, hay que agregar unas variables de entorno en el sistema.
+
+Para ello, se hace clic en Inicio, situado en la esquina inferior izquierda de la pantalla, y teclear ‘Variables de entorno’ para buscar esta configuración. Hacer clic en ‘Editar las variables de entorno del sistema’, el resultado que aparecerá. Y en la ventana que se abrirá, hacer clic en ‘Variables de entorno’.
+
+Por si acaso, en mi caso particular, he agregado las variables de entorno tanto para mi propio usuario como para el sistema completo. Las variables de entorno que deberán agregarse son:
+
+Variable: Python35-32. Valor: C: \textbackslash Users \textbackslash Pc \textbackslash AppData \textbackslash Local \textbackslash Programs \textbackslash Python \textbackslash Python35-32.
+Variable: Python36. Valor: C: \textbackslash Users \textbackslash Pc \textbackslash AppData \textbackslash Local \textbackslash Programs \textbackslash Python \textbackslash Python36.
+
+(Siendo ‘Pc’ el nombre de mi usuario; aquí se debe introducir el nombre de usuario correspondiente.)
+
+Para agregar una variable de entorno, hacer clic en ‘Nueva...’. Hay dos botones ‘Nueva...’. El que se ubica arriba se agrega en el usuario específico del sistema, y el que se ubica abajo se agrega para todo el sistema en general. En ‘Nombre de la variable’ y ‘Valor de la variable’, introducir los datos mencionados anteriormente, y hacer clic en ‘Aceptar’.
+
+\section{Instalación del software Python.}
+
+Para este trabajo de fin de grado, se necesitaba desarrollar un software usando un programa de ordenador: Python. La última versión disponible a la hora de realizar dicho trabajo era la 3.6.4. Se ha utilizado además la versión de 64 bits, debido a que mi PC donde desarrollé el programa monta esta arquitectura de CPU.
+
+A continuación, se explicará cómo descargar Python 3.6.4.
+
+Abrir un explorador de internet como Google Chrome, y buscar en Google ‘Instalar Python 3.6.4 64 bits’. Pinchar en el resultado ‘Python Release Python 3.6.4 | Python.org’.
+
+
+
+Una vez se haya accedido a esa página oficial de Python, realizar scroll hacia abajo para acceder a los archivos disponibles de esa versión de Python a descargar en el PC.
+
+
+
+Pinchar en ‘Windows x86-64 executable installer’ para descargar en el PC el instalador de Python, el cual se encargará de instalar este programa.
+
+
+
+La descarga se completará en cinco segundos. Pinchar en el archivo ‘EXE’ mostrado en la esquina inferior izquierda para abrir el instalador de Python.
+
+
+
+Aparecerá esta ventana de instalación. A no ser que se desee agregar manualmente las variables de entorno de Python (con el fin de poder ejecutar Python desde la consola de comandos de Windows), hacer clic en ‘Add Python 3.6 to PATH’. El propio instalador llevará a cabo este procedimiento. A continuación, hacer clic en ‘Install Now’.
+
+
+
+Se instalará Python en el sistema. Hay que esperar unos minutos para que este procedimiento se complete (cuando la barra verde se llene por completo).
+
+
+
+Cuando finalice correctamente la instalación, se mostrará en la ventana del instalador ‘Setup was successful’. Hacer clic en ‘Close’ para cerrar el instalador.
+
+
+
+El icono de Python debería aparecer en el escritorio. Hacer doble clic para abrir el programa.
+
+
+
+Si no aparece el icono de Python en el escritorio, hacer clic en el logotipo (o bandera) de Windows mostrado en la esquina inferior izquierda de la pantalla, y teclear ‘idle’. Debería ya aparecer en el buscador de programas ‘IDLE (Python 3.6 64-bit)’. Hacer clic ahí para abrirlo.
+
+
+
+En el caso de querer agregar el icono del programa al escritorio (si no lo estaba), desde esa misma pantalla del buscador de programas, situar el cursor sobre el programa, hacer clic con el botón derecho del ratón, y seleccionar ‘Abrir ubicación de archivo’. Se mostrará la ubicación exacta del archivo en el sistema, abriéndose la ventana del explorador de archivos de Windows.
+
+
+
+Desde esa ventana, y haciendo clic con el botón derecho del ratón sobre el programa (acceso directo) ‘IDLE (Python 3.6 64-bit)’, seleccionar desde el menú contextual ‘Crear acceso directo’. Se creará un nuevo acceso directo a ese programa, en esta misma ventana, con nombre ‘IDLE (Python 3.6 64-bit) (2)’.
+
+
+
+Reducir el tamaño de la ventana, de forma parecida a la mostrada en esta captura de pantalla. Tras esto, simplemente habría que arrastrar y soltar este acceso directo ‘IDLE (Python 3.6 64-bit) (2)’ desde esa ventana al escritorio. Así, ya se tiene el programa en el escritorio.
+
+\section{Cómo usar el software.}
+
+Para usar y ejecutar el software en el PC descrito en este informe, especialmente por primera vez, se siguen las siguientes instrucciones:
+
+\# Heliostatos
+
+--- Cómo abrir y ejecutar el proyecto de caracterización de helióstatos ---
+
+Nota: el código de este proyecto se realizó mediante el programa Python e IDLE 3.6.4.
+
+1. Acceder a la página Web donde se ubica el proyecto: https://github.com/VictorRodri/Heliostatos
+2. En ella, hacer clic en el botón verde 'Clone or download' \textgreater 'Download ZIP'.
+3. El proyecto se descargará en el disco duro del equipo, generalmente en 'Documentos' \textgreater 'Descargas'. De lo contrario, especificar en qué ruta exacta del equipo se realizará la descarga.
+4. Descomprimir el proyecto descargado previamente, usando un software como WinRAR: https://www.winrar.es/descargas
+5. Instalar la última versión de Python desde su página Web oficial: https://www.python.org/downloads/
+6. Abrir la terminal de comandos de Windows. Para ello, hacer clic en 'Inicio' \textgreater 'Ejecutar'. En la ventana que aparecerá, escribir en el cuadro de texto 'cmd' y pulsar Enter.
+7. La terminal mostrará la ruta o directorio del sistema donde se ubica usted actualmente, como 'C: \textbackslash Users \textbackslash Pc\textgreater'. Ir navegando hasta encontrar el directorio que contiene el proyecto descomprimido previamente. Para acceder a una carpeta, escribir 'cd NombreCarpeta' y pulsar Enter. Para salir del directorio actual, escribir 'cd ..'.
+8. Una vez se haya navegado al directorio que contiene el proyecto, ejecutarlo con el comando 'estimacion\_potencia.py Videos/varios\_heliostatos.mp4 50 50', siendo respectivamente el nombre del proyecto '.py' con el software ejecutable, el directorio que contiene el vídeo de helióstatos a ser procesado, y el ancho y alto mínimos del helióstato para su detección y análisis.
+9. Durante aproximadamente un minuto, se ejecutará el software que consistirá en medir la radiación de energía que proyecta cada helióstato. Concretamente, la energía se calcula como la sumatoria de los cuadrados de cada componente BGR del helióstato. Aparecerán estos resultados en tiempo de ejecución en la consola, para cada fotograma del vídeo de helióstatos.
+10. Si desea cancelar la ejecución del software, pulsar 'Ctrl+C'.
+
+\section{Diagrama de flujo.}
+
+El funcionamiento del código de helióstatos mediante la representación de un diagrama de flujo es el siguiente:
+
+\section{Funcionamiento del software y código.}
+
+El software consiste en la lectura y procesamiento de un vídeo guardado en el disco duro del ordenador personal y en formato MP4. El vídeo es de un conjunto de helióstatos que van entrando uno por uno en un panel solar y fusionándose todos entre sí. Y tras esto, los helióstatos van saliendo uno por uno de ese panel solar, hasta que no quede ninguno.
+
+El código desarrollado es el siguiente:
+
+\# Bibliotecas requeridas para este software.
+import cv2
+import argparse
+import time
+import numpy as np
+
+Para que funcione todo el código expuesto y elaborado a continuación, hay que importar en este caso las librerías ‘cv2’, ‘argparse’, 'time' y ‘numpy’ (esta última se ha asignado un nombre propio: ‘np’).
+
+‘cv2’ permite el uso de distintas funcionalidades de Python. En este proyecto, se ha usado para la captura y lectura de un vídeo guardado en el sistema, convertirlo de color a escala de grises, aplicarle un umbral (diferenciar solo dos niveles de grises: u oscuros o claros), mostrar el vídeo original y umbralizado en pantalla y en reproducción (conforme el programa lo va analizando fotograma a fotograma), realizar pausas (breves o prolongadas) de la ejecución del código, detectar y localizar contornos (helióstatos) en el vídeo, calcular el ancho y alto en píxeles de los contornos, así como sus valores de área, calcular la sumatoria parcial y total de los valores de todos los píxeles BGR al cuadrado de cada helióstato, y dibujar un rectángulo verde o de otro color alrededor del contorno en el vídeo.
+‘argparse’ es usado para proporcionar distintos parámetros desde la consola de Windows al ejecutar este código, de tal forma que el programa sea ejecutado de una forma u otra según la petición de datos del usuario, como las dimensiones del helióstato que el programa analizará, y así ignorar los helióstatos con dimensiones ajenas a las deseadas por el usuario.
+‘time’ permite medir tiempos de ejecución de todo el código o de fragmentos de código, en segundos. Se utilizará para medir la tasa de ‘frames’ (fotogramas) por segundo de la lectura y procesado del vídeo de helióstatos, y así comprobar la eficiencia de la ejecución del programa.
+‘numpy’ permite el manejo de arrays o vectores con el fin de recorrer y analizar una serie de datos en secuencia, como una matriz de dos dimensiones y con muchos valores numéricos guardados. Además, usar ‘numpy’ para dicho fin es mucho más eficiente que otros métodos de análisis de datos en secuencia que no sean en arrays o vectores, como los típicos bucles ‘for’.
+
+
+start\_time = time.time() \# Obtener el tiempo de ejecución inicial de este programa.
+frame\_counter = 0 \# Contador de fotogramas totales del vídeo. Se irá incrementando progresivamente en líneas de código posteriores.
+
+Obtener en segundos el tiempo de ejecución inicial del programa. Inicial porque esta línea de código se ubica en el comienzo del software. Declarar e inicializar a cero un contador de fotogramas del vídeo. Ambos datos serán usados para calcular los FPS (fotogramas por segundo) del vídeo de helióstatos, al final de este código.
+
+
+\# Argumentos o parámetros necesarios para ejecutar este programa a través de la consola de Windows.
+parser = argparse.ArgumentParser(description='Parametros del programa.') \# Dar un nombre al conjunto de parámetros y asignarlo a la variable 'parser'.
+parser.add\_argument('directorioVideoHeliostatosCargar', type=str) \# Crear el argumento 1: ruta o directorio del vídeo a cargar en el PC.
+parser.add\_argument('anchoMinimoHeliostato', type=int) \# Crear el argumento 3: ancho mínimo del helióstato para su análisis.
+parser.add\_argument('altoMinimoHeliostato', type=int) \# Crear el argumento 4: alto mínimo del helióstato para su análisis.
+parser.add\_argument('umbralVideoHeliostatos', type=int) \# Crear el argumento 5: umbral o nivel de color mínimo del vídeo de helióstatos a partir del cual podría estar detectándose un helióstato.
+parser.add\_argument('numeroHeliostatosAnalizar', type=int) \# Crear el argumento 6: número máximo de helióstatos a detectar y analizar en cada fotograma del vídeo de helióstatos.
+args = parser.parse\_args() \# Devuelve información de los parámetros definidos previamente.
+
+Permite que a la hora de ejecutar el programa desde la terminal de comandos de Windows, solicite al usuario la ruta del vídeo a cargar del sistema, el ancho y alto mínimos del helióstato para ser detectado y analizado por el programa, el umbral (o tonalidad del color) del vídeo a partir del cual el programa detectará los helióstatos, y el número máximo de helióstatos que el programa deberá detectar y analizar, para cada fotograma del vídeo de helióstatos. Por ejemplo: ‘C: \textbackslash Users \textbackslash Pc \textbackslash Desktop \textbackslash TFG>miCodigo.py Videos/varios\_heliostatos.mp4 50 50 127 2’.
+
+‘parser = argparse.ArgumentParser(description='Parametros del programa.')’. Esta línea de código permite asignar un conjunto de parámetros o argumentos y de darles un nombre. Es guardado en la variable ‘parser’.
+Partiendo de la anterior variable ‘parser’, se van designando los distintos argumentos, junto a sus nombres y tipos, como cadena o entero (según si la entrada del parámetro hay que escribir letras y/o caracteres, o simplemente números).
+‘args = parser.parse\_args()’. Permite que, desde la variable ‘args’, cargar el argumento concreto, almacenado previamente cuando el programa solicitó al usuario los argumentos. Por ejemplo, si se desea comprobar cuál fue el ancho del helióstato que el usuario solicitó por parámetro en la consola, se cargará y obtendrá el segundo argumento con la línea de código siguiente: ‘args.anchoMinimoHeliostato’. Así, el programa realizará las medidas y operaciones oportunas de acuerdo al valor de este parámetro deseado por el usuario.
+
+
+\# Mostrar en la consola este aviso de cuando se va a ejecutar el programa.
+print("")
+print("Iniciando programa...")
+print("")
+
+Al iniciar la ejecución del programa, mostrará por consola que se ha iniciado su ejecución, con el aviso ‘Iniciando programa…’. Este aviso solo aparecerá una vez durante toda su ejecución.
+
+
+\# Leer secuencia de imágenes del vídeo a partir del directorio especificado por parámetro.
+camara = cv2.VideoCapture(args.directorioVideoHeliostatosCargar)
+
+Partiendo del directorio especificado por el usuario, el programa leerá y cargará el archivo concreto, que deberá ser el vídeo de helióstatos. De lo contrario, la ejecución del programa no se realizará correctamente.
+
+
+\# Declarar estos arrays con el fin de almacenar toda la información sobre los resultados de los helióstatos analizados en el vídeo de helióstatos.
+\# Además, son usados especialmente con el fin de mostrar, para cada información, hasta dos resultados distintos (uno para cada helióstato) en una misma línea de texto, en la consola.
+heliostato = []
+anchoAlto = []
+areaTotal = []
+sumaBGRparcial = []
+sumaBGRtotal = []
+
+Arrays que permiten almacenar y mostrar en consola toda la información y resultados sobre los helióstatos analizados en el vídeo de helióstatos. El uso concreto de estos arrays se debe a que con ellos es posible mostrar en consola y para cada información, hasta dos resultados distintos (uno para cada helióstato) en una misma línea de texto, de la forma que se explicará posteriormente. Así se evita el uso de demasiadas líneas de texto en la consola, y compactar toda la información posible en una sola. Estos arrays son vaciados una vez que se haya guardado la información correspondiente al helióstato (o helióstatos) del fotograma actual (en análisis) del vídeo de helióstatos, y posteriormente mostradas dichas informaciones de ese helióstato (o helióstatos) en consola. Todo este procedimiento se repite igual para los siguientes fotogramas de dicho vídeo de helióstatos.
+
+
+\# Iteración 'while True' para cada fotograma del vídeo, hasta completar todos los fotogramas y llegar al final del vídeo (cambiaría automáticamente de True a False y el bucle 'while' finaliza).
+while True:
+
+A partir de aquí y prácticamente hasta el final del código, todas las demás instrucciones se aplicarán para cada fotograma del vídeo de helióstatos.
+
+    
+    \# Obtener frame. Para ello, se toma un fotograma del vídeo, se guarda en 'frame', y si se ha hecho esta acción correctamente, 'grabbed' valdrá true (verdadero), y viceversa.
+    (grabbed, frame) = camara.read()
+
+    \# Si se ha llegado al final del vídeo, romper la ejecución de este bucle 'while' y finalizar el programa.
+    if not grabbed:
+        break
+
+Estas líneas de código se encargarán de indicar al programa si quedan más fotogramas por leer o no del vídeo de helióstatos, y así saber hasta cuándo dicho programa se mantendría en ejecución. Primero, ‘camara.read()’ obtiene el fotograma actual del vídeo, y lo guarda en la variable ‘frame’. Si se ha hecho esta acción correctamente (debido a que quedan más fotogramas por leer del vídeo y no se ha llegado al final del mismo), ‘grabbed’ (justo al lado izquierdo de ‘frame’) valdrá ‘true’, y viceversa. Si se ha llegado al final del vídeo, ‘grabbed’ valdrá ‘false’ (porque ya no quedan más fotogramas por leer), y romperá la ejecución del presente bucle ‘while’ para que deje de leer más fotogramas del vídeo y finalice la ejecución de este programa. Esta ruptura es producida porque se cumple la condición de ‘if not grabbed’, así que desencadena la instrucción ‘break’.
+
+
+    \# Convertir a escala de grises el fotograma actual del vídeo. Para ello, con la variable 'frame' (fotograma del vídeo) capturada anteriormente, se llama a la función 'cv2.COLOR\_BGR2GRAY'.
+    img = cv2.cvtColor(frame, cv2.COLOR\_BGR2GRAY)
+    
+    \# Aplicar un umbral a ese fotograma del vídeo. Parámetros de este método: imagen fuente en escala de grises, valor de umbral para clasificar los valores de píxeles de esa imagen,
+    \# valor máximo a ser representado si el valor del píxel supera al valor del umbral, aplicar un tipo concreto de umbralización (0 porque no se desea hacer esto).
+    \# NOTA: la variable ‘ret’ que recibe como resultado en este método no es usada en este programa así que se puede ignorar, esto es debido a que no se está aplicando umbralización de Otsu.
+    ret, thresh = cv2.threshold(img, args.umbralVideoHeliostatos, 255, 0)
+    
+    cv2.imshow("Camara2", thresh) \# Mostrar vídeo umbralizado en una ventana.
+
+    cv2.waitKey(1) \# El programa hará una pequeña pausa (1 milisegundo) para que de tiempo a que se muestren los vídeos y fotogramas en las dos ventanas que se han creado en este código para tal fin.
+
+    \# Buscar y detectar todos los contornos o helióstatos del fotograma actual del vídeo.
+    \# Parámetros del siguiente método: imagen umbralizada, devolver todos los contornos y crear una lista completa de jerarquía de familia, marcar la mínima cantidad de puntos (no todos)
+    \# que forman (delimitan) la figura (helióstato). Argumentos que devolverá dicho método: imagen fuente (sobra), modo de devolución del contorno, método de aproximación del contorno (sobra).
+    im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR\_TREE, cv2.CHAIN\_APPROX\_SIMPLE)
+
+Las siguientes líneas de código se encargarán de convertir cada fotograma del vídeo a escala de grises, aplicarle un umbral y detectar los contornos o helióstatos, así como mostrar en pantalla la visualización en vivo (al mismo tiempo que la ejecución del programa) del vídeo de helióstatos umbralizado.
+
+Convertir a escala de grises el fotograma actual del vídeo. Basta con tomar la anterior variable ‘frame’ (fotograma actual del vídeo a color), y aplicar la línea de código ‘cv2.COLOR\_BGR2GRAY’. El fotograma convertido a escala de grises se guarda en la variable resultado ‘img’.
+Aplicar un umbral al fotograma actual del vídeo en escala de grises (variable ‘img’ anterior). Un vídeo umbralizado en escala de grises permite diferenciar únicamente dos niveles de color: gris oscuro y gris claro. Así se facilitan las tareas de análisis y detección de contornos (helióstatos) en el vídeo. En este caso, el umbral definido ha sido de 'args.umbralVideoHeliostatos', siendo esta expresión el valor numérico proporcionado por parámetro por el usuario al ejecutar el programa (por ejemplo, 127), y el máximo típico de 255. Es decir, si el píxel del vídeo es gris oscuro, en una escala de grises 0-127, será tratado y pintado como negro. En otros casos (128-255), como blanco. Así para todos los píxeles de cada fotograma del vídeo, quedando un vídeo en blanco y negro puros. Blanco es el helióstato, y negro el fondo. El fotograma umbralizado se guarda en la variable resultado ‘thresh’. Después, con el método ‘imshow’, se muestra en tiempo de ejecución y en una ventana el vídeo de helióstatos umbralizado. Es importante realizar después de las operaciones anteriores una pausa muy breve de un milisegundo para que el programa le de tiempo a mostrar los vídeos y fotogramas actualizados en las dos ventanas: vídeo normal y umbralizado. Para ello, se usa el método ‘waitKey(1)’, siendo ‘1’ el tiempo de espera deseado en milisegundos.
+Buscar, detectar y delimitar todos los contornos o helióstatos del fotograma actual del vídeo umbralizado. Para ello, el método ‘findContours’ requiere de los parámetros necesarios para saber cuál es el fotograma umbralizado a tratar (variable ‘thresh’ obtenida previamente), cómo devolverá el o los resultados (en este caso devolverá todos los contornos detectados, y almacenados en lista completa de de jerarquía de familia), y cómo delimitará el contorno (en este caso usando la mínima cantidad de puntos). Los contornos detectados se guardarán en la variable resultado ‘contours’. Las otras dos variables resultado ‘im2’ e ‘hierarchy’ no son usadas para este proyecto.
+
+
+	\# Guardar en los distintos arrays los siguientes textos, para luego ser mostrados por consola junto con los respectivos resultados de los helióstatos.
+    heliostato.append("                                               ")
+    anchoAlto.append("Ancho y alto WH del helióstato en píxeles:      ")
+    areaTotal.append("Área del helióstato en píxeles:                 ")
+    sumaBGRparcial.append("Sumatorias BGR al cuadrado de todos sus píxeles:")
+    sumaBGRtotal.append("Suma total BGR al cuadrado helióstato completo: ")
+    
+    Guardar en los respectivos arrays 'heliostato', 'anchoAlto', 'areaTotal', 'sumaBGRparcial' y 'sumaBGRtotal' los textos 'Ancho y alto', 'Área', 'Sumatorias BGR parcial' y 'Sumatorias BGR total', relacionados con los datos que se obtendrán más adelante de los helióstatos analizados en el vídeo de helióstatos.
+
+
+    \# Recorrer solo los dos primeros contornos, los más grandes (siguiente bucle 'for'), para cada fotograma del vídeo (bucle 'while' ejecutándose actualmente).
+    \# Al no recorrer los demás contornos, estos serán descartados porque no son muy grandes ni importantes o son falsos.
+    \# Siendo 'args.numeroHeliostatosAnalizar' el número de contornos deseado por el usuario por parámetro en la consola que se quiere analizar como máximo para cada fotograma.
+    for i in range(0,args.numeroHeliostatosAnalizar):
+
+Este bucle ‘for’ que va del número 0 al 'args.numeroHeliostatosAnalizar' (sin incluirse este último número) se encargará de analizar únicamente los 'x' primeros contornos más grandes, para cada fotograma del vídeo. De esta forma, se ignorarán los falsos contornos y menos importantes. Además, en dicho bucle se abarcan y realizan operaciones como detectar las coordenadas de cada helióstato en el vídeo, así como calcular sus áreas y sumatorias de los valores de las componentes RGB al cuadrado de todos sus píxeles. Siendo 'args.numeroHeliostatosAnalizar' el número de contornos deseado por el usuario por parámetro en la consola que se quiere analizar como máximo para cada fotograma.
+        
+        
+        \# Obtener las coordenadas del contorno.
+        (x, y, w, h) = cv2.boundingRect(contours[i]) \# xy: coordenadas de un punto, w: ancho, h: altura.
+
+        \# Calcular el área del contorno numero 'i', en el fotograma actual del vídeo. 'i' es el iterador del bucle 'for' actual.
+        area = cv2.contourArea(contours[i])
+        
+Para cada contorno, se obtendrán sus coordenadas en el vídeo, y su valor de área, aparte de mostrar el vídeo de helióstatos normal en pantalla (en tiempo de ejecución), o de actualizarlo al siguiente fotograma que se analizará.
+
+Obtener las coordenadas del contorno usando el método ‘boundingRect’: XY, correspondientes a su esquina superior izquierda en el vídeo, y WH, correspondientes a su ancho (horizontal) y su altura (vertical). Es posible que si el helióstato todavía no ha terminado de entrar en el vídeo (desde el lado izquierdo), pues que no se muestre su esquina superior izquierda. Así que en este caso, se mostrará la esquina superior izquierda del helióstato mostrado en dicho vídeo hasta el momento. Respectivamente para el ancho y la altura.
+Para el contorno número 1 y/o 2 del fotograma actual del vídeo, el programa detectará y calculará su área total, gracias al método ‘contourArea’ de la biblioteca de OpenCV.
+
+
+        \# Si el contorno tiene un ancho y alto mayores a los especificados por parámetros, este será analizado y reencuadrado en un rectángulo verde en el vídeo.
+        if (w > args.anchoMinimoHeliostato and h > args.altoMinimoHeliostato):
+
+Esta condición ‘if’ solo será ejecutada si los valores que el usuario proporcionó por parámetro desde consola de ancho y alto del helióstato son menores al ancho y alto del helióstato que se va a analizar justo ahora. Si se cumplen todas, se accederá a este ‘if’ para calcular y mostrar en consola la sumatoria acumulativa de los valores de las componentes RGB al cuadrado de todos los píxeles del contorno (helióstato), además del valor de área y de reencuadrarlo en un rectángulo verde en el vídeo. Y también, se mostrarán sus coordenadas (ubicación) en el vídeo, su ancho y alto, etcétera. Todo esto se irá aplicando a cada contorno.
+            
+
+            \# Si se está analizando el contorno número uno en el fotograma actual del vídeo, hacer.
+            if (i == 0):
+
+                \# Dibujar un rectángulo verde alrededor del contorno, en el vídeo.
+                \# Parámetros: fotograma actual vídeo, esquina superior izquierda, esquina inferior derecha (width: ancho, height: altura), rectángulo color verde, grosor del rectángulo 2 píxeles.
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+
+            \# Si se está analizando el helióstato número dos en el fotograma actual del vídeo (en caso de que ya exista el otro helióstato en ese mismo fotograma del vídeo), hacer.
+            else:
+
+                \# En este caso, ahora se reencuadra el contorno en un rectángulo rojo, en vez de verde. Así, ambos contornos podrán ser diferenciados si se muestran en el mismo fotograma del vídeo.
+                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
+
+Aquí puede suceder los siguientes casos:
+
+Si solo hay un contorno en el fotograma actual del vídeo, o hay dos pero relativamente juntos entre sí (rozándose, fusionándose o separándose), se reencuadrará en verde dicho contorno o doble contorno en el vídeo usando el método ‘rectangle’.
+Si se muestran dos contornos separados entre sí en un mismo fotograma del vídeo, se analizarán primero uno y después el otro. En el vídeo, cada contorno se reencuadrará en colores distintos: el de la izquierda en verde y el de la derecha en rojo.
+Si en el fotograma actual del vídeo no hay contornos, no se hará ningún procedimiento. Simplemente se pasará inmediatamente al siguiente fotograma del vídeo para seguir analizando más helióstatos que pudieran existir en ellos.
+
+Además, conforme el helióstato se vaya desplazando por el vídeo, también lo hará el rectángulo verde o rojo para mantener el reencuadre.
+
+Respecto a los parámetros introducidos en el método ‘rectangle’, aclarar que ‘x+w’ hace referencia a la esquina superior derecha del contorno, porque a ‘xy’, que es su esquina superior izquierda, se le suma su ancho ‘w’. Respectivamente para ‘y+h’ que es su esquina inferior izquierda: a ‘xy’ (esquina superior izquierda) se le suma su altura ‘h’. La combinación de las esquinas superior derecha y la inferior izquierda, ‘(x+w, y+h)’, resulta la esquina inferior derecha.
+
+
+            \# Leer y analizar todos los píxeles del helióstato.
+            def vectorial(frame, x, y):
+                \# Del fotograma actual del vídeo, se leerá únicamente donde haya un helióstato (su ancho y alto), y así con todos los helióstatos de cada fotograma del vídeo.
+                i = frame[y+2:y+h-1, x+2:x+w-1]
+                
+                \# Matrices BGR resultado de la lectura de ese helióstato.
+                mB = i[:, :, 2]
+                mG = i[:, :, 1]
+                mR = i[:, :, 0]
+                                
+                \# Elevar al cuadrado cada dato BGR del helióstato.
+                mB2 = np.power(mB, 2)
+                mG2 = np.power(mG, 2)
+                mR2 = np.power(mR, 2)
+
+                \# Realizar la sumatoria acumulativa de cada BGR al cuadrado de ese helióstato.
+                sumB = np.sum(mB2)
+                sumG = np.sum(mG2)
+                sumR = np.sum(mR2)
+
+                \# Sumar las anteriores tres componentes entre sí, para obtener la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
+                sumaRGB = sumR+sumG+sumB
+                
+                \# Ir introduciendo en los arrays las informaciones de los resultados de los helióstatos, con el fin de mostrarlas después por consola.
+                \# Al ser arrays acumulativos, si en un mismo fotograma del vídeo se obtienen datos de dos helióstatos, para cada array se guardarán los datos de esos dos helióstatos a la vez.
+                \# De esta forma, se compactará más la información mostrada en consola al estar esta a dos columnas: helióstato verde y helióstato rojo, para cada línea de texto o array.
+                anchoAlto.append(w)
+                anchoAlto.append(h)
+                anchoAlto.append("                      ")
+                
+                areaTotal.append(area)
+                areaTotal.append("                       ")
+                
+                sumaBGRparcial.append(sumB)
+                sumaBGRparcial.append(sumG)
+                sumaBGRparcial.append(sumR)
+                sumaBGRparcial.append("     ")
+                
+                sumaBGRtotal.append(sumaBGR)
+                sumaBGRtotal.append("                       ")
+
+            \# Llamar a la función definida 'vectorial(frame, x, y)', siendo 'frame' el fotograma actual del vídeo a tratar, y XY las coordenadas de la esquina superior izquierda del helióstato.
+            vectorial(frame, x, y)
+        
+Estos dos bucles ‘for’ compactados en vectores son los encargados de analizar píxel a píxel el helióstato. Primero se analizarán los píxeles de columnas, y luego los de filas. En resumen, se realizan las siguientes operaciones: medir el ancho, alto y área del helióstato en píxeles, calcular para cada píxel del helióstato las componentes RGB y RGB al cuadrado (cada componente por separado), y con estas últimas, realizar una sumatoria acumulativa de cada componente RGB por separado de todos los píxeles que componen el helióstato, y después, lo mismo pero sumando o unificando las tres componentes entre sí.
+
+Esta sección de código se ha trabajado sobretodo con NumPy (abreviado como ‘np’ en el código) y con arrays, con el fin de reducir considerablemente el tiempo de ejecución del programa. La función ‘vectorial()’ es llamada y con los parámetros ‘fotograma actual del vídeo’, y las coordenadas XY de la esquina superior izquierda del helióstato, que es desde donde se empezarán a analizar cada helióstato, hasta llegar a su esquina inferior derecha.
+
+En la línea de código ‘i = frame[y+2:y+h-1, x+2:x+w-1]’, se obtendrá, de ese fotograma, el helióstato. Para ello, en la primera entrada de ‘frame’, que hace referencia al número de filas, se indica el número de las mismas, es decir, desde la altura máxima del helióstato ‘y’ hasta su base inferior ‘y+h’. Y en la segunda entrada de ‘frame’, correspondiente al número de columnas, se proporciona también cuántas tiene: desde el lado izquierdo ‘x’ hasta el lado derecho del helióstato ‘x+w’. Es importante no confundir la longitud/altura del helióstato (‘w’ y ‘h’, respectivamente), con las coordenadas o ubicación del helióstato en el vídeo, midiéndose desde su esquina superior izquierda (‘XY’). Para seleccionar o cargar el helióstato (variable ‘i’) del fotograma actual del vídeo (variable ‘frame’), se parte desde la esquina superior izquierda de ese helióstato con la coordenada ‘X’, y para definir el límite derecho (lado derecho) del helióstato, a esa ‘X’, que es donde está ubicado el helióstato en el vídeo, se le suma su longitud ‘w’. Y respectivamente para la altura. Indicar que, con el fin de evitar leer sobre el rectángulo verde o rojo que reencuadra al helióstato en el vídeo, se le han puesto en ‘frame’ unos números ‘+2’ y ‘-1’. Son las medidas exactas para evitar que esto suceda.
+
+En ‘mB = i[:, :, 2], mG = i[:, :, 1], mR = i[:, :, 0]’, se obtendrán las salidas BGR (o números del 0-255) de ese helióstato cargado previamente en la variable ‘i’. Para ello, se indica, en cada matriz ‘mB’, ‘mG’ y ‘mR’ (matrices de píxeles azules, verdes y rojos del helióstato, respectivamente), que se desean obtener todas las filas y columnas de ‘i’, es decir, todos los valores BGR del helióstato. Se indican con los dos puntos ‘:’, en las dos primeras entradas de esas matrices. Y en la tercera entrada, que correspondería a la tercera dimensión, se obtienen los valores azules ‘B’ con el número 2, los verdes ‘G’ con el 1, y los rojos ‘R’ con el 0.
+
+Con esos valores BGR (‘mB’, ‘mG’ y ‘mR’), se elevarán cada uno de ellos al cuadrado con el método ‘np.power’. Así, se dispondrán en ‘mB2’, ‘mG2’ y ‘mR2’ todos los valores BGR del helióstato elevados al cuadrado. Los valores RGB solo pueden ser representados del 0 al 255. Al elevar al cuadrado uno de estos valores, nunca se sobrepasará del 255, y pasará del 255 al cero directamente, y así sucesivamente. Esto lo realiza el programa automáticamente.
+
+Con todos estos valores BGR del helióstato elevados al cuadrado, se realizará una sumatoria acumulativa de todos ellos, para cada componente BGR por separado. Los resultados de las sumatorias se guardarán en ‘sumB’, ‘sumG’ y ‘sumR’. Se trataría de cumplir la siguiente fórmula:
+
+E = sumatoria R al cuadrado + sumatoria G al cuadrado + sumatoria B al cuadrado
+Siendo ‘sumatoria’ la sumatoria acumulativa de todos los píxeles del helióstato.
+
+Para cada helióstato, se obtendría entonces: Er, Eg y Eb.
+           
+Finalmente, en ‘sumaRGB = sumR+sumG+sumB’, esta acción consiste en sumar o unificar los resultados ‘sumB’, ‘sumG’ y ‘sumR’ obtenidos previamente (las anteriores sumatorias al cuadrado de todos los píxeles del contorno). Así, lo que se estaría haciendo para cada helióstato sería lo siguiente:
+
+Etotal = Er + Eg + Eb
+
+Es decir, obtener la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
+
+Ir guardando los valores y resultados del helióstato en sus respectivos arrays (dependiendo del tipo de información: ancho/alto, área, etcétera), para luego mostrarlos por consola.
+
+Cuando se analiza otro helióstato (independientemente de si se salta o no al siguiente fotograma del vídeo), los valores de área y sumatorias pasarán automáticamente a valer cero de partida. De esta forma, no se obtendrán valores de un helióstato acumulados (erróneos) del helióstato analizado previamente.
+
+
+\# Mostrar vídeo original en una ventana/actualizar fotograma.
+cv2.imshow("Camara", frame)
+
+Mostrar el vídeo de helióstatos normal en pantalla con el método ‘imshow()’, y reproducirse al mismo tiempo que el programa va analizando cada uno de sus fotogramas. Con ‘reproducirse’, quiere decir además que se actualizará o cambiará el fotograma del vídeo al actual.
+
+
+\# Mostrar en consola el valor del área del helióstato en píxeles, su ancho y alto también en píxeles,
+\# los valores de las sumatorias acumulativas RGB al cuadrado (cada componente por separado) de todos los píxeles del helióstato, y esto mismo pero sumando esta vez las tres componentes entre sí.
+    print(heliostato)
+    print(anchoAlto)
+    print(areaTotal)
+    print(sumaBGRparcial)
+    print(sumaBGRtotal)
+
+\# Borrar el contenido de los arrays, ya que se ha mostrado toda la información en consola del helióstato (o helióstatos) para el fotograma actual del vídeo de helióstatos.
+    del heliostato[:]
+    del anchoAlto[:]
+    del areaTotal[:]
+    del sumaBGRparcial[:]
+    del sumaBGRtotal[:]
+    
+Mostrar en consola todos los datos obtenidos del helióstato (o helióstatos) del fotograma actual del vídeo, y que fueron almacenados (temporalmente) en los arrays 'heliostato', 'anchoAlto', 'areaTotal', 'sumaBGRparcial' y 'sumaBGRtotal'. Es decir, el valor del área del helióstato en píxeles, su ancho y alto también en píxeles, los valores de las sumatorias acumulativas RGB al cuadrado (cada componente por separado) de todos los píxeles del helióstato, y esto mismo pero sumando esta vez las tres componentes entre sí.
+
+Después, tras mostrarse toda esta información en la consola, vaciar los arrays, con el fin de reutilizarlos para el análisis de los siguientes fotogramas.
+
+
+\# Al alcanzar esta línea de código, ya se habrá leído y analizado el fotograma actual del vídeo. Antes de pasar al siguiente fotograma, hacer:
+    frame\_counter += 1 \# Incrementar el contador de fotogramas leídos del vídeo a uno.
+    end\_time = time.time() \# Obtener el tiempo de ejecución tras haber leído el fotograma actual del vídeo.
+    fps = frame\_counter / float(end\_time - start\_time) \# Calcular los FPS (fotogramas por segundo del vídeo) dividiendo el contador de fotogramas actual por la diferencia entre ambos tiempos medidos.
+    print("FPS:", fps) \# Mostrar en consola los FPS (fotogramas por segundo del vídeo). Se mostrará cada vez que se haya analizado el fotograma actual del vídeo.
+
+Esta sección de código se encargará de calcular los FPS (fotogramas por segundo) del vídeo de helióstatos, cada vez que se lea y analice un fotograma completo de ese vídeo (o el equivalente a haber alcanzado estas líneas de código). Para ello, se incrementa en uno el contador de fotogramas leídos, tomar el tiempo de ejecución final tras haber procesado el fotograma actual, calcular los FPS con una fórmula que consiste en dividir el contador de fotogramas leídos actual entre la diferencia del tiempo final de la lectura del fotograma actual y el comienzo de la ejecución del programa, y mostrar dicho resultado en consola, cada vez que se haya leído y procesado un fotograma del vídeo.
+
+
+\# Cuando el bucle 'while' inicial finalice, mostrar en consola que el programa finalizó su ejecución (el vídeo fue leído y analizado completamente).
+print("Programa terminado.")
+
+Cuando se hayan terminado de leer todos los fotogramas del vídeo, es decir, se ha leído el vídeo completo, se mostrará en consola ‘Programa terminado.’, finalizando la ejecución del programa.
+
+\section{Cronograma de tareas.}
+
+20 de febrero de 2.017: escogí este TFG de caracterización de helióstatos. Es un proyecto realizado a medias de Diego Zapata Hernández y que yo decidí ayudarle y finalizarlo. Conocí y hablé por primera vez con mi tutor de este TFG, Vicente González Ruiz, y el co-tutor, Luis Yebra. Vicente me explicó algunos conceptos, como la normativa de entrega y presentación del TFG, y qué código del proyecto de Diego debía yo trabajar. Vicente me dijo que yo le dijera a Luis (y así hice) una información concreta del TFG para que él nos explicase la siguiente tarea que yo debía hacer.
+
+22 de febrero de 2.017: he ejecutado el código inicial de Diego y he agregado el código que Vicente me indicó dos días antes. Ambas cosas funcionan correctamente.
+
+23 de febrero de 2.017: ya dispongo de un código que dado un vídeo, calcula el centroide de la proyección de cada imagen del vídeo en tiempo real. Exactamente, calcula en tiempo real el centroide de cada proyección (helióstato) de cada imagen del vídeo, y aparece un recuadro verde en cada helióstato en el vídeo. Vicente me dijo que intentara yo eliminar, de ese código, la parte de procesamiento de Diego, y yo le pregunté qué parte era esa, y dónde estaba. Aunque finalmente yo no pude hacerlo, porque no sabía qué código era (y no era) de procesamiento, y Vicente me ayudó días después en tutorías (27 de febrero), y ya lo conseguimos. Vicente me dijo que ya podía yo incluir más cálculos de helióstatos, aparte del centroide. Luis nos comentó la siguiente tarea: yo debía calcular la integral en dos dimensiones dentro del contorno calculado para cada imagen.
+
+24 de febrero de 2.017: Vicente me dijo que el código de procesamiento (y que por tanto yo debía eliminar) era todo lo que no tenía que ver con el cálculo del contorno y el centroide, como filtrados, pirámides, umbralizaciones y correlaciones.
+
+26 de febrero de 2.017: tuve problemas a la hora de eliminar código, ya que algunas instrucciones dependían de otras.
+
+27 de febrero de 2.017: Vicente me dijo que eliminara de código lo que no necesitaba. Aunque después, en este mismo día, fui a tutorías y él me ayudó a eliminar todo el código de procesamiento de Diego, y dejando instrucciones de código que sí eran necesarias y que realmente no había que quitarlas, solucionando así el problema que a mí me costó lograr.
+
+1 de marzo de 2.017: intenté adaptar el código para que funcione para todo un vídeo, en vez de para una imagen, pero no lo logré.
+
+7 de marzo de 2.017: olvidé asistir al despacho con Vicente para que me resolviera dudas del TFG.
+
+19 de marzo de 2.017 (aprox.): ya he adaptado el código para que el programa lea y trabaje todos los fotogramas del vídeo de helióstatos cargado.
+
+27 de marzo de 2.017: conseguí que el programa funcionase con los cálculos que me dio Vicente. Le pregunté a Luis sobre qué más cálculos deberían hacerse.
+
+28 de marzo de 2.017: Luis me responde a la pregunta que yo hice ayer. Hay que calcular una integral de superficie dentro de un contorno de proyección, y su resultado será una aproximación potencia total incidiendo en el blanco y reflejada por el helióstato.
+
+17 de abril de 2.017: le agregué al código una instrucción para calcular el área del contorno del helióstato, y supuse que así completaría correctamente la tarea de Luis.
+
+?
+
+4 de mayo de 2.017: he hecho una primera versión del anteproyecto, y se la enseñé a Vicente por si tenía fallos antes de enviarla.
+
+5 de mayo de 2.017: he logrado que genere el programa Python un archivo TXT con las áreas en cada fotograma del vídeo, y con el programa Gnuplot proporcionar ese archivo para generar una gráfica y guardarla como PDF.
+
+8 de mayo de 2.017: Vicente me dijo sobre la gráfica que yo le mostré el otro día, que es raro que la gráfica indique que primero se tiene un área de helióstato grande en un fotograma determinado del vídeo de helióstatos, y que en el siguiente fotograma indique que el área es muy pequeña, y que en la realidad ambos fotogramas muestran un área de helióstato grande.
+
+19 de junio de 2.017: el problema anterior todavía no lo pude solucionar, así que para examinarlo mejor, le agregué código que permitía que el programa pausase su ejecución automáticamente cuando lea un fotograma del vídeo de helióstatos con un área de helióstatos menor o igual que 100, y que al pulsar una tecla cualquiera en el teclado del PC, reanudara su ejecución, y así sucesivamente. También intenté que el programa mostrara en tiempo de ejecución el vídeo de los helióstatos, pero no lo logré de momento.
+
+?
+
+3 de julio de 2.017: le expliqué a Vicente, tal y como me dijo que yo hiciera, información que encontré en internet sobre la instrucción que localizaba contornos en helióstatos y más áreas, en el vídeo de helióstatos.
+
+5 de julio de 2.017: Vicente me dijo que intentara pintar los contornos que el programa detectaba en el vídeo de helióstatos, para comprobar qué contornos se están detectando cuando el área de la proyección es cero.
+
+1 de agosto de 2.017: he conseguido adaptar el programa para que guarde en el PC todas las imágenes y contornos con área de proyección tendiendo a cero. Aún así, seguí sin comprender bien por qué el programa indica que estas imágenes concretas son de área cero.
+
+20 de septiembre de 2.017: Vicente me dijo (y también a Luis) que ese problema se puede deber a que, para cada fotograma del vídeo de helióstatos, hay más de un contorno (puntos pequeños o mini-contornos que merodean al contorno principal y grande), y que para solucionarlo, probablemente bastará con que el programa seleccione siempre el área del contorno más grande, para cada fotograma.
+
+21 de septiembre de 2.017: le expliqué a Vicente más información sobre la instrucción que localizaba contornos en helióstatos, aunque él me dijo después que me preocupara mejor por cómo generar la figura geométrica que contiene los objetos de las escenas, y que si aparece más de una mancha, para cada fotograma del vídeo de helióstatos, que calcule el área de todas y luego el programa selecciona la más grande de todas, o que el usuario elija una de ellas.
+
+27 de septiembre de 2.017: le recordé a Vicente de que seguía teniendo el problema de que en el programa, en imágenes (fotogramas del vídeo de helióstatos) con helióstatos grandes, indica que no hay área.
+
+29 de septiembre de 2.017: conseguí completar una de las tareas de Vicente, que de cada fotograma del vídeo de helióstatos, que el programa seleccione siempre el helióstato más grande de todos, además de calcular el área de todos los helióstatos localizados. No obstante, le pregunté a Vicente que me gustaría poder calcular cuántos contornos hay en total para cada fotograma de ese vídeo, además de que este valor es variable. Y que además, le comenté que he mostrado por consola las salidas de todas las áreas calculadas de cada contorno para cada fotograma del vídeo, y siempre había una con un valor muy elevado (y las demás con valores muy pequeños). Esto no tenía sentido porque ocurría en el principio del vídeo, y ahí no hay áreas todavía.
+
+30 de septiembre de 2.017: le enseñé a Vicente la salida por consola del programa, además de indicarle que el programa, durante su ejecución y al cabo de varios segundos, se detiene automáticamente por un error de fuera de rango.
+
+1 de octubre de 2.017: solucioné por mí mismo el problema de que necesitaba saber cuántos contornos habían en total en cada fotograma del vídeo de helióstatos. Para ello, la instrucción que devolvía dicho valor era ‘for i in range(0,len(contours)):’.
+
+2 de octubre de 2.017: he solucionado también el otro problema, el de que el programa seleccione siempre el contorno más grande de todos, para cada fotograma del vídeo de helióstatos.
+
+5 de octubre de 2.017: me he dado cuenta de que el programa realmente no funcionaba correctamente, porque aparece el aviso por consola 'No se está detectando correctamente el contorno principal' que yo mismo puse cuando el primer contorno de todos es menor que 1000 (prácticamente inexistente).
+
+8 de octubre de 2.017: le comenté a Vicente las partes del programa que sí estaban bien y en las que daban problemas. Concretamente, le dije: ‘He analizado bien lo que llevo hecho de mi código y de la salida por consola resultante, efectivamente, siempre me coge el contorno más grande, para cada fotograma del vídeo. Hasta ahí bien. Los dos problemas son: primero, es que ese contorno grande, no siempre aparece en la primera posición del array de contornos, durante el vídeo (no en el principio ni en el final del vídeo). Aparece por ejemplo en posiciones 2, 3, ó 4. Segundo problema: siempre me dice que hay un contorno grande, en todo el vídeo. Y eso no tiene sentido, está mal, porque en el principio y final del vídeo no hay contornos, ó éstos son pequeños, medio entrando/saliendo en/del área del vídeo. Por esto pongo la condición de que si en el primer contorno, es de área 1000 ó más, que señale por consola que sí se detecta el contorno; pero el problema ya comentado es que a veces ese contorno no está en la primera posición del array de contornos y por eso dice que no se detecta el contorno.’. Vicente me respondió que esto es normal si yo no ordenaba los contornos por tamaño, y que si yo usaba el contorno más grande, que es posible que no se tratase de la proyección de un helióstato.
+
+13 de octubre de 2.017: he intentado poner nuevas líneas de código con el fin de que el programa reencuadre (en verde) los contornos que se van detectando a lo largo del vídeo de helióstatos, pero no ha funcionado. Se lo comenté a Vicente para que me ayudara en esto.
+
+16 de octubre de 2.017: Vicente me dijo que me fijara bien en el código de Diego Zapata donde reencuadra los contornos localizados en dicho vídeo.
+
+26 de octubre de 2.017: hablé con Vicente para quedar mañana día 27 en tutorías en su despacho para solucionar el problema de reencuadrar los helióstatos del vídeo.
+
+30 de octubre de 2.017: ya solucioné el problema. Ahora el programa reencuadra únicamente los helióstatos reales (en cada fotograma del vídeo de helióstatos), y no los falsos helióstatos, a partir de un umbral determinado. El umbral es el tamaño del helióstato, no lo he puesto ni muy grande ni muy pequeño. Se lo comenté a Vicente para que lo tuviera en cuenta.
+
+31 de octubre de 2.017: Vicente, viendo que yo le conté que ya solucioné el problema anterior, mandó un mensaje a Luis para tener todos juntos una nueva reunión y que Luis nos dijera la siguiente tarea que yo debía hacer.
+
+6 de noviembre de 2.017: Luis recibió y leyó el mensaje de Vicente. Intentamos encontrar una buena hora para quedar los tres, pero no fue posible, hasta ahora.
+
+7 de noviembre de 2.017: Entre los tres, decidimos quedar el viernes 10 de noviembre a las 11 de la mañana en el CIESOL. Este horario concreto se nos adecuaba muy bien.
+
+10 de noviembre de 2.017: Luis nos comentó la siguiente y última tarea. Esta consistía en obtener las componentes RGB de todos los píxeles del contorno principal o central de cada fotograma del vídeo de helióstatos, elevarlos al cuadrado, y sumarlos. También, Vicente habló y explicó sobre el BitCoin, por cambiar de contexto. Esto no es necesario que yo lo implemente en el TFG.
+
+29 de noviembre de 2.017: he conseguido que en un determinado píxel XY, el que yo especifique al programa, del fotograma del vídeo de helióstatos, me indicara cada componente RGB, por separado (de rojo, de verde y de azul), y también sumadas entre sí (R+G+B), pero que aún no he conseguido aplicar esto para un contorno entero, es decir, sumar todas las componentes RGB de todos los píxeles de un contorno.
+
+18 de diciembre de 2.017: le comenté a Vicente que todavía no pude solucionar el problema del pasado 29 de noviembre. Le dije además lo siguiente: ‘Obtener la solución es complicada debido a que, si bien Slack es capaz de reencuadrar el contorno principal, el grande, y no los otros contornos o falsos contornos, Slack no detecta en qué coordenadas se ubica ese contorno, así como las coordenadas de los píxeles de ese contorno, a no ser que yo sea capaz de implementar esta función que va a ser difícil. Esto es lo que necesito para continuar. Insisto que sé medir las componentes RGB del píxel que yo le indique, pero necesito eso, que el programa me indique (no yo a él) las coordenadas XY de los píxeles del contorno principal.’. También le indiqué a Vicente que el programa reconocía todos los contornos (grande y demás), pero el contorno grande (y los pequeños) no indicaba las coordenadas exactas. Con contornos hacía yo referencia a los rectángulos que los contienen. Vicente me respondió que calcular la densidad de potencia de los rectángulos no era lo más conveniente porque habían píxeles dentro que no pertenecían al contorno, y que se podía obviar este problema. También me dijo que en realidad mi programa sí pintaba bien los rectángulos, y que yo debería tener acceso a las coordenadas (como la esquina superior izquierda e inferior derecha) de cada uno de ellos. Tras su respuesta, yo rectifiqué diciendo que como se pintaban los rectángulos, que tal vez sí tuviera acceso a las coordenadas de cada contorno, pero probablemente no lo tuviera a las coordenadas de todos y cada uno de los píxeles del contorno principal, y que eso fue lo que yo deseaba saber hacer, para continuar con el TFG. Vicente me respondió que es sencillo: bastaba con obtener (leer) los valores RGB del píxel ubicado en la esquina superior izquierda del rectángulo verde (que reencuadra el helióstato principal), para todos los fotogramas del vídeo de helióstatos, y que se hace lo mismo para el rectángulo completo, como hacer un bucle ‘for’ que recorra desde X hasta W, ó Y hasta H. Así decidí hacerlo, pero el programa únicamente leía la primera fila y la primera columna del helióstato, y no todas las filas y todas las columnas. Vicente también me dijo que hiciera un archivo ‘Léeme’ y que lo subiera a GitHub, donde está mi proyecto de TFG, para que cualquiera que ejecute el programa sepa cómo hacerlo.
+
+25 de diciembre de 2.017: Vicente me dijo que yo he usado como índice de los bucles la misma variable que para los límites, y que deben ser diferentes.
+
+27 de diciembre de 2.017: he hecho el cambio que Vicente me dijo que hiciera hace dos días, y aparentemente el código funciona bien. Además, he hecho y subido a GitHub el archivo ‘Léeme’. No obstante, le dije a Vicente que lo mirara por él mismo por si habían errores. También le dije que el programa tardaba horas en finalizar su ejecución porque debía leer todos los píxeles del contorno principal y para cada fotograma del vídeo de helióstatos. Finalmente, le pregunté si habría que contactar con Luis para que nos dijera cuál sería la próxima tarea a hacer en el TFG.
+
+8 de enero de 2.018: Vicente me ha puesto algunos fallos y errores de mi código en GitHub, y que yo los debía de resolver cuanto antes. Además, a Vicente no le ha parecido que tuviera una ejecución lenta, y que me asegurara de que GitHub estuviera a la última versión disponible.
+
+9 de enero de 2.018: le comenté a Luis que ya terminé la tarea que él mandó, pero que no sabía si estaba bien hecha, o habían algunos errores sin yo saberlo. También le comenté que mejor esperásemos a que Vicente dijera si tener los tres una nueva tutoría, o no.
+
+3 de febrero de 2.018: le comenté a Vicente para que tuviésemos una tutoría y así enseñarle mi trabajo y resolver el problema que yo tenía desde hace tiempo en el código.
+
+6 de febrero de 2.018: he tenido las tutorías con Vicente, y he mejorado el ‘commit’ que yo hice el pasado 27 de diciembre y lo he vuelto a subir a GitHub, el ‘commit’ de leer y obtener las componentes RGB de cada píxel del helióstato central de cada fotograma del vídeo de heliostatos. Concretamente, le agregué algunos cálculos para obtener la energía del reflejo de la proyección del helióstato, indicando en formato código que la energía era el cuadrado de las componentes RGB. Además, Vicente me enseñó y me dio en formato PDF un TFG de otro compañero, de temática distinta a mi TFG, para que yo me basase en cómo debía estructurar dicho TFG, aparte de hacer caso a las normativas de presentación, estructura y diseño de un TFG.
+
+7 de febrero de 2.018: se me ocurrió ejecutar mi proyecto de otra forma, haciendo doble clic en mi proyecto simplemente. Apareció una ventana de consola con el fondo negro, y ahí sí se ejecuta todo el código en poco tiempo (un par de minutos), tal y como Vicente me dijo hace tiempo, que su ejecución (de Vicente) de mi código de mi TFG le duraba pocos minutos, en vez de horas, como me sucedía a mí en un principio.
+
+9 de febrero de 2.018: Luis nos preguntó si necesitábamos su ayuda, pero yo le dije que de momento no era necesario, puesto que Vicente no dijo nada de quedar con Luis los tres para más tutorías. Luis respondió que de acuerdo, que cuando Vicente lo viese conveniente, él nos avisaría a los tres. Tal y como me dijo Vicente el otro día, yo subí mi TFG actual a Google Drive, y creé un enlace de tal forma que Vicente y Luis tuvieran acceso a dicho TFG, accediendo a este servicio en internet. Así podrán ver cómo lo llevo en cada momento, anotar fallos, sugerencias, y más.
+
+10 de febrero de 2.018: le comenté a Vicente que, si él lo deseaba, que me sugeriese qué cosas nuevas podía yo agregar a mi informe, ya que a veces no se me ocurría nada. Además, le recomendé que revisase mi código recientemente actualizado a GitHub por si tuviese errores. Además, en el informe he explicado cosas sobre las energías renovables e información básica sobre los helióstatos.
+
+26 de marzo de 2.018: le enseñé a Vicente cómo hice hasta el momento mi diagrama de flujo, del funcionamiento del código de este TFG.
+
+28 de marzo de 2.018: de acuerdo al diagrama de flujo que le enseñé a Vicente, me respondió lo siguiente, además de decirme otras cosas: ‘¿Seguro que lees la secuencia de vídeo completa y luego la procesas? ¿No la vas procesando conforme la vas leyendo de disco? Espero a que tengas la versión definitiva del diagrama para preguntarte sobre las cajas, algunas no tengo muy claro qué es lo que haces dentro, como en la que dice "dispersar centroides". ¿Has terminado ya con la memoria del proyecto? ¿Has incluído todos los apartados que debe tener, incluyendo un cronograma de tareas (me parece recordar que lo exige la normativa)?’
+
+31 de marzo de 2.018: le respondí a Vicente lo siguiente: ‘De acuerdo a tu primera pregunta: ¿te refieres justo al comienzo del diagrama? Yo así mismo lo hice en código y funciona muy bien. Después de esa parte, el diagrama de flujo (así como mi código) representa los pasos a seguir para cada fotograma del vídeo. De acuerdo a tu segunda pregunta: hay algunas cajas que no supe concretarlas muy bien, tienes razón. De acuerdo a tu tercera pregunta: todavía no he terminado el TFG. Necesito antes poder ampliarlo con muchas más páginas, como me dijiste. Lo malo es que no se me ocurren muchas más cosas (ideas) para añadir más páginas al TFG. Lo de los apartados que debe tener, pensé que era libre, porque yo en la página de la UAL de mi carrera no he encontrado un documento de TFG que indique qué apartados debe tener, así como su orden. Sólo encontré el diseño de la portada (y creo que contraportada), el diseño del anteproyecto, y poco más.’.
+
+2 de abril de 2.018: Vicente me aclaró que la memoria del TFG tiene un contenido “libre” (evidentemente, respetando la normativa de presentación de un TFG, como la estructura, formato de fuente, presentación, márgenes, y más), y que para la evaluación de TFG el tribunal debe rellenar una rúbrica en la que se preguntan cosas como si hay un cronograma o si el alumno se explica con claridad. Además, me ha mandado un enlace web donde aparece el proyecto que él mismo describió (TFG de caracterización de proyección de helióstatos), y que el anteproyecto debía de tener al menos los apartados que ahí figuran, y que probablemente ocurrirá lo mismo para la memoria del TFG. Me solicitó que le enviase el enlace web donde indica la estructura y contenido del TFG, y así hice. Le dije además que adaptaré mi TFG a lo que ahí menciona. Además, en el informe he explicado cosas sobre la utilidad y uso de los helióstatos y del celóstato del observatorio UCM.
+
+11 de abril de 2.018: en el informe he explicado cosas sobre el helióstato con sensor de reflexión.
+
+15 de abril de 2.018: le hice a Vicente la siguiente pregunta: ¿cómo debo poner una cita que se aplique a múltiples párrafos, en vez de a uno solo? Además, en el informe he explicado cosas sobre la historia de la energía termosolar y del origen de la energía solar.
+
+16 de abril de 2.018: Vicente me respondió que lo ideal en estos casos sería unir todos los párrafos en uno y al final colocar la cita.
+
+2 de mayo de 2.018: le pregunté a Vicente que cuándo me resolvería las dudas que dejé anotadas en mi TFG, en Google Docs, como él me solía hacer.
+
+6 de mayo de 2.018: en el informe he explicado cosas sobre el funcionamiento de la central solar.
+
+11 de mayo de 2.018: Vicente me respondió que debido a que él andaba justo de tiempo y mis preguntas suelen ser bastantes, que por este motivo no lo hacía. Antes de hacerlo, me dijo que incorporara al TFG un índice al principio, con dos niveles: capítulo y secciones de cada capítulo. Finalmente, me preguntó si había algo en la normativa que limitase por arriba o por debajo la longitud de la memoria, y yo le respondí que no creo, que mi idea era primero finalizar el informe, y tras esto, aplicar todo el formato a mi memoria que requiere la normativa, como los márgenes superiores e inferiores, tamaños y formatos de fuente, etcétera.
+
+15 de junio de 2.018: le avisé a Vicente de que ya hice el índice del TFG. Además, en el informe he explicado cosas sobre un proyecto que consistía en un helióstato para iluminar lugares que siempre están a la sombra, las centrales térmicas, la energía termodinámica y las centrales solares, así como generar energía eléctrica con el Sol.
+
+16 de junio de 2.018: en el informe he explicado cosas sobre un mecanismo de seguimiento solar a partir de la tecnología espacial, la megatorre sevillana de la energía solar y más información de los helióstatos y sus usos.
+
+17 de junio de 2.018: en el informe he explicado cosas sobre los desafíos de la astrofísica contemporánea, la energía solar, ingeniería y construcción, paneles fotovoltaicos, discos, greenmob, ángulos de los rayos del sol en la Tierra, degradación de contaminantes presentes en agua mediante fotocatálisis solar, absorción de luz en un material, y la ley de la reflexión.
+
+18 de junio de 2.018: Vicente me dijo que revisaría y respondería en un par de días a todas mis preguntas que yo le dejé anotadas en el TFG, y si no lo hacía, que yo le mandase un mensaje. Además, en el informe he explicado cosas sobre PSA, los parques fotovoltaicos, el brillante futuro de las fábricas alimentadas con energía termosolar, PS10 y PS20, la planta de energía termosolar de concentración Gemasolar, y la central térmica Solar Power Tower.
+
+19 de junio de 2.018: en el informe he explicado cosas sobre las centrales termosolares y la orientación de los helióstatos.
+
+20 de junio de 2.018: Vicente ya me ha resuelto algunas de las preguntas que yo dejé anotadas en el TFG. En base a eso, yo le volví a preguntar a Vicente lo siguiente: ‘Tengo una pregunta. Donde yo puse las referencias "[1] [2]", tú me dices que no las ponga así. ¿Cómo lo pongo, así: "[1]"? Entonces, ¿qué hago con la referencia "[2]", y cómo la puedo unir con la "[1]" que van relacionadas entre sí? Y respecto al índice, lo he organizado un poco, y de momento he puesto: Introducción (con muy poco texto), Fundamentos (aquí he puesto mucho texto), Trabajo realizado en el proyecto (cantidad de texto normal), y Resultados y conclusiones (que esto aún no lo he hecho). En la sección Fundamentos, debo leer y revisar lo antes posible todo el texto. He puesto esas cosas porque creo que van muy bien con mi TFG.’. Y Vicente me respondió que está bien que exista un apartado de fundamentos, pero no puede ser que esta sección sea la mayor parte del documento. Y respecto a las referencias, que yo las puedo dejar tal y como las puse originalmente (usando “[1]”, “[2]”, etcétera), y que luego las cambiaremos fácilmente. Además, en el informe he explicado cosas sobre los sistemas de control de plantas termosolares de receptor central, como introducción a dicho informe y explicado al principio del todo.
+
+2 de julio de 2.018: le pregunté a Vicente si ya podía dar por finalizado lo que llevaba hecho de mi TFG, ya que llevaba 114 páginas hechas, aparte de mencionarle cómo podía yo saber si toda la información que puse era correcta, y si debía agregar más cosas. Finalmente, le dije que yo debía corregir el índice, dar el formato adecuado al TFG de acuerdo a la normativa de entrega y presentación de un TFG, y el diagrama de flujo que Vicente me comentó hace tiempo que habían algunas cosas que él no comprendía bien lo que hacían. Esto último lo he mejorado y actualizado a Google Drive este mismo día, corrigiendo algunos errores que he localizado, tras una segunda revisión. Vicente me respondió que agregase un índice. Y que cuando lo haya hecho, aparte de estar bien estructurado, que le avisara.
+
+3 de julio de 2.018: he mejorado el índice del TFG. Sin embargo, tras hacer esto, me di cuenta de que tengo muchos apartados de Introducción y pocos de Fundamentos. Y que debería organizarlo mejor, dividiendo los apartados de Introducción en otros más concretos, y creando nuevas secciones (con nuevos nombres) del índice.
+
+4 de julio de 2.018: Vicente me dijo, tras lo que le comenté ayer día 3 de julio, que cuando yo viera la memoria perfecta, que él la revisaría para ver si estaba bien hecha.
+
+8 de julio de 2.018: le dije a Vicente lo siguiente: ‘Buenas. Te cuento. Creo que ya he realizado un índice y memoria correctos y perfectos. Ambas cosas las he dividido en: introducción, ejemplos de helióstatos, fundamentos, futuro, trabajo realizado en el proyecto, resultados y conclusiones (bueno, en realidad, este punto todavía me falta, pero lo haré en poco tiempo), y referencias bibliográficas. Si quieres, ya le puedes echar un vistazo a mi TFG.’. En dos horas y media, Vicente me respondió que revisaría mi TFG en cuando pueda.
+
+14 de julio de 2.018: Vicente leyó por encima mi memoria (de momento) y me dijo lo siguiente: ‘Tras una primera lectura de tu memoria te sugiero que resumas los primeros capítulos que hablan de las plataformas solares hasta un tamaño que sea comparable al capítulo en el que describes tu trabajo. Yo incluiría además, un capítulo de Python indicando las particularidades del lenguaje y por qué se ha escogido para desarrollar tu proyecto, y otro sobre OpenCV y por qué se ha escogido también. Con esto, el primer nivel del índice quedaría algo así:
+1. Descripción del problema a resolver.
+2. El lenguaje de programación Python.
+3. La biblioteca OpenCV.
+4. Propuesta desarollada.
+5. Conclusiones y posibles líneas de trabajo futuro.
+6. Bibliografía.
+Yo continuaré revisando lo que sería el punto 4 de dicho índice.’. Le pregunté, en base a eso, que aparte de lo de Python, si lo de las plataformas solares y demás capítulos los debía resumir más, quitando mucho texto innecesario que puse, o no hacía falta.
+
+16 de julio de 2.018: Vicente me respondió que era correcto, que el 90\% de mi memoria actual sería el punto 1 del índice que él me dijo anteayer día 14 de julio.
+
+17 de julio de 2.018: le pregunté a Vicente lo siguiente: ‘De acuerdo. No obstante, al igual que en el TFG ejemplo que tú me pasaste (y como me dijiste), debo hacer que la descripción del problema a resolver (punto 1) y la propuesta desarrollada (descripción del trabajo, punto 4) sean prácticamente del mismo número de hojas, tengo entendido. ¿Es así? Más cosas: en el caso de la descripción del trabajo (punto 4), yo no pensaba agregar más cosas. No se me ocurrían más cosas que poner, excepto si trato de hacerlo para que tenga el mismo número de páginas que en el apartado de 'descripción del problema a resolver' (punto 1) que ahí puse muchas cosas. Y además, encontré una página de wikipedia sobre la historia de python pero por ser de wikipedia (ahí las fuentes no son siempre fiables), pues no sé si incorporarlo al tfg o no.’. Vicente me respondió lo siguiente: ‘Generalmente los 4 primeros capítulos del índice que te he propuesto tienen aproximadamente la misma extensión, cada uno. Lo que no puede ser es que uno ocupe 90 página y otro 2, siendo este último el que describe tu trabajo. A ver, cosas que debes de poner en el capítulo 4: (1) un cronograma de tareas (tuyas, no del software, desde el comienzo del proyecto), (2) descripción de los requerimientos/requisitos, (3) descripción (texto) del funcionamiento del software, (4) entradas y salidas, (5) análisis de los recursos (principalmente memoria y CPU) consumidos, (6) plataformas (más bien, sistemas operativos) que serían capaces de ejecutarlo, (7) el código en sí, COMPLETAMENTE COMENTADO, (9) ejemplos de ejecuciones y comentarios sobre los resultados de las mismas.’. Además, en el informe he explicado cosas sobre OpenCV y Python.
+
+18 de julio de 2.018: le dije a Vicente que de acuerdo, y que empezaría a hacer el cronograma de tareas.
+
+1 de agosto de 2.018: en el informe he explicado más cosas sobre Python. Además, le dije a Vicente por Slack de que el programa, aproximadamente en el segundo 10 de iniciar su ejecución, muestra en consola una advertencia (no un error) cuando se intenta elevar al cuadrado la R, la G y la B, del píxel X225 Y99 en el contorno (helióstato) principal del vídeo, y que no sabía por qué sucedía esto. Era un error de fuera de rango (‘overflow’). Se lo dije por si me echaba una mano con el problema.
+
+4 de agosto de 2.018: le comenté a Vicente que he actualizado el cronograma de tareas agregando esta vez las tareas de las cosas, temas y páginas web que iba poniendo en la memoria. También le comenté que ya he puesto en principio todas las cosas que debía poner yo en el capítulo 4, aunque debería extenderme algo más. Finalmente, le recordé que él debía responderme a las dos dudas que yo le escribí por Slack los días 30 de julio y 1 de agosto.
+
+5 de agosto de 2.018: Vicente me respondió a las dudas que yo le pregunté hace unos días. Me dijo que como sugerencia (no era obligatorio), que en la memoria, que había que poner el código comentado del programa usado y sus explicaciones de cómo funcionaba, debería estar organizado (dicho código) en funciones y comentar cada una de ellas. Es decir, comentar bloques de instrucciones. Me solicitó además de que le recordase cuál era la URL de mi repositorio de GitHub para que me viese y solucionase el problema de que el programa mostraba en consola unas advertencias (ver ‘1 de agosto’) nada más ser ejecutado. Unas horas más tarde, le proporcioné a Vicente dicha URL, actualizada desde este mismo día, y que yo debía solucionar los tres ‘issues’ que Vicente me comentó hace tiempo en GitHub (unos problemas de presentación del código que yo subí ahí), así como mejorar el ReadMe (que indicaba cómo funcionaba y se ejecutaba ese código). Más horas después, le hice una nueva pregunta: ‘Como puedes apreciar en los vídeos y consola, se está detectando el contorno principal, porque de todos los contornos detectados en el fotograma actual del vídeo, el primero de todos es el de mayor área (p. ej.: 54 34 43 21 14 24). Pero sin embargo, no aparece ni calcula en esta ocasión las sumatorias RGB al cuadrado de todos los píxeles de ese contorno principal, porque yo lo programé que hiciera esto solo cuando se detecte un contorno de ancho mayor a 70 y así ignorar falsos contornos. ¿Debería de corregir esto borrando completamente la condición esa de 'ancho mayor a 70', y hacerlo mejor para cuando se detecte el contorno principal, que haga las sumatorias RGB al cuadrado de todos los píxeles de dicho contorno principal? Si hago esto, es posible que tarde un poco en reorganizar las nuevas explicaciones y nuevo formato de código a mi memoria. Espero haberme explicado bien.’. Le adjunté también una foto (captura de pantalla de mi PC) de mi problema.
+
+8 de agosto de 2.018: Vicente ejecutó mi código, y me dijo que mejor lo corrigiera de tal forma que el usuario pudiera introducir por parámetros y desde consola las variables deseadas, como la ruta o directorio del vídeo de helióstatos a procesar, y el ancho y alto mínimos del helióstato para ser analizado por el programa. Todo esto usando ‘argparse’ en dicho código. En lugar de que las variables queden predeterminadamente inicializadas a determinados valores en el código, y no puedan ser modificadas bajo ningún concepto por el usuario que ejecuta el programa, que así es como yo lo tenía hecho. Para finalizar, Vicente me confirmó que, respecto a las advertencias comentadas el pasado 5 de agosto, que no eran importantes pues solo sucedían al comienzo de la ejecución del programa.
+
+9 de agosto de 2.018: respecto a la última pregunta de Vicente de ayer 8 de agosto, le respondí que no, y que si era importante hacerlo así, como él dice (con ‘argparse’).
+
+10 de agosto de 2.018: Traté de ejecutar el programa con muchas y distintas variables de entrada (ancho y alto del helióstato), pero el problema del programa no se solucionaba (el de que el programa a veces leía bien el helióstato y otras no, en ciertas partes del vídeo de helióstatos). Además, he corregido el programa para que los argumentos proporcionados desde consola por el usuario se leyesen usando ‘argparse’, porque maneja dichos argumentos bastante mejor que de mi anterior forma.
+
+11 de agosto de 2.018: le dije a Vicente que, referido a mi código, acabo de hacerlo ya con ‘argparse’, y que se lo he subido a ‘GitHub’. También le comenté que intenté arreglar el fallo aquel de que en algunas partes concretas del vídeo de helióstatos no calcula las sumatorias RGB de dicho helióstato, y que pese a haber probado con distintos y muchos valores de variables (ancho y alto del helióstato), el problema seguía sin solucionarse. Y que supuse que el problema podría no ser de las variables, sino en alguna o algunas líneas de código del programa.
+
+13 de agosto de 2.018: le dije a Vicente lo siguiente: ‘El fallo aún no lo he arreglado. Ya sé en qué falla pero no sé el por qué. De acuerdo a las salidas por consola, el helióstato sólo es leído aproximadamente en la primera mitad izquierda del vídeo de helióstatos, y no en el resto (centro y derecha del vídeo). Esto significa que sólo lee los helióstatos que están entrando en el vídeo desde la izquierda y acercándose al centro del mismo, y los helióstatos que salen de ahí hacia la izquierda hasta que salen del vídeo.’. Y le mandé un dibujo ilustrativo de mi problema.
+
+15 de agosto de 2.018: ya encontré el error al problema del programa. Es porque en los bucles 'for' X-Y que recorren todos los píxeles del contorno, yo lo puse para que analice desde la posición X de donde se ubica ahora mismo el contorno hasta su longitud (y respectivamente desde Y hasta su altura). Y creo que no es así. Debería ser desde X hasta X+longitud (y respectivamente para Y: desde Y hasta Y+altura), porque las posiciones X-Y del helióstato no son las mismas, van cambiando a lo largo del vídeo. Hice las correcciones necesarias en el código, y este problema se finalmente se solucionó. Pero acto seguido apareció un nuevo problema de ‘error: fuera de rango’, que también debía analizar y solucionar. Ocurría cuando el helióstato alcanzaba el centro del vídeo.
+
+16 de agosto de 2.018: ya supe por qué ocurría aquel error de fuera de rango: porque estaba confundiendo las coordenadas XY del vídeo de helióstatos, y en una de esas coordenadas me estaba saliendo del vídeo, y analizaba coordenadas inexistentes en esa área del vídeo.
+
+17 de agosto de 2.018: logré arreglar el error de ayer en el código. Ahora, el helióstato alcanza el centro del vídeo y prosigue su ejecución hasta el final. Ya parece que no hay más errores en la ejecución del programa.
+
+18 de agosto de 2.018: he realizado algunas modificaciones en el código para que si aparecen dos helióstatos en un mismo fotograma del vídeo, que además de analizar cada helióstato por separado, que me diga el área de cada uno de ellos. También he puesto que para que se detecte y analice un helióstato, debe tener como mínimo tal área, ancho y alto, o superior. Estas tres variables se pueden pasar por parámetro en la línea de comandos.
+
+20 de agosto de 2.018: el programa ya corregido dura unas 14 horas de ejecución, bastante tiempo pero comprensible. Un fallo mínimo es que aunque elimina todos los falsos contornos en todo el vídeo, no los elimina en el final del mismo, cuando ya han desaparecido (se han ido) todos los contornos. Ahí, no hay contornos en el vídeo normal, pero en esa parte del vídeo hay un contorno central grande al mirar el vídeo umbralizado, y por eso lo analiza inútilmente. Y otro fallo mínimo es que cuando se detecta un helióstato y lo procesa el programa, no es reencuadrado en el vídeo hasta el siguiente fotograma. Debería reencuadrarlo justo en el momento de la detección. Estos fallos debería arreglarlos.
+
+26 de agosto de 2.018: Vicente me respondió a todas mis preguntas que yo le hice por Slack desde el 17 de agosto. Concretamente me dijo: exacto, que yo podría mostrar en consola el área de dos helióstatos que aparecen en el mismo fotograma del vídeo, aunque cree que no tiene mucho sentido; además, es mejor analizar un helióstato en ancho y alto que por valor de área; que el tiempo de ejecución del programa de 14 horas es elevado, y que lo debía reducir; y que daba igual que se analizase erróneamente por el programa un helióstato falso al final del vídeo de helióstatos, que ese helióstato no debería existir.
+
+27 de agosto de 2.018: le pregunté por Slack a Luis sobre unas dudas que tuve en la realización del software del TFG. Las preguntas que le hice fueron: si en el vídeo de helióstatos, en un mismo fotograma aparecen dos helióstatos, ¿analizo los dos por separado, o únicamente el de mayor área? ¿O da igual como lo haga? Y lo mismo con mostrar por consola sus áreas. ¿Muestro los dos, o sólo el de mayor área? Indicar que yo ya lo tenía implementado (y explicado también en la memoria) de la segunda forma: analizar los dos helióstatos y mostrar las informaciones y áreas de ambos.
+
+28 de agosto de 2.018: Luis me respondió que se analicen los dos helióstatos por separado, es decir, tal y como yo lo tenía hecho finalmente. Calcular el área de los helióstatos, como sus estimaciones de potencia (aproximada, inicialmente, en base a la sumatoria del valor de los componentes RGB de cada píxel del helióstato). Luis me habló de nuevo y me dijo que a ver qué le parecía a Vicente, y que si es posible, que ellos (Luis y Vicente) pudieran ver mi proyecto funcionando. Le respondí a Luis que enseñarle mi proyecto funcionando a distancia (en lugar de presencialmente) iba a ser complicado, además de que dicho proyecto dura 14 horas de ejecución para grabarlo en un vídeo y subirlo posteriormente a una nube para que él y Vicente lo viesen.
+
+29 de agosto de 2.018: de acuerdo a lo último que le dije ayer a Vicente, me respondió: ‘No sabía que necesitase tantos recursos para ejecutarse. Con que haya unos cuantos fotogramas (3 o 4) con las proyecciones de los dos helióstatos, en la que aparezcan los contornos detectados y la potencia estimada creo que sería suficiente. ¿Sería posible obtener estos 3 o 4 fotogramas? Por otra parte, también estaría bien tener una medida del tiempo de cómputo necesario por fotograma. ¿Cómo lo ves?’. Le respondí que en mi informe que subí a la nube lo podía consultar, todo lo que él me había preguntado. Y respecto al tiempo de cómputo necesario por fotograma, eso no lo tenía hecho, pero lo implementaré.
+
+30 de agosto de 2.018: Vicente dijo que opinaba lo mismo que Luis: ‘Analizar en paralelo todas las proyecciones de un área mínima que aparezcan concurrentemente en el vídeo. Sí así está hecho, perfecto. Y que respecto de esas 14 horas, como a Luis a mí me parece que es demasiado tiempo para los cálculos que haces. ¿Podrías recordarnos qué operaciones aplicas a cada fotograma del vídeo? También sería útil que hicieras un profiling de la aplicación y nos cuantificaras el tiempo de cada una de esas operaciones.’ Yo les respondí (a Vicente y a Luis): ‘El programa analiza y muestra por consola y en este orden los siguientes datos para cada contorno (helióstato): su valor de área (sigo sin saber sus unidades; el área solo se muestra al comienzo del análisis de un nuevo helióstato), píxel XY en análisis de ese helióstato, su ancho y alto, coordenadas de la esquina superior izquierda (y luego superior derecha e inferior derecha) del helióstato, valores de cada componente RGB de ese píxel en análisis, valores de cada componente RGB anterior elevados al cuadrado, sumatoria acumulativa de todos los valores RGB al cuadrado (componentes por separado) de todos los píxeles del contorno, y tras analizar todos los píxeles del contorno, 'unificar' las anteriores componentes R+G+B para sumarlas entre sí.’ También les dije que haría lo de cronometrar las operaciones concretas que yo hago en el programa para ver cuánto tardan, así como el tiempo de cómputo necesario por fotograma del vídeo. Finalmente, Vicente me sugirió que probara a redirigir la salida del programa a un archivo para ver si se aceleraba la ejecución. Lo hice, pero no se apreciaban diferencias en la velocidad de ejecución del programa, antes y después.
+
+3 de septiembre de 2.018: hemos tenido una conferencia online Vicente, Luis y yo, con el fin de enseñarles mi programa en ejecución para que me dijeran posibles fallos y mejoras.
+
+4 de septiembre de 2.018: Vicente me sugirió que optimizase más mi programa, ya que había una sección de código que consumía bastantes recursos del PC. Y que para ello, que usase la biblioteca de Python 'NumPy'. Me llevó hasta el día 9 desarrollar correctamente esto.
+
+10 de septiembre de 2.018: seguí actualizando la memoria, ya que de nuevo tenía contenido explicado para una versión antigua del programa que tengo hecho actualmente.
+
+25 de septiembre de 2.018: le pregunté presencialmente algunas dudas a Vicente sobre si algunas secciones de mi memoria estaban bien o no hechas.
+
+1 de octubre de 2.018: marqué en color rojo todo aquel texto de mi memoria que es totalmente prescindible o resumible, para tenerlo en cuenta.
+
+3 de octubre de 2.018: Luis miró por encima mi informe, y me sugirió que borrase todo el contenido que yo expliqué y que no tuviera nada que ver con helióstatos y centrales de torre (centrales de receptor central).
+
+5 de octubre de 2.018: Vicente descubrió que mi programa no funciona siempre, para cualquier vídeo de helióstatos que se le proporcione. Porque algunos vídeos de helióstatos sí los procesaba bien el software, pero con otros no. Y me sugirió que solucionase este problema. También, Vicente y Luis me recomendaron que pasase mi memoria a LaTeX.
+
+8 de octubre de 2.018: en cierto modo, he logrado que el programa mostrase la información de los helióstatos por consola a dos columnas, tal y como Vicente me dijo que hiciese. Aunque se muestran comas y corchetes en dicha información, y que no fui capaz de eliminar. También, he reducido la longitud de la memoria a 65 páginas el capítulo 1 de helióstatos y centrales de torre, resumiendo dicho contenido.
+
+11 de octubre de 2.018: he reducido de nuevo la longitud de la memoria, en esta ocasión a 32 páginas, el capítulo 1 de helióstatos y centrales de torre. El objetivo es llegar a 10 páginas en este capítulo.
+
+13 de octubre de 2.018: he reducido todavía más la longitud de la memoria a 23 páginas el capítulo 1.
+
+15 de octubre de 2.018: Luis me sugirió que explicase también en mi informe sobre la  Ivanpah Solar Electric Generating System. Así hice.
+
+17 de octubre de 2.018: estaba practicando con la herramienta online Overleaf con el fin de, por lo pronto, pasar el índice de mi memoria a LaTeX, y lo logré hacer.
+
+19 de octubre de 2.018: he pasado todo mi informe a LaTeX, aunque debo corregir los errores que me producen. Al copiar únicamente texto, no hay problema, pero debo agregar el código necesario para insertar imágenes y más. También he logrado corregir el fallo que me comentó Vicente el pasado día 5 de octubre en el que el programa no siempre funcionaba para cualquier vídeo que se le proporcionase.
+
+20 de octubre de 2.018: 
+
+\section{Descripción de los requerimientos/requisitos.}
+
+En la elaboración de este TFG, se ha creado además un programa de ordenador en lenguaje de programación Python. Para ello, se requerían de los siguientes elementos:
+
+Ordenador personal.
+Tener instalados los siguientes programas en el sistema:
+‘IDLE (Python 3.6 64-bit)’, concretamente la versión ‘3.6.4’.
+‘Git Bash’, versión 2.7.7 para sistemas de 64 bits.
+Agregar unas variables de entorno en el sistema, explicado previamente en este informe.
+
+\section{Entradas y salidas.}
+
+El software requiere de un vídeo cualquiera en formato MP4, de cualquier resolución, y guardado en una ubicación o ruta cualquiera en el disco duro del PC. El vídeo preferentemente será de helióstatos, con el fin de sacar el máximo partido al código ya que este está adaptado para procesar helióstatos.
+
+En el código de ese software, se han utilizado las siguientes variables de entrada:
+
+‘start\_time’. Indica el tiempo de ejecución nada más iniciar la ejecución del programa.
+‘frame\_counter’. Cuenta los fotogramas analizados del vídeo.
+‘end\_time’. Indica el tiempo de ejecución tras haber procesado un fotograma del vídeo (o tiempo final), y lo mismo para los siguientes, en cuyo caso el tiempo final nunca se reinicia a cero, sino que es acumulado.
+‘fps’. Con la fórmula ‘frame\_counter / float(end\_time - start\_time)’, es decir, usando las variables anteriores, se calcula, para cada fotograma analizado del vídeo, sus fotogramas por segundo.
+‘parser’. Permite definir unos parámetros para que cuando se ejecute el programa por consola, se proporcione como parámetros o entradas (y en el siguiente orden) la ruta o directorio del vídeo a leer en el PC, el ancho y el alto mínimos del helióstato para su detección y análisis.
+‘args’. Devuelve o carga el parámetro deseado y que fueron especificados por el usuario (explicado previamente): directorio, ancho o alto.
+‘camara’. Contenido del vídeo de helióstatos que se irá leyendo, fotograma a fotograma, por el software.
+‘grabbed’. Indica si se ha logrado cargar el siguiente fotograma del vídeo de helióstatos, queriendo además decir que dicho vídeo aún no se han analizado todos sus fotogramas y que debe proseguir la ejecución del programa.
+‘frame’. Es el contenido del fotograma concreto del vídeo de helióstatos.
+‘img’. Es el vídeo de helióstatos convertido a escala de grises.
+‘thresh’. Aplicar un umbral para cada fotograma del vídeo de helióstatos, con el fin de determinar en cada píxel, si este es relativamente brillante o no lo es.
+‘i’. Para el fotograma del vídeo actual, indica el número de helióstato en análisis: 0 (helióstato 1) ó 1 (helióstato 2).
+‘contours’. Todos los contornos o helióstatos detectados, para cada fotograma del vídeo de helióstatos.
+‘x, y, w, h’. Referido al contorno en análisis: ‘xy’ son las coordenadas de un punto, ‘w’ es el ancho, y ‘h’ es la altura.
+‘area’. Valor del área del contorno o helióstato en análisis.
+‘m’. Vector BGR en tres dimensiones que representa dicha información del helióstato en análisis.
+‘mB’, ‘mG’, ‘mR’. Lo mismo que la variable anterior ‘m’, pero esta vez separadas en sus distintas componentes BGR.
+‘mB2’, ‘mG2’, ‘mR2’. Resultados de elevar al cuadrado los valores de las componentes BGR del helióstato.
+‘sumB’, ‘sumG’ y ‘sumR’. Indica la sumatoria acumulativa de todos los píxeles de valor R al cuadrado del helióstato en análisis, y respectivamente para G y B.
+‘sumaBGR’. Indica la sumatoria de todos los píxeles de valores R al cuadrado más G al cuadrado más B al cuadrado del helióstato en análisis.
+'heliostato', 'anchoAlto', 'areaTotal', 'sumaBGRparcial', 'sumaBGRtotal'. Variables en forma de arrays que almacenan (y después muestran en consola) los textos, datos y resultados de los helióstatos analizados. Cada array almacena su correspondiente información.
+
+Las siguientes variables de entrada son completamente personalizables por el usuario, ya que estas son insertables desde la ventana de comandos de Windows al ejecutar el programa:
+
+'args.directorioVideoHeliostatosCargar'. Parámetro que el programa solicita al usuario para que lo introduzca por consola y que permite indicar el directorio o ruta donde se ubica el vídeo de helióstatos a procesar.
+'args.umbralVideoHeliostatos'. Parámetro que el programa solicita al usuario para que lo introduzca por consola y que permite definir el umbral del vídeo de helióstatos para que, si los píxeles (del helióstato) en análisis de ese vídeo superan ese umbral, sean analizados, y viceversa.
+'args.numeroHeliostatosAnalizar'. Parámetro que el programa solicita al usuario para que lo introduzca por consola y que permite definir el número máximo de helióstatos que serán analizados (si cumplen los requisitos) en cada fotograma del vídeo de helióstatos, ignorando así posibles falsos contornos/helióstatos que suelen ser más pequeños que los helióstatos reales.
+'args.anchoMinimoHeliostato', 'args.altoMinimoHeliostato'. Parámetros que el programa solicita al usuario para que los introduzca por consola y que permiten definir el ancho/alto mínimos que debe tener el helióstato para ser analizado.
+
+Las siguientes variables no son usadas para este proyecto y se explicarán muy brevemente. No obstante, era necesario declararlas para evitar errores de compilación en el software.
+
+‘ret’. Umbralización de Otsu en el vídeo de helióstatos.
+‘im2’. Imagen fuente, procedente del fotograma actual del vídeo de helióstatos.
+‘hierarchy’. Método de aproximación del contorno.
+
+Tras el uso de las variables de entrada anteriores, el software mostrará por pantalla una consola de información y resultados y dos ventanas del vídeo de helióstatos. Ambos elementos se van actualizando en tiempo de ejecución. Los resultados mostrados en consola de los helióstatos son finales, no parciales. En la consola aparece la siguiente información, para cada fotograma del vídeo de helióstatos:
+
+Analizando el helióstato verde y/o rojo.
+Ancho y alto del helióstato en píxeles.
+Área del helióstato en píxeles.
+Sumatorias acumulativas de los valores BGR al cuadrado (cada componente por separado) de todos los píxeles del helióstato en análisis.
+Suma total (o unificación) de esas tres componentes BGR entre sí.
+Fotogramas por segundo del vídeo.
+
+Ejemplo gráfico:
+
+
+
+En las ventanas del vídeo de helióstatos, en una de ellas aparece el vídeo umbralizado, con el fin de detectar lo que son contornos (helióstatos) e ignorar los que no lo sean, así como los falsos contornos. Y en la otra ventana, aparece el vídeo original. En esta última, cuando se detecten helióstatos de un tamaño (ancho y alto) determinados (deseados por el usuario en los parámetros que él mismo proporcionó al ejecutar el programa), se reencuadrará con un cuadrado o rectángulo verde o rojo y se analizará por el software. El rectángulo en general será de color verde si solo se muestra un helióstato (o dos helióstatos rozándose entre sí, tratados como si fueran uno solo) en el fotograma actual del vídeo, pero si en dicho fotograma se muestran dos helióstatos (y separados entre sí), el rectángulo para el helióstato secundario será rojo. Esto permitirá diferenciar bien los helióstatos, y saber qué información mostrada en consola le corresponde a cada helióstato.
+
+Ejemplo gráfico:
+
+\section{Análisis de los recursos consumidos.}
+
+A continuación, se mostrarán y explicarán los resultados del uso de la CPU y del consumo de la memoria RAM en el PC, en el administrador de tareas de Windows 10, durante la ejecución del software en distintos periodos de tiempo. También se medirán los fotogramas por segundo (FPS) actuales del vídeo.
+
+Se inicia la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando el comando 'estimacion\_potencia.py Videos/varios\_heliostatos.mp4 50 50 127 2'.
+
+
+
+Instante de tiempo 1. Al iniciar la ejecución del software, cuando está entrando el primer helióstato desde el lado izquierdo en el vídeo y aún no se muestra en su totalidad, Python consume un 7,1\% de CPU y 33,5 MB de memoria RAM, mientras que la terminal de Windows consume un 4\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 57,27.
+
+
+
+
+Instante de tiempo 2. Cuando el primer helióstato ya ha llegado al centro del vídeo, Python consume un 6,5\% de CPU y 33,8 MB de memoria RAM, mientras que la terminal de Windows consume un 7\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 60,61.
+
+
+
+
+Instante de tiempo 3. Cuando está entrando desde la izquierda del vídeo el segundo helióstato, Python consume un 5,2\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,1\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 61,53.
+
+
+
+
+Instante de tiempo 4. Cuando el segundo helióstato prácticamente se ha fusionado con el helióstato permanecido en el centro del vídeo, Python consume un 7,3\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 7\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 61,91.
+
+
+
+
+Instante de tiempo 5. Cuando está entrando desde la izquierda del vídeo el tercer helióstato, Python consume un 3,7\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,9\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 62,38.
+
+
+
+
+Instante de tiempo 6. Cuando el tercer helióstato prácticamente se ha fusionado con el helióstato permanecido en el centro del vídeo, Python consume un 6,7\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 7,4\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 62,48.
+
+
+
+
+Instante de tiempo 7. Cuando está entrando desde la izquierda del vídeo el cuarto y último helióstato, Python consume un 6,2\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,2\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 62,57.
+
+
+
+
+Instante de tiempo 8. Cuando el cuarto helióstato comienza a iniciar la fusión con el helióstato permanecido en el centro del vídeo, Python consume un 5,1\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,9\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 62,49.
+
+
+
+
+Instante de tiempo 9. Cuando uno de los helióstatos fusionados con el helióstato del centro del vídeo trata de salir del mismo (todavía no se ha completado este procedimiento). Python consume un 4,2\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,5\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,25.
+
+
+
+
+Instante de tiempo 10. Cuando el helióstato ya se ha separado del helióstato central del vídeo, Python consume un 4,8\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,8\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,12.
+
+
+
+
+Instante de tiempo 11. Cuando únicamente permanece el helióstato central del vídeo (el otro helióstato ya se ha ido a la izquierda del vídeo), Python consume un 3,4\% de CPU y 34,6 MB de memoria RAM, mientras que la terminal de Windows consume un 5,9\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,26.
+
+
+
+
+Instante de tiempo 12. Cuando otro de los helióstatos fusionados con el helióstato del centro del vídeo trata de salir del mismo (todavía no se ha completado este procedimiento). Python consume un 7,4\% de CPU y 34,6 MB de memoria RAM, mientras que la terminal de Windows consume un 4,6\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,32.
+
+
+
+
+Instante de tiempo 13. Cuando los dos helióstatos están a punto de separarse entre sí. Python consume un 7,4\% de CPU y 34,6 MB de memoria RAM, mientras que la terminal de Windows consume un 4,6\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,33.
+
+
+
+
+Instante de tiempo 14. Cuando ambos helióstatos ya se han separado entre sí, Python consume un 7,2\% de CPU y 34,6 MB de memoria RAM, mientras que la terminal de Windows consume un 4,9\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,35.
+
+
+
+
+Instante de tiempo 15. Cuando el helióstato de la izquierda ya casi ni se ve porque este se ha separado bastante del helióstato del centro del vídeo, Python consume un 7,9\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 5,5\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,35.
+
+
+
+
+Instante de tiempo 16. Cuando otro (el tercero ya) de los helióstatos fusionados con el helióstato del centro del vídeo trata de salir del mismo (todavía no se ha completado este procedimiento). Python consume un 5,3\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 6,4\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,45.
+
+
+
+
+Instante de tiempo 17. Cuando los dos helióstatos están a punto de separarse entre sí. Python consume un 7,1\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 6\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,47.
+
+
+
+
+Instante de tiempo 18. Cuando el helióstato de la izquierda ya casi ni se ve porque este se ha separado bastante del helióstato del centro del vídeo, Python consume un 7,5\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 5,9\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,52.
+
+
+
+
+Instante de tiempo 19. Cuando el helióstato del centro del vídeo, el último de todos, empieza a trasladarse hacia la izquierda con el fin de salirse del vídeo, Python consume un 6,9\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 7,1\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,49.
+
+
+
+
+Instante de tiempo 20. Cuando dicho helióstato está a punto de desaparecer del vídeo (aún se muestra parcialmente a la izquierda del mismo), Python consume un 8,4\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 6,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,50.
+
+
+
+
+Instante de tiempo 21. Cuando finalmente no permanecen helióstatos en el vídeo (final del mismo, ya se han ido todos), Python consume un 6,1\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 6,1\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,53.
+
+
+
+Se inicia la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando esta vez el comando 'estimacion\_potencia.py Videos/heliostato.MOV 50 50 200 1'.
+
+Instante de tiempo 1. Nada más iniciar la ejecución del software, cuando todavía no han pasado por el vídeo los helióstatos, ni siquiera el primero, Python consume un 45,6\% de CPU y 98,5 MB de memoria RAM, mientras que la terminal de Windows consume un 0,6\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 20,18.
+
+Instante de tiempo 2. Cuando está entrando el primer helióstato en el vídeo (todavía no ha entrado completamente, sino parcialmente), Python consume un 42,1\% de CPU y 101,5 MB de memoria RAM, mientras que la terminal de Windows consume un 1,5\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 20,55.
+
+Instante de tiempo 3. Cuando el primer helióstato ya ha llegado al centro del vídeo, Python consume un 41,8\% de CPU y 101,0 MB de memoria RAM, mientras que la terminal de Windows consume un 1,8\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,62.
+
+Instante de tiempo 4. Cuando el primer helióstato tiende a irse del centro del vídeo, Python consume un 42,4\% de CPU y 101 MB de memoria RAM, mientras que la terminal de Windows consume un 1,1\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,58.
+
+Instante de tiempo 5. Cuando está llegando al centro del vídeo un segundo helióstato desde la izquierda, Python consume un 43\% de CPU y 103 MB de memoria RAM, mientras que la terminal de Windows consume un 1,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,79.
+
+Instante de tiempo 6. Cuando el segundo helióstato se ha aproximado un poco más al centro del vídeo (respecto al instante de tiempo anterior), Python consume un 40,7\% de CPU y 105 MB de memoria RAM, mientras que la terminal de Windows consume un 1\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,8.
+
+Instante de tiempo 7. Cuando el segundo helióstato ya ha llegado al centro del vídeo, Python consume un 41,5\% de CPU y 105,9 MB de memoria RAM, mientras que la terminal de Windows consume un 1,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,73.
+
+Instante de tiempo 8. Cuando el segundo helióstato tiende a irse del centro del vídeo, Python consume un 36,2\% de CPU y 103,1 MB de memoria RAM, mientras que la terminal de Windows consume un 0,9\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,58.
+
+Instante de tiempo 9. Cuando el segundo helióstato ya ha abandonado el vídeo y aún no ha llegado el tercero, Python consume un 40,3\% de CPU y 102,0 MB de memoria RAM, mientras que la terminal de Windows consume un 0,8\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,59.
+
+Instante de tiempo 10. Cuando el tercer helióstato está entrando en el vídeo (todavía no ha entrado completamente, sino parcialmente), Python consume un 44,3\% de CPU y 105,3 MB de memoria RAM, mientras que la terminal de Windows consume un 0\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,65.
+
+Instante de tiempo 11. Cuando el tercer helióstato está a punto de alcanzar el centro del vídeo, Python consume un 42,9\% de CPU y 101,1 MB de memoria RAM, mientras que la terminal de Windows consume un 1,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,67.
+
+Instante de tiempo 12. Cuando el tercer helióstato se está alejando del centro del vídeo, Python consume un 39,2\% de CPU y 103,1 MB de memoria RAM, mientras que la terminal de Windows consume un 1,5\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,64.
+
+Instante de tiempo 13. Cuando el tercer helióstato está a punto de abandonar el vídeo, Python consume un 42,8\% de CPU y 102,5 MB de memoria RAM, mientras que la terminal de Windows consume un 0,8\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,65.
+
+Instante de tiempo 14. Cuando no hay ningún helióstato en el vídeo (todos ya han pasado por él, y no quedan más), Python consume un 46,2\% de CPU y 104,3 MB de memoria RAM, mientras que la terminal de Windows consume un 0,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,68.
+
+\section{Plataformas que son capaces de ejecutar el software.}
+
+El software está escrito en lenguaje de programación Python, y una de las características de Python es que es un lenguaje multiplataforma. Esto significa que, aunque originalmente Python se diseñó para Unix, cualquier sistema es compatible con el lenguaje siempre y cuando exista un intérprete programado para él. Además, hay diversas versiones de Python en muchos sistemas informáticos distintos.
+
+\section{Ejemplos de ejecuciones y comentarios sobre sus resultados.}
+
+Al iniciar la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando el comando 'estimacion\_potencia.py Videos/varios\_heliostatos.mp4 50 50 127 2', ocurre lo siguiente:
+
+Cuando un helióstato comienza a entrar en el vídeo de helióstatos, el programa todavía no lo reencuadra en dicho vídeo ni lo analiza. Esto se debe a que, en este instante de tiempo, el helióstato mostrado en el vídeo aún no es de ancho y alto 50 píxeles o más, tal y como solicitó el usuario por parámetros en la consola. De forma análoga ocurre cuando un helióstato está a punto de salir del vídeo: en ese instante apenas se muestra el helióstato en el vídeo, y el ancho o el alto mostrados no son mayores de 50 píxeles, siendo ignorado por el programa. También debe cumplirse el valor de umbral proporcionado por parámetro para el análisis del helióstato, 127. De lo contrario, si el helióstato se muestra en su totalidad en el vídeo, o por lo menos su ancho y alto en un instante determinado son mayores de 50 píxeles (y por supuesto el umbral del vídeo es al menos de 127), el programa lo reencuadra en el vídeo y lo analiza.
+
+Por parámetro en la consola, se ha indicado también que se desea leer hasta un máximo de dos helióstatos por fotograma del vídeo, porque en este vídeo pueden mostrarse hasta dos helióstatos en un mismo fotograma. Si en vez de '2' se introduce '1', cuando aparezcan dos helióstatos en un mismo fotograma, simplemente se reencuadrará en el vídeo y procesará el helióstato situado a la izquierda, y no el de la derecha.
+
+En el análisis de un helióstato, el programa calculará su ancho y alto, su área total (todo estos valores se miden en píxeles), la sumatoria acumulativa de los valores de cada componente BGR al cuadrado (cada componente por separado) de todo el helióstato, y esto mismo pero sumando las tres componentes resultantes entre sí. Los resultados de estos datos son mostrados por consola, para cada helióstato analizado. En la consola, dichos datos son representados textualmente así (respectivamente):
+
+Ancho y alto WH del helióstato en píxeles.
+Área del helióstato en píxeles.
+Sumatorias BGR al cuadrado de todos sus píxeles.
+Suma total BGR al cuadrado helióstato completo.
+
+En el análisis de un helióstato, además, el programa reencuadrará en el vídeo y en tiempo de ejecución los helióstatos que se están analizando actualmente. Si en el fotograma actual de dicho vídeo simplemente aparece un helióstato, se reencuadrará en color verde. De lo contrario, si aparecen dos helióstatos al mismo tiempo en un mismo fotograma, el helióstato de la izquierda se reencuadrará en verde y el de la derecha en rojo. En cualquiera de los casos, y tal y como se comentó antes, el programa analizará el o los helióstatos y mostrará sus resultados en la consola. Tener en cuenta que cuando se analizan dos helióstatos en un mismo fotograma, el programa mostrará sus respectivos resultados en la consola en dos columnas. La primera para el helióstato reencuadrado en verde, y la segunda para el helióstato reencuadrado en rojo. Finalmente, indicar que cuando dos helióstatos, en un mismo fotograma, están fusionados (parcialmente o totalmente) o rozándose, serán tratados y analizados como si fueran uno solo.
+
+La tasa de fotogramas por segundo (FPS) es alta, de aproximadamente 60 FPS, porque se está procesando un vídeo de dimensiones reducidas, y gracias también al uso de matrices vectorizadas (biblioteca 'NumPy' de Python) para la carga, procesamiento y guardado de todos los datos de todos los píxeles de cada helióstato.
+
+Todo este procedimiento se repite para todos los demás fotogramas del vídeo de helióstatos, hasta que se hayan leído todos sus fotogramas, finalizando así la ejecución del programa.
+
+El contenido de este vídeo son de cuatro helióstatos que entran poco a poco en el vídeo desde el lado izquierdo, y se van ubicando en el centro. Los demás (y siguientes) helióstatos que también llegan desde la izquierda se solapan con el helióstato o helióstatos permanecidos en el centro de dicho vídeo. Cuando los cuatro helióstatos permanezcan solapados en el centro del vídeo, se irán separando, uno por uno, los helióstatos hacia la izquierda, saliéndose cada uno del vídeo, hasta que no queden ninguno.
+
+
+
+Al iniciar la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando esta vez el comando 'estimacion\_potencia.py Videos/heliostato.MOV 50 50 200 1', ocurre lo siguiente:
+
+Para que el helióstato sea en esta ocasión reencuadrado en el vídeo y analizado, el nuevo umbral escogido es de 200, porque el nuevo vídeo tiene una tonalidad de color más clara. En el anterior caso, bastaba con un umbral de 127 porque aquel vídeo era más oscuro. El ancho y alto escogidos del helióstato, al igual que en el caso anterior, es de 50 por 50 píxeles.
+
+Como en este vídeo aparece como máximo un único helióstato por fotograma, se indica por parámetro en la consola que se desea analizar esta vez 1 helióstato por fotograma (en vez de 2, como sucedía en el anterior caso). Si se escribe un número mayor a 1, provocaría en el programa un error de fuera de rango.
+
+Al ser un vídeo con unas dimensiones muy elevadas, a comparación del anterior vídeo usado en aquel caso, la tasa de fotogramas por segundo (FPS) se reduce considerablemente, y oscila en 20 FPS. Esto es debido a que el programa le llevará más tiempo analizar los helióstatos y sus píxeles, ya que dichos helióstatos tendrán unas dimensiones más elevadas, y por tanto, más píxeles a analizar dentro del helióstato.
+
+Como en el anterior caso, el programa reencuadra el helióstato en el vídeo y lo analiza, siempre y cuando se cumplan los requisitos deseados por el usuario por parámetros en la consola, es decir, de qué tamaño y umbral debe ser el helióstato. Y también se mostrarán los resultados por consola de los helióstatos analizados por el programa. Aparece la misma información de los resultados de los helióstatos que en el anterior caso.
+
+Todo este procedimiento se repite para todos los demás fotogramas del vídeo de helióstatos, hasta que se hayan leído todos sus fotogramas, finalizando así la ejecución del programa.
+
+El contenido de este vídeo es de tres helióstatos que entran poco a poco en el vídeo (desde la izquierda), permanecen en el centro durante unos segundos, y se salen poco a poco (hacia la izquierda) del vídeo. Los tres helióstatos hacen esto, de uno en uno. No aparecen dos helióstatos en un mismo fotograma del vídeo como en el anterior caso, así que por tanto no habrán fusiones ni rozamientos de dos helióstatos distintos.
+
+
+
+\end{document}
