@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  16 NOV 2018 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  17 NOV 2018 19:45
 entering extended mode
 **./Cap4PropuestaDesarrollada.tex
 (Cap4PropuestaDesarrollada.tex
@@ -467,16 +467,281 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 569.
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-[25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39]
-[40] [41] (Cap4PropuestaDesarrollada.aux
+[25] [26] [27] [28] [29] [30] [31] [32] [33]
+<CapturasRendimientoSoftware1/Imagen1.png, id=110, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen1.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen1.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen1.png  used on inpu
+t line 721.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [34]
+<CapturasRendimientoSoftware1/Imagen2.png, id=115, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen2.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen2.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen2.png  used on inpu
+t line 726.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [35 <./CapturasRendimientoSoftware1/Imagen1.png> <./CapturasRendimientoSoftwar
+e1/Imagen2.png>]
+<CapturasRendimientoSoftware1/Imagen3.png, id=121, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen3.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen3.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen3.png  used on inpu
+t line 731.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware1/Imagen4.png, id=122, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen4.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen4.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen4.png  used on inpu
+t line 736.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [36 <./CapturasRendimientoSoftware1/Imagen3.png> <./CapturasRendimientoSoftwar
+e1/Imagen4.png>]
+<CapturasRendimientoSoftware1/Imagen5.png, id=128, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen5.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen5.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen5.png  used on inpu
+t line 741.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware1/Imagen6.png, id=129, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen6.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen6.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen6.png  used on inpu
+t line 746.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [37 <./CapturasRendimientoSoftware1/Imagen5.png>]
+<CapturasRendimientoSoftware1/Imagen7.png, id=135, 1206.00563pt x 651.1527pt>
+File: CapturasRendimientoSoftware1/Imagen7.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen7.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen7.png  used on inpu
+t line 751.
+(pdftex.def)             Requested size: 427.43153pt x 230.77829pt.
+ [38 <./CapturasRendimientoSoftware1/Imagen6.png> <./CapturasRendimientoSoftwar
+e1/Imagen7.png>]
+<CapturasRendimientoSoftware1/Imagen8.png, id=141, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen8.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen8.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen8.png  used on inpu
+t line 756.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware1/Imagen9.png, id=142, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen9.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen9.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen9.png  used on inpu
+t line 761.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [39 <./CapturasRendimientoSoftware1/Imagen8.png> <./CapturasRendimientoSoftwar
+e1/Imagen9.png>]
+<CapturasRendimientoSoftware1/Imagen10.png, id=148, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen10.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen10.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen10.png  used on inp
+ut line 766.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware1/Imagen11.png, id=149, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen11.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen11.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen11.png  used on inp
+ut line 771.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [40 <./CapturasRendimientoSoftware1/Imagen10.png>]
+<CapturasRendimientoSoftware1/Imagen12.png, id=154, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen12.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen12.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen12.png  used on inp
+ut line 776.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [41 <./CapturasRendimientoSoftware1/Imagen11.png> <./CapturasRendimientoSoftwa
+re1/Imagen12.png>]
+<CapturasRendimientoSoftware1/Imagen13.png, id=160, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen13.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen13.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen13.png  used on inp
+ut line 781.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware1/Imagen14.png, id=161, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen14.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen14.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen14.png  used on inp
+ut line 786.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+[42 <./CapturasRendimientoSoftware1/Imagen13.png> <./CapturasRendimientoSoftwar
+e1/Imagen14.png>]
+<CapturasRendimientoSoftware1/Imagen15.png, id=167, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen15.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen15.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen15.png  used on inp
+ut line 791.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware1/Imagen16.png, id=168, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen16.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen16.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen16.png  used on inp
+ut line 796.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [43 <./CapturasRendimientoSoftware1/Imagen15.png>]
+<CapturasRendimientoSoftware1/Imagen17.png, id=174, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen17.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen17.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen17.png  used on inp
+ut line 801.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [44 <./CapturasRendimientoSoftware1/Imagen16.png> <./CapturasRendimientoSoftwa
+re1/Imagen17.png>]
+<CapturasRendimientoSoftware1/Imagen18.png, id=180, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen18.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen18.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen18.png  used on inp
+ut line 806.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware1/Imagen19.png, id=181, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen19.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen19.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen19.png  used on inp
+ut line 811.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [45 <./CapturasRendimientoSoftware1/Imagen18.png> <./CapturasRendimientoSoftwa
+re1/Imagen19.png>]
+<CapturasRendimientoSoftware1/Imagen20.png, id=187, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen20.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen20.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen20.png  used on inp
+ut line 816.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware1/Imagen21.png, id=188, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen21.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen21.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen21.png  used on inp
+ut line 821.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [46 <./CapturasRendimientoSoftware1/Imagen20.png>]
+<CapturasRendimientoSoftware2/Imagen1.png, id=193, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen1.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen1.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen1.png  used on inpu
+t line 829.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+[47 <./CapturasRendimientoSoftware1/Imagen21.png> <./CapturasRendimientoSoftwar
+e2/Imagen1.png>]
+<CapturasRendimientoSoftware2/Imagen2.png, id=199, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen2.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen2.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen2.png  used on inpu
+t line 834.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware2/Imagen3.png, id=200, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen3.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen3.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen3.png  used on inpu
+t line 839.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [48 <./CapturasRendimientoSoftware2/Imagen2.png>]
+<CapturasRendimientoSoftware2/Imagen4.png, id=205, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen4.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen4.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen4.png  used on inpu
+t line 844.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [49 <./CapturasRendimientoSoftware2/Imagen3.png> <./CapturasRendimientoSoftwar
+e2/Imagen4.png>]
+<CapturasRendimientoSoftware2/Imagen5.png, id=212, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen5.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen5.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen5.png  used on inpu
+t line 849.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware2/Imagen6.png, id=213, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen6.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen6.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen6.png  used on inpu
+t line 854.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [50 <./CapturasRendimientoSoftware2/Imagen5.png> <./CapturasRendimientoSoftwar
+e2/Imagen6.png>]
+<CapturasRendimientoSoftware2/Imagen7.png, id=219, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen7.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen7.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen7.png  used on inpu
+t line 859.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware2/Imagen8.png, id=220, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen8.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen8.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen8.png  used on inpu
+t line 864.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [51 <./CapturasRendimientoSoftware2/Imagen7.png> <./CapturasRendimientoSoftwar
+e2/Imagen8.png>]
+<CapturasRendimientoSoftware2/Imagen9.png, id=226, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen9.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen9.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen9.png  used on inpu
+t line 869.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware2/Imagen10.png, id=227, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware2/Imagen10.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen10.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen10.png  used on inp
+ut line 874.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [52 <./CapturasRendimientoSoftware2/Imagen9.png>]
+<CapturasRendimientoSoftware2/Imagen11.png, id=232, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware2/Imagen11.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen11.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen11.png  used on inp
+ut line 879.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [53 <./CapturasRendimientoSoftware2/Imagen10.png> <./CapturasRendimientoSoftwa
+re2/Imagen11.png>]
+<CapturasRendimientoSoftware2/Imagen12.png, id=238, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware2/Imagen12.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen12.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen12.png  used on inp
+ut line 884.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware2/Imagen13.png, id=239, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware2/Imagen13.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen13.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen13.png  used on inp
+ut line 889.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [54 <./CapturasRendimientoSoftware2/Imagen12.png> <./CapturasRendimientoSoftwa
+re2/Imagen13.png>]
+<CapturasRendimientoSoftware2/Imagen14.png, id=245, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware2/Imagen14.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen14.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen14.png  used on inp
+ut line 894.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [55 <./CapturasRendimientoSoftware2/Imagen14.png>] [56] [57] [58] (Cap4Propues
+taDesarrollada.aux
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 ) ) 
 Here is how much of TeX's memory you used:
- 5466 strings out of 492970
- 73147 string characters out of 3127925
+ 5630 strings out of 492970
+ 79841 string characters out of 3127925
  160225 words of memory out of 3000000
- 9223 multiletter control sequences out of 15000+200000
+ 9363 multiletter control sequences out of 15000+200000
  9198 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,11n,43p,2520b,478s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -485,9 +750,9 @@ m/cmbx12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmmi12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmr12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Cap4PropuestaDesarrollada.pdf (41 pages, 165339 bytes).
+Output written on Cap4PropuestaDesarrollada.pdf (58 pages, 24160721 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
+ 276 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -6,8 +6,8 @@
 \contentsline {section}{\numberline {5}Diagrama de flujo.}{4}
 \contentsline {section}{\numberline {6}Funcionamiento del software y c\IeC {\'o}digo.}{5}
 \contentsline {section}{\numberline {7}Cronograma de tareas.}{15}
-\contentsline {section}{\numberline {8}Descripci\IeC {\'o}n de los requerimientos/requisitos.}{31}
+\contentsline {section}{\numberline {8}Descripci\IeC {\'o}n de los requerimientos/requisitos.}{32}
 \contentsline {section}{\numberline {9}Entradas y salidas.}{32}
 \contentsline {section}{\numberline {10}An\IeC {\'a}lisis de los recursos consumidos.}{34}
-\contentsline {section}{\numberline {11}Plataformas que son capaces de ejecutar el software.}{38}
-\contentsline {section}{\numberline {12}Ejemplos de ejecuciones y comentarios sobre sus resultados.}{39}
+\contentsline {section}{\numberline {11}Plataformas que son capaces de ejecutar el software.}{55}
+\contentsline {section}{\numberline {12}Ejemplos de ejecuciones y comentarios sobre sus resultados.}{56}
