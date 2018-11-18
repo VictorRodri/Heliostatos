@@ -1,9 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  16 NOV 2018 23:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  18 NOV 2018 22:49
 entering extended mode
 **./main.tex
 (main.tex
 LaTeX2e <2018-04-01> patch level 5
-(Cap1DescripcionProblemaResolver.tex
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo"
@@ -282,30 +281,30 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks33
 \verbatim@line=\toks34
 \verbatim@in@stream=\read1
-) (main.aux
+) (Cap1DescripcionProblemaResolver.tex (main.aux
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \. on input line 40.
-LaTeX Info: Redefining \% on input line 40.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -352,15 +351,14 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \celsius on input line 40.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 40.
-
+LaTeX Info: Redefining \celsius on input line 1.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 1.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 40.
-Package gensymb Info: Using \Omega for \ohm on input line 40.
+LaTeX Info: Redefining \ohm on input line 1.
+Package gensymb Info: Using \Omega for \ohm on input line 1.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -397,289 +395,289 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 
 Package natbib Warning: Citation `OpenCVWebSite' on page 2 undefined on input l
-ine 55.
+ine 16.
 
 
 Package natbib Warning: Citation `SALWebSite' on page 2 undefined on input line
- 55.
+ 16.
 
 
 Package natbib Warning: Citation `IEEEXploreWebSite' on page 2 undefined on inp
-ut line 55.
+ut line 16.
 
 [2]
 
-LaTeX Warning: File `unnamed (1).jpg' not found on input line 69.
+LaTeX Warning: File `unnamed (1).jpg' not found on input line 30.
 
 <unnamed (1).jpg, id=11, 595.22375pt x 288.07625pt>
 File: unnamed (1).jpg Graphic file (type jpg)
 <use unnamed (1).jpg>
-Package pdftex.def Info: unnamed (1).jpg  used on input line 69.
+Package pdftex.def Info: unnamed (1).jpg  used on input line 30.
 (pdftex.def)             Requested size: 427.43153pt x 206.86526pt.
 
 Package natbib Warning: Citation `OepmWebSite' on page 3 undefined on input lin
-e 70.
+e 31.
 
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 69--71
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 30--32
 []\OT1/cmr/m/n/12 (1).jpg (1).jpg []
  []
 
 <unnamed.jpg, id=12, 455.7025pt x 464.73625pt>
 File: unnamed.jpg Graphic file (type jpg)
 <use unnamed.jpg>
-Package pdftex.def Info: unnamed.jpg  used on input line 76.
+Package pdftex.def Info: unnamed.jpg  used on input line 37.
 (pdftex.def)             Requested size: 427.43153pt x 435.91608pt.
 
 Package natbib Warning: Citation `OepmWebSite' on page 3 undefined on input lin
-e 77.
+e 38.
 
 [3 <./unnamed (1).jpg>]
 
 Package natbib Warning: Citation `GstriatumWebSite' on page 4 undefined on inpu
-t line 83.
+t line 44.
 
 
 Package natbib Warning: Citation `EcuRedWebSite' on page 4 undefined on input l
-ine 83.
+ine 44.
 
 [4 <./unnamed.jpg>]
 
-LaTeX Warning: File `unnamed (2).jpg' not found on input line 89.
+LaTeX Warning: File `unnamed (2).jpg' not found on input line 50.
 
 <unnamed (2).jpg, id=20, 400.49625pt x 277.035pt>
 File: unnamed (2).jpg Graphic file (type jpg)
 <use unnamed (2).jpg>
-Package pdftex.def Info: unnamed (2).jpg  used on input line 89.
+Package pdftex.def Info: unnamed (2).jpg  used on input line 50.
 (pdftex.def)             Requested size: 427.43153pt x 295.68475pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 89--90
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 50--51
 []\OT1/cmr/m/n/12 (2).jpg (2).jpg [] 
  []
 
 
 Package natbib Warning: Citation `LuciaRinconWebSite' on page 5 undefined on in
-put line 99.
+put line 60.
 
 [5 <./unnamed (2).jpg>]
 
 Package natbib Warning: Citation `IgualadaWebSite' on page 6 undefined on input
- line 117.
+ line 78.
 
 
 Package natbib Warning: Citation `SoliclimaWebSite' on page 6 undefined on inpu
-t line 117.
+t line 78.
 
 
 Package natbib Warning: Citation `ClaudioWebSite' on page 6 undefined on input 
-line 117.
+line 78.
 
 <unnamed.png, id=24, 150.5625pt x 111.41624pt>
 File: unnamed.png Graphic file (type png)
 <use unnamed.png>
-Package pdftex.def Info: unnamed.png  used on input line 119.
+Package pdftex.def Info: unnamed.png  used on input line 80.
 (pdftex.def)             Requested size: 427.43153pt x 316.36313pt.
 
-LaTeX Warning: File `unnamed (1).png' not found on input line 120.
+LaTeX Warning: File `unnamed (1).png' not found on input line 81.
 
 <unnamed (1).png, id=25, 150.5625pt x 63.23625pt>
 File: unnamed (1).png Graphic file (type png)
 <use unnamed (1).png>
-Package pdftex.def Info: unnamed (1).png  used on input line 120.
+Package pdftex.def Info: unnamed (1).png  used on input line 81.
 (pdftex.def)             Requested size: 427.43153pt x 179.55743pt.
 
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 119--121
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 80--82
 \OT1/cmr/m/n/12 (1).png (1).png [] 
  []
 
 [6]
 
-LaTeX Warning: File `unnamed (4).jpg' not found on input line 127.
+LaTeX Warning: File `unnamed (4).jpg' not found on input line 88.
 
 <unnamed (4).jpg, id=29, 180.675pt x 170.6375pt>
 File: unnamed (4).jpg Graphic file (type jpg)
 <use unnamed (4).jpg>
-Package pdftex.def Info: unnamed (4).jpg  used on input line 127.
+Package pdftex.def Info: unnamed (4).jpg  used on input line 88.
 (pdftex.def)             Requested size: 427.43153pt x 403.72424pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 127--130
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 88--91
 []\OT1/cmr/m/n/12 (4).jpg (4).jpg []
  []
 
 [7 <./unnamed.png> <./unnamed (1).png>]
 
-LaTeX Warning: File `unnamed (3).jpg' not found on input line 131.
+LaTeX Warning: File `unnamed (3).jpg' not found on input line 92.
 
 <unnamed (3).jpg, id=34, 501.875pt x 298.11375pt>
 File: unnamed (3).jpg Graphic file (type jpg)
 <use unnamed (3).jpg>
-Package pdftex.def Info: unnamed (3).jpg  used on input line 131.
+Package pdftex.def Info: unnamed (3).jpg  used on input line 92.
 (pdftex.def)             Requested size: 427.43153pt x 253.90735pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 131--136
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 92--97
 []\OT1/cmr/m/n/12 (3).jpg (3).jpg []
  []
 
 [8 <./unnamed (4).jpg>]
 
-LaTeX Warning: File `unnamed (5).jpg' not found on input line 137.
+LaTeX Warning: File `unnamed (5).jpg' not found on input line 98.
 
 <unnamed (5).jpg, id=38, 501.875pt x 294.09875pt>
 File: unnamed (5).jpg Graphic file (type jpg)
 <use unnamed (5).jpg>
-Package pdftex.def Info: unnamed (5).jpg  used on input line 137.
+Package pdftex.def Info: unnamed (5).jpg  used on input line 98.
 (pdftex.def)             Requested size: 427.43153pt x 250.48772pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 137--139
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 98--100
 []\OT1/cmr/m/n/12 (5).jpg (5).jpg []
  []
 
 [9 <./unnamed (3).jpg>]
 
-LaTeX Warning: File `unnamed (7).jpg' not found on input line 140.
+LaTeX Warning: File `unnamed (7).jpg' not found on input line 101.
 
 <unnamed (7).jpg, id=42, 501.875pt x 217.81375pt>
 File: unnamed (7).jpg Graphic file (type jpg)
 <use unnamed (7).jpg>
-Package pdftex.def Info: unnamed (7).jpg  used on input line 140.
+Package pdftex.def Info: unnamed (7).jpg  used on input line 101.
 (pdftex.def)             Requested size: 427.43153pt x 185.51479pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 140--141
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 101--102
 []\OT1/cmr/m/n/12 (7).jpg (7).jpg [] 
  []
 
 [10 <./unnamed (5).jpg> <./unnamed (7).jpg>]
 
-LaTeX Warning: File `unnamed (6).jpg' not found on input line 146.
+LaTeX Warning: File `unnamed (6).jpg' not found on input line 107.
 
 <unnamed (6).jpg, id=46, 501.875pt x 225.84375pt>
 File: unnamed (6).jpg Graphic file (type jpg)
 <use unnamed (6).jpg>
-Package pdftex.def Info: unnamed (6).jpg  used on input line 146.
+Package pdftex.def Info: unnamed (6).jpg  used on input line 107.
 (pdftex.def)             Requested size: 427.43153pt x 192.35403pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 146--147
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 107--108
 []\OT1/cmr/m/n/12 (6).jpg (6).jpg [] 
  []
 
 
 Package natbib Warning: Citation `JonathanWebSite' on page 11 undefined on inpu
-t line 149.
+t line 110.
 
 
-LaTeX Warning: File `unnamed (2).png' not found on input line 159.
+LaTeX Warning: File `unnamed (2).png' not found on input line 120.
 
 <unnamed (2).png, id=47, 301.125pt x 177.66376pt>
 File: unnamed (2).png Graphic file (type png)
 <use unnamed (2).png>
-Package pdftex.def Info: unnamed (2).png  used on input line 159.
+Package pdftex.def Info: unnamed (2).png  used on input line 120.
 (pdftex.def)             Requested size: 427.43153pt x 252.20837pt.
 
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 159--161
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 120--122
 []\OT1/cmr/m/n/12 (2).png (2).png []
  []
 
 [11 <./unnamed (6).jpg>]
 
-LaTeX Warning: File `unnamed (3).png' not found on input line 162.
+LaTeX Warning: File `unnamed (3).png' not found on input line 123.
 
 <unnamed (3).png, id=52, 301.125pt x 226.8475pt>
 File: unnamed (3).png Graphic file (type png)
 <use unnamed (3).png>
-Package pdftex.def Info: unnamed (3).png  used on input line 162.
+Package pdftex.def Info: unnamed (3).png  used on input line 123.
 (pdftex.def)             Requested size: 427.43153pt x 322.02878pt.
 
 Package natbib Warning: Citation `ValenticampderrosWebSite' on page 12 undefine
-d on input line 163.
+d on input line 124.
 
 
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 162--164
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 123--125
 []\OT1/cmr/m/n/12 (3).png (3).png []
  []
 
 [12 <./unnamed (2).png>]
 
-LaTeX Warning: File `unnamed (8).jpg' not found on input line 178.
+LaTeX Warning: File `unnamed (8).jpg' not found on input line 139.
 
 <unnamed (8).jpg, id=57, 491.8375pt x 306.14375pt>
 File: unnamed (8).jpg Graphic file (type jpg)
 <use unnamed (8).jpg>
-Package pdftex.def Info: unnamed (8).jpg  used on input line 178.
+Package pdftex.def Info: unnamed (8).jpg  used on input line 139.
 (pdftex.def)             Requested size: 427.43153pt x 266.06262pt.
 
-Overfull \hbox (73.76312pt too wide) in paragraph at lines 178--179
+Overfull \hbox (73.76312pt too wide) in paragraph at lines 139--140
 []\OT1/cmr/m/n/12 (8).jpg (8).jpg [] 
  []
 
 [13 <./unnamed (3).png>]
 
 Package natbib Warning: Citation `PonsWebSite' on page 14 undefined on input li
-ne 189.
+ne 150.
 
 [14 <./unnamed (8).jpg>]
 
 Package natbib Warning: Citation `Wikipedia2WebSite' on page 15 undefined on in
-put line 201.
+put line 162.
 
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <14.4> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 205.
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 166.
 <HeliostatoGoogle.png, id=66, 357.58594pt x 283.81032pt>
 File: HeliostatoGoogle.png Graphic file (type png)
 <use HeliostatoGoogle.png>
-Package pdftex.def Info: HeliostatoGoogle.png  used on input line 207.
+Package pdftex.def Info: HeliostatoGoogle.png  used on input line 168.
 (pdftex.def)             Requested size: 427.43153pt x 339.26283pt.
 [15]
 
 Package natbib Warning: Citation `Wikipedia3WebSite' on page 16 undefined on in
-put line 209.
+put line 170.
 
 [16 <./HeliostatoGoogle.png>] [17]
 
 Package natbib Warning: Citation `GoogleWebSite' on page 18 undefined on input 
-line 253.
+line 214.
 
 
-LaTeX Warning: File `unnamed (4).png' not found on input line 261.
+LaTeX Warning: File `unnamed (4).png' not found on input line 222.
 
 <unnamed (4).png, id=79, 521.95pt x 349.305pt>
 File: unnamed (4).png Graphic file (type png)
 <use unnamed (4).png>
-Package pdftex.def Info: unnamed (4).png  used on input line 261.
+Package pdftex.def Info: unnamed (4).png  used on input line 222.
 (pdftex.def)             Requested size: 427.43153pt x 286.05351pt.
 
 Package natbib Warning: Citation `PSA1WebSite' on page 18 undefined on input li
-ne 262.
+ne 223.
 
 
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 261--263
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 222--224
 []\OT1/cmr/m/n/12 (4).png (4).png []
  []
 
 
 Package natbib Warning: Citation `PSA3WebSite' on page 18 undefined on input li
-ne 270.
+ne 231.
 
 [18 <./unnamed (4).png>]
 
-LaTeX Warning: File `unnamed (6).png' not found on input line 276.
+LaTeX Warning: File `unnamed (6).png' not found on input line 237.
 
 <unnamed (6).png, id=83, 521.95pt x 210.7875pt>
 File: unnamed (6).png Graphic file (type png)
 <use unnamed (6).png>
-Package pdftex.def Info: unnamed (6).png  used on input line 276.
+Package pdftex.def Info: unnamed (6).png  used on input line 237.
 (pdftex.def)             Requested size: 427.43153pt x 172.6185pt.
 
 Package natbib Warning: Citation `PSA2WebSite' on page 19 undefined on input li
-ne 277.
+ne 238.
 
 
-Overfull \hbox (79.63806pt too wide) in paragraph at lines 276--278
+Overfull \hbox (79.63806pt too wide) in paragraph at lines 237--239
 []\OT1/cmr/m/n/12 (6).png (6).png []
  []
 
 
 Package natbib Warning: Citation `PSA4WebSite' on page 19 undefined on input li
-ne 284.
+ne 245.
 
 
 Package natbib Warning: There were undefined citations.
@@ -695,7 +693,7 @@ Here is how much of TeX's memory you used:
  9026 multiletter control sequences out of 15000+200000
  10161 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,43p,854b,529s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,11n,43p,814b,529s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmmi12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/t
