@@ -1,14 +1,5 @@
-\begin{document}
-
-\tableofcontents
-\pagebreak
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Conclusiones y posibles líneas de trabajo futuro.}
  
 El software desarrollado es capaz de detectar, para el vídeo de helióstatos escogido, los helióstatos importantes o grandes y descartar los falsos helióstatos o pequeños. Una de las utilidades de este tipo de detección puede ser el de informar al usuario de que las células fotovoltaicas están recibiendo la cantidad suficiente de luz solar.
  
 Partiendo de ese helióstato detectado, además, calcula las sumatorias de las componentes RGB, cada una elevada al cuadrado, de todos los píxeles del contorno. Una vez hecho esto, se suman los resultados de R, más G, más B, para obtener la sumatoria RGB total. Este valor puede variar ligeramente conforme el helióstato se va moviendo en el vídeo, así que por este motivo, estos cálculos se van realizando para cada fotograma de dicho vídeo. Una de las utilidades de esto es que permite, además de medir indirectamente el tamaño del helióstato, indicar su nivel de luminosidad. Cuantos más píxeles con valores R255, G255 y B255 (o cercanos al 255) hayan en el helióstato, más amplio y luminoso será. Un píxel de componentes R255, G255 y B255 es completamente blanco, y si las tres componentes se reducen ligeramente su valor y al mismo tiempo, el píxel será menos blanco, cada vez más tendiendo al color negro.
-
-\end{document}
