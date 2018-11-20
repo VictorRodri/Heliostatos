@@ -326,9 +326,9 @@ Etotal = Er + Eg + Eb
 
 Es decir, obtener la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
 
-Ir guardando los valores y resultados del helióstato en sus respectivos arrays (dependiendo del tipo de información: ancho/alto, área, etcétera), para luego mostrarlos por consola.
-
 Cuando se analiza otro helióstato (independientemente de si se salta o no al siguiente fotograma del vídeo), los valores de área y sumatorias pasarán automáticamente a valer cero de partida. De esta forma, no se obtendrán valores de un helióstato acumulados (erróneos) del helióstato analizado previamente.
+
+Ir guardando los valores y resultados del helióstato en sus respectivos arrays (dependiendo del tipo de información: ancho/alto, área, etcétera), para luego mostrarlos por consola.
 
 
 \# Mostrar vídeo original en una ventana/actualizar fotograma.
@@ -606,7 +606,27 @@ Yo continuaré revisando lo que sería el punto 4 de dicho índice.’. Le pregu
 
 31 de octubre de 2.018: Pregunté a Vicente hace un par de días que si me podía olvidar de usar BibTex y Mendeley, porque se iba a usar en su lugar el 'plain.bst' de LaTeX. Él me respondió que no.
 
-1 de noviembre de 2.018: 
+1 de noviembre de 2.018: He agregado a LaTeX la bibliografía en formato Bibtex, usando '@misc'.
+
+2 de noviembre de 2.018: en base a lo que hice ayer, Luis me respondió que no hice el formato habitual que se usa con BibTex. Es necesario generar un fichero de texto con extensión '.bib' (a mano o con Mendeley), y que contenga todos los registros bibliográficos que usaré en la memoria. Cuando se trabaja con BibTex los registros bibliográficos solo han de estar en el fichero '.bib' y no en el documento LaTeX. El documento LaTeX simplemente se limita a citarlos con el comando "\cite" (u otra variante).
+
+3 de noviembre de 2.018: he hecho las referencias bibliográficas usando el comando 'cite' en LaTeX, para referenciarlas al archivo 'proyecto.bib'. Aunque me da errores. Concretamente, aparece en la compilación del documento LaTeX '?', en vez de la referencia usada con 'cite'.
+
+4 de noviembre de 2.018: he dividido el fichero 'main.tex' en distintas partes (archivos) según sus capítulos.
+
+9 de noviembre de 2.018: Luis me ayudó a solucionar el problema de que LaTeX no compilaba bien las referencias bibliográficas del fichero '.bib', pese a que dichas referencias las hice con ayuda de BibTex e incluidas en ese fichero '.bib'. El error estaba en que algunas referencias en 'main.bib' no tenían exactamente los mismos nombres puestos en el documento 'main.tex', y por tanto no las encontraba LaTeX.
+
+11 de noviembre de 2.018: He actualizado algunas cosas desactualizadas en el capítulo 7 de 'Funcionamiento del software y código', en los ficheros 'main.tex' (principal) y 'Capitulo7FuncionamientoSoftwareYCodigo.tex' (fichero exclusivo de ese capítulo).
+
+13 de noviembre de 2.018: He actualizado los capítulos de 'Análisis de los recursos consumidos' y 'Ejemplos de ejecuciones y comentarios sobre sus resultados', tanto en los ficheros LaTeX capitulares como en el principal.
+
+14 de noviembre de 2.018: estoy en la sección de 'Trabajo desarrollado en el proyecto' (es decir, todo lo que no es capítulo 1), explicando y actualizando cosas sobre los resultados (concretamente consumos CPU y RAM, FPS obtenidos, ejemplos ejecuciones) del comando en consola 'estimacion_potencia.py Videos/varios_heliostatos.mp4 50 50 127 2'. Pregunté a Vicente que si sería también recomendable explicar todo esto pero para el caso (comando) 'estimacion_potencia.py Videos/heliostato.MOV 50 50 200 1', y me respondió que sí.
+
+15 de noviembre de 2.018: he actualizado cosas en los ficheros (capítulos) 'Entradas y salidas del software', 'Cronograma de tareas', 'Analisis de los recursos consumidos', y 'Ejemplos de ejecuciones y comentarios sobre sus resultados'.
+
+16 de noviembre de 2.018: he dividido los ficheros TEX en 6 capítulos (junto con sus respectivos contenidos), en vez de 15 como lo tenia antes, con el fin de adaptar la estructura de los capítulos a como lo quiere Vicente. Además, estaba intentando (en aquel momento sin éxito), en el fichero 'main.tex', incluir los nombres de estos 6 capítulos sin texto, con el fin de generar un único fichero PDF (también sin éxito) de toda la memoria del TFG: capítulos y sus contenidos.
+
+17 de noviembre de 2.018: he agregado capturas de pantalla de mi programa en el TEX del capítulo 4 (propuesta desarrollada), y dentro de ese TEX o capítulo, en la sección de análisis de recursos consumidos. También he ido extendiendo un poco más (actualizando) el cronograma de tareas de dicho capítulo 4.
 
 \section{Descripción de los requerimientos/requisitos.}
 
