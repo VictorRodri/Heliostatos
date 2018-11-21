@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{gensymb}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\usepackage{verbatim}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{Tu titulo}					% Titulo
+\author{Tu nombre}					% Autor
+\date{\today}						% Fecha
+
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\begin{document}
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Análisis de los recursos consumidos.}
+
+A continuación, se mostrarán y explicarán los resultados del uso de la CPU y del consumo de la memoria RAM en el PC, en el administrador de tareas de Windows 10, durante la ejecución del software en distintos periodos de tiempo. También se medirán los fotogramas por segundo (FPS) actuales del vídeo.
+
+Se inicia la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando el comando 'estimacion\_potencia.py Videos/varios\_heliostatos.mp4 50 50 127 2'.
+
+
+
+Instante de tiempo 1. Al iniciar la ejecución del software, cuando está entrando el primer helióstato desde el lado izquierdo en el vídeo y aún no se muestra en su totalidad, Python consume un 7,1\% de CPU y 33,5 MB de memoria RAM, mientras que la terminal de Windows consume un 4\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 57,27.
+
+
+
+
+Instante de tiempo 2. Cuando el primer helióstato ya ha llegado al centro del vídeo, Python consume un 6,5\% de CPU y 33,8 MB de memoria RAM, mientras que la terminal de Windows consume un 7\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 60,61.
+
+
+
+
+Instante de tiempo 3. Cuando está entrando desde la izquierda del vídeo el segundo helióstato, Python consume un 5,2\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,1\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 61,53.
+
+
+
+
+Instante de tiempo 4. Cuando el segundo helióstato prácticamente se ha fusionado con el helióstato permanecido en el centro del vídeo, Python consume un 7,3\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 7\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 61,91.
+
+
+
+
+Instante de tiempo 5. Cuando está entrando desde la izquierda del vídeo el tercer helióstato, Python consume un 3,7\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,9\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 62,38.
+
+
+
+
+Instante de tiempo 6. Cuando el tercer helióstato prácticamente se ha fusionado con el helióstato permanecido en el centro del vídeo, Python consume un 6,7\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 7,4\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 62,48.
+
+
+
+
+Instante de tiempo 7. Cuando está entrando desde la izquierda del vídeo el cuarto y último helióstato, Python consume un 6,2\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,2\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 62,57.
+
+
+
+
+Instante de tiempo 8. Cuando el cuarto helióstato comienza a iniciar la fusión con el helióstato permanecido en el centro del vídeo, Python consume un 5,1\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,9\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 62,49.
+
+
+
+
+Instante de tiempo 9. Cuando uno de los helióstatos fusionados con el helióstato del centro del vídeo trata de salir del mismo (todavía no se ha completado este procedimiento). Python consume un 4,2\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,5\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,25.
+
+
+
+
+Instante de tiempo 10. Cuando el helióstato ya se ha separado del helióstato central del vídeo, Python consume un 4,8\% de CPU y 34,5 MB de memoria RAM, mientras que la terminal de Windows consume un 6,8\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,12.
+
+
+
+
+Instante de tiempo 11. Cuando únicamente permanece el helióstato central del vídeo (el otro helióstato ya se ha ido a la izquierda del vídeo), Python consume un 3,4\% de CPU y 34,6 MB de memoria RAM, mientras que la terminal de Windows consume un 5,9\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,26.
+
+
+
+
+Instante de tiempo 12. Cuando otro de los helióstatos fusionados con el helióstato del centro del vídeo trata de salir del mismo (todavía no se ha completado este procedimiento). Python consume un 7,4\% de CPU y 34,6 MB de memoria RAM, mientras que la terminal de Windows consume un 4,6\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,32.
+
+
+
+
+Instante de tiempo 13. Cuando los dos helióstatos están a punto de separarse entre sí. Python consume un 7,4\% de CPU y 34,6 MB de memoria RAM, mientras que la terminal de Windows consume un 4,6\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,33.
+
+
+
+
+Instante de tiempo 14. Cuando ambos helióstatos ya se han separado entre sí, Python consume un 7,2\% de CPU y 34,6 MB de memoria RAM, mientras que la terminal de Windows consume un 4,9\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,35.
+
+
+
+
+Instante de tiempo 15. Cuando el helióstato de la izquierda ya casi ni se ve porque este se ha separado bastante del helióstato del centro del vídeo, Python consume un 7,9\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 5,5\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,35.
+
+
+
+
+Instante de tiempo 16. Cuando otro (el tercero ya) de los helióstatos fusionados con el helióstato del centro del vídeo trata de salir del mismo (todavía no se ha completado este procedimiento). Python consume un 5,3\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 6,4\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,45.
+
+
+
+
+Instante de tiempo 17. Cuando los dos helióstatos están a punto de separarse entre sí. Python consume un 7,1\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 6\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,47.
+
+
+
+
+Instante de tiempo 18. Cuando el helióstato de la izquierda ya casi ni se ve porque este se ha separado bastante del helióstato del centro del vídeo, Python consume un 7,5\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 5,9\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,52.
+
+
+
+
+Instante de tiempo 19. Cuando el helióstato del centro del vídeo, el último de todos, empieza a trasladarse hacia la izquierda con el fin de salirse del vídeo, Python consume un 6,9\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 7,1\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,49.
+
+
+
+
+Instante de tiempo 20. Cuando dicho helióstato está a punto de desaparecer del vídeo (aún se muestra parcialmente a la izquierda del mismo), Python consume un 8,4\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 6,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,50.
+
+
+
+
+Instante de tiempo 21. Cuando finalmente no permanecen helióstatos en el vídeo (final del mismo, ya se han ido todos), Python consume un 6,1\% de CPU y 35,2 MB de memoria RAM, mientras que la terminal de Windows consume un 6,1\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 62,53.
+
+
+
+Se inicia la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando esta vez el comando 'estimacion_potencia.py Videos/heliostato.MOV 50 50 200 1'.
+
+Instante de tiempo 1. Nada más iniciar la ejecución del software, cuando todavía no han pasado por el vídeo los helióstatos, ni siquiera el primero, Python consume un 45,6\% de CPU y 98,5 MB de memoria RAM, mientras que la terminal de Windows consume un 0,6\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 20,18.
+
+Instante de tiempo 2. Cuando está entrando el primer helióstato en el vídeo (todavía no ha entrado completamente, sino parcialmente), Python consume un 42,1\% de CPU y 101,5 MB de memoria RAM, mientras que la terminal de Windows consume un 1,5\% de CPU y 8,6 MB de memoria RAM. Los FPS son de 20,55.
+
+Instante de tiempo 3. Cuando el primer helióstato ya ha llegado al centro del vídeo, Python consume un 41,8\% de CPU y 101,0 MB de memoria RAM, mientras que la terminal de Windows consume un 1,8\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,62.
+
+Instante de tiempo 4. Cuando el primer helióstato tiende a irse del centro del vídeo, Python consume un 42,4\% de CPU y 101 MB de memoria RAM, mientras que la terminal de Windows consume un 1,1\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,58.
+
+Instante de tiempo 5. Cuando está llegando al centro del vídeo un segundo helióstato desde la izquierda, Python consume un 43\% de CPU y 103 MB de memoria RAM, mientras que la terminal de Windows consume un 1,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,79.
+
+Instante de tiempo 6. Cuando el segundo helióstato se ha aproximado un poco más al centro del vídeo (respecto al instante de tiempo anterior), Python consume un 40,7\% de CPU y 105 MB de memoria RAM, mientras que la terminal de Windows consume un 1\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,8.
+
+Instante de tiempo 7. Cuando el segundo helióstato ya ha llegado al centro del vídeo, Python consume un 41,5\% de CPU y 105,9 MB de memoria RAM, mientras que la terminal de Windows consume un 1,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,73.
+
+Instante de tiempo 8. Cuando el segundo helióstato tiende a irse del centro del vídeo, Python consume un 36,2\% de CPU y 103,1 MB de memoria RAM, mientras que la terminal de Windows consume un 0,9\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,58.
+
+Instante de tiempo 9. Cuando el segundo helióstato ya ha abandonado el vídeo y aún no ha llegado el tercero, Python consume un 40,3\% de CPU y 102,0 MB de memoria RAM, mientras que la terminal de Windows consume un 0,8\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,59.
+
+Instante de tiempo 10. Cuando el tercer helióstato está entrando en el vídeo (todavía no ha entrado completamente, sino parcialmente), Python consume un 44,3\% de CPU y 105,3 MB de memoria RAM, mientras que la terminal de Windows consume un 0\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,65.
+
+Instante de tiempo 11. Cuando el tercer helióstato está a punto de alcanzar el centro del vídeo, Python consume un 42,9\% de CPU y 101,1 MB de memoria RAM, mientras que la terminal de Windows consume un 1,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,67.
+
+Instante de tiempo 12. Cuando el tercer helióstato se está alejando del centro del vídeo, Python consume un 39,2\% de CPU y 103,1 MB de memoria RAM, mientras que la terminal de Windows consume un 1,5\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,64.
+
+Instante de tiempo 13. Cuando el tercer helióstato está a punto de abandonar el vídeo, Python consume un 42,8\% de CPU y 102,5 MB de memoria RAM, mientras que la terminal de Windows consume un 0,8\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,65.
+
+Instante de tiempo 14. Cuando no hay ningún helióstato en el vídeo (todos ya han pasado por él, y no quedan más), Python consume un 46,2\% de CPU y 104,3 MB de memoria RAM, mientras que la terminal de Windows consume un 0,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,68.
+
+\end{document}

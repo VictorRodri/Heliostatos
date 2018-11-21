@@ -1,0 +1,2 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Funcionamiento del software y c\IeC {\'o}digo.}{2}
