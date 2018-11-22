@@ -1,2 +1,0 @@
-\babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}Ejemplos de ejecuciones y comentarios sobre sus resultados.}{2}

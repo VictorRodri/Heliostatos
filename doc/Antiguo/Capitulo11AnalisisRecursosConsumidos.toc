@@ -1,2 +1,0 @@
-\babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}An\IeC {\'a}lisis de los recursos consumidos.}{2}
