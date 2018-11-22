@@ -1,2 +1,0 @@
-\babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}Instalaci\IeC {\'o}n del software Python.}{2}

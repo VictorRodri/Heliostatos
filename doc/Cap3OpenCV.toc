@@ -1,2 +1,0 @@
-\babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}La biblioteca OpenCV.}{2}
