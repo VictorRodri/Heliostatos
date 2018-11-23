@@ -17,14 +17,14 @@
 \contentsline {section}{\numberline {11}Trabajo realizado en el proyecto.}{26}
 \contentsline {section}{\numberline {12}Variables de entorno.}{26}
 \contentsline {section}{\numberline {13}Instalaci\IeC {\'o}n del software Python.}{27}
-\contentsline {section}{\numberline {14}C\IeC {\'o}mo usar el software.}{36}
-\contentsline {section}{\numberline {15}Diagrama de flujo.}{37}
-\contentsline {section}{\numberline {16}Funcionamiento del software y c\IeC {\'o}digo.}{37}
-\contentsline {section}{\numberline {17}Cronograma de tareas.}{48}
-\contentsline {section}{\numberline {18}Descripci\IeC {\'o}n de los requerimientos/requisitos.}{66}
-\contentsline {section}{\numberline {19}Entradas y salidas.}{66}
-\contentsline {section}{\numberline {20}An\IeC {\'a}lisis de los recursos consumidos.}{71}
-\contentsline {section}{\numberline {21}Plataformas que son capaces de ejecutar el software.}{94}
-\contentsline {section}{\numberline {22}Ejemplos de ejecuciones y comentarios sobre sus resultados.}{94}
-\contentsline {section}{\numberline {23}Conclusiones y posibles l\IeC {\'\i }neas de trabajo futuro.}{97}
-\contentsline {section}{\numberline {24}Referencias bibliogr\IeC {\'a}ficas.}{98}
+\contentsline {section}{\numberline {14}C\IeC {\'o}mo usar el software.}{32}
+\contentsline {section}{\numberline {15}Diagrama de flujo.}{36}
+\contentsline {section}{\numberline {16}Funcionamiento del software y c\IeC {\'o}digo.}{36}
+\contentsline {section}{\numberline {17}Cronograma de tareas.}{47}
+\contentsline {section}{\numberline {18}Descripci\IeC {\'o}n de los requerimientos/requisitos.}{65}
+\contentsline {section}{\numberline {19}Entradas y salidas.}{65}
+\contentsline {section}{\numberline {20}An\IeC {\'a}lisis de los recursos consumidos.}{68}
+\contentsline {section}{\numberline {21}Plataformas que son capaces de ejecutar el software.}{92}
+\contentsline {section}{\numberline {22}Ejemplos de ejecuciones y comentarios sobre sus resultados.}{92}
+\contentsline {section}{\numberline {23}Conclusiones y posibles l\IeC {\'\i }neas de trabajo futuro.}{94}
+\contentsline {section}{\numberline {24}Referencias bibliogr\IeC {\'a}ficas.}{95}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  22 NOV 2018 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.19)  23 NOV 2018 13:12
 entering extended mode
 **./main.tex
 (main.tex
@@ -287,24 +287,24 @@ LaTeX Info: Redefining \% on input line 2.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \. on input line 40.
-LaTeX Info: Redefining \% on input line 40.
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
 
 ("C:\Users\Pc\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -351,15 +351,15 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \celsius on input line 40.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 40.
+LaTeX Info: Redefining \celsius on input line 39.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 39.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 40.
-Package gensymb Info: Using \Omega for \ohm on input line 40.
+LaTeX Info: Redefining \ohm on input line 39.
+Package gensymb Info: Using \Omega for \ohm on input line 39.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -654,20 +654,22 @@ ine 54.
 File: FotosPaginasWebHeliostatos/unnamed(7).png Graphic file (type png)
 <use FotosPaginasWebHeliostatos/unnamed(7).png>
 Package pdftex.def Info: FotosPaginasWebHeliostatos/unnamed(7).png  used on inp
-ut line 71.
+ut line 73.
 (pdftex.def)             Requested size: 427.43153pt x 119.1036pt.
-[21]
-<FotosPaginasWebHeliostatos/unnamed(8).png, id=96, 1054.94125pt x 413.545pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<FotosPaginasWebHeliostatos/unnamed(8).png, id=93, 1054.94125pt x 413.545pt>
 File: FotosPaginasWebHeliostatos/unnamed(8).png Graphic file (type png)
 <use FotosPaginasWebHeliostatos/unnamed(8).png>
 Package pdftex.def Info: FotosPaginasWebHeliostatos/unnamed(8).png  used on inp
-ut line 75.
+ut line 82.
 (pdftex.def)             Requested size: 427.43153pt x 167.55421pt.
- [22 <./FotosPaginasWebHeliostatos/unnamed(7).png> <./FotosPaginasWebHeliostato
-s/unnamed(8).png>]
+[21] [22 <./FotosPaginasWebHeliostatos/unnamed(7).png> <./FotosPaginasWebHelios
+tatos/unnamed(8).png>]
 
 Package natbib Warning: Citation `BartolomeWebSite' on page 23 undefined on inp
-ut line 106.
+ut line 116.
 
 ) (Cap3OpenCV.tex [23]
 
@@ -678,23 +680,26 @@ line 5.
 File: FotosPaginasWebHeliostatos/unnamed(9).jpg Graphic file (type jpg)
 <use FotosPaginasWebHeliostatos/unnamed(9).jpg>
 Package pdftex.def Info: FotosPaginasWebHeliostatos/unnamed(9).jpg  used on inp
-ut line 11.
+ut line 13.
 (pdftex.def)             Requested size: 180.67455pt x 179.67079pt.
-[24 <./FotosPaginasWebHeliostatos/unnamed(9).jpg>] [25]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[24] [25 <./FotosPaginasWebHeliostatos/unnamed(9).jpg>]
 
 Package natbib Warning: Citation `SourceForceWebSite' on page 26 undefined on i
-nput line 44.
+nput line 49.
 
 
 Package natbib Warning: Citation `UbaaWebSite' on page 26 undefined on input li
-ne 44.
+ne 49.
 
 
 Package natbib Warning: Citation `YahooWebSite' on page 26 undefined on input l
-ine 44.
+ine 49.
 
 ) (Cap4PropuestaDesarrollada.tex
-Overfull \hbox (7.51341pt too wide) in paragraph at lines 42--1
+Overfull \hbox (7.51341pt too wide) in paragraph at lines 47--1
 \OT1/cmr/m/n/12 pa-ra al-gu-nas pla-ta-for-mas es-pecfi-cas,tales co-mo pro-c
 e-sa-do-res de se~nal di-gi-tal. OpenCV
  []
@@ -707,21 +712,22 @@ Overfull \hbox (6.6226pt too wide) in paragraph at lines 11--13
 al \OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Programs
  []
 
-<CapturasInstalacionPython/unnamed.png, id=111, 622.325pt x 588.1975pt>
+[26]
+<CapturasInstalacionPython/unnamed.png, id=114, 622.325pt x 588.1975pt>
 File: CapturasInstalacionPython/unnamed.png Graphic file (type png)
 <use CapturasInstalacionPython/unnamed.png>
 Package pdftex.def Info: CapturasInstalacionPython/unnamed.png  used on input l
-ine 18.
+ine 20.
 (pdftex.def)             Requested size: 427.43153pt x 403.99886pt.
-[26]
-<CapturasInstalacionPython/unnamed(1).png, id=115, 1606.0pt x 903.375pt>
+ [27 <./CapturasInstalacionPython/unnamed.png>]
+<CapturasInstalacionPython/unnamed(1).png, id=118, 1606.0pt x 903.375pt>
 File: CapturasInstalacionPython/unnamed(1).png Graphic file (type png)
 <use CapturasInstalacionPython/unnamed(1).png>
 Package pdftex.def Info: CapturasInstalacionPython/unnamed(1).png  used on inpu
-t line 26.
+t line 33.
 (pdftex.def)             Requested size: 427.43153pt x 240.42706pt.
- [27 <./CapturasInstalacionPython/unnamed.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
@@ -729,629 +735,764 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 File: CapturasInstalacionPython/unnamed(2).png Graphic file (type png)
 <use CapturasInstalacionPython/unnamed(2).png>
 Package pdftex.def Info: CapturasInstalacionPython/unnamed(2).png  used on inpu
-t line 30.
+t line 42.
 (pdftex.def)             Requested size: 427.43153pt x 240.42706pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-[28 <./CapturasInstalacionPython/unnamed(1).png> <./CapturasInstalacionPython/u
-nnamed(2).png>]
-<CapturasInstalacionPython/unnamed(3).png, id=123, 1606.0pt x 903.375pt>
+<CapturasInstalacionPython/unnamed(3).png, id=120, 1606.0pt x 903.375pt>
 File: CapturasInstalacionPython/unnamed(3).png Graphic file (type png)
 <use CapturasInstalacionPython/unnamed(3).png>
 Package pdftex.def Info: CapturasInstalacionPython/unnamed(3).png  used on inpu
-t line 34.
+t line 51.
 (pdftex.def)             Requested size: 427.43153pt x 240.42706pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
 
-<CapturasInstalacionPython/unnamed(4).png, id=124, 525.965pt x 323.2075pt>
-File: CapturasInstalacionPython/unnamed(4).png Graphic file (type png)
-<use CapturasInstalacionPython/unnamed(4).png>
-Package pdftex.def Info: CapturasInstalacionPython/unnamed(4).png  used on inpu
-t line 38.
-(pdftex.def)             Requested size: 427.43153pt x 262.66956pt.
-[29 <./CapturasInstalacionPython/unnamed(3).png>]
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-
- []
-
-<CapturasInstalacionPython/unnamed(5).png, id=128, 525.965pt x 323.2075pt>
-File: CapturasInstalacionPython/unnamed(5).png Graphic file (type png)
-<use CapturasInstalacionPython/unnamed(5).png>
-Package pdftex.def Info: CapturasInstalacionPython/unnamed(5).png  used on inpu
-t line 42.
-(pdftex.def)             Requested size: 427.43153pt x 262.66956pt.
-[30 <./CapturasInstalacionPython/unnamed(4).png>]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
-
- []
-
-<CapturasInstalacionPython/unnamed(6).png, id=132, 525.965pt x 323.2075pt>
-File: CapturasInstalacionPython/unnamed(6).png Graphic file (type png)
-<use CapturasInstalacionPython/unnamed(6).png>
-Package pdftex.def Info: CapturasInstalacionPython/unnamed(6).png  used on inpu
-t line 46.
-(pdftex.def)             Requested size: 427.43153pt x 262.66956pt.
-[31 <./CapturasInstalacionPython/unnamed(5).png>]
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-<CapturasInstalacionPython/unnamed(7).png, id=137, 184.69pt x 222.8325pt>
-File: CapturasInstalacionPython/unnamed(7).png Graphic file (type png)
-<use CapturasInstalacionPython/unnamed(7).png>
-Package pdftex.def Info: CapturasInstalacionPython/unnamed(7).png  used on inpu
-t line 50.
-(pdftex.def)             Requested size: 427.43153pt x 515.71031pt.
-[32 <./CapturasInstalacionPython/unnamed(6).png>]
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-<CapturasInstalacionPython/unnamed(8).png, id=141, 1606.0pt x 903.375pt>
-File: CapturasInstalacionPython/unnamed(8).png Graphic file (type png)
-<use CapturasInstalacionPython/unnamed(8).png>
-Package pdftex.def Info: CapturasInstalacionPython/unnamed(8).png  used on inpu
-t line 54.
-(pdftex.def)             Requested size: 427.43153pt x 240.42706pt.
-[33 <./CapturasInstalacionPython/unnamed(7).png>]
 Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-<CapturasInstalacionPython/unnamed(9).png, id=145, 1606.0pt x 903.375pt>
+<CapturasInstalacionPython/unnamed(4).png, id=121, 525.965pt x 323.2075pt>
+File: CapturasInstalacionPython/unnamed(4).png Graphic file (type png)
+<use CapturasInstalacionPython/unnamed(4).png>
+Package pdftex.def Info: CapturasInstalacionPython/unnamed(4).png  used on inpu
+t line 60.
+(pdftex.def)             Requested size: 427.43153pt x 262.66956pt.
+[28 <./CapturasInstalacionPython/unnamed(1).png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+[29 <./CapturasInstalacionPython/unnamed(2).png> <./CapturasInstalacionPython/u
+nnamed(3).png>]
+<CapturasInstalacionPython/unnamed(5).png, id=128, 525.965pt x 323.2075pt>
+File: CapturasInstalacionPython/unnamed(5).png Graphic file (type png)
+<use CapturasInstalacionPython/unnamed(5).png>
+Package pdftex.def Info: CapturasInstalacionPython/unnamed(5).png  used on inpu
+t line 69.
+(pdftex.def)             Requested size: 427.43153pt x 262.66956pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+<CapturasInstalacionPython/unnamed(6).png, id=129, 525.965pt x 323.2075pt>
+File: CapturasInstalacionPython/unnamed(6).png Graphic file (type png)
+<use CapturasInstalacionPython/unnamed(6).png>
+Package pdftex.def Info: CapturasInstalacionPython/unnamed(6).png  used on inpu
+t line 78.
+(pdftex.def)             Requested size: 427.43153pt x 262.66956pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+<CapturasInstalacionPython/unnamed(7).png, id=130, 184.69pt x 222.8325pt>
+File: CapturasInstalacionPython/unnamed(7).png Graphic file (type png)
+<use CapturasInstalacionPython/unnamed(7).png>
+Package pdftex.def Info: CapturasInstalacionPython/unnamed(7).png  used on inpu
+t line 87.
+(pdftex.def)             Requested size: 427.43153pt x 515.71031pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
+[30 <./CapturasInstalacionPython/unnamed(4).png>]
+<CapturasInstalacionPython/unnamed(8).png, id=134, 1606.0pt x 903.375pt>
+File: CapturasInstalacionPython/unnamed(8).png Graphic file (type png)
+<use CapturasInstalacionPython/unnamed(8).png>
+Package pdftex.def Info: CapturasInstalacionPython/unnamed(8).png  used on inpu
+t line 96.
+(pdftex.def)             Requested size: 427.43153pt x 240.42706pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
+<CapturasInstalacionPython/unnamed(9).png, id=135, 1606.0pt x 903.375pt>
 File: CapturasInstalacionPython/unnamed(9).png Graphic file (type png)
 <use CapturasInstalacionPython/unnamed(9).png>
 Package pdftex.def Info: CapturasInstalacionPython/unnamed(9).png  used on inpu
-t line 58.
+t line 105.
 (pdftex.def)             Requested size: 427.43153pt x 240.42706pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
-[34 <./CapturasInstalacionPython/unnamed(8).png> <./CapturasInstalacionPython/u
-nnamed(9).png>]
-<CapturasInstalacionPython/unnamed(10).png, id=149, 1606.0pt x 903.375pt>
+<CapturasInstalacionPython/unnamed(10).png, id=136, 1606.0pt x 903.375pt>
 File: CapturasInstalacionPython/unnamed(10).png Graphic file (type png)
 <use CapturasInstalacionPython/unnamed(10).png>
 Package pdftex.def Info: CapturasInstalacionPython/unnamed(10).png  used on inp
-ut line 62.
+ut line 114.
 (pdftex.def)             Requested size: 427.43153pt x 240.42706pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
-<CapturasInstalacionPython/unnamed(11).png, id=150, 1606.0pt x 903.375pt>
+[31 <./CapturasInstalacionPython/unnamed(5).png>]
+<CapturasInstalacionPython/unnamed(11).png, id=141, 1606.0pt x 903.375pt>
 File: CapturasInstalacionPython/unnamed(11).png Graphic file (type png)
 <use CapturasInstalacionPython/unnamed(11).png>
 Package pdftex.def Info: CapturasInstalacionPython/unnamed(11).png  used on inp
-ut line 66.
+ut line 123.
 (pdftex.def)             Requested size: 427.43153pt x 240.42706pt.
-[35 <./CapturasInstalacionPython/unnamed(10).png>]
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-
-Overfull \hbox (74.64024pt too wide) in paragraph at lines 80--90
+[32 <./CapturasInstalacionPython/unnamed(6).png>] [33 <./CapturasInstalacionPyt
+hon/unnamed(7).png>] [34 <./CapturasInstalacionPython/unnamed(8).png> <./Captur
+asInstalacionPython/unnamed(9).png>] [35 <./CapturasInstalacionPython/unnamed(1
+0).png> <./CapturasInstalacionPython/unnamed(11).png>]
+Overfull \hbox (74.64024pt too wide) in paragraph at lines 140--150
 []\OT1/cmr/m/n/12 1. Ac-ce-der a la pagi-na Web don-de se ubi-ca el pro-yec-to
 : https://github.com/VictorRodri/Heliostatos
  []
 
-[36 <./CapturasInstalacionPython/unnamed(11).png>] [37]
-Overfull \hbox (148.26028pt too wide) in paragraph at lines 121--129
+[36]
+Overfull \hbox (148.26028pt too wide) in paragraph at lines 181--189
 \OT1/cmr/m/n/12 Crear el ar-gu-men-to 1: ru-ta o di-rec-to-rio del vdeo a car
 -gar en el PC. par-ser.add[]argument('anchoMinimoHeliostato',
  []
 
 
-Overfull \hbox (9.38922pt too wide) in paragraph at lines 121--129
+Overfull \hbox (9.38922pt too wide) in paragraph at lines 181--189
 \OT1/cmr/m/n/12 mni-mo del he-liosta-to pa-ra su anali-sis. par-ser.add[]ar
 gument('umbralVideoHeliostatos',
  []
 
 
-Overfull \hbox (161.55014pt too wide) in paragraph at lines 121--129
+Overfull \hbox (161.55014pt too wide) in paragraph at lines 181--189
 \OT1/cmr/m/n/12 liosta-tos a par-tir del cual podra es-tar de-tectando-se u
 n he-liosta-to. par-ser.add[]argument('numeroHeliostatosAnalizar',
  []
 
-[38] [39] [40] [41]
-Overfull \hbox (33.43567pt too wide) in paragraph at lines 202--208
+[37] [38] [39] [40]
+Overfull \hbox (33.43567pt too wide) in paragraph at lines 262--268
 \OT1/cmr/m/n/12 area-To-tal.append("[]Area del he-liosta-to en pxe-les: ") s
 u-maBGRpar-cial.append("Sumatorias
  []
 
 
-Overfull \hbox (6.55682pt too wide) in paragraph at lines 209--210
+Overfull \hbox (6.55682pt too wide) in paragraph at lines 269--270
 []\OT1/cmr/m/n/12 Guardar en los res-pec-ti-vos arrays 'he-lios-ta-to', 'an-cho
 Al-to', 'area-To-tal', 'su-maBGRpar-
  []
 
-
-Overfull \hbox (1.8077pt too wide) in paragraph at lines 220--222
+[41]
+Overfull \hbox (1.8077pt too wide) in paragraph at lines 280--282
 []\OT1/cmr/m/n/12 # Ob-te-ner las coor-de-na-das del con-torno. (x, y, w, h) = 
 cv2.boundingRect(contours[i])
  []
 
-[42] [43] [44]
-Overfull \hbox (79.4871pt too wide) in paragraph at lines 295--299
+[42] [43]
+Overfull \hbox (79.4871pt too wide) in paragraph at lines 355--359
 []\OT1/cmr/m/n/12 sumaBGRparcial.append(sumB) su-maBGRpar-cial.append(sumG) su-
 maBGRpar-cial.append(sumR)
  []
 
-[45] [46]
-Overfull \hbox (10.71199pt too wide) in paragraph at lines 334--336
+[44] [45]
+Overfull \hbox (10.71199pt too wide) in paragraph at lines 394--396
 []\OT1/cmr/m/n/12 # Mos-trar vdeo ori-gi-nal en una ven-ta-na/actualizar fo-t
 o-gra-ma. cv2.imshow("Camara",
  []
 
-[47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61]
-[62] [63] [64]
+[46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60]
+[61] [62] [63]
 
-Package natbib Warning: Citation `"' on page 65 undefined on input line 611.
+Package natbib Warning: Citation `"' on page 64 undefined on input line 671.
 
-[65] [66] [67]
-<CapturasEntradasYSalidas/Captura(2).PNG, id=256, 539.76656pt x 197.23688pt>
+[64] [65] [66]
+<CapturasEntradasYSalidas/Captura(2).PNG, id=252, 539.76656pt x 197.23688pt>
 File: CapturasEntradasYSalidas/Captura(2).PNG Graphic file (type png)
 <use CapturasEntradasYSalidas/Captura(2).PNG>
 Package pdftex.def Info: CapturasEntradasYSalidas/Captura(2).PNG  used on input
- line 693.
+ line 755.
 (pdftex.def)             Requested size: 427.43153pt x 156.1916pt.
-<CapturasEntradasYSalidas/Captura(3).PNG, id=257, 750.55406pt x 88.07906pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<CapturasEntradasYSalidas/Captura(3).PNG, id=253, 750.55406pt x 88.07906pt>
 File: CapturasEntradasYSalidas/Captura(3).PNG Graphic file (type png)
 <use CapturasEntradasYSalidas/Captura(3).PNG>
 Package pdftex.def Info: CapturasEntradasYSalidas/Captura(3).PNG  used on input
- line 695.
+ line 762.
 (pdftex.def)             Requested size: 427.43153pt x 50.16122pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 695--696
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
-
-[68 <./CapturasEntradasYSalidas/Captura(2).PNG>]
-<CapturasEntradasYSalidas/unnamed(1).png, id=262, 645.41125pt x 780.9175pt>
+[67]
+<CapturasEntradasYSalidas/unnamed(1).png, id=258, 645.41125pt x 780.9175pt>
 File: CapturasEntradasYSalidas/unnamed(1).png Graphic file (type png)
 <use CapturasEntradasYSalidas/unnamed(1).png>
 Package pdftex.def Info: CapturasEntradasYSalidas/unnamed(1).png  used on input
- line 701.
+ line 773.
 (pdftex.def)             Requested size: 427.43153pt x 517.17068pt.
- [69 <./CapturasEntradasYSalidas/Captura(3).PNG>] [70 <./CapturasEntradasYSalid
-as/unnamed(1).png>]
-<CapturasRendimientoSoftware1/Imagen1.png, id=270, 1206.00563pt x 648.28337pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<CapturasRendimientoSoftware1/Imagen1.png, id=259, 1206.00563pt x 648.28337pt>
 File: CapturasRendimientoSoftware1/Imagen1.png Graphic file (type png)
 <use CapturasRendimientoSoftware1/Imagen1.png>
 Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen1.png  used on inpu
-t line 709.
+t line 786.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--712
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
 
-<CapturasRendimientoSoftware1/Imagen2.png, id=271, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware1/Imagen2.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen2.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen2.png  used on inpu
-t line 714.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[71 <./CapturasRendimientoSoftware1/Imagen1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 716--717
-
- []
-
-<CapturasRendimientoSoftware1/Imagen3.png, id=276, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware1/Imagen3.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen3.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen3.png  used on inpu
-t line 719.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 721--722
-
- []
-
-[72 <./CapturasRendimientoSoftware1/Imagen2.png> <./CapturasRendimientoSoftware
-1/Imagen3.png>]
-<CapturasRendimientoSoftware1/Imagen4.png, id=282, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware1/Imagen4.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen4.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen4.png  used on inpu
-t line 724.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 726--727
-
- []
-
-<CapturasRendimientoSoftware1/Imagen5.png, id=283, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware1/Imagen5.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen5.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen5.png  used on inpu
-t line 729.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[73 <./CapturasRendimientoSoftware1/Imagen4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 731--732
-
- []
-
-<CapturasRendimientoSoftware1/Imagen6.png, id=289, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware1/Imagen6.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen6.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen6.png  used on inpu
-t line 734.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 736--737
-
- []
-
-[74 <./CapturasRendimientoSoftware1/Imagen5.png> <./CapturasRendimientoSoftware
-1/Imagen6.png>]
-<CapturasRendimientoSoftware1/Imagen7.png, id=295, 1206.00563pt x 651.1527pt>
-File: CapturasRendimientoSoftware1/Imagen7.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen7.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen7.png  used on inpu
-t line 739.
-(pdftex.def)             Requested size: 427.43153pt x 230.77829pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
-
- []
-
-<CapturasRendimientoSoftware1/Imagen8.png, id=296, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware1/Imagen8.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen8.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen8.png  used on inpu
-t line 744.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[75 <./CapturasRendimientoSoftware1/Imagen7.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 746--747
-
- []
-
-<CapturasRendimientoSoftware1/Imagen9.png, id=301, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware1/Imagen9.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen9.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen9.png  used on inpu
-t line 749.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 751--752
-
- []
-
-[76 <./CapturasRendimientoSoftware1/Imagen8.png> <./CapturasRendimientoSoftware
-1/Imagen9.png>]
-<CapturasRendimientoSoftware1/Imagen10.png, id=307, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen10.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen10.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen10.png  used on inp
-ut line 754.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 756--757
-
- []
-
-<CapturasRendimientoSoftware1/Imagen11.png, id=308, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen11.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen11.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen11.png  used on inp
-ut line 759.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[77 <./CapturasRendimientoSoftware1/Imagen10.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 761--762
-
- []
-
-<CapturasRendimientoSoftware1/Imagen12.png, id=313, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen12.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen12.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen12.png  used on inp
-ut line 764.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 766--767
-
- []
-
-[78 <./CapturasRendimientoSoftware1/Imagen11.png> <./CapturasRendimientoSoftwar
-e1/Imagen12.png>]
-<CapturasRendimientoSoftware1/Imagen13.png, id=319, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen13.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen13.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen13.png  used on inp
-ut line 769.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 771--772
-
- []
-
-<CapturasRendimientoSoftware1/Imagen14.png, id=320, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen14.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen14.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen14.png  used on inp
-ut line 774.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[79 <./CapturasRendimientoSoftware1/Imagen13.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 776--777
-
- []
-
-<CapturasRendimientoSoftware1/Imagen15.png, id=326, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen15.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen15.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen15.png  used on inp
-ut line 779.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 781--782
-
- []
-
-[80 <./CapturasRendimientoSoftware1/Imagen14.png> <./CapturasRendimientoSoftwar
-e1/Imagen15.png>]
-<CapturasRendimientoSoftware1/Imagen16.png, id=332, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen16.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen16.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen16.png  used on inp
-ut line 784.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 786--787
-
- []
-
-<CapturasRendimientoSoftware1/Imagen17.png, id=333, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen17.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen17.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen17.png  used on inp
-ut line 789.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[81 <./CapturasRendimientoSoftware1/Imagen16.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 791--792
 
  []
 
-<CapturasRendimientoSoftware1/Imagen18.png, id=338, 1206.00563pt x 648.28337pt>
+[68 <./CapturasEntradasYSalidas/Captura(2).PNG> <./CapturasEntradasYSalidas/Cap
+tura(3).PNG>]
 
-File: CapturasRendimientoSoftware1/Imagen18.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen18.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen18.png  used on inp
-ut line 794.
+LaTeX Warning: Text page 69 contains only floats.
+
+[69 <./CapturasEntradasYSalidas/unnamed(1).png>]
+<CapturasRendimientoSoftware1/Imagen2.png, id=268, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen2.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen2.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen2.png  used on inpu
+t line 795.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 796--797
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 800--801
 
  []
 
-[82 <./CapturasRendimientoSoftware1/Imagen17.png> <./CapturasRendimientoSoftwar
-e1/Imagen18.png>]
-<CapturasRendimientoSoftware1/Imagen19.png, id=344, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen19.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen19.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen19.png  used on inp
-ut line 799.
+<CapturasRendimientoSoftware1/Imagen3.png, id=269, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen3.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen3.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen3.png  used on inpu
+t line 804.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--802
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--810
 
  []
 
-<CapturasRendimientoSoftware1/Imagen20.png, id=345, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen20.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen20.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen20.png  used on inp
-ut line 804.
+<CapturasRendimientoSoftware1/Imagen4.png, id=270, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen4.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen4.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen4.png  used on inpu
+t line 813.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[83 <./CapturasRendimientoSoftware1/Imagen19.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 806--807
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 818--819
 
  []
 
-<CapturasRendimientoSoftware1/Imagen21.png, id=350, 1206.00563pt x 648.28337pt>
-
-File: CapturasRendimientoSoftware1/Imagen21.png Graphic file (type png)
-<use CapturasRendimientoSoftware1/Imagen21.png>
-Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen21.png  used on inp
-ut line 809.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--812
-
- []
-
-[84 <./CapturasRendimientoSoftware1/Imagen20.png> <./CapturasRendimientoSoftwar
-e1/Imagen21.png>]
-<CapturasRendimientoSoftware2/Imagen1.png, id=356, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware2/Imagen1.png Graphic file (type png)
-<use CapturasRendimientoSoftware2/Imagen1.png>
-Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen1.png  used on inpu
-t line 817.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 819--820
-
- []
-
-<CapturasRendimientoSoftware2/Imagen2.png, id=357, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware2/Imagen2.png Graphic file (type png)
-<use CapturasRendimientoSoftware2/Imagen2.png>
-Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen2.png  used on inpu
+[70 <./CapturasRendimientoSoftware1/Imagen1.png>] [71 <./CapturasRendimientoSof
+tware1/Imagen2.png> <./CapturasRendimientoSoftware1/Imagen3.png>]
+<CapturasRendimientoSoftware1/Imagen5.png, id=280, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen5.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen5.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen5.png  used on inpu
 t line 822.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[85 <./CapturasRendimientoSoftware2/Imagen1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 824--825
+
+Underfull \hbox (badness 10000) in paragraph at lines 827--828
 
  []
 
-<CapturasRendimientoSoftware2/Imagen3.png, id=363, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware2/Imagen3.png Graphic file (type png)
-<use CapturasRendimientoSoftware2/Imagen3.png>
-Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen3.png  used on inpu
-t line 827.
+[72 <./CapturasRendimientoSoftware1/Imagen4.png> <./CapturasRendimientoSoftware
+1/Imagen5.png>]
+<CapturasRendimientoSoftware1/Imagen6.png, id=286, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen6.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen6.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen6.png  used on inpu
+t line 831.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--830
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 
  []
 
-[86 <./CapturasRendimientoSoftware2/Imagen2.png> <./CapturasRendimientoSoftware
-2/Imagen3.png>]
-<CapturasRendimientoSoftware2/Imagen4.png, id=369, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware2/Imagen4.png Graphic file (type png)
-<use CapturasRendimientoSoftware2/Imagen4.png>
-Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen4.png  used on inpu
-t line 832.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+<CapturasRendimientoSoftware1/Imagen7.png, id=287, 1206.00563pt x 651.1527pt>
+File: CapturasRendimientoSoftware1/Imagen7.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen7.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen7.png  used on inpu
+t line 840.
+(pdftex.def)             Requested size: 427.43153pt x 230.77829pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 834--835
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
 
-<CapturasRendimientoSoftware2/Imagen5.png, id=370, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware2/Imagen5.png Graphic file (type png)
-<use CapturasRendimientoSoftware2/Imagen5.png>
-Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen5.png  used on inpu
-t line 837.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[87 <./CapturasRendimientoSoftware2/Imagen4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 839--840
+Underfull \hbox (badness 10000) in paragraph at lines 845--846
 
  []
 
-<CapturasRendimientoSoftware2/Imagen6.png, id=375, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware2/Imagen6.png Graphic file (type png)
-<use CapturasRendimientoSoftware2/Imagen6.png>
-Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen6.png  used on inpu
-t line 842.
+<CapturasRendimientoSoftware1/Imagen8.png, id=288, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen8.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen8.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen8.png  used on inpu
+t line 849.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 844--845
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- []
 
-[88 <./CapturasRendimientoSoftware2/Imagen5.png> <./CapturasRendimientoSoftware
-2/Imagen6.png>]
-<CapturasRendimientoSoftware2/Imagen7.png, id=381, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware2/Imagen7.png Graphic file (type png)
-<use CapturasRendimientoSoftware2/Imagen7.png>
-Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen7.png  used on inpu
-t line 847.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 849--850
-
- []
-
-<CapturasRendimientoSoftware2/Imagen8.png, id=382, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware2/Imagen8.png Graphic file (type png)
-<use CapturasRendimientoSoftware2/Imagen8.png>
-Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen8.png  used on inpu
-t line 852.
-(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[89 <./CapturasRendimientoSoftware2/Imagen7.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 854--855
 
  []
 
-<CapturasRendimientoSoftware2/Imagen9.png, id=387, 1206.00563pt x 648.28337pt>
-File: CapturasRendimientoSoftware2/Imagen9.png Graphic file (type png)
-<use CapturasRendimientoSoftware2/Imagen9.png>
-Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen9.png  used on inpu
-t line 857.
+[73 <./CapturasRendimientoSoftware1/Imagen6.png>] [74 <./CapturasRendimientoSof
+tware1/Imagen7.png> <./CapturasRendimientoSoftware1/Imagen8.png>]
+<CapturasRendimientoSoftware1/Imagen9.png, id=299, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware1/Imagen9.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen9.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen9.png  used on inpu
+t line 858.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--860
+Underfull \hbox (badness 10000) in paragraph at lines 863--864
 
  []
 
-[90 <./CapturasRendimientoSoftware2/Imagen8.png> <./CapturasRendimientoSoftware
-2/Imagen9.png>]
-<CapturasRendimientoSoftware2/Imagen10.png, id=393, 1206.00563pt x 648.28337pt>
+<CapturasRendimientoSoftware1/Imagen10.png, id=300, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen10.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen10.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen10.png  used on inp
+ut line 867.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--873
+
+ []
+
+<CapturasRendimientoSoftware1/Imagen11.png, id=301, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen11.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen11.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen11.png  used on inp
+ut line 876.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 881--882
+
+ []
+
+<CapturasRendimientoSoftware1/Imagen12.png, id=302, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen12.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen12.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen12.png  used on inp
+ut line 885.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+[75 <./CapturasRendimientoSoftware1/Imagen9.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 890--891
+
+ []
+
+[76 <./CapturasRendimientoSoftware1/Imagen10.png> <./CapturasRendimientoSoftwar
+e1/Imagen11.png>]
+<CapturasRendimientoSoftware1/Imagen13.png, id=312, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen13.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen13.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen13.png  used on inp
+ut line 894.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--900
+
+ []
+
+<CapturasRendimientoSoftware1/Imagen14.png, id=313, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen14.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen14.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen14.png  used on inp
+ut line 903.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--909
+
+ []
+
+<CapturasRendimientoSoftware1/Imagen15.png, id=314, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen15.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen15.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen15.png  used on inp
+ut line 912.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 917--918
+
+ []
+
+[77 <./CapturasRendimientoSoftware1/Imagen12.png>]
+<CapturasRendimientoSoftware1/Imagen16.png, id=319, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen16.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen16.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen16.png  used on inp
+ut line 921.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [78 <./CapturasRendimientoSoftware1/Imagen13.png> <./CapturasRendimientoSoftwa
+re1/Imagen14.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 926--927
+
+ []
+
+[79 <./CapturasRendimientoSoftware1/Imagen15.png> <./CapturasRendimientoSoftwar
+e1/Imagen16.png>]
+<CapturasRendimientoSoftware1/Imagen17.png, id=331, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen17.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen17.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen17.png  used on inp
+ut line 930.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 935--936
+
+ []
+
+<CapturasRendimientoSoftware1/Imagen18.png, id=332, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen18.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen18.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen18.png  used on inp
+ut line 939.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 944--945
+
+ []
+
+<CapturasRendimientoSoftware1/Imagen19.png, id=333, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen19.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen19.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen19.png  used on inp
+ut line 948.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 953--954
+
+ []
+
+[80 <./CapturasRendimientoSoftware1/Imagen17.png>] [81 <./CapturasRendimientoSo
+ftware1/Imagen18.png> <./CapturasRendimientoSoftware1/Imagen19.png>]
+<CapturasRendimientoSoftware1/Imagen20.png, id=343, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen20.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen20.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen20.png  used on inp
+ut line 957.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 962--963
+
+ []
+
+<CapturasRendimientoSoftware1/Imagen21.png, id=344, 1206.00563pt x 648.28337pt>
+
+File: CapturasRendimientoSoftware1/Imagen21.png Graphic file (type png)
+<use CapturasRendimientoSoftware1/Imagen21.png>
+Package pdftex.def Info: CapturasRendimientoSoftware1/Imagen21.png  used on inp
+ut line 966.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 971--972
+
+ []
+
+<CapturasRendimientoSoftware2/Imagen1.png, id=345, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen1.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen1.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen1.png  used on inpu
+t line 979.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 984--985
+
+ []
+
+[82 <./CapturasRendimientoSoftware1/Imagen20.png>]
+<CapturasRendimientoSoftware2/Imagen2.png, id=350, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen2.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen2.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen2.png  used on inpu
+t line 988.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+ [83 <./CapturasRendimientoSoftware1/Imagen21.png> <./CapturasRendimientoSoftwa
+re2/Imagen1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 993--994
+
+ []
+
+<CapturasRendimientoSoftware2/Imagen3.png, id=356, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen3.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen3.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen3.png  used on inpu
+t line 997.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
+
+ []
+
+<CapturasRendimientoSoftware2/Imagen4.png, id=357, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen4.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen4.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen4.png  used on inpu
+t line 1006.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1012
+
+ []
+
+<CapturasRendimientoSoftware2/Imagen5.png, id=358, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen5.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen5.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen5.png  used on inpu
+t line 1015.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1020--1021
+
+ []
+
+[84 <./CapturasRendimientoSoftware2/Imagen2.png>] [85 <./CapturasRendimientoSof
+tware2/Imagen3.png> <./CapturasRendimientoSoftware2/Imagen4.png>]
+<CapturasRendimientoSoftware2/Imagen6.png, id=369, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen6.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen6.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen6.png  used on inpu
+t line 1024.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
+
+ []
+
+[86 <./CapturasRendimientoSoftware2/Imagen5.png> <./CapturasRendimientoSoftware
+2/Imagen6.png>]
+<CapturasRendimientoSoftware2/Imagen7.png, id=375, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen7.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen7.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen7.png  used on inpu
+t line 1033.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1039
+
+ []
+
+<CapturasRendimientoSoftware2/Imagen8.png, id=376, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen8.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen8.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen8.png  used on inpu
+t line 1042.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1048
+
+ []
+
+<CapturasRendimientoSoftware2/Imagen9.png, id=377, 1206.00563pt x 648.28337pt>
+File: CapturasRendimientoSoftware2/Imagen9.png Graphic file (type png)
+<use CapturasRendimientoSoftware2/Imagen9.png>
+Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen9.png  used on inpu
+t line 1051.
+(pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1056--1057
+
+ []
+
+[87 <./CapturasRendimientoSoftware2/Imagen7.png>]
+<CapturasRendimientoSoftware2/Imagen10.png, id=382, 1206.00563pt x 648.28337pt>
 
 File: CapturasRendimientoSoftware2/Imagen10.png Graphic file (type png)
 <use CapturasRendimientoSoftware2/Imagen10.png>
 Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen10.png  used on inp
-ut line 862.
+ut line 1060.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 864--865
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1066
 
  []
 
-<CapturasRendimientoSoftware2/Imagen11.png, id=394, 1206.00563pt x 648.28337pt>
+[88 <./CapturasRendimientoSoftware2/Imagen8.png> <./CapturasRendimientoSoftware
+2/Imagen9.png>]
+<CapturasRendimientoSoftware2/Imagen11.png, id=388, 1206.00563pt x 648.28337pt>
 
 File: CapturasRendimientoSoftware2/Imagen11.png Graphic file (type png)
 <use CapturasRendimientoSoftware2/Imagen11.png>
 Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen11.png  used on inp
-ut line 867.
+ut line 1069.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[91 <./CapturasRendimientoSoftware2/Imagen10.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 869--870
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1075
 
  []
 
-<CapturasRendimientoSoftware2/Imagen12.png, id=400, 1206.00563pt x 648.28337pt>
+<CapturasRendimientoSoftware2/Imagen12.png, id=389, 1206.00563pt x 648.28337pt>
 
 File: CapturasRendimientoSoftware2/Imagen12.png Graphic file (type png)
 <use CapturasRendimientoSoftware2/Imagen12.png>
 Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen12.png  used on inp
-ut line 872.
+ut line 1078.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--875
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
 
  []
 
-[92 <./CapturasRendimientoSoftware2/Imagen11.png> <./CapturasRendimientoSoftwar
-e2/Imagen12.png>]
-<CapturasRendimientoSoftware2/Imagen13.png, id=406, 1206.00563pt x 648.28337pt>
+<CapturasRendimientoSoftware2/Imagen13.png, id=390, 1206.00563pt x 648.28337pt>
 
 File: CapturasRendimientoSoftware2/Imagen13.png Graphic file (type png)
 <use CapturasRendimientoSoftware2/Imagen13.png>
 Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen13.png  used on inp
-ut line 877.
+ut line 1087.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 879--880
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1092--1093
 
  []
 
-<CapturasRendimientoSoftware2/Imagen14.png, id=407, 1206.00563pt x 648.28337pt>
+[89 <./CapturasRendimientoSoftware2/Imagen10.png>]
+<CapturasRendimientoSoftware2/Imagen14.png, id=395, 1206.00563pt x 648.28337pt>
 
 File: CapturasRendimientoSoftware2/Imagen14.png Graphic file (type png)
 <use CapturasRendimientoSoftware2/Imagen14.png>
 Package pdftex.def Info: CapturasRendimientoSoftware2/Imagen14.png  used on inp
-ut line 882.
+ut line 1096.
 (pdftex.def)             Requested size: 427.43153pt x 229.76135pt.
-[93 <./CapturasRendimientoSoftware2/Imagen13.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 884--885
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
 
  []
 
-[94 <./CapturasRendimientoSoftware2/Imagen14.png>] [95] [96])
+[90 <./CapturasRendimientoSoftware2/Imagen11.png> <./CapturasRendimientoSoftwar
+e2/Imagen12.png>] [91 <./CapturasRendimientoSoftware2/Imagen13.png> <./Capturas
+RendimientoSoftware2/Imagen14.png>] [92] [93])
 (Cap5ConclusionesYPosiblesLineasTrabajoFuturo.tex)
-(Cap6ReferenciasBibliograficas.tex [97]
+(Cap6ReferenciasBibliograficas.tex [94]
 Overfull \hbox (15.08276pt too wide) in paragraph at lines 5--6
 \OT1/cmr/m/n/12 ro de 2.018 de: https://www.ecured.cu/Biblioteca[]P$ $%C3$ $%BA
 blica[]Municipal[]Sandino 
@@ -1369,7 +1510,7 @@ Overfull \hbox (49.48686pt too wide) in paragraph at lines 19--20
 g2.wordpress.com/tag/heliostatos/ 
  []
 
-
+[95]
 Overfull \hbox (24.77557pt too wide) in paragraph at lines 23--24
 []\OT1/cmr/m/n/12 [33] OpenCV (2.018). OpenCV. Re-cu-pe-ra-do el 20 de ju-nio d
 e 2.018 de: http://opencv.org/ 
@@ -1387,11 +1528,11 @@ Overfull \hbox (148.84589pt too wide) in paragraph at lines 29--30
 e ju-lio de 2.018 de: https://sourceforge.net/projects/opencv/ 
  []
 
-[98])
+) [96]
 
 Package natbib Warning: There were undefined citations.
 
-[99] (main.aux
+[97] (main.aux
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
 )
@@ -1400,10 +1541,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 5835 strings out of 492970
- 87754 string characters out of 3127925
- 166367 words of memory out of 3000000
- 9529 multiletter control sequences out of 15000+200000
+ 5888 strings out of 492970
+ 90208 string characters out of 3127925
+ 166899 words of memory out of 3000000
+ 9582 multiletter control sequences out of 15000+200000
  10161 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,11n,43p,2533b,529s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1415,9 +1556,9 @@ msfonts/cm/cmmi12.pfb><C:/Users/Pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Pc/AppData/Local/Pr
 ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Pc/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (99 pages, 27937426 bytes).
+Output written on main.pdf (97 pages, 27936741 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
+ 452 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  346 words of extra memory for PDF output out of 10000 (max. 10000000)
 
