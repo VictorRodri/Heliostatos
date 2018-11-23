@@ -4,6 +4,9 @@ import argparse
 import time
 import numpy as np
 
+f1 = open("SumasBGRHeliostatosVerdes.txt", "a")
+f2 = open("SumasBGRHeliostatosRojos.txt", "a")
+
 start_time = time.time() # Obtener el tiempo de ejecución inicial de este programa.
 frame_counter = 0 # Contador de fotogramas totales del vídeo. Se irá incrementando progresivamente en líneas de código posteriores.
 
@@ -24,6 +27,8 @@ print("")
 # Leer secuencia de imágenes del vídeo a partir del directorio especificado por parámetro.
 camara = cv2.VideoCapture(args.directorioVideoHeliostatosCargar)
 
+# Declarar estos arrays con el fin de almacenar toda la información sobre los resultados de los helióstatos analizados en el vídeo de helióstatos.
+# Además, son usados especialmente con el fin de mostrar, para cada información, hasta dos resultados distintos (uno para cada helióstato) en una misma línea de texto, en la consola.
 heliostato = []
 anchoAlto = []
 areaTotal = []
@@ -56,13 +61,16 @@ while True:
     # que forman (delimitan) la figura (helióstato). Argumentos que devolverá dicho método: imagen fuente (sobra), modo de devolución del contorno, método de aproximación del contorno (sobra).
     im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
+    # Guardar en los distintos arrays los siguientes textos, para luego ser mostrados por consola junto con los respectivos resultados de los helióstatos.
+    heliostato.append("                                               ")
     anchoAlto.append("Ancho y alto WH del helióstato en píxeles:      ")
     areaTotal.append("Área del helióstato en píxeles:                 ")
     sumaBGRparcial.append("Sumatorias BGR al cuadrado de todos sus píxeles:")
     sumaBGRtotal.append("Suma total BGR al cuadrado helióstato completo: ")
         
-    # Recorrer solo los dos primeros contornos, los más grandes (siguiente bucle 'for'), para cada fotograma del vídeo (bucle 'while' ejecutándose actualmente).
+    # Recorrer solo los 'args.numeroHeliostatosAnalizar' primeros contornos, los más grandes (siguiente bucle 'for'), para cada fotograma del vídeo (bucle 'while' ejecutándose actualmente).
     # Al no recorrer los demás contornos, éstos serán descartados porque no son muy grandes ni importantes o son falsos.
+    # Siendo 'args.numeroHeliostatosAnalizar' el número de contornos deseado por el usuario por parámetro en la consola que se quiere analizar como máximo para cada fotograma.
     for i in range(0, args.numeroHeliostatosAnalizar):
         
         # Obtener las coordenadas del contorno.
@@ -80,22 +88,12 @@ while True:
                 # Dibujar un rectángulo verde alrededor del contorno, en el vídeo.
                 # Parámetros: fotograma actual vídeo, esquina superior izquierda, esquina inferior derecha (width: ancho, height: altura), rectángulo color verde, grosor del rectángulo 2 píxeles.
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-                '''
-                # Mostrar en consola que se está analizando el helióstato reencuadrado en un rectángulo verde en el vídeo.
-                print("")
-                print("- Analizando el helióstato verde...")
-                print("")'''
                 
             # Si se está analizando el helióstato número dos en el fotograma actual del vídeo (en caso de que ya exista el otro helióstato en ese mismo fotograma del vídeo), hacer.
             else:
                 
                 # En este caso, ahora se reencuadra el contorno en un rectángulo rojo, en vez de verde. Así, ambos contornos podrán ser diferenciados si se muestran en el mismo fotograma del vídeo.
                 cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
-                '''
-                # Mostrar en consola que se está analizando el helióstato reencuadrado en un rectángulo rojo en el vídeo.
-                print("")
-                print("- Analizando el helióstato rojo...")
-                print("")'''
 
             # Leer y analizar todos los píxeles del helióstato.
             def vectorial(frame, x, y):
@@ -120,19 +118,15 @@ while True:
 
                 # Sumar las anteriores tres componentes entre sí, para obtener la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
                 sumaBGR = sumR+sumG+sumB
-                '''
-                # Mostrar en consola los resultados del helióstato o helióstatos localizados y analizados, para cada fotograma del vídeo.
-                print("Ancho y alto WH del helióstato en píxeles:       %4i %4i" %(w, h)) # Mostrar en consola el ancho y el alto WH del helióstato en píxeles.
-                print("Área del helióstato en píxeles:                  ", area) # Mostrar en consola el área del helióstato en píxeles.
-                print("Sumatorias BGR al cuadrado de todos sus píxeles: %8i %8i %8i" %(sumB, sumG, sumR)) # Mostrar en consola el valor de la sumatoria acumulativa de cada componente RGB de todos los pixeles al cuadrado del helióstato entero.
-                print("Suma total BGR al cuadrado helióstato completo:  ", sumaBGR) # Mostrar en consola la sumatoria total de los valores de las tres componentes RGB entre si de todos los pixeles al cuadrado del helióstato entero.
-                '''
-
-                if (i == 0):
-                    heliostato.append("                                                   Verde")
-                else:
-                    heliostato.append("                                                   Rojo")
                 
+                if (i == 0):
+                    heliostato.append("Verde                           ")
+                else:
+                    heliostato.append("Rojo")
+
+                # Ir introduciendo en los arrays las informaciones de los resultados de los helióstatos, con el fin de mostrarlas después por consola.
+                # Al ser arrays acumulativos, si en un mismo fotograma del vídeo se obtienen datos de dos helióstatos, para cada array se guardarán los datos de esos dos helióstatos a la vez.
+                # De esta forma, se compactará más la información mostrada en consola al estar esta a dos columnas: helióstato verde y helióstato rojo, para cada línea de texto o array.
                 anchoAlto.append(w)
                 anchoAlto.append(h)
                 anchoAlto.append("                      ")
@@ -147,19 +141,27 @@ while True:
                 
                 sumaBGRtotal.append(sumaBGR)
                 sumaBGRtotal.append("                       ")
+
+                if (i == 0):
+                    f1.write(str(sumaBGR)+"\n")
+                else:
+                    f2.write(str(sumaBGR)+"\n")
                 
             # Llamar a la función definida 'vectorial(frame, x, y)', siendo 'frame' el fotograma actual del vídeo a tratar, y XY las coordenadas de la esquina superior izquierda del helióstato.
             vectorial(frame, x, y)
 
     # Mostrar vídeo original en una ventana/actualizar fotograma.
     cv2.imshow("Camara", frame)
-    
+
+    # Mostrar en consola el valor del área del helióstato en píxeles, su ancho y alto también en píxeles,
+    # los valores de las sumatorias acumulativas RGB al cuadrado (cada componente por separado) de todos los píxeles del helióstato, y esto mismo pero sumando esta vez las tres componentes entre sí.
     print(heliostato)
     print(anchoAlto)
     print(areaTotal)
     print(sumaBGRparcial)
     print(sumaBGRtotal)
 
+    # Borrar el contenido de los arrays, ya que se ha mostrado toda la información en consola del helióstato (o helióstatos) para el fotograma actual del vídeo de helióstatos.
     del heliostato[:]
     del anchoAlto[:]
     del areaTotal[:]
@@ -177,3 +179,6 @@ while True:
     
 # Cuando el bucle 'while' inicial finalice, mostrar en consola que el programa finalizó su ejecución (el vídeo fue leído y analizado completamente).
 print("Programa terminado.")
+
+f1.close()
+f2.close()
