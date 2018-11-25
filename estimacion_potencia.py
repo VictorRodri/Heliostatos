@@ -149,6 +149,13 @@ while True:
                 
             # Llamar a la función definida 'vectorial(frame, x, y)', siendo 'frame' el fotograma actual del vídeo a tratar, y XY las coordenadas de la esquina superior izquierda del helióstato.
             vectorial(frame, x, y)
+            
+        else:
+            
+            if (i == 0):
+                f1.write(str(0)+"\n")
+            else:
+                f2.write(str(0)+"\n")
 
     # Mostrar vídeo original en una ventana/actualizar fotograma.
     cv2.imshow("Camara", frame)
