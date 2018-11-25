@@ -1,14 +1,16 @@
-\section{Introducción.}
+\section{Descripción del problema a resolver.}
+
+\subsection{Introducción.}
 
 Los sistemas de control de plantas termosolares de receptor central son sistemas complejos que tienen entre sus objetivos concentrar energía solar reflejada por el campo de helióstatos en una serie de puntos. Obtener una medida de la radiación reflejada en un punto del receptor es una tarea complicada debido a la dificultad de medir directamente dicha radiación concentrada. Este trabajo plantea como objetivo general el aproximarse a esta medida mediante la utilización del tratamiento digital de imágenes de la proyección de la radiación solar concentrada por un helióstato.
 La obtención en tiempo real de parámetros matemáticos obtenidos del análisis de dichas imágenes, así como su correlación con variables físicas, permitirán una estimación óptima de la distribución de radiación solar concentrada por un helióstato en un receptor. Esta estimación de la distribución podría ser aplicada a la proyección de un conjunto de helióstatos, así como utilizada en tareas diarias de operación y mantenimiento de un campo de helióstatos.
 
-\section{Objetivos y justificación.}
+\subsection{Objetivos y justificación.}
 
 Este proyecto tiene como objetivo fundamental obtener los parámetros matemáticos de una imagen de ejemplo de la proyección de la radiación solar reflejada por un helióstato de la Plataforma Solar de Almería (CIEMAT) sobre una diana. Con dichos parámetros se construirá un estimador de la cantidad de radiación solar concentrada.
 Para ello se utilizarán como herramientas la librería de código abierto OpenCV a través de su interfase en lenguaje Python/C/C++ y sobre el sistema operativo UNIX/Linux. Se utilizarán las primitivas que dicho sistema ofrece para obtener la medida del tiempo de cómputo de cada parámetro ante diferentes configuraciones de computador (concurrencia, paralelismo, ...). \cite{OpenCVWebSite} \cite{SALWebSite} \cite{IEEEXploreWebSite}
 
-\section{Helióstatos.}
+\subsection{Helióstatos.}
 
 Un helióstato es un conjunto de espejos que establecen una superficie grande y se mueven sobre uno o dos ejes, normalmente en montura acimutal, lo que permite, con los movimientos apropiados, mantener el reflejo de los rayos solares que inciden sobre él, se fijen en todo momento en un punto o superficie. Haciendo esto, los rayos que refleja el helióstato pueden ser dirigidos hacia un solo punto (o superficie) durante todo el día.
 
@@ -18,7 +20,7 @@ En experimentación y pruebas de materiales a altas temperaturas, un conjunto su
 
 Los primeros helióstatos considerados como elementos industriales se desarrollaron a los inicios de la década de los ochenta para las plantas experimentales termosolares de receptor central, con el propósito de probar la viabilidad de la energía solar térmica en los procesos de producción de electricidad a escala industrial. Las figuras 1 y 2 muestran, respectivamente, un campo de helióstatos y un helióstato.
 
-\section{Helióstato con sensor de reflexión.}
+\subsection{Helióstato con sensor de reflexión.}
 
 \begin{figure}[h!]
   	\centering
@@ -38,7 +40,7 @@ Desde mediados del siglo XX se vienen realizando investigaciones para intentar t
 
 \cite{GstriatumWebSite} \cite{EcuRedWebSite}
 
-\section{Funcionamiento de la central solar de receptor central o de tipo torre.}
+\subsection{Funcionamiento de la central solar de receptor central o de tipo torre.}
 
 Una central solar de tipo torre central, está formada por un campo de helióstatos que reflejan la luz del sol y concentran los haces reflejados en una caldera situada sobre una torre de gran altura (figura \ref{fig:FotosPaginasWebHeliostatos/unnamed(2).jpg}).
 
@@ -83,8 +85,8 @@ Se necesitan acumuladores de calor para poder usar este dispositivo para cuando 
 
 En la turbina se genera la energía eléctrica, y de ahí pasa a un generador y un transformador y finalmente a una subestación; mientras que el vapor de agua pasa a un condensador y a un sistema de enfriamiento para posteriormente pasar por una bomba a la caldera donde el ciclo se repite. \cite{IgualadaWebSite} \cite{SoliclimaWebSite} \cite{ClaudioWebSite}
 
-\section{Ejemplos de centrales de receptor central.}
-\subsection{Plantas PS10 y PS20.}
+\subsection{Ejemplos de centrales de receptor central.}
+\subsubsection{Plantas PS10 y PS20.}
 
 PS10: La megatorre sevillana de la energía solar, y cómo funciona (figura \ref{fig:FotosPaginasWebHeliostatos/unnamed(4).jpg}).
 
@@ -163,7 +165,7 @@ La PS20 dispone con un sistema de almacenamiento de 1 hora, con un receptor más
 
 \cite{ValenticampderrosWebSite}
 
-\subsection{Planta termosolar Gemasolar.}
+\subsubsection{Planta termosolar Gemasolar.}
 
 Gemasolar es una planta de energía solar por concentración con sistema de almacenamiento térmico en sales fundidas situada en Sevilla, España. Es la primera a escala comercial en aplicar la tecnología de receptor de torre central y almacenamiento térmico en sales fundidas. La superficie de esta planta ocupa aproximadamente 158 hectáreas. Características:
 
@@ -214,7 +216,7 @@ Es tal el éxito de la planta sevillana que muchos profesionales del sector busc
 
 
 
-\subsection{Planta termosolar de receptor central de Ivanpah.}
+\subsubsection{Planta termosolar de receptor central de Ivanpah.}
 
 El Sistema de generación eléctrica solar Ivanpah es una planta termosolar concentrada en el desierto de Mojave. Está ubicado en la base de Clark Mountain en California, a través de la línea estatal desde Primm, Nevada. La planta tiene una capacidad bruta de 392 megavatios (MW). Su campo solar está formado por 173,500 helióstatos, de 14.05 m2 cada uno proyectando en tres torres la energía solar reflejada. La primera unidad del sistema se conectó a la red eléctrica en septiembre de 2013 para una prueba de sincronización inicial. La instalación abrió formalmente el 13 de febrero de 2014. En 2014, fue la estación de energía solar térmica más grande del mundo.
  
@@ -226,7 +228,7 @@ La instalación, con un costo de \$ 2.2 mil millones, fue desarrollada por Brigh
 
 
 
-\subsection{Proyecto de Google RE\textless C.}
+\subsubsection{Proyecto de Google RE\textless C.}
 
 \begin{figure}[h!]
   	\centering
@@ -281,7 +283,7 @@ Los helióstatos a lo largo del borde exterior de un campo protegen a los helió
 
 
 
-\subsection{Torres CESA y CRS de la Plataforma Solar de Almería.}
+\subsubsection{Torres CESA y CRS de la Plataforma Solar de Almería.}
 
 La instalación CESA-1 de 7MWt
 

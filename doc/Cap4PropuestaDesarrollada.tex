@@ -1,6 +1,6 @@
 \section{Trabajo realizado en el proyecto.}
 
-\section{Variables de entorno.}
+\subsection{Variables de entorno.}
 
 Antes de trabajar el código, hay que agregar unas variables de entorno en el sistema.
 
@@ -22,7 +22,7 @@ Para agregar una variable de entorno, hacer clic en ‘Nueva...’. Hay dos boto
 	\label{fig:CapturasInstalacionPython/unnamed.png}}
 \end{figure}
 
-\section{Instalación del software Python.}
+\subsection{Instalación del software Python.}
 
 Figura \ref{fig:CapturasInstalacionPython/unnamed.png}. Para este trabajo de fin de grado, se necesitaba desarrollar un software usando un programa de ordenador: Python. La última versión disponible a la hora de realizar dicho trabajo era la 3.6.4. Se ha utilizado además la versión de 64 bits, debido a que mi PC donde desarrollé el programa monta esta arquitectura de CPU.
 
@@ -127,7 +127,7 @@ Figura \ref{fig:CapturasInstalacionPython/unnamed(10).png}. Desde esa ventana, y
 
 Figura \ref{fig:CapturasInstalacionPython/unnamed(11).png}. Reducir el tamaño de la ventana, de forma parecida a la mostrada en esta captura de pantalla. Tras esto, simplemente habría que arrastrar y soltar este acceso directo ‘IDLE (Python 3.6 64-bit) (2)’ desde esa ventana al escritorio. Así, ya se tiene el programa en el escritorio.\\[20pt]
 
-\section{Cómo usar el software.}
+\subsection{Cómo usar el software.}
 
 Para usar y ejecutar el software en el PC descrito en este informe, especialmente por primera vez, se siguen las siguientes instrucciones:
 
@@ -148,11 +148,11 @@ Nota: el código de este proyecto se realizó mediante el programa Python e IDLE
 9. Durante aproximadamente un minuto, se ejecutará el software que consistirá en medir la radiación de energía que proyecta cada helióstato. Concretamente, la energía se calcula como la sumatoria de los cuadrados de cada componente BGR del helióstato. Aparecerán estos resultados en tiempo de ejecución en la consola, para cada fotograma del vídeo de helióstatos.
 10. Si desea cancelar la ejecución del software, pulsar 'Ctrl+C'.
 
-\section{Diagrama de flujo.}
+\subsection{Diagrama de flujo.}
 
 El funcionamiento del código de helióstatos mediante la representación de un diagrama de flujo es el siguiente:
 
-\section{Funcionamiento del software y código.}
+\subsection{Funcionamiento del software y código.}
 
 El software consiste en la lectura y procesamiento de un vídeo guardado en el disco duro del ordenador personal y en formato MP4. El vídeo es de un conjunto de helióstatos que van entrando uno por uno en un panel solar y fusionándose todos entre sí. Y tras esto, los helióstatos van saliendo uno por uno de ese panel solar, hasta que no quede ninguno.
 
@@ -431,7 +431,7 @@ print("Programa terminado.")
 
 Cuando se hayan terminado de leer todos los fotogramas del vídeo, es decir, se ha leído el vídeo completo, se mostrará en consola ‘Programa terminado.’, finalizando la ejecución del programa.
 
-\section{Cronograma de tareas.}
+\subsection{Cronograma de tareas.}
 
 20 de febrero de 2.017: escogí este TFG de caracterización de helióstatos. Es un proyecto realizado a medias de Diego Zapata Hernández y que yo decidí ayudarle y finalizarlo. Conocí y hablé por primera vez con mi tutor de este TFG, Vicente González Ruiz, y el co-tutor, Luis Yebra. Vicente me explicó algunos conceptos, como la normativa de entrega y presentación del TFG, y qué código del proyecto de Diego debía yo trabajar. Vicente me dijo que yo le dijera a Luis (y así hice) una información concreta del TFG para que él nos explicase la siguiente tarea que yo debía hacer.
 
@@ -678,7 +678,7 @@ Yo continuaré revisando lo que sería el punto 4 de dicho índice.’. Le pregu
 
 17 de noviembre de 2.018: he agregado capturas de pantalla de mi programa en el TEX del capítulo 4 (propuesta desarrollada), y dentro de ese TEX o capítulo, en la sección de análisis de recursos consumidos. También he ido extendiendo un poco más (actualizando) el cronograma de tareas de dicho capítulo 4.
 
-\section{Descripción de los requerimientos/requisitos.}
+\subsection{Descripción de los requerimientos/requisitos.}
 
 En la elaboración de este TFG, se ha creado además un programa de ordenador en lenguaje de programación Python. Para ello, se requerían de los siguientes elementos:
 
@@ -688,7 +688,7 @@ Tener instalados los siguientes programas en el sistema:
 ‘Git Bash’, versión 2.7.7 para sistemas de 64 bits.
 Agregar unas variables de entorno en el sistema, explicado previamente en este informe.
 
-\section{Entradas y salidas.}
+\subsection{Entradas y salidas.}
 
 El software requiere de un vídeo cualquiera en formato MP4, de cualquier resolución, y guardado en una ubicación o ruta cualquiera en el disco duro del PC. El vídeo preferentemente será de helióstatos, con el fin de sacar el máximo partido al código ya que este está adaptado para procesar helióstatos.
 
@@ -765,7 +765,7 @@ Ejemplo gráfico (figura \ref{fig:CapturasEntradasYSalidas/unnamed(1).png}):
 	\label{fig:CapturasEntradasYSalidas/unnamed(1).png}}
 \end{figure}
 
-\section{Análisis de los recursos consumidos.}
+\subsection{Análisis de los recursos consumidos.}
 
 A continuación, se mostrarán y explicarán los resultados del uso de la CPU y del consumo de la memoria RAM en el PC, en el administrador de tareas de Windows 10, durante la ejecución del software en distintos periodos de tiempo. También se medirán los fotogramas por segundo (FPS) actuales del vídeo.
 
@@ -1090,11 +1090,11 @@ Figura \ref{fig:CapturasRendimientoSoftware2/Imagen13.png}. Cuando el tercer hel
 
 Figura \ref{fig:CapturasRendimientoSoftware2/Imagen14.png}. Cuando no hay ningún helióstato en el vídeo (todos ya han pasado por él, y no quedan más), Python consume un 46,2\% de CPU y 104,3 MB de memoria RAM, mientras que la terminal de Windows consume un 0,3\% de CPU y 8,4 MB de memoria RAM. Los FPS son de 20,68.\\[20pt]
 
-\section{Plataformas que son capaces de ejecutar el software.}
+\subsection{Plataformas que son capaces de ejecutar el software.}
 
 El software está escrito en lenguaje de programación Python, y una de las características de Python es que es un lenguaje multiplataforma. Esto significa que, aunque originalmente Python se diseñó para Unix, cualquier sistema es compatible con el lenguaje siempre y cuando exista un intérprete programado para él. Además, hay diversas versiones de Python en muchos sistemas informáticos distintos.
 
-\section{Ejemplos de ejecuciones y comentarios sobre sus resultados.}
+\subsection{Ejemplos de ejecuciones y comentarios sobre sus resultados.}
 
 Al iniciar la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando el comando 'estimacion\_potencia.py Videos/varios\_heliostatos.mp4 50 50 127 2', ocurre lo siguiente:
 
@@ -1116,8 +1116,6 @@ La tasa de fotogramas por segundo (FPS) es alta, de aproximadamente 60 FPS, porq
 Todo este procedimiento se repite para todos los demás fotogramas del vídeo de helióstatos, hasta que se hayan leído todos sus fotogramas, finalizando así la ejecución del programa.
 
 El contenido de este vídeo son de cuatro helióstatos que entran poco a poco en el vídeo desde el lado izquierdo, y se van ubicando en el centro. Los demás (y siguientes) helióstatos que también llegan desde la izquierda se solapan con el helióstato o helióstatos permanecidos en el centro de dicho vídeo. Cuando los cuatro helióstatos permanezcan solapados en el centro del vídeo, se irán separando, uno por uno, los helióstatos hacia la izquierda, saliéndose cada uno del vídeo, hasta que no queden ninguno.
-
-
 
 Al iniciar la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando esta vez el comando 'estimacion\_potencia.py Videos/heliostato.MOV 50 50 200 1', ocurre lo siguiente:
 
