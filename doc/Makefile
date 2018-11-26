@@ -1,12 +1,12 @@
-default:	main.pdf
+default: main.pdf
 
-main.pdf:	main.tex main.bib Capitulo*.tex
+main.pdf: main.tex main.bib *.tex
 		pdflatex main
 		@if grep "Warning: Citation" main.log; then bibtex main; \
-		  pdflatex main; \
+			pdflatex main; \
 		fi;
 		@while grep Rerun main.log; do \
-		  pdflatex main; \
+			pdflatex main; \
 		done;
 
 clean:
