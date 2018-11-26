@@ -1,0 +1,32 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Descripci\IeC {\'o}n del problema a resolver.}{2}
+\contentsline {subsection}{\numberline {1.1}Introducci\IeC {\'o}n.}{2}
+\contentsline {subsection}{\numberline {1.2}Objetivos y justificaci\IeC {\'o}n.}{2}
+\contentsline {subsection}{\numberline {1.3}Heli\IeC {\'o}statos.}{2}
+\contentsline {subsection}{\numberline {1.4}Heli\IeC {\'o}stato con sensor de reflexi\IeC {\'o}n.}{3}
+\contentsline {subsection}{\numberline {1.5}Funcionamiento de la central solar de receptor central o de tipo torre.}{4}
+\contentsline {subsection}{\numberline {1.6}Ejemplos de centrales de receptor central.}{6}
+\contentsline {subsubsection}{\numberline {1.6.1}Plantas PS10 y PS20.}{6}
+\contentsline {subsubsection}{\numberline {1.6.2}Planta termosolar Gemasolar.}{9}
+\contentsline {subsubsection}{\numberline {1.6.3}Planta termosolar de receptor central de Ivanpah.}{12}
+\contentsline {subsubsection}{\numberline {1.6.4}Proyecto de Google RE\textless C.}{12}
+\contentsline {subsubsection}{\numberline {1.6.5}Torres CESA y CRS de la Plataforma Solar de Almer\IeC {\'\i }a.}{15}
+\contentsline {section}{\numberline {2}El lenguaje de programaci\IeC {\'o}n Python.}{17}
+\contentsline {subsection}{\numberline {2.1}Usos de Python.}{19}
+\contentsline {subsection}{\numberline {2.2}Versiones de Python.}{20}
+\contentsline {section}{\numberline {3}La biblioteca OpenCV.}{24}
+\contentsline {section}{\numberline {4}Trabajo realizado en el proyecto.}{27}
+\contentsline {subsection}{\numberline {4.1}Variables de entorno.}{27}
+\contentsline {subsection}{\numberline {4.2}Instalaci\IeC {\'o}n del software Python.}{27}
+\contentsline {subsection}{\numberline {4.3}C\IeC {\'o}mo usar el software.}{32}
+\contentsline {subsection}{\numberline {4.4}Diagrama de flujo.}{37}
+\contentsline {subsection}{\numberline {4.5}Funcionamiento del software y c\IeC {\'o}digo.}{37}
+\contentsline {subsection}{\numberline {4.6}Cronograma de tareas.}{48}
+\contentsline {subsection}{\numberline {4.7}Descripci\IeC {\'o}n de los requerimientos/requisitos.}{63}
+\contentsline {subsection}{\numberline {4.8}Entradas y salidas.}{64}
+\contentsline {subsection}{\numberline {4.9}An\IeC {\'a}lisis de los recursos consumidos.}{66}
+\contentsline {subsection}{\numberline {4.10}Plataformas que son capaces de ejecutar el software.}{91}
+\contentsline {subsection}{\numberline {4.11}Ejemplos de ejecuciones y comentarios sobre sus resultados.}{91}
+\contentsline {subsection}{\numberline {4.12}Validaci\IeC {\'o}n cualitativa de la funci\IeC {\'o}n de estimaci\IeC {\'o}n de potencia.}{94}
+\contentsline {section}{\numberline {5}Conclusiones y posibles l\IeC {\'\i }neas de trabajo futuro.}{97}
+\contentsline {section}{\numberline {6}Referencias bibliogr\IeC {\'a}ficas.}{98}

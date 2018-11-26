@@ -1,7 +1,0 @@
-La gráfica muestra el tamaño del helióstato reencuadrado en rojo en diferentes partes del vídeo, siendo el eje de abscisas X el tiempo del vídeo en segundos y el eje de ordenadas Y el tamaño del helióstato en píxeles.
-
-La gráfica, cuando el helióstato con el reencuadre en rojo es visible en el vídeo, muestra un valor de suma BGR constante e intermedio, porque dicho helióstato solo aparece cuando en un mismo fotograma se muestran dos helióstatos separados entre sí: uno a la izquierda (reencuadre verde), y otro en el centro (reencuadre rojo). Y cuando el helióstato con el reencuadre en rojo aparece, suele tener un valor de suma BGR constante.
-
-En los demás casos, cuando el helióstato con el reencuadre en rojo no aparece en el vídeo, el valor de suma BGR en la gráfica es nulo.
-
-Debido probablemente al ruido del vídeo, se aprecia en ciertas partes de la gráfica que el valor del helióstato reencuadrado en rojo crece enormemente, cosa que no tiene sentido porque su valor de suma BGR, como se comentó antes, es mediano y prácticamente constante, cuando dicho helióstato se muestra en el vídeo.
