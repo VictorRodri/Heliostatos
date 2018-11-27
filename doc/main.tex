@@ -19,9 +19,10 @@
 \usepackage{vmargin}
 \usepackage{verbatim}
 \usepackage{listings}
-\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+\setmarginsrb{2.5 cm}{2.5 cm}{2.5 cm}{2.5 cm}{0 cm}{1.5 cm}{0 cm}{1.5 cm}
+\renewcommand{\baselinestretch}{1} % Interlineado
 
-\title{Tu titulo}					% Titulo
+\title{Medición de la radiación solar proyectada}					% Titulo
 \author{Tu nombre}					% Autor
 \date{\today}						% Fecha
 
@@ -81,11 +82,15 @@
 
 \lstset{language=Python} 
 
-%\input{Cap1DescripcionProblemaResolver}
-%\input{Cap2Python}
-%\input{Cap3OpenCV}
+\input{Cap1DescripcionProblemaResolver}
+\input{Cap2Python}
+\input{Cap3OpenCV}
 \input{Cap4PropuestaDesarrollada}
-%\input{Cap5ConclusionesYPosiblesLineasTrabajoFuturo}
-%\input{Cap6ReferenciasBibliograficas}
+\input{Cap5ConclusionesYPosiblesLineasTrabajoFuturo}
+\input{Cap6ReferenciasBibliograficas}
+
+\addcontentsline{toc}{section}{Referencias}
+\bibliographystyle{plain}
+\bibliography{main}
 
 \end{document}

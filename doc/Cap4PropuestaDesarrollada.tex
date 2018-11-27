@@ -9,6 +9,7 @@ Para ello, se hace clic en Inicio, situado en la esquina inferior izquierda de l
 Por si acaso, en mi caso particular, he agregado las variables de entorno tanto para mi propio usuario como para el sistema completo. Las variables de entorno que deberán agregarse son:
 
 Variable: Python35-32. Valor: C: \textbackslash Users \textbackslash Pc \textbackslash AppData \textbackslash Local \textbackslash Programs \textbackslash Python \textbackslash Python35-32.
+
 Variable: Python36. Valor: C: \textbackslash Users \textbackslash Pc \textbackslash AppData \textbackslash Local \textbackslash Programs \textbackslash Python \textbackslash Python36.
 
 (Siendo ‘Pc’ el nombre de mi usuario; aquí se debe introducir el nombre de usuario correspondiente.)
@@ -228,7 +229,8 @@ Para que funcione todo el código expuesto y elaborado a continuación, hay que 
 ‘numpy’ permite el manejo de arrays o vectores con el fin de recorrer y analizar una serie de datos en secuencia, como una matriz de dos dimensiones y con muchos valores numéricos guardados. Además, usar ‘numpy’ para dicho fin es mucho más eficiente que otros métodos de análisis de datos en secuencia que no sean en arrays o vectores, como los típicos bucles ‘for’.\\[20pt]
 
 \begin{lstlisting}
-# Crear y abrir los siguientes archivos de texto en modo escritura.
+# Crear y abrir los siguientes archivos de texto en modo
+# escritura.
 f1 = open("SumasBGRHeliostatosVerdes.txt", "w")
 f2 = open("SumasBGRHeliostatosRojos.txt", "w")
 \end{lstlisting}
@@ -236,21 +238,38 @@ f2 = open("SumasBGRHeliostatosRojos.txt", "w")
 En el directorio del sistema donde se está ejecutando este software, se crearán los ficheros de texto "SumasBGRHeliostatosVerdes.txt" y "SumasBGRHeliostatosRojos.txt" y se escribirán informaciones en ellos (significado del parámetro "w"). Si ya existían estos ficheros en el sistema, serán sobreescritos por los nuevos.\\[20pt]
 
 \begin{lstlisting}
-start\_time = time.time() # Obtener el tiempo de ejecución inicial de este programa.
-frame\_counter = 0 # Contador de fotogramas totales del vídeo. Se irá incrementando progresivamente en líneas de código posteriores.
+start\_time = time.time() # Obtener el tiempo de ejecución
+# inicial de este programa.
+frame\_counter = 0 # Contador de fotogramas totales del vídeo.
+# Se irá incrementando progresivamente en líneas de código
+# posteriores.
 \end{lstlisting}
 
 Obtener en segundos el tiempo de ejecución inicial del programa. Inicial porque esta línea de código se ubica en el comienzo del software. Declarar e inicializar a cero un contador de fotogramas del vídeo. Ambos datos serán usados para calcular los FPS (fotogramas por segundo) del vídeo de helióstatos, al final de este código.\\[20pt]
 
 \begin{lstlisting}
-# Argumentos o parámetros necesarios para ejecutar este programa a través de la consola de Windows.
-parser = argparse.ArgumentParser(description='Parametros del programa.') # Dar un nombre al conjunto de parámetros y asignarlo a la variable 'parser'.
-parser.add_argument('directorioVideoHeliostatosCargar', type=str) # Crear el argumento 1: ruta o directorio del vídeo a cargar en el PC.
-parser.add_argument('anchoMinimoHeliostato', type=int) # Crear el argumento 3: ancho mínimo del helióstato para su análisis.
-parser.add_argument('altoMinimoHeliostato', type=int) # Crear el argumento 4: alto mínimo del helióstato para su análisis.
-parser.add_argument('umbralVideoHeliostatos', type=int) # Crear el argumento 5: umbral o nivel de color mínimo del vídeo de helióstatos a partir del cual podría estar detectándose un helióstato.
-parser.add_argument('numeroHeliostatosAnalizar', type=int) # Crear el argumento 6: número máximo de helióstatos a detectar y analizar en cada fotograma del vídeo de helióstatos.
-args = parser.parse_args() # Devuelve información de los parámetros definidos previamente.
+# Argumentos o parámetros necesarios para ejecutar este programa
+# a través de la consola de Windows.
+parser = 
+argparse.ArgumentParser(description='Parametros del programa.')
+# Dar un nombre al conjunto de parámetros y asignarlo a la
+# variable 'parser'.
+parser.add_argument('directorioVideoHeliostatosCargar', type=str)
+# Crear el argumento 1: ruta o directorio del vídeo a cargar en
+# el PC.
+parser.add_argument('anchoMinimoHeliostato', type=int) # Crear el 
+# argumento 3: ancho mínimo del helióstato para su análisis.
+parser.add_argument('altoMinimoHeliostato', type=int) # Crear
+# el argumento 4: alto mínimo del helióstato para su análisis.
+parser.add_argument('umbralVideoHeliostatos', type=int) # Crear
+# el argumento 5: umbral o nivel de color mínimo del vídeo de
+# helióstatos a partir del cual podría estar detectándose un
+# helióstato.
+parser.add_argument('numeroHeliostatosAnalizar', type=int)
+# Crear el argumento 6: número máximo de helióstatos a detectar y
+# analizar en cada fotograma del vídeo de helióstatos.
+args = parser.parse_args() # Devuelve información de los
+# parámetros definidos previamente.
 \end{lstlisting}
 
 Permite que a la hora de ejecutar el programa desde la terminal de comandos de Windows, solicite al usuario la ruta del vídeo a cargar del sistema, el ancho y alto mínimos del helióstato para ser detectado y analizado por el programa, el umbral (o tonalidad del color) del vídeo a partir del cual el programa detectará los helióstatos, y el número máximo de helióstatos que el programa deberá detectar y analizar, para cada fotograma del vídeo de helióstatos. Por ejemplo: ‘C: \textbackslash Users \textbackslash Pc \textbackslash Desktop \textbackslash TFG>miCodigo.py Videos/varios\_heliostatos.mp4 50 50 127 2’.
@@ -262,7 +281,8 @@ Partiendo de la anterior variable ‘parser’, se van designando los distintos 
 ‘args = parser.parse\_args()’. Permite que, desde la variable ‘args’, cargar el argumento concreto, almacenado previamente cuando el programa solicitó al usuario los argumentos. Por ejemplo, si se desea comprobar cuál fue el ancho del helióstato que el usuario solicitó por parámetro en la consola, se cargará y obtendrá el segundo argumento con la línea de código siguiente: ‘args.anchoMinimoHeliostato’. Así, el programa realizará las medidas y operaciones oportunas de acuerdo al valor de este parámetro deseado por el usuario.\\[20pt]
 
 \begin{lstlisting}
-# Mostrar en la consola este aviso de cuando se va a ejecutar el programa.
+# Mostrar en la consola este aviso de cuando se va a ejecutar el
+# programa.
 print("")
 print("Iniciando programa...")
 print("")
@@ -271,15 +291,20 @@ print("")
 Al iniciar la ejecución del programa, mostrará por consola que se ha iniciado su ejecución, con el aviso ‘Iniciando programa…’. Este aviso solo aparecerá una vez durante toda su ejecución.\\[20pt]
 
 \begin{lstlisting}
-# Leer secuencia de imágenes del vídeo a partir del directorio especificado por parámetro.
+# Leer secuencia de imágenes del vídeo a partir del directorio
+# especificado por parámetro.
 camara = cv2.VideoCapture(args.directorioVideoHeliostatosCargar)
 \end{lstlisting}
 
 Partiendo del directorio especificado por el usuario, el programa leerá y cargará el archivo concreto, que deberá ser el vídeo de helióstatos. De lo contrario, la ejecución del programa no se realizará correctamente.\\[20pt]
 
 \begin{lstlisting}
-# Declarar estos arrays con el fin de almacenar toda la información sobre los resultados de los helióstatos analizados en el vídeo de helióstatos.
-# Además, son usados especialmente con el fin de mostrar, para cada información, hasta dos resultados distintos (uno para cada helióstato) en una misma línea de texto, en la consola.
+# Declarar estos arrays con el fin de almacenar toda la
+# información sobre los resultados de los helióstatos analizados
+# en el vídeo de helióstatos.
+# Además, son usados especialmente con el fin de mostrar, para
+# cada información, hasta dos resultados distintos (uno para cada
+# helióstato) en una misma línea de texto, en la consola.
 heliostato = []
 anchoAlto = []
 areaTotal = []
@@ -290,17 +315,24 @@ sumaBGRtotal = []
 Arrays que permiten almacenar y mostrar en consola toda la información y resultados sobre los helióstatos analizados en el vídeo de helióstatos. El uso concreto de estos arrays se debe a que con ellos es posible mostrar en consola y para cada información, hasta dos resultados distintos (uno para cada helióstato) en una misma línea de texto, de la forma que se explicará posteriormente. Así se evita el uso de demasiadas líneas de texto en la consola, y compactar toda la información posible en una sola. Estos arrays son vaciados una vez que se haya guardado la información correspondiente al helióstato (o helióstatos) del fotograma actual (en análisis) del vídeo de helióstatos, y posteriormente mostradas dichas informaciones de ese helióstato (o helióstatos) en consola. Todo este procedimiento se repite igual para los siguientes fotogramas de dicho vídeo de helióstatos.\\[20pt]
 
 \begin{lstlisting}
-# Iteración 'while True' para cada fotograma del vídeo, hasta completar todos los fotogramas y llegar al final del vídeo (cambiaría automáticamente de True a False y el bucle 'while' finaliza).
+# Iteración 'while True' para cada fotograma del vídeo, hasta
+# completar todos los fotogramas y llegar al final del vídeo
+# (cambiaría automáticamente de True a False y el bucle 'while'
+# finaliza).
 while True:
 \end{lstlisting}
 
 A partir de aquí y prácticamente hasta el final del código, todas las demás instrucciones se aplicarán para cada fotograma del vídeo de helióstatos.\\[20pt]
     
 \begin{lstlisting}
-    # Obtener frame. Para ello, se toma un fotograma del vídeo, se guarda en 'frame', y si se ha hecho esta acción correctamente, 'grabbed' valdrá true (verdadero), y viceversa.
+    # Obtener frame. Para ello, se toma un fotograma del vídeo,
+    # se guarda en 'frame', y si se ha hecho esta acción
+    # correctamente, 'grabbed' valdrá true (verdadero), y
+    # viceversa.
     (grabbed, frame) = camara.read()
 
-    # Si se ha llegado al final del vídeo, romper la ejecución de este bucle 'while' y finalizar el programa.
+    # Si se ha llegado al final del vídeo, romper la ejecución
+    # de este bucle 'while' y finalizar el programa.
     if not grabbed:
         break
 \end{lstlisting}
@@ -308,21 +340,44 @@ A partir de aquí y prácticamente hasta el final del código, todas las demás 
 Estas líneas de código se encargarán de indicar al programa si quedan más fotogramas por leer o no del vídeo de helióstatos, y así saber hasta cuándo dicho programa se mantendría en ejecución. Primero, ‘camara.read()’ obtiene el fotograma actual del vídeo, y lo guarda en la variable ‘frame’. Si se ha hecho esta acción correctamente (debido a que quedan más fotogramas por leer del vídeo y no se ha llegado al final del mismo), ‘grabbed’ (justo al lado izquierdo de ‘frame’) valdrá ‘true’, y viceversa. Si se ha llegado al final del vídeo, ‘grabbed’ valdrá ‘false’ (porque ya no quedan más fotogramas por leer), y romperá la ejecución del presente bucle ‘while’ para que deje de leer más fotogramas del vídeo y finalice la ejecución de este programa. Esta ruptura es producida porque se cumple la condición de ‘if not grabbed’, así que desencadena la instrucción ‘break’.\\[20pt]
 
 \begin{lstlisting}
-    # Convertir a escala de grises el fotograma actual del vídeo. Para ello, con la variable 'frame' (fotograma del vídeo) capturada anteriormente, se llama a la función 'cv2.COLOR\_BGR2GRAY'.
+    # Convertir a escala de grises el fotograma actual del
+    # vídeo. Para ello, con la variable 'frame' (fotograma del
+    # vídeo) capturada anteriormente, se llama a la función
+    # 'cv2.COLOR\_BGR2GRAY'.
     img = cv2.cvtColor(frame, cv2.COLOR\_BGR2GRAY)
     
-    # Aplicar un umbral a ese fotograma del vídeo. Parámetros de este método: imagen fuente en escala de grises, valor de umbral para clasificar los valores de píxeles de esa imagen,
-    # valor máximo a ser representado si el valor del píxel supera al valor del umbral, aplicar un tipo concreto de umbralización (0 porque no se desea hacer esto).
-    # NOTA: la variable "ret" que recibe como resultado en este método no es usada en este programa así que se puede ignorar, esto es debido a que no se está aplicando umbralización de Otsu.
-    ret, thresh = cv2.threshold(img, args.umbralVideoHeliostatos, 255, 0)
+    # Aplicar un umbral a ese fotograma del vídeo. Parámetros de
+    # este método: imagen fuente en escala de grises, valor de 
+    # umbral para clasificar los valores de píxeles de esa imagen,
+    # valor máximo a ser representado si el valor del píxel
+    # supera al valor del umbral, aplicar un tipo concreto de
+    # umbralización (0 porque no se desea hacer esto).
+    # NOTA: la variable "ret" que recibe como resultado en este
+    # método no es usada en este programa así que se puede
+    # ignorar, esto es debido a que no se está aplicando
+    # umbralización de Otsu.
+    ret, thresh =
+    cv2.threshold(img, args.umbralVideoHeliostatos, 255, 0)
     
-    cv2.imshow("Camara2", thresh) # Mostrar vídeo umbralizado en una ventana.
-    cv2.waitKey(1) # El programa hará una pequeña pausa (1 milisegundo) para que de tiempo a que se muestren los vídeos y fotogramas en las dos ventanas que se han creado en este código para tal fin.
+    cv2.imshow("Camara2", thresh) # Mostrar vídeo umbralizado en
+    # una ventana.
+    cv2.waitKey(1) # El programa hará una pequeña pausa (1
+    # milisegundo) para que de tiempo a que se muestren los
+    # vídeos y fotogramas en las dos ventanas que se han creado
+    # en este código para tal fin.
 
-    # Buscar y detectar todos los contornos o helióstatos del fotograma actual del vídeo.
-    # Parámetros del siguiente método: imagen umbralizada, devolver todos los contornos y crear una lista completa de jerarquía de familia, marcar la mínima cantidad de puntos (no todos)
-    # que forman (delimitan) la figura (helióstato). Argumentos que devolverá dicho método: imagen fuente (sobra), modo de devolución del contorno, método de aproximación del contorno (sobra).
-    im2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR\_TREE, cv2.CHAIN\_APPROX\_SIMPLE)
+    # Buscar y detectar todos los contornos o helióstatos del
+    # fotograma actual del vídeo.
+    # Parámetros del siguiente método: imagen umbralizada,
+    # devolver todos los contornos y crear una lista completa
+    # de jerarquía de familia, marcar la mínima cantidad de
+    # puntos (no todos) que forman (delimitan) la figura
+    # (helióstato). Argumentos que devolverá dicho método:
+    # imagen fuente (sobra), modo de devolución del contorno,
+    # método de aproximación del contorno (sobra).
+    im2, contours, hierarchy =
+    cv2.findContours(thresh, cv2.RETR\_TREE,
+    cv2.CHAIN\_APPROX\_SIMPLE)
 \end{lstlisting}
 
 Las siguientes líneas de código se encargarán de convertir cada fotograma del vídeo a escala de grises, aplicarle un umbral y detectar los contornos o helióstatos, así como mostrar en pantalla la visualización en vivo (al mismo tiempo que la ejecución del programa) del vídeo de helióstatos umbralizado.
@@ -334,7 +389,9 @@ Aplicar un umbral al fotograma actual del vídeo en escala de grises (variable �
 Buscar, detectar y delimitar todos los contornos o helióstatos del fotograma actual del vídeo umbralizado. Para ello, el método ‘findContours’ requiere de los parámetros necesarios para saber cuál es el fotograma umbralizado a tratar (variable ‘thresh’ obtenida previamente), cómo devolverá el o los resultados (en este caso devolverá todos los contornos detectados, y almacenados en lista completa de de jerarquía de familia), y cómo delimitará el contorno (en este caso usando la mínima cantidad de puntos). Los contornos detectados se guardarán en la variable resultado ‘contours’. Las otras dos variables resultado ‘im2’ e ‘hierarchy’ no son usadas para este proyecto.\\[20pt]
 
 \begin{lstlisting}
-	# Guardar en los distintos arrays los siguientes textos, para luego ser mostrados por consola junto con los respectivos resultados de los helióstatos.
+	# Guardar en los distintos arrays los siguientes textos,
+	# para luego ser mostrados por consola junto con los
+	# respectivos resultados de los helióstatos.
     heliostato.append("                                               ")
     anchoAlto.append("Ancho y alto WH del helióstato en píxeles:      ")
     areaTotal.append("Área del helióstato en píxeles:                 ")
@@ -345,9 +402,15 @@ Buscar, detectar y delimitar todos los contornos o helióstatos del fotograma ac
     Guardar en los respectivos arrays 'heliostato', 'anchoAlto', 'areaTotal', 'sumaBGRparcial' y 'sumaBGRtotal' los textos 'Ancho y alto', 'Área', 'Sumatorias BGR parcial' y 'Sumatorias BGR total', relacionados con los datos que se obtendrán más adelante de los helióstatos analizados en el vídeo de helióstatos.\\[20pt]
 
 \begin{lstlisting}
-    # Recorrer solo los dos primeros contornos, los más grandes (siguiente bucle 'for'), para cada fotograma del vídeo (bucle 'while' ejecutándose actualmente).
-    # Al no recorrer los demás contornos, estos serán descartados porque no son muy grandes ni importantes o son falsos.
-    # Siendo 'args.numeroHeliostatosAnalizar' el número de contornos deseado por el usuario por parámetro en la consola que se quiere analizar como máximo para cada fotograma.
+    # Recorrer solo los dos primeros contornos, los más grandes
+    # (siguiente bucle 'for'), para cada fotograma del vídeo
+    # (bucle 'while' ejecutándose actualmente).
+    # Al no recorrer los demás contornos, estos serán descartados
+    # porque no son muy grandes ni importantes o son falsos.
+    # Siendo 'args.numeroHeliostatosAnalizar' el número de
+    # contornos deseado por el usuario por parámetro en la
+    # consola que se quiere analizar como máximo para cada
+    # fotograma.
     for i in range(0,args.numeroHeliostatosAnalizar):
 \end{lstlisting}
 
@@ -355,9 +418,12 @@ Este bucle ‘for’ que va del número 0 al 'args.numeroHeliostatosAnalizar' (s
         
 \begin{lstlisting}
         # Obtener las coordenadas del contorno.
-        (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
+        (x, y, w, h) = cv2.boundingRect(contours[i]) # xy:
+        # coordenadas de un punto, w: ancho, h: altura.
 
-        # Calcular el área del contorno numero 'i', en el fotograma actual del vídeo. 'i' es el iterador del bucle 'for' actual.
+        # Calcular el área del contorno numero 'i', en el
+        # fotograma actual del vídeo. 'i' es el iterador del
+        # bucle 'for' actual.
         area = cv2.contourArea(contours[i])
 \end{lstlisting}
         
@@ -368,25 +434,41 @@ Obtener las coordenadas del contorno usando el método ‘boundingRect’: XY, c
 Para el contorno número 1 y/o 2 del fotograma actual del vídeo, el programa detectará y calculará su área total, gracias al método ‘contourArea’ de la biblioteca de OpenCV.\\[20pt]
 
 \begin{lstlisting}
-        # Si el contorno tiene un ancho y alto mayores a los especificados por parámetros, este será analizado y reencuadrado en un rectángulo verde en el vídeo.
-        if (w > args.anchoMinimoHeliostato and h > args.altoMinimoHeliostato):
+        # Si el contorno tiene un ancho y alto mayores a los
+        # especificados por parámetros, este será analizado y
+        # reencuadrado en un rectángulo verde en el vídeo.
+        if (w > args.anchoMinimoHeliostato and
+        h > args.altoMinimoHeliostato):
 \end{lstlisting}
 
 Esta condición ‘if’ solo será ejecutada si los valores que el usuario proporcionó por parámetro desde consola de ancho y alto del helióstato son menores al ancho y alto del helióstato que se va a analizar justo ahora. Si se cumplen todas, se accederá a este ‘if’ para calcular y mostrar en consola la sumatoria acumulativa de los valores de las componentes RGB al cuadrado de todos los píxeles del contorno (helióstato), además del valor de área y de reencuadrarlo en un rectángulo verde en el vídeo. Y también, se mostrarán sus coordenadas (ubicación) en el vídeo, su ancho y alto, etcétera. Todo esto se irá aplicando a cada contorno.\\[20pt]            
 
 \begin{lstlisting}
-            # Si se está analizando el contorno número uno en el fotograma actual del vídeo, hacer.
+            # Si se está analizando el contorno número uno en
+            # el fotograma actual del vídeo, hacer.
             if (i == 0):
 
-                # Dibujar un rectángulo verde alrededor del contorno, en el vídeo.
-                # Parámetros: fotograma actual vídeo, esquina superior izquierda, esquina inferior derecha (width: ancho, height: altura), rectángulo color verde, grosor del rectángulo 2 píxeles.
-                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+                # Dibujar un rectángulo verde alrededor del
+                # contorno, en el vídeo. Parámetros: fotograma
+                # actual vídeo, esquina superior izquierda,
+                # esquina inferior derecha (width: ancho,
+                # height: altura), rectángulo color verde,
+                # grosor del rectángulo 2 píxeles.
+                cv2.rectangle(frame, (x, y), (x+w, y+h),
+                (0, 255, 0), 2)
 
-            # Si se está analizando el helióstato número dos en el fotograma actual del vídeo (en caso de que ya exista el otro helióstato en ese mismo fotograma del vídeo), hacer.
+            # Si se está analizando el helióstato número dos
+            # en el fotograma actual del vídeo (en caso de que
+            # ya exista el otro helióstato en ese mismo fotograma
+            # del vídeo), hacer.
             else:
 
-                # En este caso, ahora se reencuadra el contorno en un rectángulo rojo, en vez de verde. Así, ambos contornos podrán ser diferenciados si se muestran en el mismo fotograma del vídeo.
-                cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
+                # En este caso, ahora se reencuadra el contorno
+                # en un rectángulo rojo, en vez de verde. Así,
+                # ambos contornos podrán ser diferenciados si se
+                # muestran en el mismo fotograma del vídeo.
+                cv2.rectangle(frame, (x, y), (x+w, y+h),
+                (0, 0, 255), 2)
 \end{lstlisting}
 
 Aquí pueden suceder los siguientes casos:
@@ -405,36 +487,56 @@ Respecto a los parámetros introducidos en el método ‘rectangle’, aclarar q
             # Leer y analizar todos los píxeles del helióstato.
             def vectorial(frame, x, y):
             
-                # Del fotograma actual del vídeo, se leerá únicamente donde haya un helióstato (su ancho y alto), y así con todos los helióstatos de cada fotograma del vídeo.
+                # Del fotograma actual del vídeo, se leerá
+                # únicamente donde haya un helióstato (su ancho
+                # y alto), y así con todos los helióstatos de
+                # cada fotograma del vídeo.
                 m = frame[y+2:y+h-1, x+2:x+w-1]
                 
-                # Obtener en matrices las componentes BGR de todos los píxeles del helióstato.
+                # Obtener en matrices las componentes BGR de
+                # todos los píxeles del helióstato.
                 mB = m[:, :, 2]
                 mG = m[:, :, 1]
                 mR = m[:, :, 0]
                                 
-                # Elevar al cuadrado cada dato BGR del helióstato.
+                # Elevar al cuadrado cada dato BGR del
+                # helióstato.
                 mB2 = np.power(mB, 2)
                 mG2 = np.power(mG, 2)
                 mR2 = np.power(mR, 2)
                 
-                # Realizar la sumatoria acumulativa de cada BGR al cuadrado de ese helióstato.
+                # Realizar la sumatoria acumulativa de cada BGR
+                # al cuadrado de ese helióstato.
                 sumB = np.sum(mB2)
                 sumG = np.sum(mG2)
                 sumR = np.sum(mR2)
 
-                # Sumar las anteriores tres componentes entre sí, para obtener la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
+                # Sumar las anteriores tres componentes entre sí,
+                # para obtener la sumatoria total de los valores
+                # de las tres componentes RGB entre sí de todos
+                # los píxeles al cuadrado del contorno entero.
                 sumaRGB = sumR+sumG+sumB
                 
-                # Introducir en el array 'heliostato' qué helióstato(s) se ha(n) leído y analizado en el fotograma actual del vídeo (reencuadre verde o rojo).
+                # Introducir en el array 'heliostato' qué
+                # helióstato(s) se ha(n) leído y analizado en el
+                # fotograma actual del vídeo (reencuadre verde o
+                # rojo).
                 if (i == 0):
                     heliostato.append("Verde                           ")
                 else:
                     heliostato.append("Rojo")
                 
-                # Ir introduciendo en los arrays las informaciones de los resultados de los helióstatos, con el fin de mostrarlas después por consola.
-                # Al ser arrays acumulativos, si en un mismo fotograma del vídeo se obtienen datos de dos helióstatos, para cada array se guardarán los datos de esos dos helióstatos a la vez.
-                # De esta forma, se compactará más la información mostrada en consola al estar esta a dos columnas: helióstato verde y helióstato rojo, para cada línea de texto o array.
+                # Ir introduciendo en los arrays las
+                # informaciones de los resultados de los
+                # helióstatos, con el fin de mostrarlas después
+                # por consola. Al ser arrays acumulativos, si
+                # en un mismo fotograma del vídeo se obtienen
+                # datos de dos helióstatos, para cada array se
+                # guardarán los datos de esos dos helióstatos a
+                # la vez. De esta forma, se compactará más la
+                # información mostrada en consola al estar esta
+                # a dos columnas: helióstato verde y helióstato
+                # rojo, para cada línea de texto o array.
                 anchoAlto.append(w)
                 anchoAlto.append(h)
                 anchoAlto.append("                      ")
@@ -449,13 +551,21 @@ Respecto a los parámetros introducidos en el método ‘rectangle’, aclarar q
                 sumaBGRtotal.append(sumaBGR)
                 sumaBGRtotal.append("                       ")
                 
-                # Dependiendo de qué helióstato se esté analizando (reencuadre verde o rojo), los resultados de la estimación de potencia para cada fotograma del vídeo se guardarán en un fichero o en otro.
+                # Dependiendo de qué helióstato se esté
+                # analizando (reencuadre verde o rojo), los
+                # resultados de la estimación de potencia para
+                # cada fotograma del vídeo se guardarán en un
+                # fichero o en otro.
                 if (i == 0):
                     f1.write(str(sumaBGR)+"\n")  
                 else:
                     f2.write(str(sumaBGR)+"\n")
 
-            # Llamar a la función definida 'vectorial(frame, x, y)', siendo 'frame' el fotograma actual del vídeo a tratar, y XY las coordenadas de la esquina superior izquierda del helióstato.
+            # Llamar a la función definida
+            # 'vectorial(frame, x, y)', siendo 'frame' el
+            # fotograma actual del vídeo a tratar, y XY las
+            # coordenadas de la esquina superior izquierda del
+            # helióstato.
             vectorial(frame, x, y)
 \end{lstlisting}
         
@@ -492,8 +602,13 @@ En el final de este fragmento de código, donde hay un 'if-else' y unos métodos
 
 \begin{lstlisting}
 		else:
-            # Si el ancho y alto proporcionados por el usuario en consola no son mayores al ancho y alto del helióstato actual (en análisis), aparte de no analizarlo,
-            # marcar su estimación de potencia como cero y guardarlo en un fichero o en otro, dependiendo de si se trata del helióstato con reencuadre verde o rojo.
+            # Si el ancho y alto proporcionados por el usuario
+            # en consola no son mayores al ancho y alto del
+            # helióstato actual (en análisis), aparte de no
+            # analizarlo, marcar su estimación de potencia como
+            # cero y guardarlo en un fichero o en otro,
+            # dependiendo de si se trata del helióstato con
+            # reencuadre verde o rojo.
             if (i == 0):
                 f1.write(str(0)+"\n")
             else:
@@ -510,15 +625,20 @@ cv2.imshow("Camara", frame)
 Mostrar el vídeo de helióstatos normal en pantalla con el método ‘imshow()’, y reproducirse al mismo tiempo que el programa va analizando cada uno de sus fotogramas. Con ‘reproducirse’, quiere decir además que se actualizará o cambiará el fotograma del vídeo al actual.\\[20pt]
 
 \begin{lstlisting}
-# Mostrar en consola el valor del área del helióstato en píxeles, su ancho y alto también en píxeles,
-# los valores de las sumatorias acumulativas RGB al cuadrado (cada componente por separado) de todos los píxeles del helióstato, y esto mismo pero sumando esta vez las tres componentes entre sí.
+# Mostrar en consola el valor del área del helióstato en píxeles,
+# su ancho y alto también en píxeles, los valores de las
+# sumatorias acumulativas RGB al cuadrado (cada componente
+# por separado) de todos los píxeles del helióstato, y esto mismo
+# pero sumando esta vez las tres componentes entre sí.
     print(heliostato)
     print(anchoAlto)
     print(areaTotal)
     print(sumaBGRparcial)
     print(sumaBGRtotal)
 
-# Borrar el contenido de los arrays, ya que se ha mostrado toda la información en consola del helióstato (o helióstatos) para el fotograma actual del vídeo de helióstatos.
+# Borrar el contenido de los arrays, ya que se ha mostrado toda
+# la información en consola del helióstato (o helióstatos) para
+# el fotograma actual del vídeo de helióstatos.
     del heliostato[:]
     del anchoAlto[:]
     del areaTotal[:]
@@ -531,12 +651,21 @@ Mostrar en consola todos los datos obtenidos del helióstato (o helióstatos) de
 Después, tras mostrarse toda esta información en la consola, vaciar los arrays, con el fin de reutilizarlos para el análisis de los siguientes fotogramas.\\[20pt]
 
 \begin{lstlisting}
-# Al alcanzar esta línea de código, ya se habrá leído y analizado el fotograma actual del vídeo. Antes de pasar al siguiente fotograma, hacer:
-    frame\_counter += 1 # Incrementar el contador de fotogramas leídos del vídeo a uno.
-    end\_time = time.time() # Obtener el tiempo de ejecución tras haber leído el fotograma actual del vídeo.
-    fps = frame\_counter / float(end\_time - start\_time) # Calcular los FPS (fotogramas por segundo del vídeo) dividiendo el contador de fotogramas actual por la diferencia entre ambos tiempos medidos.
+# Al alcanzar esta línea de código, ya se habrá leído y analizado
+# el fotograma actual del vídeo. Antes de pasar al siguiente
+# fotograma, hacer:
+    frame\_counter += 1 # Incrementar el contador de fotogramas
+    # leídos del vídeo a uno.
+    end\_time = time.time() # Obtener el tiempo de ejecución
+    # tras haber leído el fotograma actual del vídeo.
+    fps = frame\_counter / float(end\_time - start\_time)
+    # Calcular los FPS (fotogramas por segundo del vídeo)
+    # dividiendo el contador de fotogramas actual por la
+    # diferencia entre ambos tiempos medidos.
     print("")
-    print("FPS:", fps) # Mostrar en consola los FPS (fotogramas por segundo del vídeo). Se mostrará cada vez que se haya analizado el fotograma actual del vídeo.
+    print("FPS:", fps) # Mostrar en consola los FPS
+    # (fotogramas por segundo del vídeo). Se mostrará cada vez
+    # que se haya analizado el fotograma actual del vídeo.
     print("")
     print("")
 \end{lstlisting}
@@ -544,7 +673,9 @@ Después, tras mostrarse toda esta información en la consola, vaciar los arrays
 Esta sección de código se encargará de calcular los FPS (fotogramas por segundo) del vídeo de helióstatos, cada vez que se lea y analice un fotograma completo de ese vídeo (o el equivalente a haber alcanzado estas líneas de código). Para ello, se incrementa en uno el contador de fotogramas leídos, tomar el tiempo de ejecución final tras haber procesado el fotograma actual, calcular los FPS con una fórmula que consiste en dividir el contador de fotogramas leídos actual entre la diferencia del tiempo final de la lectura del fotograma actual y el comienzo de la ejecución del programa, y mostrar dicho resultado en consola, cada vez que se haya leído y procesado un fotograma del vídeo.\\[20pt]
 
 \begin{lstlisting}
-# Cuando el bucle 'while' inicial finalice, mostrar en consola que el programa finalizó su ejecución (el vídeo fue leído y analizado completamente).
+# Cuando el bucle 'while' inicial finalice, mostrar en consola
+# que el programa finalizó su ejecución (el vídeo fue leído y
+# analizado completamente).
 print("Programa terminado.")
 \end{lstlisting}
 
@@ -561,8 +692,6 @@ Como ya se alcanzó el final del programa, los ficheros de texto que fueron abie
 
 
 \subsection{Cronograma de tareas.}
-
-
 
 19 de marzo de 2.017: he adaptado el código para que el programa lea y trabaje todos los fotogramas del vídeo de helióstatos cargado.
 
