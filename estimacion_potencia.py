@@ -4,8 +4,9 @@ import argparse
 import time
 import numpy as np
 
-f1 = open("SumasBGRHeliostatosVerdes.txt", "a")
-f2 = open("SumasBGRHeliostatosRojos.txt", "a")
+# Crear y abrir los siguientes archivos de texto en modo escritura.
+f1 = open("SumasBGRHeliostatosVerdes.txt", "w")
+f2 = open("SumasBGRHeliostatosRojos.txt", "w")
 
 start_time = time.time() # Obtener el tiempo de ejecución inicial de este programa.
 frame_counter = 0 # Contador de fotogramas totales del vídeo. Se irá incrementando progresivamente en líneas de código posteriores.
@@ -101,7 +102,7 @@ while True:
                 # Del fotograma actual del vídeo, se leerá únicamente donde haya un helióstato (su ancho y alto), y así con todos los helióstatos de cada fotograma del vídeo.
                 m = frame[y+2:y+h-1, x+2:x+w-1]
                              
-                # Matrices BGR resultado de la lectura de ese helióstato.
+                # Obtener en matrices las componentes BGR de todos los píxeles del helióstato.
                 mB = m[:, :, 2]
                 mG = m[:, :, 1]
                 mR = m[:, :, 0]
@@ -118,7 +119,8 @@ while True:
 
                 # Sumar las anteriores tres componentes entre sí, para obtener la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
                 sumaBGR = sumR+sumG+sumB
-                
+
+                # Introducir en el array 'heliostato' qué helióstato(s) se ha(n) leído y analizado en el fotograma actual del vídeo (reencuadre verde o rojo).
                 if (i == 0):
                     heliostato.append("Verde                           ")
                 else:
@@ -142,6 +144,7 @@ while True:
                 sumaBGRtotal.append(sumaBGR)
                 sumaBGRtotal.append("                       ")
 
+                # Dependiendo de qué helióstato se esté analizando (reencuadre verde o rojo), los resultados de la estimación de potencia para cada fotograma del vídeo se guardarán en un fichero o en otro.
                 if (i == 0):
                     f1.write(str(sumaBGR)+"\n")
                 else:
@@ -151,7 +154,9 @@ while True:
             vectorial(frame, x, y)
             
         else:
-            
+
+            # Si el ancho y alto proporcionados por el usuario en consola no son mayores al ancho y alto del helióstato actual (en análisis), aparte de no analizarlo,
+            # marcar su estimación de potencia como cero y guardarlo en un fichero o en otro, dependiendo de si se trata del helióstato con reencuadre verde o rojo.
             if (i == 0):
                 f1.write(str(0)+"\n")
             else:
@@ -187,5 +192,6 @@ while True:
 # Cuando el bucle 'while' inicial finalice, mostrar en consola que el programa finalizó su ejecución (el vídeo fue leído y analizado completamente).
 print("Programa terminado.")
 
+# Tras finalizar la edición de ambos ficheros, cerrarlos.
 f1.close()
 f2.close()
