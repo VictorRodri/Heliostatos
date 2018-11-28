@@ -1,9 +1,10 @@
-\documentclass[11pt,draft]{article} % Tamaño fuente
+\documentclass[11pt]{article} % Tamaño fuente
 
 \usepackage[utf8x]{inputenc}
 \usepackage[spanish,es-noshorthands]{babel}
-
+\usepackage[pages=some]{background}
 \usepackage{hyperref}
+
 \usepackage{amssymb,amsmath,amsthm,amsfonts}
 \usepackage{calc}
 \usepackage{graphicx}
@@ -77,6 +78,16 @@
 
 \begin{document}
 
+\backgroundsetup{
+ scale=1, %escala
+ color=black, %fondo a usar para transparencia
+ opacity=0.0, %nivel de transparencia
+ angle=0, %en caso de querer una rotación
+ contents={%
+  \includegraphics[width=\paperwidth,height=\paperheight]{TFG_II_fron.pdf}
+ }%
+}
+
 \includepdf{TFG_II_front}
 
 \tableofcontents
@@ -89,7 +100,7 @@
 \input{Cap3OpenCV}
 \input{Cap4PropuestaDesarrollada}
 \input{Cap5ConclusionesYPosiblesLineasTrabajoFuturo}
-\input{Cap6ReferenciasBibliograficas}
+%\input{Cap6ReferenciasBibliograficas}
 
 \addcontentsline{toc}{section}{Referencias}
 \bibliographystyle{plain}
