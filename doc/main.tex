@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article} % Tamaño fuente
 
 \usepackage[utf8x]{inputenc}
 \usepackage[spanish,es-noshorthands]{babel}
@@ -19,12 +19,11 @@
 \usepackage{vmargin}
 \usepackage{verbatim}
 \usepackage{listings}
-\setmarginsrb{2.5 cm}{2.5 cm}{2.5 cm}{2.5 cm}{0 cm}{1.5 cm}{0 cm}{1.5 cm}
+\usepackage{pdfpages}
+\setmarginsrb{2.5 cm}{2.5 cm}{2.5 cm}{2.5 cm}{0 cm}{1.5 cm}{0 cm}{0 cm} % Márgenes
 \renewcommand{\baselinestretch}{1} % Interlineado
 
-\title{Medición de la radiación solar proyectada}					% Titulo
-\author{Tu nombre}					% Autor
-\date{\today}						% Fecha
+\title{Medición de la radiación solar proyectada} % Título
 
 \makeatletter
 \let\thetitle\@title
@@ -36,7 +35,7 @@
 \fancyhf{}
 \rhead{\theauthor}
 \lhead{\thetitle}
-\cfoot{\thepage}
+\rhead{\thepage}
 
 \lstset{
      basicstyle=\small,
@@ -77,10 +76,12 @@
 
 \begin{document}
 
+\includepdf{TFG_II_front}
+
 \tableofcontents
 \pagebreak
 
-\lstset{language=Python} 
+\lstset{language=Python}
 
 \input{Cap1DescripcionProblemaResolver}
 \input{Cap2Python}

@@ -85,7 +85,7 @@ Figura \ref{fig:CapturasInstalacionPython/unnamed(6).png}. Cuando finalice corre
 
 \begin{figure}[h!]
   	\centering
-	\includegraphics[width=\textwidth]{CapturasInstalacionPython/unnamed(7).png}
+	\includegraphics[scale=1]{CapturasInstalacionPython/unnamed(7).png}
 	\caption{Icono en el escritorio para abrir Python.
 	\label{fig:CapturasInstalacionPython/unnamed(7).png}}
 \end{figure}
@@ -138,15 +138,18 @@ Para usar y ejecutar el software en el PC descrito en este informe, especialment
 
 Nota: el código de este proyecto se realizó mediante el programa Python e IDLE 3.6.4.
 
-1. Acceder a la página Web donde se ubica el proyecto: https://github.com/VictorRodri/Heliostatos
+1. Acceder a la página Web donde se ubica el proyecto:\\
+https://github.com/VictorRodri/Heliostatos
 
 2. En ella, hacer clic en el botón verde 'Clone or download' \textgreater 'Download ZIP'.
 
 3. El proyecto se descargará en el disco duro del equipo, generalmente en 'Documentos' \textgreater 'Descargas'. De lo contrario, especificar en qué ruta exacta del equipo se realizará la descarga.
 
-4. Descomprimir el proyecto descargado previamente, usando un software como WinRAR: https://www.winrar.es/descargas
+4. Descomprimir el proyecto descargado previamente, usando un software como WinRAR:\\
+https://www.winrar.es/descargas
 
-5. Instalar la última versión de Python desde su página Web oficial: https://www.python.org/downloads/
+5. Instalar la última versión de Python desde su página Web oficial:\\
+https://www.python.org/downloads/
 
 6. Abrir la terminal de comandos de Windows. Para ello, hacer clic en 'Inicio' \textgreater 'Ejecutar'. En la ventana que aparecerá, escribir en el cuadro de texto 'cmd' y pulsar Enter.
 
@@ -165,42 +168,42 @@ El funcionamiento del código de helióstatos mediante la representación de un 
 \begin{figure}[h!]
   	\centering
 	\includegraphics[width=\textwidth]{DiagramaFlujoSoftwareTFG/diagramaFlujo1.PNG}
-	\caption{Diagrama de flujo 1.
+	\caption{Diagrama de flujo, parte 1.
 	\label{fig:DiagramaFlujoSoftwareTFG/diagramaFlujo1.PNG}}
 \end{figure}
 
 \begin{figure}[h!]
   	\centering
 	\includegraphics[width=\textwidth]{DiagramaFlujoSoftwareTFG/diagramaFlujo2.PNG}
-	\caption{Diagrama de flujo 2.
+	\caption{Diagrama de flujo, parte 2.
 	\label{fig:DiagramaFlujoSoftwareTFG/diagramaFlujo2.PNG}}
 \end{figure}
 
 \begin{figure}[h!]
   	\centering
 	\includegraphics[width=\textwidth]{DiagramaFlujoSoftwareTFG/diagramaFlujo3.PNG}
-	\caption{Diagrama de flujo 3.
+	\caption{Diagrama de flujo, parte 3.
 	\label{fig:DiagramaFlujoSoftwareTFG/diagramaFlujo3.PNG}}
 \end{figure}
 
 \begin{figure}[h!]
   	\centering
 	\includegraphics[width=\textwidth]{DiagramaFlujoSoftwareTFG/diagramaFlujo4.PNG}
-	\caption{Diagrama de flujo 4.
+	\caption{Diagrama de flujo, parte 4.
 	\label{fig:DiagramaFlujoSoftwareTFG/diagramaFlujo4.PNG}}
 \end{figure}
 
 \begin{figure}[h!]
   	\centering
 	\includegraphics[width=\textwidth]{DiagramaFlujoSoftwareTFG/diagramaFlujo5.PNG}
-	\caption{Diagrama de flujo 5.
+	\caption{Diagrama de flujo, parte 5.
 	\label{fig:DiagramaFlujoSoftwareTFG/diagramaFlujo5.PNG}}
 \end{figure}
 
 \begin{figure}[h!]
   	\centering
 	\includegraphics[width=\textwidth]{DiagramaFlujoSoftwareTFG/diagramaFlujo6.PNG}
-	\caption{Diagrama de flujo 6.
+	\caption{Diagrama de flujo, parte 6.
 	\label{fig:DiagramaFlujoSoftwareTFG/diagramaFlujo6.PNG}}
 \end{figure}
 
@@ -424,14 +427,14 @@ Este bucle ‘for’ que va del número 0 al 'args.numeroHeliostatosAnalizar' (s
         # Calcular el área del contorno numero 'i', en el
         # fotograma actual del vídeo. 'i' es el iterador del
         # bucle 'for' actual.
-        area = cv2.contourArea(contours[i])
+        area = int(cv2.contourArea(contours[i]))
 \end{lstlisting}
         
 Para cada contorno, se obtendrán sus coordenadas en el vídeo, y su valor de área, aparte de mostrar el vídeo de helióstatos normal en pantalla (en tiempo de ejecución), o de actualizarlo al siguiente fotograma que se analizará.
 
 Obtener las coordenadas del contorno usando el método ‘boundingRect’: XY, correspondientes a su esquina superior izquierda en el vídeo, y WH, correspondientes a su ancho (horizontal) y su altura (vertical). Es posible que si el helióstato todavía no ha terminado de entrar en el vídeo (desde el lado izquierdo), pues que no se muestre su esquina superior izquierda. Así que en este caso, se mostrará la esquina superior izquierda del helióstato mostrado en dicho vídeo hasta el momento. Respectivamente para el ancho y la altura.
 
-Para el contorno número 1 y/o 2 del fotograma actual del vídeo, el programa detectará y calculará su área total, gracias al método ‘contourArea’ de la biblioteca de OpenCV.\\[20pt]
+Para el contorno número 1 y/o 2 del fotograma actual del vídeo, el programa detectará y calculará su área total (como número entero, usando 'int'), gracias al método ‘contourArea’ de la biblioteca de OpenCV.\\[20pt]
 
 \begin{lstlisting}
         # Si el contorno tiene un ancho y alto mayores a los
@@ -693,67 +696,76 @@ Como ya se alcanzó el final del programa, los ficheros de texto que fueron abie
 
 \subsection{Cronograma de tareas.}
 
-19 de marzo de 2.017: he adaptado el código para que el programa lea y trabaje todos los fotogramas del vídeo de helióstatos cargado.
+\begin{figure}[h!]
+  	\centering
+	\includegraphics[width=\textwidth]{CronogramaTareas/cronogramaTareas.PNG}
+	\caption{Cronograma de tareas.
+	\label{fig:CronogramaTareas/cronogramaTareas.PNG}}
+\end{figure}
 
-17 de abril de 2.017: le agregué al código una instrucción para calcular el área del contorno del helióstato.
+En la figura \ref{fig:CronogramaTareas/cronogramaTareas.PNG} se muestra un cronograma de tareas con las tareas realizadas en este trabajo de fin de grado (TFG) y sus respectivas duraciones.
 
-5 de mayo de 2.017: he logrado que genere el programa Python un archivo TXT con las áreas en cada fotograma del vídeo, y con el programa Gnuplot proporcionar ese archivo para generar una gráfica y guardarla como PDF.
+Tarea 1. 19 de marzo de 2.017: he adaptado el código para que el programa lea y trabaje todos los fotogramas del vídeo de helióstatos cargado.
 
-1 de agosto de 2.017: he conseguido adaptar el programa para que guarde en el PC todas las imágenes y contornos con área de proyección tendiendo a cero.
+Tarea 2. 17 de abril de 2.017: le agregué al código una instrucción para calcular el área del contorno del helióstato.
 
-29 de septiembre de 2.017: programé el software para que seleccione y procese siempre el helióstato más grande de todos, además de calcular el área de todos los helióstatos localizados, para cada fotograma del vídeo de helióstatos.
+Tarea 3. 5 de mayo de 2.017: he logrado que genere el programa Python un archivo TXT con las áreas en cada fotograma del vídeo, y con el programa Gnuplot proporcionar ese archivo para generar una gráfica y guardarla como PDF.
 
-1 de octubre de 2.017: solucioné el problema de que se necesitaba saber cuántos contornos (helióstatos) habían en total en cada fotograma del vídeo de helióstatos. Para ello, la instrucción que devolvía dicho valor era ‘for i in range(0,len(contours)):’.
+Tarea 4. 1 de agosto de 2.017: he conseguido adaptar el programa para que guarde en el PC todas las imágenes y contornos con área de proyección tendiendo a cero.
 
-30 de octubre de 2.017: el programa ya reencuadra únicamente los helióstatos reales (en cada fotograma del vídeo de helióstatos), y no los falsos helióstatos, a partir de un umbral determinado.
+Tarea 5. 29 de septiembre de 2.017: programé el software para que seleccione y procese siempre el helióstato más grande de todos, además de calcular el área de todos los helióstatos localizados, para cada fotograma del vídeo de helióstatos.
 
-29 de noviembre de 2.017: he conseguido que en un determinado píxel XY, el que yo especifique al programa, del fotograma del vídeo de helióstatos, indicase cada componente RGB, por separado (de rojo, de verde y de azul), y también sumadas entre sí (R+G+B).
+Tarea 6. 1 de octubre de 2.017: solucioné el problema de que se necesitaba saber cuántos contornos (helióstatos) habían en total en cada fotograma del vídeo de helióstatos. Para ello, la instrucción que devolvía dicho valor era ‘for i in range(0,len(contours)):’.
 
-6 de febrero de 2.018: agregué algunos cálculos al software para obtener la energía del reflejo de la proyección del helióstato, indicando en formato código que la energía era el cuadrado de las componentes RGB.
+Tarea 7. 30 de octubre de 2.017: el programa ya reencuadra únicamente los helióstatos reales (en cada fotograma del vídeo de helióstatos), y no los falsos helióstatos, a partir de un umbral determinado.
 
-10 de febrero de 2.018: en el informe he explicado cosas sobre las energías renovables e información básica sobre los helióstatos, como sus utilidades y usos.
+Tarea 8. 29 de noviembre de 2.017: he conseguido que en un determinado píxel XY, el que yo especifique al programa, del fotograma del vídeo de helióstatos, indicase cada componente RGB, por separado (de rojo, de verde y de azul), y también sumadas entre sí (R+G+B).
 
-11 de abril de 2.018: en el informe he explicado cosas sobre el helióstato con sensor de reflexión y del funcionamiento de la central solar de receptor central o de tipo torre.
+Tarea 9. 6 de febrero de 2.018: agregué algunos cálculos al software para obtener la energía del reflejo de la proyección del helióstato, indicando en formato código que la energía era el cuadrado de las componentes RGB.
 
-15 de junio de 2.018: agregué el índice del informe. Además, en dicho informe he explicado cosas sobre las centrales térmicas.
+Tarea 10. 10 de febrero de 2.018: en el informe he explicado cosas sobre las energías renovables e información básica sobre los helióstatos, como sus utilidades y usos.
 
-18 de junio de 2.018: en el informe he explicado cosas sobre las plantas termosolares PSA, PS10 y PS20 y Gemasolar.
+Tarea 11. 11 de abril de 2.018: en el informe he explicado cosas sobre el helióstato con sensor de reflexión y del funcionamiento de la central solar de receptor central o de tipo torre.
 
-2 de julio de 2.018: he corregido algunos errores que he localizado en el diagrama de flujo del software desarrollado, tras una segunda revisión.
+Tarea 12. 15 de junio de 2.018: agregué el índice del informe. Además, en dicho informe he explicado cosas sobre las centrales térmicas.
 
-3 de julio de 2.018: he mejorado el índice del TFG.
+Tarea 13. 18 de junio de 2.018: en el informe he explicado cosas sobre las plantas termosolares PSA, PS10 y PS20 y Gemasolar.
 
-17 de julio de 2.018: en el informe he explicado cosas sobre OpenCV y Python.
+Tarea 14. 2 de julio de 2.018: he corregido algunos errores que he localizado en el diagrama de flujo del software desarrollado, tras una segunda revisión.
 
-10 de agosto de 2.018: he programado el software para que el usuario pueda introducir algunas variables desde consola, como el vídeo de helióstatos a cargar, y las dimensiones de dicho helióstato.
+Tarea 15. 3 de julio de 2.018: he mejorado el índice del TFG.
 
-15 de agosto de 2.018: en el programa, en los bucles 'for' X-Y que recorren todos los píxeles del contorno, yo lo puse para que analice desde la posición X de donde se ubica ahora mismo el contorno hasta su longitud (y respectivamente desde Y hasta su altura). Y eso estaba mal. Debería ser desde X hasta X+longitud (y respectivamente para Y: desde Y hasta Y+altura), porque las posiciones X-Y del helióstato no son las mismas, van cambiando a lo largo del vídeo. Hice las correcciones necesarias en el código, y este problema se finalmente se solucionó.
+Tarea 16. 17 de julio de 2.018: en el informe he explicado cosas sobre OpenCV y Python.
 
-17 de agosto de 2.018: arreglé en el software otro problema. Consistía en que estaba confundiendo las coordenadas XY del vídeo de helióstatos, y en una de esas coordenadas se salía del vídeo, y analizaba coordenadas inexistentes en esa área del vídeo.
+Tarea 17. 10 de agosto de 2.018: he programado el software para que el usuario pueda introducir algunas variables desde consola, como el vídeo de helióstatos a cargar, y las dimensiones de dicho helióstato.
 
-18 de agosto de 2.018: he realizado algunas modificaciones en el código para que si aparecen dos helióstatos en un mismo fotograma del vídeo, que además de analizar cada helióstato por separado, que mencione el área de cada uno de ellos. También he puesto que para que se detecte y analice un helióstato, debe tener como mínimo tal ancho y alto, o superior. Estas tres variables se pueden pasar por parámetro en la línea de comandos.
+Tarea 18. 15 de agosto de 2.018: en el programa, en los bucles 'for' X-Y que recorren todos los píxeles del contorno, yo lo puse para que analice desde la posición X de donde se ubica ahora mismo el contorno hasta su longitud (y respectivamente desde Y hasta su altura). Y eso estaba mal. Debería ser desde X hasta X+longitud (y respectivamente para Y: desde Y hasta Y+altura), porque las posiciones X-Y del helióstato no son las mismas, van cambiando a lo largo del vídeo. Hice las correcciones necesarias en el código, y este problema se finalmente se solucionó.
 
-9 de septiembre de 2.018: optimicé más el software, ya que había una sección de código que consumía bastantes recursos del PC. Para ello, usé la biblioteca de Python 'NumPy'.
+Tarea 19. 17 de agosto de 2.018: arreglé en el software otro problema. Consistía en que estaba confundiendo las coordenadas XY del vídeo de helióstatos, y en una de esas coordenadas se salía del vídeo, y analizaba coordenadas inexistentes en esa área del vídeo.
 
-10 de septiembre de 2.018: seguí actualizando la memoria, ya que de nuevo tenía contenido explicado para una versión antigua del programa que tengo hecho actualmente.
+Tarea 20. 18 de agosto de 2.018: he realizado algunas modificaciones en el código para que si aparecen dos helióstatos en un mismo fotograma del vídeo, que además de analizar cada helióstato por separado, que mencione el área de cada uno de ellos. También he puesto que para que se detecte y analice un helióstato, debe tener como mínimo tal ancho y alto, o superior. Estas tres variables se pueden pasar por parámetro en la línea de comandos.
 
-8 de octubre de 2.018: he logrado que el programa mostrase la información de los helióstatos por consola a dos columnas.
+Tarea 21. 9 de septiembre de 2.018: optimicé más el software, ya que había una sección de código que consumía bastantes recursos del PC. Para ello, usé la biblioteca de Python 'NumPy'.
 
-15 de octubre de 2.018: expliqué también en mi informe sobre la Ivanpah Solar Electric Generating System, en el capítulo 1 de helióstatos.
+Tarea 22. 10 de septiembre de 2.018: seguí actualizando la memoria, ya que de nuevo tenía contenido explicado para una versión antigua del programa que tengo hecho actualmente.
 
-19 de octubre de 2.018: he pasado todo mi informe a LaTeX. También he logrado corregir el fallo de que el programa no siempre funcionaba para cualquier vídeo que se le proporcionase.
+Tarea 23. 8 de octubre de 2.018: he logrado que el programa mostrase la información de los helióstatos por consola a dos columnas.
 
-20 de octubre de 2.018: he hecho unos cambios al código con el fin de que por consola, también solicite al usuario el umbral del vídeo, y el número máximo de helióstatos a analizar por fotograma.
+Tarea 24. 15 de octubre de 2.018: expliqué también en mi informe sobre la Ivanpah Solar Electric Generating System, en el capítulo 1 de helióstatos.
 
-27 de octubre de 2.018: he reducido el capítulo 1 de helióstatos del informe del TFG en LaTeX a 10 páginas sin imágenes, y he hecho también varias correcciones de dicho capítulo.
+Tarea 25. 19 de octubre de 2.018: he pasado todo mi informe a LaTeX. También he logrado corregir el fallo de que el programa no siempre funcionaba para cualquier vídeo que se le proporcionase.
 
-3 de noviembre de 2.018: he hecho las referencias bibliográficas usando el comando 'cite' en LaTeX, para referenciarlas al archivo 'proyecto.bib'.
+Tarea 26. 20 de octubre de 2.018: he hecho unos cambios al código con el fin de que por consola, también solicite al usuario el umbral del vídeo, y el número máximo de helióstatos a analizar por fotograma.
 
-15 de noviembre de 2.018: he actualizado los contenidos de las secciones 'Funcionamiento del software y código', 'Entradas y salidas del software', 'Cronograma de tareas', 'Análisis de los recursos consumidos', y 'Ejemplos de ejecuciones y comentarios sobre sus resultados' del capítulo 4 de 'Propuesta desarrollada' del informe del TFG.
+Tarea 27. 27 de octubre de 2.018: he reducido el capítulo 1 de helióstatos del informe del TFG en LaTeX a 10 páginas sin imágenes, y he hecho también varias correcciones de dicho capítulo.
 
-17 de noviembre de 2.018: he agregado capturas de pantalla de mi programa en el TEX del capítulo 4 (propuesta desarrollada), y dentro de ese TEX o capítulo, en la sección de análisis de recursos consumidos. También he ido extendiendo un poco más (actualizando) el cronograma de tareas de dicho capítulo 4.
+Tarea 28. 3 de noviembre de 2.018: he hecho las referencias bibliográficas usando el comando 'cite' en LaTeX, para referenciarlas al archivo 'proyecto.bib'.
 
-26 de noviembre de 2.018: he actualizado y arreglado algunos detalles de la memoria y software, y aplicando el formato y estructura requerida a dicha memoria en LaTeX.
+Tarea 29. 15 de noviembre de 2.018: he actualizado los contenidos de las secciones 'Funcionamiento del software y código', 'Entradas y salidas del software', 'Cronograma de tareas', 'Análisis de los recursos consumidos', y 'Ejemplos de ejecuciones y comentarios sobre sus resultados' del capítulo 4 de 'Propuesta desarrollada' del informe del TFG.
+
+Tarea 30. 17 de noviembre de 2.018: he agregado capturas de pantalla de mi programa en el TEX del capítulo 4 (propuesta desarrollada), y dentro de ese TEX o capítulo, en la sección de análisis de recursos consumidos. También he ido extendiendo un poco más (actualizando) el cronograma de tareas de dicho capítulo 4.
+
+Tarea 31. 26 de noviembre de 2.018: he actualizado y arreglado algunos detalles de la memoria y software, y aplicando el formato y estructura requerida a dicha memoria en LaTeX.
 
 \subsection{Descripción de los requerimientos/requisitos.}
 

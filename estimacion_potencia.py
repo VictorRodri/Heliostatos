@@ -78,7 +78,7 @@ while True:
         (x, y, w, h) = cv2.boundingRect(contours[i]) # xy: coordenadas de un punto, w: ancho, h: altura.
         
         # Calcular el área del contorno número 'i', en el fotograma actual del vídeo. 'i' es el iterador del bucle 'for' actual.
-        area = cv2.contourArea(contours[i])
+        area = int(cv2.contourArea(contours[i]))
         
         # Si el contorno tiene un ancho y alto mayores a los especificados por parámetros, este será analizado y reencuadrado en un rectángulo verde en el vídeo.
         if (w > args.anchoMinimoHeliostato and h > args.altoMinimoHeliostato):
