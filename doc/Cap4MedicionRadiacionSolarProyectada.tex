@@ -144,8 +144,7 @@ Para usar y ejecutar el software en el PC descrito en este informe, especialment
 
 Nota: el código de este proyecto se realizó mediante el programa Python e IDLE 3.6.4.
 
-1. Acceder a la página Web donde se ubica el proyecto:\\
-https://github.com/VictorRodri/Heliostatos
+1. Acceder a la página Web donde se ubica el proyecto: \url{https://github.com/VictorRodri/Heliostatos}.
 
 2. En ella, hacer clic en el botón verde 'Clone or download' \textgreater 'Download ZIP'.
 
@@ -159,7 +158,7 @@ https://github.com/VictorRodri/Heliostatos
 
 7. La terminal mostrará la ruta o directorio del sistema donde se ubica usted actualmente, como \verb|C:\Users\Pc>|. Ir navegando hasta encontrar el directorio que contiene el proyecto descomprimido previamente. Para acceder a una carpeta, escribir 'cd NombreCarpeta' y pulsar Enter. Para salir del directorio actual, escribir 'cd ..'.
 
-8. Una vez se haya navegado al directorio que contiene el proyecto, ejecutarlo con el comando 'estimacion\_potencia.py Videos/varios\_heliostatos.mp4 50 50', siendo respectivamente el nombre del proyecto '.py' con el software ejecutable, el directorio que contiene el vídeo de helióstatos a ser procesado, y el ancho y alto mínimos del helióstato para su detección y análisis.
+8. Una vez se haya navegado al directorio que contiene el proyecto, ejecutarlo con el comando \verb|estimacion_potencia.py Videos/varios_heliostatos.mp4 50 50|, siendo respectivamente el nombre del proyecto '.py' con el software ejecutable, el directorio que contiene el vídeo de helióstatos a ser procesado, y el ancho y alto mínimos del helióstato para su detección y análisis.
 
 9. Durante aproximadamente un minuto, se ejecutará el software que consistirá en medir la radiación de energía que proyecta cada helióstato. Concretamente, la energía se calcula como la sumatoria de los cuadrados de cada componente BGR del helióstato. Aparecerán estos resultados en tiempo de ejecución en la consola, para cada fotograma del vídeo de helióstatos.
 
@@ -225,15 +224,15 @@ import time
 import numpy as np
 \end{lstlisting}
 
-Para que funcione todo el código expuesto y elaborado a continuación, hay que importar en este caso las librerías ‘cv2’, ‘argparse’, 'time' y ‘numpy’ (esta última se ha asignado un nombre propio: ‘np’).
+Para que funcione todo el código expuesto y elaborado a continuación, hay que importar en este caso las librerías \verb|cv2|, \verb|argparse|, \verb|time| y \verb|numpy| (esta última se ha asignado un nombre propio: \verb|np|).
 
-‘cv2’ permite el uso de distintas funcionalidades de Python. En este proyecto, se ha usado para la captura y lectura de un vídeo guardado en el sistema, convertirlo de color a escala de grises, aplicarle un umbral (diferenciar solo dos niveles de grises: u oscuros o claros), mostrar el vídeo original y umbralizado en pantalla y en reproducción (conforme el programa lo va analizando fotograma a fotograma), realizar pausas (breves o prolongadas) de la ejecución del código, detectar y localizar contornos (helióstatos) en el vídeo, calcular el ancho y alto en píxeles de los contornos, así como sus valores de área, calcular la sumatoria parcial y total de los valores de todos los píxeles BGR al cuadrado de cada helióstato, y dibujar un rectángulo verde o de otro color alrededor del contorno en el vídeo.
+\verb|cv2| permite el uso de distintas funcionalidades de Python. En este proyecto, se ha usado para la captura y lectura de un vídeo guardado en el sistema, convertirlo de color a escala de grises, aplicarle un umbral (diferenciar solo dos niveles de grises: u oscuros o claros), mostrar el vídeo original y umbralizado en pantalla y en reproducción (conforme el programa lo va analizando fotograma a fotograma), realizar pausas (breves o prolongadas) de la ejecución del código, detectar y localizar contornos (helióstatos) en el vídeo, calcular el ancho y alto en píxeles de los contornos, así como sus valores de área, calcular la sumatoria parcial y total de los valores de todos los píxeles BGR al cuadrado de cada helióstato, y dibujar un rectángulo verde o de otro color alrededor del contorno en el vídeo.
 
-‘argparse’ es usado para proporcionar distintos parámetros desde la consola de Windows al ejecutar este código, de tal forma que el programa sea ejecutado de una forma u otra según la petición de datos del usuario, como las dimensiones del helióstato que el programa analizará, y así ignorar los helióstatos con dimensiones ajenas a las deseadas por el usuario.
+\verb|argparse| es usado para proporcionar distintos parámetros desde la consola de Windows al ejecutar este código, de tal forma que el programa sea ejecutado de una forma u otra según la petición de datos del usuario, como las dimensiones del helióstato que el programa analizará, y así ignorar los helióstatos con dimensiones ajenas a las deseadas por el usuario.
 
-‘time’ permite medir tiempos de ejecución de todo el código o de fragmentos de código, en segundos. Se utilizará para medir la tasa de ‘frames’ (fotogramas) por segundo de la lectura y procesado del vídeo de helióstatos, y así comprobar la eficiencia de la ejecución del programa.
+\verb|time| permite medir tiempos de ejecución de todo el código o de fragmentos de código, en segundos. Se utilizará para medir la tasa de ‘frames’ (fotogramas) por segundo de la lectura y procesado del vídeo de helióstatos, y así comprobar la eficiencia de la ejecución del programa.
 
-‘numpy’ permite el manejo de arrays o vectores con el fin de recorrer y analizar una serie de datos en secuencia, como una matriz de dos dimensiones y con muchos valores numéricos guardados. Además, usar ‘numpy’ para dicho fin es mucho más eficiente que otros métodos de análisis de datos en secuencia que no sean en arrays o vectores, como los típicos bucles ‘for’.\\[20pt]
+\verb|numpy| permite el manejo de arrays o vectores con el fin de recorrer y analizar una serie de datos en secuencia, como una matriz de dos dimensiones y con muchos valores numéricos guardados. Además, usar \verb|numpy| para dicho fin es mucho más eficiente que otros métodos de análisis de datos en secuencia que no sean en arrays o vectores, como los típicos bucles ‘for’.\\[20pt]
 
 \begin{lstlisting}
 # Crear y abrir los siguientes archivos de texto en modo
@@ -242,7 +241,7 @@ f1 = open("SumasBGRHeliostatosVerdes.txt", "w")
 f2 = open("SumasBGRHeliostatosRojos.txt", "w")
 \end{lstlisting}
 
-En el directorio del sistema donde se está ejecutando este software, se crearán los ficheros de texto "SumasBGRHeliostatosVerdes.txt" y "SumasBGRHeliostatosRojos.txt" y se escribirán informaciones en ellos (significado del parámetro "w"). Si ya existían estos ficheros en el sistema, serán sobreescritos por los nuevos.\\[20pt]
+En el directorio del sistema donde se está ejecutando este software, se crearán los ficheros de texto "SumasBGRHeliostatosVerdes.txt" y "SumasBGRHeliostatosRojos.txt" y se escribirán informaciones en ellos (significado del parámetro \verb|w|). Si ya existían estos ficheros en el sistema, serán sobreescritos por los nuevos.\\[20pt]
 
 \begin{lstlisting}
 start\_time = time.time() # Obtener el tiempo de ejecución
@@ -279,13 +278,13 @@ args = parser.parse_args() # Devuelve información de los
 # parámetros definidos previamente.
 \end{lstlisting}
 
-Permite que a la hora de ejecutar el programa desde la terminal de comandos de Windows, solicite al usuario la ruta del vídeo a cargar del sistema, el ancho y alto mínimos del helióstato para ser detectado y analizado por el programa, el umbral (o tonalidad del color) del vídeo a partir del cual el programa detectará los helióstatos, y el número máximo de helióstatos que el programa deberá detectar y analizar, para cada fotograma del vídeo de helióstatos. Por ejemplo: ‘C: \textbackslash Users \textbackslash Pc \textbackslash Desktop \textbackslash TFG>miCodigo.py Videos/varios\_heliostatos.mp4 50 50 127 2’.
+Permite que a la hora de ejecutar el programa desde la terminal de comandos de Windows, solicite al usuario la ruta del vídeo a cargar del sistema, el ancho y alto mínimos del helióstato para ser detectado y analizado por el programa, el umbral (o tonalidad del color) del vídeo a partir del cual el programa detectará los helióstatos, y el número máximo de helióstatos que el programa deberá detectar y analizar, para cada fotograma del vídeo de helióstatos. Por ejemplo: \verb|C:\Users\Pc\Desktop\TFG>miCodigo.py Videos/varios_heliostatos.mp4 50 50 127 2|.
 
-‘parser = argparse.ArgumentParser(description='Parametros del programa.')’. Esta línea de código permite asignar un conjunto de parámetros o argumentos y de darles un nombre. Es guardado en la variable ‘parser’.
+\verb|parser = argparse.ArgumentParser(description='Parametros del programa.')|. Esta línea de código permite asignar un conjunto de parámetros o argumentos y de darles un nombre. Es guardado en la variable \verb|parser|.
 
-Partiendo de la anterior variable ‘parser’, se van designando los distintos argumentos, junto a sus nombres y tipos, como cadena o entero (según si la entrada del parámetro hay que escribir letras y/o caracteres, o simplemente números).
+Partiendo de la anterior variable \verb|parser|, se van designando los distintos argumentos, junto a sus nombres y tipos, como cadena o entero (según si la entrada del parámetro hay que escribir letras y/o caracteres, o simplemente números).
 
-‘args = parser.parse\_args()’. Permite que, desde la variable ‘args’, cargar el argumento concreto, almacenado previamente cuando el programa solicitó al usuario los argumentos. Por ejemplo, si se desea comprobar cuál fue el ancho del helióstato que el usuario solicitó por parámetro en la consola, se cargará y obtendrá el segundo argumento con la línea de código siguiente: ‘args.anchoMinimoHeliostato’. Así, el programa realizará las medidas y operaciones oportunas de acuerdo al valor de este parámetro deseado por el usuario.\\[20pt]
+\verb|args = parser.parse_args()|. Permite que, desde la variable \verb|args|, cargar el argumento concreto, almacenado previamente cuando el programa solicitó al usuario los argumentos. Por ejemplo, si se desea comprobar cuál fue el ancho del helióstato que el usuario solicitó por parámetro en la consola, se cargará y obtendrá el segundo argumento con la línea de código siguiente: \verb|args.anchoMinimoHeliostato|. Así, el programa realizará las medidas y operaciones oportunas de acuerdo al valor de este parámetro deseado por el usuario.\\[20pt]
 
 \begin{lstlisting}
 # Mostrar en la consola este aviso de cuando se va a ejecutar el
@@ -344,7 +343,7 @@ A partir de aquí y prácticamente hasta el final del código, todas las demás 
         break
 \end{lstlisting}
 
-Estas líneas de código se encargarán de indicar al programa si quedan más fotogramas por leer o no del vídeo de helióstatos, y así saber hasta cuándo dicho programa se mantendría en ejecución. Primero, ‘camara.read()’ obtiene el fotograma actual del vídeo, y lo guarda en la variable ‘frame’. Si se ha hecho esta acción correctamente (debido a que quedan más fotogramas por leer del vídeo y no se ha llegado al final del mismo), ‘grabbed’ (justo al lado izquierdo de ‘frame’) valdrá ‘true’, y viceversa. Si se ha llegado al final del vídeo, ‘grabbed’ valdrá ‘false’ (porque ya no quedan más fotogramas por leer), y romperá la ejecución del presente bucle ‘while’ para que deje de leer más fotogramas del vídeo y finalice la ejecución de este programa. Esta ruptura es producida porque se cumple la condición de ‘if not grabbed’, así que desencadena la instrucción ‘break’.\\[20pt]
+Estas líneas de código se encargarán de indicar al programa si quedan más fotogramas por leer o no del vídeo de helióstatos, y así saber hasta cuándo dicho programa se mantendría en ejecución. Primero, \verb|camara.read()| obtiene el fotograma actual del vídeo, y lo guarda en la variable \verb|frame|. Si se ha hecho esta acción correctamente (debido a que quedan más fotogramas por leer del vídeo y no se ha llegado al final del mismo), \verb|grabbed| (justo al lado izquierdo de \verb|frame|) valdrá \verb|true|, y viceversa. Si se ha llegado al final del vídeo, \verb|grabbed| valdrá \verb|false| (porque ya no quedan más fotogramas por leer), y romperá la ejecución del presente bucle \verb|while| para que deje de leer más fotogramas del vídeo y finalice la ejecución de este programa. Esta ruptura es producida porque se cumple la condición de \verb|if not grabbed|, así que desencadena la instrucción \verb|break|.\\[20pt]
 
 \begin{lstlisting}
     # Convertir a escala de grises el fotograma actual del
@@ -389,11 +388,11 @@ Estas líneas de código se encargarán de indicar al programa si quedan más fo
 
 Las siguientes líneas de código se encargarán de convertir cada fotograma del vídeo a escala de grises, aplicarle un umbral y detectar los contornos o helióstatos, así como mostrar en pantalla la visualización en vivo (al mismo tiempo que la ejecución del programa) del vídeo de helióstatos umbralizado.
 
-Convertir a escala de grises el fotograma actual del vídeo. Basta con tomar la anterior variable ‘frame’ (fotograma actual del vídeo a color), y aplicar la línea de código ‘cv2.COLOR\_BGR2GRAY’. El fotograma convertido a escala de grises se guarda en la variable resultado ‘img’.
+Convertir a escala de grises el fotograma actual del vídeo. Basta con tomar la anterior variable \verb|frame| (fotograma actual del vídeo a color), y aplicar la línea de código \verb|cv2.COLOR_BGR2GRAY|. El fotograma convertido a escala de grises se guarda en la variable resultado \verb|img|.
 
-Aplicar un umbral al fotograma actual del vídeo en escala de grises (variable ‘img’ anterior). Un vídeo umbralizado en escala de grises permite diferenciar únicamente dos niveles de color: gris oscuro y gris claro. Así se facilitan las tareas de análisis y detección de contornos (helióstatos) en el vídeo. En este caso, el umbral definido ha sido de 'args.umbralVideoHeliostatos', siendo esta expresión el valor numérico proporcionado por parámetro por el usuario al ejecutar el programa (por ejemplo, 127), y el máximo típico de 255. Es decir, si el píxel del vídeo es gris oscuro, en una escala de grises 0-127, será tratado y pintado como negro. En otros casos (128-255), como blanco. Así para todos los píxeles de cada fotograma del vídeo, quedando un vídeo en blanco y negro puros. Blanco es el helióstato, y negro el fondo. El fotograma umbralizado se guarda en la variable resultado ‘thresh’. Después, con el método ‘imshow’, se muestra en tiempo de ejecución y en una ventana el vídeo de helióstatos umbralizado. Es importante realizar después de las operaciones anteriores una pausa muy breve de un milisegundo para que el programa le de tiempo a mostrar los vídeos y fotogramas actualizados en las dos ventanas: vídeo normal y umbralizado. Para ello, se usa el método ‘waitKey(1)’, siendo ‘1’ el tiempo de espera deseado en milisegundos.
+Aplicar un umbral al fotograma actual del vídeo en escala de grises (variable \verb|img| anterior). Un vídeo umbralizado en escala de grises permite diferenciar únicamente dos niveles de color: gris oscuro y gris claro. Así se facilitan las tareas de análisis y detección de contornos (helióstatos) en el vídeo. En este caso, el umbral definido ha sido de \verb|args.umbralVideoHeliostatos|, siendo esta expresión el valor numérico proporcionado por parámetro por el usuario al ejecutar el programa (por ejemplo, 127), y el máximo típico de 255. Es decir, si el píxel del vídeo es gris oscuro, en una escala de grises 0-127, será tratado y pintado como negro. En otros casos (128-255), como blanco. Así para todos los píxeles de cada fotograma del vídeo, quedando un vídeo en blanco y negro puros. Blanco es el helióstato, y negro el fondo. El fotograma umbralizado se guarda en la variable resultado \verb|thresh|. Después, con el método \verb|imshow|, se muestra en tiempo de ejecución y en una ventana el vídeo de helióstatos umbralizado. Es importante realizar después de las operaciones anteriores una pausa muy breve de un milisegundo para que el programa le de tiempo a mostrar los vídeos y fotogramas actualizados en las dos ventanas: vídeo normal y umbralizado. Para ello, se usa el método \verb|waitKey(1)|, siendo ‘1’ el tiempo de espera deseado en milisegundos.
 
-Buscar, detectar y delimitar todos los contornos o helióstatos del fotograma actual del vídeo umbralizado. Para ello, el método ‘findContours’ requiere de los parámetros necesarios para saber cuál es el fotograma umbralizado a tratar (variable ‘thresh’ obtenida previamente), cómo devolverá el o los resultados (en este caso devolverá todos los contornos detectados, y almacenados en lista completa de de jerarquía de familia), y cómo delimitará el contorno (en este caso usando la mínima cantidad de puntos). Los contornos detectados se guardarán en la variable resultado ‘contours’. Las otras dos variables resultado ‘im2’ e ‘hierarchy’ no son usadas para este proyecto.\\[20pt]
+Buscar, detectar y delimitar todos los contornos o helióstatos del fotograma actual del vídeo umbralizado. Para ello, el método \verb|findContours| requiere de los parámetros necesarios para saber cuál es el fotograma umbralizado a tratar (variable \verb|thresh| obtenida previamente), cómo devolverá el o los resultados (en este caso devolverá todos los contornos detectados, y almacenados en lista completa de de jerarquía de familia), y cómo delimitará el contorno (en este caso usando la mínima cantidad de puntos). Los contornos detectados se guardarán en la variable resultado \verb|contours|. Las otras dos variables resultado \verb|im2| e \verb|hierarchy| no son usadas para este proyecto.\\[20pt]
 
 \begin{lstlisting}
 	# Guardar en los distintos arrays los siguientes textos,
@@ -406,7 +405,7 @@ Buscar, detectar y delimitar todos los contornos o helióstatos del fotograma ac
     sumaBGRtotal.append("Suma total BGR al cuadrado helióstato completo: ")
 \end{lstlisting}
     
-    Guardar en los respectivos arrays 'heliostato', 'anchoAlto', 'areaTotal', 'sumaBGRparcial' y 'sumaBGRtotal' los textos 'Ancho y alto', 'Área', 'Sumatorias BGR parcial' y 'Sumatorias BGR total', relacionados con los datos que se obtendrán más adelante de los helióstatos analizados en el vídeo de helióstatos.\\[20pt]
+    Guardar en los respectivos arrays \verb|heliostato|, \verb|anchoAlto|, \verb|areaTotal|, \verb|sumaBGRparcial| y \verb|sumaBGRtotal| los textos 'Ancho y alto', 'Área', 'Sumatorias BGR parcial' y 'Sumatorias BGR total', relacionados con los datos que se obtendrán más adelante de los helióstatos analizados en el vídeo de helióstatos.\\[20pt]
 
 \begin{lstlisting}
     # Recorrer solo los dos primeros contornos, los más grandes
@@ -421,7 +420,7 @@ Buscar, detectar y delimitar todos los contornos o helióstatos del fotograma ac
     for i in range(0,args.numeroHeliostatosAnalizar):
 \end{lstlisting}
 
-Este bucle ‘for’ que va del número 0 al 'args.numeroHeliostatosAnalizar' (sin incluirse este último número) se encargará de analizar únicamente los 'x' primeros contornos más grandes, para cada fotograma del vídeo. De esta forma, se ignorarán los falsos contornos y menos importantes. Además, en dicho bucle se abarcan y realizan operaciones como detectar las coordenadas de cada helióstato en el vídeo, así como calcular sus áreas y sumatorias de los valores de las componentes RGB al cuadrado de todos sus píxeles. Siendo 'args.numeroHeliostatosAnalizar' el número de contornos deseado por el usuario por parámetro en la consola que se quiere analizar como máximo para cada fotograma.\\[20pt]        
+Este bucle \verb|for| que va del número 0 al \verb|args.numeroHeliostatosAnalizar| (sin incluirse este último número) se encargará de analizar únicamente los \verb|x| primeros contornos más grandes, para cada fotograma del vídeo. De esta forma, se ignorarán los falsos contornos y menos importantes. Además, en dicho bucle se abarcan y realizan operaciones como detectar las coordenadas de cada helióstato en el vídeo, así como calcular sus áreas y sumatorias de los valores de las componentes RGB al cuadrado de todos sus píxeles. Siendo \verb|args.numeroHeliostatosAnalizar| el número de contornos deseado por el usuario por parámetro en la consola que se quiere analizar como máximo para cada fotograma.\\[20pt]        
         
 \begin{lstlisting}
         # Obtener las coordenadas del contorno.
@@ -436,9 +435,9 @@ Este bucle ‘for’ que va del número 0 al 'args.numeroHeliostatosAnalizar' (s
         
 Para cada contorno, se obtendrán sus coordenadas en el vídeo, y su valor de área, aparte de mostrar el vídeo de helióstatos normal en pantalla (en tiempo de ejecución), o de actualizarlo al siguiente fotograma que se analizará.
 
-Obtener las coordenadas del contorno usando el método ‘boundingRect’: XY, correspondientes a su esquina superior izquierda en el vídeo, y WH, correspondientes a su ancho (horizontal) y su altura (vertical). Es posible que si el helióstato todavía no ha terminado de entrar en el vídeo (desde el lado izquierdo), pues que no se muestre su esquina superior izquierda. Así que en este caso, se mostrará la esquina superior izquierda del helióstato mostrado en dicho vídeo hasta el momento. Respectivamente para el ancho y la altura.
+Obtener las coordenadas del contorno usando el método \verb|boundingRect|: \verb|XY|, correspondientes a su esquina superior izquierda en el vídeo, y \verb|WH|, correspondientes a su ancho (horizontal) y su altura (vertical). Es posible que si el helióstato todavía no ha terminado de entrar en el vídeo (desde el lado izquierdo), pues que no se muestre su esquina superior izquierda. Así que en este caso, se mostrará la esquina superior izquierda del helióstato mostrado en dicho vídeo hasta el momento. Respectivamente para el ancho y la altura.
 
-Para el contorno número 1 y/o 2 del fotograma actual del vídeo, el programa detectará y calculará su área total (como número entero, usando 'int'), gracias al método ‘contourArea’ de la biblioteca de OpenCV.\\[20pt]
+Para el contorno número 1 y/o 2 del fotograma actual del vídeo, el programa detectará y calculará su área total (como número entero, usando \verb|int|), gracias al método \verb|contourArea| de la biblioteca de OpenCV.\\[20pt]
 
 \begin{lstlisting}
         # Si el contorno tiene un ancho y alto mayores a los
@@ -448,7 +447,7 @@ Para el contorno número 1 y/o 2 del fotograma actual del vídeo, el programa de
         h > args.altoMinimoHeliostato):
 \end{lstlisting}
 
-Esta condición ‘if’ solo será ejecutada si los valores que el usuario proporcionó por parámetro desde consola de ancho y alto del helióstato son menores al ancho y alto del helióstato que se va a analizar justo ahora. Si se cumplen todas, se accederá a este ‘if’ para calcular y mostrar en consola la sumatoria acumulativa de los valores de las componentes RGB al cuadrado de todos los píxeles del contorno (helióstato), además del valor de área y de reencuadrarlo en un rectángulo verde en el vídeo. Y también, se mostrarán sus coordenadas (ubicación) en el vídeo, su ancho y alto, etcétera. Todo esto se irá aplicando a cada contorno.\\[20pt]            
+Esta condición \verb|if| solo será ejecutada si los valores que el usuario proporcionó por parámetro desde consola de ancho y alto del helióstato son menores al ancho y alto del helióstato que se va a analizar justo ahora. Si se cumplen todas, se accederá a este \verb|if| para calcular y mostrar en consola la sumatoria acumulativa de los valores de las componentes RGB al cuadrado de todos los píxeles del contorno (helióstato), además del valor de área y de reencuadrarlo en un rectángulo verde en el vídeo. Y también, se mostrarán sus coordenadas (ubicación) en el vídeo, su ancho y alto, etcétera. Todo esto se irá aplicando a cada contorno.\\[20pt]            
 
 \begin{lstlisting}
             # Si se está analizando el contorno número uno en
@@ -480,7 +479,7 @@ Esta condición ‘if’ solo será ejecutada si los valores que el usuario prop
 
 Aquí pueden suceder los siguientes casos:
 
-Si solo hay un contorno en el fotograma actual del vídeo, o hay dos pero relativamente juntos entre sí (rozándose, fusionándose o separándose), se reencuadrará en verde dicho contorno o doble contorno en el vídeo usando el método ‘rectangle’.
+Si solo hay un contorno en el fotograma actual del vídeo, o hay dos pero relativamente juntos entre sí (rozándose, fusionándose o separándose), se reencuadrará en verde dicho contorno o doble contorno en el vídeo usando el método \verb|rectangle|.
 
 Si se muestran dos contornos separados entre sí en un mismo fotograma del vídeo, se analizarán primero uno y después el otro. En el vídeo, cada contorno se reencuadrará en colores distintos: el de la izquierda en verde y el de la derecha en rojo.
 
@@ -488,7 +487,7 @@ Si en el fotograma actual del vídeo no hay contornos, no se hará ningún proce
 
 Además, conforme el helióstato se vaya desplazando por el vídeo, también lo hará el rectángulo verde o rojo para mantener el reencuadre.
 
-Respecto a los parámetros introducidos en el método ‘rectangle’, aclarar que ‘x+w’ hace referencia a la esquina superior derecha del contorno, porque a ‘xy’, que es su esquina superior izquierda, se le suma su ancho ‘w’. Respectivamente para ‘y+h’ que es su esquina inferior izquierda: a ‘xy’ (esquina superior izquierda) se le suma su altura ‘h’. La combinación de las esquinas superior derecha y la inferior izquierda, ‘(x+w, y+h)’, resulta la esquina inferior derecha.\\[20pt]
+Respecto a los parámetros introducidos en el método \verb|rectangle|, aclarar que \verb|x+w| hace referencia a la esquina superior derecha del contorno, porque a \verb|xy|, que es su esquina superior izquierda, se le suma su ancho \verb|w|. Respectivamente para \verb|y+h| que es su esquina inferior izquierda: a \verb|xy| (esquina superior izquierda) se le suma su altura \verb|h|. La combinación de las esquinas superior derecha y la inferior izquierda, \verb|(x+w, y+h)|, resulta la esquina inferior derecha.\\[20pt]
 
 \begin{lstlisting}
             # Leer y analizar todos los píxeles del helióstato.
@@ -576,36 +575,43 @@ Respecto a los parámetros introducidos en el método ‘rectangle’, aclarar q
             vectorial(frame, x, y)
 \end{lstlisting}
         
-Estos dos bucles ‘for’ compactados en vectores son los encargados de analizar píxel a píxel el helióstato. Primero se analizarán los píxeles de columnas, y luego los de filas. En resumen, se realizan las siguientes operaciones: medir el ancho, alto y área del helióstato en píxeles, calcular para cada píxel del helióstato las componentes RGB y RGB al cuadrado (cada componente por separado), y con estas últimas, realizar una sumatoria acumulativa de cada componente RGB por separado de todos los píxeles que componen el helióstato, y después, lo mismo pero sumando o unificando las tres componentes entre sí.
+Estos dos bucles \verb|for| compactados en vectores son los encargados de analizar píxel a píxel el helióstato. Primero se analizarán los píxeles de columnas, y luego los de filas. En resumen, se realizan las siguientes operaciones: medir el ancho, alto y área del helióstato en píxeles, calcular para cada píxel del helióstato las componentes RGB y RGB al cuadrado (cada componente por separado), y con estas últimas, realizar una sumatoria acumulativa de cada componente RGB por separado de todos los píxeles que componen el helióstato, y después, lo mismo pero sumando o unificando las tres componentes entre sí.
 
-Esta sección de código se ha trabajado sobretodo con NumPy (abreviado como ‘np’ en el código) y con arrays, con el fin de reducir considerablemente el tiempo de ejecución del programa. La función ‘vectorial()’ es llamada y con los parámetros ‘fotograma actual del vídeo’, y las coordenadas XY de la esquina superior izquierda del helióstato, que es desde donde se empezarán a analizar cada helióstato, hasta llegar a su esquina inferior derecha.
+Esta sección de código se ha trabajado sobretodo con NumPy (abreviado como \verb|np| en el código) y con arrays, con el fin de reducir considerablemente el tiempo de ejecución del programa. La función \verb|vectorial()| es llamada y con los parámetros ‘fotograma actual del vídeo’, y las coordenadas \verb|XY| de la esquina superior izquierda del helióstato, que es desde donde se empezarán a analizar cada helióstato, hasta llegar a su esquina inferior derecha.
 
-En la línea de código ‘i = frame[y+2:y+h-1, x+2:x+w-1]’, se obtendrá, de ese fotograma, el helióstato. Para ello, en la primera entrada de ‘frame’, que hace referencia al número de filas, se indica el número de las mismas, es decir, desde la altura máxima del helióstato ‘y’ hasta su base inferior ‘y+h’. Y en la segunda entrada de ‘frame’, correspondiente al número de columnas, se proporciona también cuántas tiene: desde el lado izquierdo ‘x’ hasta el lado derecho del helióstato ‘x+w’. Es importante no confundir la longitud/altura del helióstato (‘w’ y ‘h’, respectivamente), con las coordenadas o ubicación del helióstato en el vídeo, midiéndose desde su esquina superior izquierda (‘XY’). Para seleccionar o cargar el helióstato (variable ‘i’) del fotograma actual del vídeo (variable ‘frame’), se parte desde la esquina superior izquierda de ese helióstato con la coordenada ‘X’, y para definir el límite derecho (lado derecho) del helióstato, a esa ‘X’, que es donde está ubicado el helióstato en el vídeo, se le suma su longitud ‘w’. Y respectivamente para la altura. Indicar que, con el fin de evitar leer sobre el rectángulo verde o rojo que reencuadra al helióstato en el vídeo, se le han puesto en ‘frame’ unos números ‘+2’ y ‘-1’. Son las medidas exactas para evitar que esto suceda.
+En la línea de código \verb|i = frame[y+2:y+h-1, x+2:x+w-1]|, se obtendrá, de ese fotograma, el helióstato. Para ello, en la primera entrada de \verb|frame|, que hace referencia al número de filas, se indica el número de las mismas, es decir, desde la altura máxima del helióstato \verb|y| hasta su base inferior \verb|y+h|. Y en la segunda entrada de \verb|frame|, correspondiente al número de columnas, se proporciona también cuántas tiene: desde el lado izquierdo \verb|x| hasta el lado derecho del helióstato \verb|x+w|. Es importante no confundir la longitud/altura del helióstato (\verb|w| y \verb|h|, respectivamente), con las coordenadas o ubicación del helióstato en el vídeo, midiéndose desde su esquina superior izquierda (\verb|XY|). Para seleccionar o cargar el helióstato (variable \verb|i|) del fotograma actual del vídeo (variable \verb|frame|), se parte desde la esquina superior izquierda de ese helióstato con la coordenada \verb|X|, y para definir el límite derecho (lado derecho) del helióstato, a esa \verb|X|, que es donde está ubicado el helióstato en el vídeo, se le suma su longitud \verb|w|. Y respectivamente para la altura. Indicar que, con el fin de evitar leer sobre el rectángulo verde o rojo que reencuadra al helióstato en el vídeo, se le han puesto en \verb|frame| unos números ‘+2’ y ‘-1’. Son las medidas exactas para evitar que esto suceda.
 
-En ‘mB = i[:, :, 2], mG = i[:, :, 1], mR = i[:, :, 0]’, se obtendrán las salidas BGR (o números del 0-255) de ese helióstato cargado previamente en la variable ‘i’. Para ello, se indica, en cada matriz ‘mB’, ‘mG’ y ‘mR’ (matrices de píxeles azules, verdes y rojos del helióstato, respectivamente), que se desean obtener todas las filas y columnas de ‘i’, es decir, todos los valores BGR del helióstato. Se indican con los dos puntos ‘:’, en las dos primeras entradas de esas matrices. Y en la tercera entrada, que correspondería a la tercera dimensión, se obtienen los valores azules ‘B’ con el número 2, los verdes ‘G’ con el 1, y los rojos ‘R’ con el 0.
+En \verb|mB = i[:, :, 2], mG = i[:, :, 1], mR = i[:, :, 0]|, se obtendrán las salidas BGR (o números del 0-255) de ese helióstato cargado previamente en la variable \verb|i|. Para ello, se indica, en cada matriz \verb|mB|, \verb|mG| y \verb|mR| (matrices de píxeles azules, verdes y rojos del helióstato, respectivamente), que se desean obtener todas las filas y columnas de \verb|i|, es decir, todos los valores BGR del helióstato. Se indican con los dos puntos \verb|:|, en las dos primeras entradas de esas matrices. Y en la tercera entrada, que correspondería a la tercera dimensión, se obtienen los valores azules \verb|B| con el número 2, los verdes \verb|G| con el 1, y los rojos \verb|R| con el 0.
 
-Con esos valores BGR (‘mB’, ‘mG’ y ‘mR’), se elevarán cada uno de ellos al cuadrado con el método ‘np.power’. Así, se dispondrán en ‘mB2’, ‘mG2’ y ‘mR2’ todos los valores BGR del helióstato elevados al cuadrado. Los valores RGB solo pueden ser representados del 0 al 255. Al elevar al cuadrado uno de estos valores, nunca se sobrepasará del 255, y pasará del 255 al cero directamente, y así sucesivamente. Esto lo realiza el programa automáticamente.
+Con esos valores BGR (\verb|mB|, \verb|mG| y \verb|mR|), se elevarán cada uno de ellos al cuadrado con el método \verb|np.power|. Así, se dispondrán en \verb|mB2|, \verb|mG2| y \verb|mR2| todos los valores BGR del helióstato elevados al cuadrado. Los valores RGB solo pueden ser representados del 0 al 255. Al elevar al cuadrado uno de estos valores, nunca se sobrepasará del 255, y pasará del 255 al cero directamente, y así sucesivamente. Esto lo realiza el programa automáticamente.
 
-Con todos estos valores BGR del helióstato elevados al cuadrado, se realizará una sumatoria acumulativa de todos ellos, para cada componente BGR por separado. Los resultados de las sumatorias se guardarán en ‘sumB’, ‘sumG’ y ‘sumR’. Se trataría de cumplir la siguiente fórmula:
+Con todos estos valores BGR del helióstato elevados al cuadrado, se realizará una sumatoria acumulativa de todos ellos, para cada componente BGR por separado. Los resultados de las sumatorias se guardarán en \verb|sumB|, \verb|sumG| y \verb|sumR|. Se trataría de cumplir la siguiente fórmula:
 
-E = sumatoria R al cuadrado + sumatoria G al cuadrado + sumatoria B al cuadrado
+\begin{equation}
+\text{E} = \text{sumatoria R al cuadrado} + \text{sumatoria G al cuadrado} + \text{sumatoria B al cuadrado}
+\label{eq:E}
+\end{equation}
+
 Siendo ‘sumatoria’ la sumatoria acumulativa de todos los píxeles del helióstato.
 
-Para cada helióstato, se obtendría entonces: Er, Eg y Eb.
+Para cada helióstato, se obtendría entonces: \verb|Er|, \verb|Eg| y \verb|Eb|.
            
-Finalmente, en ‘sumaRGB = sumR+sumG+sumB’, esta acción consiste en sumar o unificar los resultados ‘sumB’, ‘sumG’ y ‘sumR’ obtenidos previamente (las anteriores sumatorias al cuadrado de todos los píxeles del contorno). Así, lo que se estaría haciendo para cada helióstato sería lo siguiente:
+Finalmente, en \verb|sumaRGB = sumR+sumG+sumB|, esta acción consiste en sumar o unificar los resultados \verb|sumB|, \verb|sumG| y \verb|sumR| obtenidos previamente (las anteriores sumatorias al cuadrado de todos los píxeles del contorno). Así, lo que se estaría haciendo para cada helióstato sería lo siguiente:
 
-Etotal = Er + Eg + Eb
+\begin{equation}
+\text{Etotal} = \text{Er} + \text{Eg} + \text{Eb}
+\label{eq:Etotal}
+\end{equation}
 
-Es decir, obtener la sumatoria total de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
+Es decir, obtener la sumatoria total (\ref{eq:Etotal}) de los valores de las tres componentes RGB entre sí de todos los píxeles al cuadrado del contorno entero.
 
 Cuando se analiza otro helióstato (independientemente de si se salta o no al siguiente fotograma del vídeo), los valores de área y sumatorias pasarán automáticamente a valer cero de partida. De esta forma, no se obtendrán valores de un helióstato acumulados (erróneos) del helióstato analizado previamente.
 
 Ir guardando los valores y resultados del helióstato en sus respectivos arrays (dependiendo del tipo de información: ancho/alto, área, etcétera), para luego mostrarlos por consola.
 
-Donde se realiza un 'heliostato.append', se guardará en el array de texto si el helióstato analizado tiene un recuadro verde, o rojo, o ambos. De esta forma, cuando se muestren por consola los resultados de los helióstatos analizados en el fotograma actual, se sabrá a qué información le corresponde cada helióstato.
+Donde se realiza un \verb|heliostato.append|, se guardará en el array de texto si el helióstato analizado tiene un recuadro verde, o rojo, o ambos. De esta forma, cuando se muestren por consola los resultados de los helióstatos analizados en el fotograma actual, se sabrá a qué información le corresponde cada helióstato.
 
-En el final de este fragmento de código, donde hay un 'if-else' y unos métodos 'write', se irán guardando en los dos ficheros creados al inicio de la ejecución de este programa todos los resultados de las estimaciones de potencia (sumatoria BGR final) de cada helióstato analizado, para cada fotograma del vídeo de helióstatos. Dependiendo de si el helióstato tiene un reencuadre verde o rojo, la información será guardada en un fichero o en otro.
+En el final de este fragmento de código, donde hay un \verb|if-else| y unos métodos \verb|write|, se irán guardando en los dos ficheros creados al inicio de la ejecución de este programa todos los resultados de las estimaciones de potencia (sumatoria BGR final) de cada helióstato analizado, para cada fotograma del vídeo de helióstatos. Dependiendo de si el helióstato tiene un reencuadre verde o rojo, la información será guardada en un fichero o en otro.
 
 Respecto a las unidades de medición de la estimación de potencia (sumatoria total BGR) del helióstato, con el algoritmo lo que se intenta estimar es una potencia, que se mide en W (vatios) en el Sistema Internacional de Medidas. Pero como el algoritmo aplicado no está preparado para retornar una medida calibrada, se podría decir que el algoritmo retorna como resultado de su cálculo una variable no normalizada (al no estar calibrado) que se intenta aproximar a la potencia total reflejada por el helióstato. Hay que tener en cuenta que no están aún cuantificados los errores, lo que se deja para futuros trabajos que incluirían una campaña experimental en una planta termosolar real. Diciendo ésto, queda justificado que no se pongan unidades a la variable estimada, aunque sí se puede decir que está correlacionada con la potencia reflejada por el helióstato. La correlación, que aún no se conoce, es la que se podrá obtener en un futuro con los datos de la campaña experimental. Una corrección podría ser: "Sistema Internacional de unidades".\\[20pt]
 
@@ -631,7 +637,7 @@ Si el ancho y alto proporcionados por el usuario en consola no son mayores al an
 cv2.imshow("Camara", frame)
 \end{lstlisting}
 
-Mostrar el vídeo de helióstatos normal en pantalla con el método ‘imshow()’, y reproducirse al mismo tiempo que el programa va analizando cada uno de sus fotogramas. Con ‘reproducirse’, quiere decir además que se actualizará o cambiará el fotograma del vídeo al actual.\\[20pt]
+Mostrar el vídeo de helióstatos normal en pantalla con el método \verb|imshow()|, y reproducirse al mismo tiempo que el programa va analizando cada uno de sus fotogramas. Con ‘reproducirse’, quiere decir además que se actualizará o cambiará el fotograma del vídeo al actual.\\[20pt]
 
 \begin{lstlisting}
 # Mostrar en consola el valor del área del helióstato en píxeles,
@@ -655,7 +661,7 @@ Mostrar el vídeo de helióstatos normal en pantalla con el método ‘imshow()�
     del sumaBGRtotal[:]
 \end{lstlisting}
     
-Mostrar en consola todos los datos obtenidos del helióstato (o helióstatos) del fotograma actual del vídeo, y que fueron almacenados (temporalmente) en los arrays 'heliostato', 'anchoAlto', 'areaTotal', 'sumaBGRparcial' y 'sumaBGRtotal'. Es decir, el valor del área del helióstato en píxeles, su ancho y alto también en píxeles, los valores de las sumatorias acumulativas RGB al cuadrado (cada componente por separado) de todos los píxeles del helióstato, y esto mismo pero sumando esta vez las tres componentes entre sí.
+Mostrar en consola todos los datos obtenidos del helióstato (o helióstatos) del fotograma actual del vídeo, y que fueron almacenados (temporalmente) en los arrays \verb|heliostato|, \verb|anchoAlto|, \verb|areaTotal|, \verb|sumaBGRparcial| y \verb|sumaBGRtotal|. Es decir, el valor del área del helióstato en píxeles, su ancho y alto también en píxeles, los valores de las sumatorias acumulativas RGB al cuadrado (cada componente por separado) de todos los píxeles del helióstato, y esto mismo pero sumando esta vez las tres componentes entre sí.
 
 Después, tras mostrarse toda esta información en la consola, vaciar los arrays, con el fin de reutilizarlos para el análisis de los siguientes fotogramas.\\[20pt]
 
@@ -711,68 +717,6 @@ Como ya se alcanzó el final del programa, los ficheros de texto que fueron abie
 
 En la figura \ref{fig:CronogramaTareas/cronogramaTareas.PNG} se muestra un cronograma de tareas con las tareas realizadas en este trabajo de fin de grado (TFG) y sus respectivas duraciones.
 
-Tarea 1. 19 de marzo de 2.017: he adaptado el código para que el programa lea y trabaje todos los fotogramas del vídeo de helióstatos cargado.
-
-Tarea 2. 17 de abril de 2.017: le agregué al código una instrucción para calcular el área del contorno del helióstato.
-
-Tarea 3. 5 de mayo de 2.017: he logrado que genere el programa Python un archivo TXT con las áreas en cada fotograma del vídeo, y con el programa Gnuplot proporcionar ese archivo para generar una gráfica y guardarla como PDF.
-
-Tarea 4. 1 de agosto de 2.017: he conseguido adaptar el programa para que guarde en el PC todas las imágenes y contornos con área de proyección tendiendo a cero.
-
-Tarea 5. 29 de septiembre de 2.017: programé el software para que seleccione y procese siempre el helióstato más grande de todos, además de calcular el área de todos los helióstatos localizados, para cada fotograma del vídeo de helióstatos.
-
-Tarea 6. 1 de octubre de 2.017: solucioné el problema de que se necesitaba saber cuántos contornos (helióstatos) habían en total en cada fotograma del vídeo de helióstatos. Para ello, la instrucción que devolvía dicho valor era ‘for i in range(0,len(contours)):’.
-
-Tarea 7. 30 de octubre de 2.017: el programa ya reencuadra únicamente los helióstatos reales (en cada fotograma del vídeo de helióstatos), y no los falsos helióstatos, a partir de un umbral determinado.
-
-Tarea 8. 29 de noviembre de 2.017: he conseguido que en un determinado píxel XY, el que yo especifique al programa, del fotograma del vídeo de helióstatos, indicase cada componente RGB, por separado (de rojo, de verde y de azul), y también sumadas entre sí (B+G+R).
-
-Tarea 9. 6 de febrero de 2.018: agregué algunos cálculos al software para obtener la energía del reflejo de la proyección del helióstato, indicando en formato código que la energía era el cuadrado de las componentes RGB.
-
-Tarea 10. 10 de febrero de 2.018: en el informe he explicado cosas sobre las energías renovables e información básica sobre los helióstatos, como sus utilidades y usos.
-
-Tarea 11. 11 de abril de 2.018: en el informe he explicado cosas sobre el helióstato con sensor de reflexión y del funcionamiento de la central solar de receptor central o de tipo torre.
-
-Tarea 12. 15 de junio de 2.018: agregué el índice del informe. Además, en dicho informe he explicado cosas sobre las centrales térmicas.
-
-Tarea 13. 18 de junio de 2.018: en el informe he explicado cosas sobre las plantas termosolares PSA, PS10 y PS20 y Gemasolar.
-
-Tarea 14. 2 de julio de 2.018: he corregido algunos errores que he localizado en el diagrama de flujo del software desarrollado, tras una segunda revisión.
-
-Tarea 15. 3 de julio de 2.018: he mejorado el índice del TFG.
-
-Tarea 16. 17 de julio de 2.018: en el informe he explicado cosas sobre OpenCV y Python.
-
-Tarea 17. 10 de agosto de 2.018: he programado el software para que el usuario pueda introducir algunas variables desde consola, como el vídeo de helióstatos a cargar, y las dimensiones de dicho helióstato.
-
-Tarea 18. 15 de agosto de 2.018: en el programa, en los bucles 'for' X-Y que recorren todos los píxeles del contorno, yo lo puse para que analice desde la posición X de donde se ubica ahora mismo el contorno hasta su longitud (y respectivamente desde Y hasta su altura). Y eso estaba mal. Debería ser desde X hasta X+longitud (y respectivamente para Y: desde Y hasta Y+altura), porque las posiciones X-Y del helióstato no son las mismas, van cambiando a lo largo del vídeo. Hice las correcciones necesarias en el código, y este problema se finalmente se solucionó.
-
-Tarea 19. 17 de agosto de 2.018: arreglé en el software otro problema. Consistía en que estaba confundiendo las coordenadas XY del vídeo de helióstatos, y en una de esas coordenadas se salía del vídeo, y analizaba coordenadas inexistentes en esa área del vídeo.
-
-Tarea 20. 18 de agosto de 2.018: he realizado algunas modificaciones en el código para que si aparecen dos helióstatos en un mismo fotograma del vídeo, que además de analizar cada helióstato por separado, que mencione el área de cada uno de ellos. También he puesto que para que se detecte y analice un helióstato, debe tener como mínimo tal ancho y alto, o superior. Estas tres variables se pueden pasar por parámetro en la línea de comandos.
-
-Tarea 21. 9 de septiembre de 2.018: optimicé más el software, ya que había una sección de código que consumía bastantes recursos del PC. Para ello, usé la biblioteca de Python 'NumPy'.
-
-Tarea 22. 10 de septiembre de 2.018: seguí actualizando la memoria, ya que de nuevo tenía contenido explicado para una versión antigua del programa que tengo hecho actualmente.
-
-Tarea 23. 8 de octubre de 2.018: he logrado que el programa mostrase la información de los helióstatos por consola a dos columnas.
-
-Tarea 24. 15 de octubre de 2.018: expliqué también en mi informe sobre la Ivanpah Solar Electric Generating System, en el capítulo 1 de helióstatos.
-
-Tarea 25. 19 de octubre de 2.018: he pasado todo mi informe a LaTeX. También he logrado corregir el fallo de que el programa no siempre funcionaba para cualquier vídeo que se le proporcionase.
-
-Tarea 26. 20 de octubre de 2.018: he hecho unos cambios al código con el fin de que por consola, también solicite al usuario el umbral del vídeo, y el número máximo de helióstatos a analizar por fotograma.
-
-Tarea 27. 27 de octubre de 2.018: he reducido el capítulo 1 de helióstatos del informe del TFG en LaTeX a 10 páginas sin imágenes, y he hecho también varias correcciones de dicho capítulo.
-
-Tarea 28. 3 de noviembre de 2.018: he hecho las referencias bibliográficas usando el comando 'cite' en LaTeX, para referenciarlas al archivo 'proyecto.bib'.
-
-Tarea 29. 15 de noviembre de 2.018: he actualizado los contenidos de las secciones 'Funcionamiento del software y código', 'Entradas y salidas del software', 'Cronograma de tareas', 'Análisis de los recursos consumidos', y 'Ejemplos de ejecuciones y comentarios sobre sus resultados' del capítulo 4 de 'Propuesta desarrollada' del informe del TFG.
-
-Tarea 30. 17 de noviembre de 2.018: he agregado capturas de pantalla de mi programa en el TEX del capítulo 4 (propuesta desarrollada), y dentro de ese TEX o capítulo, en la sección de análisis de recursos consumidos. También he ido extendiendo un poco más (actualizando) el cronograma de tareas de dicho capítulo 4.
-
-Tarea 31. 26 de noviembre de 2.018: he actualizado y arreglado algunos detalles de la memoria y software, y aplicando el formato y estructura requerida a dicha memoria en LaTeX.
-
 \section{Descripción de los requerimientos/requisitos}
 
 En la elaboración de este TFG, se ha creado además un programa de ordenador en lenguaje de programación Python. Para ello, se requerían de los siguientes elementos:
@@ -795,65 +739,65 @@ El software requiere de un vídeo cualquiera en formato MP4, de cualquier resolu
 
 En el código de ese software, se han utilizado las siguientes variables de entrada:
 
-- ‘start\_time’. Indica el tiempo de ejecución nada más iniciar la ejecución del programa.
+- \verb|start_time|. Indica el tiempo de ejecución nada más iniciar la ejecución del programa.
 
-- ‘frame\_counter’. Cuenta los fotogramas analizados del vídeo.
+- \verb|frame_counter|. Cuenta los fotogramas analizados del vídeo.
 
-- ‘end\_time’. Indica el tiempo de ejecución tras haber procesado un fotograma del vídeo (o tiempo final), y lo mismo para los siguientes, en cuyo caso el tiempo final nunca se reinicia a cero, sino que es acumulado.
+- \verb|end_time|. Indica el tiempo de ejecución tras haber procesado un fotograma del vídeo (o tiempo final), y lo mismo para los siguientes, en cuyo caso el tiempo final nunca se reinicia a cero, sino que es acumulado.
 
-- ‘fps’. Con la fórmula ‘frame\_counter / float(end\_time - start\_time)’, es decir, usando las variables anteriores, se calcula, para cada fotograma analizado del vídeo, sus fotogramas por segundo.
+- \verb|fps|. Con la fórmula \verb|frame_counter / float(end_time - start_time)|, es decir, usando las variables anteriores, se calcula, para cada fotograma analizado del vídeo, sus fotogramas por segundo.
 
-- ‘parser’. Permite definir unos parámetros para que cuando se ejecute el programa por consola, se proporcione como parámetros o entradas (y en el siguiente orden) la ruta o directorio del vídeo a leer en el PC, el ancho y el alto mínimos del helióstato para su detección y análisis.
+- \verb|parser|. Permite definir unos parámetros para que cuando se ejecute el programa por consola, se proporcione como parámetros o entradas (y en el siguiente orden) la ruta o directorio del vídeo a leer en el PC, el ancho y el alto mínimos del helióstato para su detección y análisis.
 
-- ‘args’. Devuelve o carga el parámetro deseado y que fueron especificados por el usuario (explicado previamente): directorio, ancho o alto.
+- \verb|args|. Devuelve o carga el parámetro deseado y que fueron especificados por el usuario (explicado previamente): directorio, ancho o alto.
 
-- ‘camara’. Contenido del vídeo de helióstatos que se irá leyendo, fotograma a fotograma, por el software.
+- \verb|camara|. Contenido del vídeo de helióstatos que se irá leyendo, fotograma a fotograma, por el software.
 
-- ‘grabbed’. Indica si se ha logrado cargar el siguiente fotograma del vídeo de helióstatos, queriendo además decir que dicho vídeo aún no se han analizado todos sus fotogramas y que debe proseguir la ejecución del programa.
+- \verb|grabbed|. Indica si se ha logrado cargar el siguiente fotograma del vídeo de helióstatos, queriendo además decir que dicho vídeo aún no se han analizado todos sus fotogramas y que debe proseguir la ejecución del programa.
 
-- ‘frame’. Es el contenido del fotograma concreto del vídeo de helióstatos.
+- \verb|frame|. Es el contenido del fotograma concreto del vídeo de helióstatos.
 
-- ‘img’. Es el vídeo de helióstatos convertido a escala de grises.
+- \verb|img|. Es el vídeo de helióstatos convertido a escala de grises.
 
-- ‘thresh’. Aplicar un umbral para cada fotograma del vídeo de helióstatos, con el fin de determinar en cada píxel, si este es relativamente brillante o no lo es.
+- \verb|thresh|. Aplicar un umbral para cada fotograma del vídeo de helióstatos, con el fin de determinar en cada píxel, si este es relativamente brillante o no lo es.
 
-- ‘i’. Para el fotograma del vídeo actual, indica el número de helióstato en análisis: 0 (helióstato 1) ó 1 (helióstato 2).
+- \verb|i|. Para el fotograma del vídeo actual, indica el número de helióstato en análisis: 0 (helióstato 1) ó 1 (helióstato 2).
 
-- ‘contours’. Todos los contornos o helióstatos detectados, para cada fotograma del vídeo de helióstatos.
+- \verb|contours|. Todos los contornos o helióstatos detectados, para cada fotograma del vídeo de helióstatos.
 
-- ‘x, y, w, h’. Referido al contorno en análisis: ‘xy’ son las coordenadas de un punto, ‘w’ es el ancho, y ‘h’ es la altura.
+- \verb|x, y, w, h|. Referido al contorno en análisis: \verb|xy| son las coordenadas de un punto, \verb|w| es el ancho, y \verb|h| es la altura.
 
-- ‘area’. Valor del área del contorno o helióstato en análisis.
+- \verb|area|. Valor del área del contorno o helióstato en análisis.
 
-- ‘m’. Vector BGR en tres dimensiones que representa dicha información del helióstato en análisis.
+- \verb|m|. Vector BGR en tres dimensiones que representa dicha información del helióstato en análisis.
 
-- ‘mB’, ‘mG’, ‘mR’. Lo mismo que la variable anterior ‘m’, pero esta vez separadas en sus distintas componentes BGR.
+- \verb|mB|, \verb|mG|, \verb|mR|. Lo mismo que la variable anterior \verb|m|, pero esta vez separadas en sus distintas componentes BGR.
 
-- ‘mB2’, ‘mG2’, ‘mR2’. Resultados de elevar al cuadrado los valores de las componentes BGR del helióstato.
+- \verb|mB2|, \verb|mG2|, \verb|mR2|. Resultados de elevar al cuadrado los valores de las componentes BGR del helióstato.
 
-- ‘sumB’, ‘sumG’ y ‘sumR’. Indica la sumatoria acumulativa de todos los píxeles de valor R al cuadrado del helióstato en análisis, y respectivamente para G y B.
+- \verb|sumB|, \verb|sumG| y \verb|sumR|. Indica la sumatoria acumulativa de todos los píxeles de valor R al cuadrado del helióstato en análisis, y respectivamente para G y B.
 
-- ‘sumaBGR’. Indica la sumatoria de todos los píxeles de valores R al cuadrado más G al cuadrado más B al cuadrado del helióstato en análisis.
+- \verb|sumaBGR|. Indica la sumatoria de todos los píxeles de valores R al cuadrado más G al cuadrado más B al cuadrado del helióstato en análisis.
 
-- 'heliostato', 'anchoAlto', 'areaTotal', 'sumaBGRparcial', 'sumaBGRtotal'. Variables en forma de arrays que almacenan (y después muestran en consola) los textos, datos y resultados de los helióstatos analizados. Cada array almacena su correspondiente información.\\[20pt]
+- \verb|heliostato|, \verb|anchoAlto|, \verb|areaTotal|, \verb|sumaBGRparcial|, \verb|sumaBGRtotal|. Variables en forma de arrays que almacenan (y después muestran en consola) los textos, datos y resultados de los helióstatos analizados. Cada array almacena su correspondiente información.\\[20pt]
 
 Las siguientes variables de entrada son completamente personalizables por el usuario, ya que estas son insertables desde la ventana de comandos de Windows al ejecutar el programa:
 
-- 'args.directorioVideoHeliostatosCargar'. Parámetro que el programa solicita al usuario para que lo introduzca por consola y que permite indicar el directorio o ruta donde se ubica el vídeo de helióstatos a procesar.
+- \verb|args.directorioVideoHeliostatosCargar|. Parámetro que el programa solicita al usuario para que lo introduzca por consola y que permite indicar el directorio o ruta donde se ubica el vídeo de helióstatos a procesar.
 
-- 'args.umbralVideoHeliostatos'. Parámetro que el programa solicita al usuario para que lo introduzca por consola y que permite definir el umbral del vídeo de helióstatos para que, si los píxeles (del helióstato) en análisis de ese vídeo superan ese umbral, sean analizados, y viceversa.
+- \verb|args.umbralVideoHeliostatos|. Parámetro que el programa solicita al usuario para que lo introduzca por consola y que permite definir el umbral del vídeo de helióstatos para que, si los píxeles (del helióstato) en análisis de ese vídeo superan ese umbral, sean analizados, y viceversa.
 
-- 'args.numeroHeliostatosAnalizar'. Parámetro que el programa solicita al usuario para que lo introduzca por consola y que permite definir el número máximo de helióstatos que serán analizados (si cumplen los requisitos) en cada fotograma del vídeo de helióstatos, ignorando así posibles falsos contornos/helióstatos que suelen ser más pequeños que los helióstatos reales.
+- \verb|args.numeroHeliostatosAnalizar|. Parámetro que el programa solicita al usuario para que lo introduzca por consola y que permite definir el número máximo de helióstatos que serán analizados (si cumplen los requisitos) en cada fotograma del vídeo de helióstatos, ignorando así posibles falsos contornos/helióstatos que suelen ser más pequeños que los helióstatos reales.
 
-- 'args.anchoMinimoHeliostato', 'args.altoMinimoHeliostato'. Parámetros que el programa solicita al usuario para que los introduzca por consola y que permiten definir el ancho/alto mínimos que debe tener el helióstato para ser analizado.\\[20pt]
+- \verb|args.anchoMinimoHeliostato|, \verb|args.altoMinimoHeliostato|. Parámetros que el programa solicita al usuario para que los introduzca por consola y que permiten definir el ancho/alto mínimos que debe tener el helióstato para ser analizado.\\[20pt]
 
 Las siguientes variables no son usadas para este proyecto y se explicarán muy brevemente. No obstante, era necesario declararlas para evitar errores de compilación en el software.
 
-- ‘ret’. Umbralización de Otsu en el vídeo de helióstatos.
+- \verb|ret|. Umbralización de Otsu en el vídeo de helióstatos.
 
-- ‘im2’. Imagen fuente, procedente del fotograma actual del vídeo de helióstatos.
+- \verb|im2|. Imagen fuente, procedente del fotograma actual del vídeo de helióstatos.
 
-- ‘hierarchy’. Método de aproximación del contorno.\\[20pt]
+- \verb|hierarchy|. Método de aproximación del contorno.\\[20pt]
 
 Tras el uso de las variables de entrada anteriores, el software mostrará por pantalla una consola de información y resultados y dos ventanas del vídeo de helióstatos. Ambos elementos se van actualizando en tiempo de ejecución. Los resultados mostrados en consola de los helióstatos son finales, no parciales. En la consola aparece la siguiente información, para cada fotograma del vídeo de helióstatos:
 
@@ -899,7 +843,7 @@ A continuación, se mostrarán y explicarán los resultados del uso de la CPU y 
 
 \subsection{Cargando el vídeo 'variosHeliostatos.mp4'}
 
-Se inicia la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando el comando 'estimacion\_potencia.py Videos/varios\_heliostatos.mp4 50 50 127 2'.
+Se inicia la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando el comando \verb|estimacion_potencia.py Videos/varios_heliostatos.mp4 50 50 127 2|.
 
 \begin{figure}[h!]
   	\centering
@@ -1092,7 +1036,7 @@ Figura \ref{fig:CapturasRendimientoSoftware1/Imagen21.png}. Cuando finalmente no
 
 \subsection{Cargando el vídeo 'heliostato.MOV'}
 
-Se inicia la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando esta vez el comando 'estimacion\_potencia.py Videos/heliostato.MOV 50 50 200 1'.
+Se inicia la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando esta vez el comando \verb|estimacion_potencia.py Videos/heliostato.MOV 50 50 200 1|.
 
 \begin{figure}[h!]
   	\centering
@@ -1244,7 +1188,7 @@ El software está escrito en lenguaje de programación Python, y una de las cara
 
 \subsection{Cargando el vídeo 'variosHeliostatos.mp4'}
 
-Al iniciar la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando el comando 'estimacion\_potencia.py Videos/varios\_heliostatos.mp4 50 50 127 2', ocurre lo siguiente:
+Al iniciar la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando el comando \verb|estimacion_potencia.py Videos/varios_heliostatos.mp4 50 50 127 2|, ocurre lo siguiente:
 
 Cuando un helióstato comienza a entrar en el vídeo de helióstatos, el programa todavía no lo reencuadra en dicho vídeo ni lo analiza. Esto se debe a que, en este instante de tiempo, el helióstato mostrado en el vídeo aún no es de ancho y alto 50 píxeles o más, tal y como solicitó el usuario por parámetros en la consola. De forma análoga ocurre cuando un helióstato está a punto de salir del vídeo: en ese instante apenas se muestra el helióstato en el vídeo, y el ancho o el alto mostrados no son mayores de 50 píxeles, siendo ignorado por el programa. También debe cumplirse el valor de umbral proporcionado por parámetro para el análisis del helióstato, 127. De lo contrario, si el helióstato se muestra en su totalidad en el vídeo, o por lo menos su ancho y alto en un instante determinado son mayores de 50 píxeles (y por supuesto el umbral del vídeo es al menos de 127), el programa lo reencuadra en el vídeo y lo analiza.
 
@@ -1269,7 +1213,7 @@ El contenido de este vídeo son de cuatro helióstatos que entran poco a poco en
 
 \subsection{Cargando el vídeo 'heliostato.MOV'}
 
-Al iniciar la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando esta vez el comando 'estimacion\_potencia.py Videos/heliostato.MOV 50 50 200 1', ocurre lo siguiente:
+Al iniciar la ejecución del software desde la terminal de Windows, estando en el directorio que contiene dicho software a ejecutar, y usando esta vez el comando \verb|estimacion_potencia.py Videos/heliostato.MOV 50 50 200 1|, ocurre lo siguiente:
 
 Para que el helióstato sea en esta ocasión reencuadrado en el vídeo y analizado, el nuevo umbral escogido es de 200, porque el nuevo vídeo tiene una tonalidad de color más clara. En el anterior caso, bastaba con un umbral de 127 porque aquel vídeo era más oscuro. El ancho y alto escogidos del helióstato, al igual que en el caso anterior, es de 50 por 50 píxeles.
 
@@ -1292,7 +1236,7 @@ El contenido de este vídeo es de tres helióstatos que entran poco a poco en el
 	\label{fig:ValidacionCualitativaFuncionEstimacionPotencia/SumasBGRHeliostatosVerdesVideo1.png}}
 \end{figure}
 
-La gráfica de la figura \ref{fig:ValidacionCualitativaFuncionEstimacionPotencia/SumasBGRHeliostatosVerdesVideo1.png} muestra el tamaño del helióstato reencuadrado en verde en diferentes partes del vídeo, siendo el eje de abscisas X el tiempo del vídeo en segundos y el eje de ordenadas Y el tamaño del helióstato en píxeles, para el caso 'estimacion\_potencia.py Videos/varios\_heliostatos.mp4 50 50 127 2'.
+La gráfica de la figura \ref{fig:ValidacionCualitativaFuncionEstimacionPotencia/SumasBGRHeliostatosVerdesVideo1.png} muestra el tamaño del helióstato reencuadrado en verde en diferentes partes del vídeo, siendo el eje de abscisas X el tiempo del vídeo en segundos y el eje de ordenadas Y el tamaño del helióstato en píxeles, para el caso \verb|estimacion_potencia.py Videos/varios_heliostatos.mp4 50 50 127 2|.
 
 Al comienzo del vídeo, el helióstato va entrando poco a poco a él, y por eso, la gráfica crece gradualmente en esa región. Luego, el helióstato permanece unos segundos en el centro del vídeo, donde la gráfica adquiere un resultado prácticamente constante. Cuando entra otro helióstato en el vídeo, y por tanto, se estarían mostrando dos helióstatos a la vez en un mismo fotograma, el helióstato del centro cambia su recuadro de verde a rojo, y es por eso que el valor de la gráfica de repente cae en picado y hacia valores nulos, pero el helióstato nuevo que entra desde la izquierda es reencuadrado en verde, y por tanto la gráfica vuelve a crecer gradualmente. Cuando los dos helióstatos mostrados en el mismo fotograma se rozan entre sí, se obtendría un único helióstato muy grande, por lo que la gráfica ahora crece de golpe, pero después volverá a decrecer poco a poco hasta obtener un valor medio. Sería el caso cuando los dos helióstatos que se estaban rozando, ahora se van fusionando. Este procedimiento continúa hasta que todos los helióstatos hayan entrado y fusionado en el vídeo.
 
@@ -1305,7 +1249,7 @@ En la mitad del vídeo, se muestra un helióstato en el centro del mismo, combin
 	\label{fig:ValidacionCualitativaFuncionEstimacionPotencia/SumasBGRHeliostatosRojosVideo1.png}}
 \end{figure}
 
-La gráfica de la figura \ref{fig:ValidacionCualitativaFuncionEstimacionPotencia/SumasBGRHeliostatosRojosVideo1.png} muestra el tamaño del helióstato reencuadrado en rojo en diferentes partes del vídeo, siendo el eje de abscisas X el tiempo del vídeo en segundos y el eje de ordenadas Y el tamaño del helióstato en píxeles, para el caso 'estimacion\_potencia.py Videos/varios\_heliostatos.mp4 50 50 127 2'.
+La gráfica de la figura \ref{fig:ValidacionCualitativaFuncionEstimacionPotencia/SumasBGRHeliostatosRojosVideo1.png} muestra el tamaño del helióstato reencuadrado en rojo en diferentes partes del vídeo, siendo el eje de abscisas X el tiempo del vídeo en segundos y el eje de ordenadas Y el tamaño del helióstato en píxeles, para el caso \verb|estimacion_potencia.py Videos/varios_heliostatos.mp4 50 50 127 2|.
 
 La gráfica, cuando el helióstato con el reencuadre en rojo es visible en el vídeo, muestra un valor de suma BGR constante e intermedio, porque dicho helióstato solo aparece cuando en un mismo fotograma se muestran dos helióstatos separados entre sí: uno a la izquierda (reencuadre verde), y otro en el centro (reencuadre rojo). Y cuando el helióstato con el reencuadre en rojo aparece, suele tener un valor de suma BGR constante.
 
@@ -1320,6 +1264,6 @@ Debido probablemente al ruido del vídeo, se aprecia en ciertas partes de la gr�
 	\label{fig:ValidacionCualitativaFuncionEstimacionPotencia/SumasBGRHeliostatosVerdesVideo2.png}}
 \end{figure}
 
-La gráfica de la figura \ref{fig:ValidacionCualitativaFuncionEstimacionPotencia/SumasBGRHeliostatosVerdesVideo2.png} muestra el tamaño del helióstato reencuadrado en verde en diferentes partes del vídeo, siendo el eje de abscisas X el tiempo del vídeo en segundos y el eje de ordenadas Y el tamaño del helióstato en píxeles, para el caso 'estimacion\_potencia.py Videos/heliostato.MOV 50 50 200 1'.
+La gráfica de la figura \ref{fig:ValidacionCualitativaFuncionEstimacionPotencia/SumasBGRHeliostatosVerdesVideo2.png} muestra el tamaño del helióstato reencuadrado en verde en diferentes partes del vídeo, siendo el eje de abscisas X el tiempo del vídeo en segundos y el eje de ordenadas Y el tamaño del helióstato en píxeles, para el caso \verb|estimacion_potencia.py Videos/heliostato.MOV 50 50 200 1|.
 
 Cuando el helióstato entra poco a poco en el vídeo, pero aún no ha entrado totalmente en él, no es reencuadrado aún, y por tanto no se obtienen valores en la gráfica. Pero a partir del instante en el que entra completamente en el vídeo, pero aún no ha llegado al centro, sí es reencuadrado, y por tanto, su valor de área (o resultado de la gráfica) es grande. Después, cuando el helióstato alcanza el centro del vídeo y se sitúa ahí unos instantes, su valor de área se reduce ligeramente. Finalmente, cuando el helióstato se va poco a poco hacia la izquierda para salirse del vídeo, y a partir del momento el cual el helióstato toca el extremo izquierdo de dicho vídeo, su valor de suma BGR se reduce poco a poco, hasta llegar a cero (el helióstato se fue totalmente del vídeo). Este procedimiento sigue igual para los siguientes dos helióstatos.
