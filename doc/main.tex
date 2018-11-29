@@ -13,6 +13,7 @@
 \usepackage[spanish,es-noshorthands]{babel}
 \usepackage[pages=some]{background}
 \usepackage{hyperref}
+\usepackage{afterpage}
 
 \usepackage{amssymb,amsmath,amsthm,amsfonts}
 \usepackage{calc}
@@ -117,5 +118,21 @@
 \addcontentsline{toc}{chapter}{6. Referencias bibliográficas}
 \bibliographystyle{plain}
 \bibliography{main}
+
+\afterpage{\null\newpage} % insertar pagina en blanco al final del informe
+\newpage
+
+\backgroundsetup{
+ scale=1, %escala
+ color=black, %fondo a usar para transparencia
+ opacity=1.0, %nivel de transparencia
+ angle=0, %en caso de querer una rotación
+ position={10.5,-14.9},
+ contents={%
+  \includegraphics[width=\paperwidth,height=\paperheight]{TFG_II_back.pdf}
+ }%
+}
+
+\BgThispage
 
 \end{document}
