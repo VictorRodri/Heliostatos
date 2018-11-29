@@ -1,4 +1,13 @@
-\documentclass[11pt]{article} % Tamaño fuente
+\documentclass[11pt]{report} % Tamaño fuente
+
+\renewcommand*\thechapter{\arabic{chapter}}
+\renewcommand*\thesection{\arabic{chapter}.\arabic{section}}
+\renewcommand*\thesubsection{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\renewcommand*\thesubsubsection{%
+  \arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}%
+}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 \usepackage[utf8x]{inputenc}
 \usepackage[spanish,es-noshorthands]{babel}
@@ -10,7 +19,6 @@
 \usepackage{graphicx}
 \usepackage{subfigure}
 \usepackage{gensymb}
-\usepackage{natbib}
 \usepackage{url}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
@@ -21,7 +29,6 @@
 \usepackage{vmargin}
 \usepackage{verbatim}
 \usepackage{listings}
-\usepackage{pdfpages}
 \setmarginsrb{2.5 cm}{2.5 cm}{2.5 cm}{2.5 cm}{0 cm}{1.5 cm}{0 cm}{0 cm} % Márgenes
 \renewcommand{\baselinestretch}{1} % Interlineado
 
@@ -35,7 +42,6 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{\theauthor}
 \lhead{\thetitle}
 \rhead{\thepage}
 
@@ -81,14 +87,20 @@
 \backgroundsetup{
  scale=1, %escala
  color=black, %fondo a usar para transparencia
- opacity=0.0, %nivel de transparencia
+ opacity=1.0, %nivel de transparencia
  angle=0, %en caso de querer una rotación
+ position={10.5,-14.9},
  contents={%
-  \includegraphics[width=\paperwidth,height=\paperheight]{TFG_II_fron.pdf}
+  \includegraphics[width=\paperwidth,height=\paperheight]{TFG_II_front.pdf}
  }%
 }
 
-\includepdf{TFG_II_front}
+\BgThispage
+
+\begin{titlepage}
+   \begin{center} 
+   \end{center}
+\end{titlepage} % Página 1 en blanco, para colocar en ella la portada del TFG.
 
 \tableofcontents
 \pagebreak
@@ -98,11 +110,11 @@
 \input{Cap1DescripcionProblemaResolver}
 \input{Cap2Python}
 \input{Cap3OpenCV}
-\input{Cap4PropuestaDesarrollada}
+\input{Cap4MedicionRadiacionSolarProyectada}
 \input{Cap5ConclusionesYPosiblesLineasTrabajoFuturo}
 %\input{Cap6ReferenciasBibliograficas}
 
-\addcontentsline{toc}{section}{Referencias}
+\addcontentsline{toc}{chapter}{6. Referencias bibliográficas}
 \bibliographystyle{plain}
 \bibliography{main}
 
